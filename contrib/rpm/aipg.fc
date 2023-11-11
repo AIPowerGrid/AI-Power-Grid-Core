@@ -1,0 +1,8 @@
+/usr/bin/aipg-cli		--	gen_context(system_u:object_r:aipg_exec_t,s0)
+/usr/sbin/aipgd		--	gen_context(system_u:object_r:aipg_exec_t,s0)
+/usr/lib(64)?/aipg/aipgd		--	gen_context(system_u:object_r:aipg_exec_t,s0)
+
+/etc/aipg(/.*)?		gen_context(system_u:object_r:aipg_conf_t,s0)
+/var/lib/aipg(/.*)?		gen_context(system_u:object_r:aipg_var_lib_t,s0)
+
+(/var)?/run/aipgd(/.*)?   gen_context(system_u:object_r:aipg_var_run_t,s0)

@@ -1,0 +1,10 @@
+[main]
+host = https://www.transifex.com
+
+[qt-translation.aipg-en-ts]
+file_filter = src/qt/locale/aipg_<lang>.ts
+minimum_perc = 0
+source_file = src/qt/locale/aipg_en.ts
+source_lang = en
+type = QT
+

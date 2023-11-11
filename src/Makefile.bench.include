@@ -1,0 +1,82 @@
+# Copyright (c) 2015-2016 The Bitcoin Core developers
+# Copyright (c) 2017-2019 The AIPG Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+bin_PROGRAMS += bench/bench_aipg
+BENCH_SRCDIR = bench
+BENCH_BINARY = bench/bench_aipg$(EXEEXT)
+
+RAW_BENCH_FILES = \
+  bench/data/block566553.raw
+GENERATED_BENCH_FILES = $(RAW_BENCH_FILES:.raw=.raw.h)
+
+bench_bench_aipg_SOURCES = \
+  $(RAW_BENCH_FILES) \
+  bench/bench_aipg.cpp \
+  bench/bench.cpp \
+  bench/bench.h \
+  bench/checkblock.cpp \
+  bench/checkqueue.cpp \
+  bench/Examples.cpp \
+  bench/rollingbloom.cpp \
+  bench/crypto_hash.cpp \
+  bench/ccoins_caching.cpp \
+  bench/mempool_eviction.cpp \
+  bench/verify_script.cpp \
+  bench/base58.cpp \
+  bench/lockedpool.cpp \
+  bench/perf.cpp \
+  bench/perf.h \
+  bench/prevector_destructor.cpp
+
+nodist_bench_bench_aipg_SOURCES = $(GENERATED_BENCH_FILES)
+
+bench_bench_aipg_CPPFLAGS = $(AM_CPPFLAGS) $(AIPG_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
+bench_bench_aipg_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bench_bench_aipg_LDADD = \
+  $(LIBAIPG_SERVER) \
+  $(LIBAIPG_COMMON) \
+  $(LIBAIPG_UTIL) \
+  $(LIBAIPG_CONSENSUS) \
+  $(LIBAIPG_CRYPTO) \
+  $(LIBLEVELDB) \
+  $(LIBLEVELDB_SSE42) \
+  $(LIBMEMENV) \
+  $(LIBSECP256K1) \
+  $(LIBUNIVALUE)
+
+if ENABLE_ZMQ
+bench_bench_aipg_LDADD += $(LIBAIPG_ZMQ) $(ZMQ_LIBS)
+endif
+
+if ENABLE_WALLET
+bench_bench_aipg_SOURCES += bench/coin_selection.cpp
+bench_bench_aipg_LDADD += $(LIBAIPG_WALLET) $(LIBAIPG_CRYPTO)
+endif
+
+bench_bench_aipg_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+bench_bench_aipg_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+
+CLEAN_AIPG_BENCH = bench/*.gcda bench/*.gcno $(GENERATED_BENCH_FILES)
+
+CLEANFILES += $(CLEAN_AIPG_BENCH)
+
+bench/checkblock.cpp: bench/data/block566553.raw.h
+
+aipg_bench: $(BENCH_BINARY)
+
+bench: $(BENCH_BINARY) FORCE
+	$(BENCH_BINARY)
+
+aipg_bench_clean : FORCE
+	rm -f $(CLEAN_AIPG_BENCH) $(bench_bench_aipg_OBJECTS) $(BENCH_BINARY)
+
+%.raw.h: %.raw
+	@$(MKDIR_P) $(@D)
+	@{ \
+	 echo "static unsigned const char $(*F)[] = {" && \
+	 $(HEXDUMP) -v -e '8/1 "0x%02x, "' -e '"\n"' $< | $(SED) -e 's/0x  ,//g' && \
+	 echo "};"; \
+	} > "$@.new" && mv -f "$@.new" "$@"
+	@echo "Generated $@"

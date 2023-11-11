@@ -1,0 +1,33 @@
+# /etc/conf.d/aipgd: config file for /etc/init.d/aipgd
+
+# Config file location
+#AIPGD_CONFIGFILE="/etc/aipg/aipg.conf"
+
+# What directory to write pidfile to?  (created and owned by $AIPGD_USER)
+#AIPGD_PIDDIR="/var/run/aipgd"
+
+# What filename to give the pidfile
+#AIPGD_PIDFILE="${AIPGD_PIDDIR}/aipgd.pid"
+
+# Where to write aipgd data (be mindful that the blockchain is large)
+#AIPGD_DATADIR="/var/lib/aipgd"
+
+# User and group to own aipgd process
+#AIPGD_USER="aipg"
+#AIPGD_GROUP="aipg"
+
+# Path to aipgd executable
+#AIPGD_BIN="/usr/bin/aipgd"
+
+# Nice value to run aipgd under
+#AIPGD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#AIPGD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for aipgd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+AIPGD_SIGTERM_TIMEOUT=60

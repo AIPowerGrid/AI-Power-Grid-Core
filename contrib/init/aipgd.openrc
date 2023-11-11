@@ -1,0 +1,92 @@
+#!/sbin/runscript
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/aipg/.aipg" ]; then
+	AIPGD_DEFAULT_DATADIR="/var/lib/aipg/.aipg"
+else
+	AIPGD_DEFAULT_DATADIR="/var/lib/aipgd"
+fi
+
+AIPGD_CONFIGFILE=${AIPGD_CONFIGFILE:-/etc/aipg/aipg.conf}
+AIPGD_PIDDIR=${AIPGD_PIDDIR:-/var/run/aipgd}
+AIPGD_PIDFILE=${AIPGD_PIDFILE:-${AIPGD_PIDDIR}/aipgd.pid}
+AIPGD_DATADIR=${AIPGD_DATADIR:-${AIPGD_DEFAULT_DATADIR}}
+AIPGD_USER=${AIPGD_USER:-${AIPG_USER:-aipg}}
+AIPGD_GROUP=${AIPGD_GROUP:-aipg}
+AIPGD_BIN=${AIPGD_BIN:-/usr/bin/aipgd}
+AIPGD_NICE=${AIPGD_NICE:-${NICELEVEL:-0}}
+AIPGD_OPTS="${AIPGD_OPTS:-${AIPG_OPTS}}"
+
+name="AIPG Core Daemon"
+description="AIPG cryptocurrency P2P network daemon"
+
+command="/usr/bin/aipgd"
+command_args="-pid=\"${AIPGD_PIDFILE}\" \
+		-conf=\"${AIPGD_CONFIGFILE}\" \
+		-datadir=\"${AIPGD_DATADIR}\" \
+		-daemon \
+		${AIPGD_OPTS}"
+
+required_files="${AIPGD_CONFIGFILE}"
+start_stop_daemon_args="-u ${AIPGD_USER} \
+			-N ${AIPGD_NICE} -w 2000"
+pidfile="${AIPGD_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${AIPGD_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${AIPGD_USER}:${AIPGD_GROUP}" \
+	"${AIPGD_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${AIPGD_USER}:${AIPGD_GROUP}" \
+	"${AIPGD_PIDDIR}"
+
+	checkpath -f \
+	-o ${AIPGD_USER}:${AIPGD_GROUP} \
+	-m 0660 \
+	${AIPGD_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${AIPGD_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run aipgd."
+		eerror "The setting must appear in ${AIPGD_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"AIPG Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

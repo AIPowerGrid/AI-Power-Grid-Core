@@ -1,0 +1,6 @@
+usr/local/bin/aipg-qt usr/bin
+share/pixmaps/aipg32.xpm usr/share/pixmaps
+share/pixmaps/aipg16.xpm usr/share/pixmaps
+share/pixmaps/aipg128.png usr/share/pixmaps
+debian/aipg-qt.desktop usr/share/applications
+debian/aipg-qt.protocol usr/share/kde4/services/

@@ -9,7 +9,7 @@ To see how to run AIPG, please read the respective files in [the doc folder](doc
 What is AIPG?
 ----------------
 
-AIPG, or AI Power Grid, is a revolutionary digital currency that stands at the intersection of blockchain and artificial intelligence (AI). It is designed to democratize access to AI technology and foster open-source AI initiatives. AIPG enables instant payments to anyone, anywhere in the world, and allows the creation of assets (tokens) on its network. These assets can be used for various purposes, including AI generated NFT's.
+AI Power Grid is a revolutionary digital currency that stands at the intersection of blockchain and artificial intelligence. It is designed to democratize access to AI technology and foster open-source AI initiatives. AIPG enables instant payments to anyone, anywhere in the world, and allows the creation of assets (tokens) on its network. These assets can be used for various purposes, including AI generated NFT's.
 
 AIPG operates on a peer-to-peer technology with no central authority, meaning transactions and money or NFT issuance are carried out collectively by the network.
 

@@ -120,7 +120,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 100000;  //~ 4 yrs at 1 min block time
+        consensus.nSubsidyHalvingInterval = 1000000;  //~ Aprox 2 years at 1 minute block time
         consensus.nBIP34Enabled = true;
         consensus.nBIP65Enabled = true; // 
         consensus.nBIP66Enabled = true;

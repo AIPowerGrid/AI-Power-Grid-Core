@@ -135,7 +135,7 @@ AIPGcoin sources in `$HOME/src`
 Berkeley DB will be installed to `$HOME/src/db4`
 
 
-AIPGcoin
+AIPG
 ------------------
 
 Start in $HOME
@@ -146,11 +146,11 @@ Make the directory for sources and go into it.
 
 `cd src`
 
-__Download AIPGcoin source.__
+__Download AIPG source.__
 
-`git clone https://github.com/AIPGProject/AIPGcoin`
+`git clone https://github.com/AIPowerGrid/AI-Power-Grid-Core`
 
-`cd AIPGcoin`
+`cd AI-Power-Grid-Core`
 
 `git checkout develop` # this checks out the develop branch.
 

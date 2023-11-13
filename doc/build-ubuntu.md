@@ -1,5 +1,5 @@
-Build instructions for AIPGcoin 
-=================================
+Build instructions for AIPG
+===========================
 
 This will install most of the dependencies from ubuntu.
 The only one we build, is Berkeley DB 4.8.

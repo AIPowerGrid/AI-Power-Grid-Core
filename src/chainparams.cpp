@@ -414,7 +414,7 @@ public:
         strAddNullQualifierTagBurnAddress = "n1addTagBurnXXXXXXXXXXXXXXXXX5oLMH";
 
         // Donation Address
-        strOperationsFundAddress = "AMhFbgNx5MZuc26jzdpTN4pZnDT7gUZ4kb";
+        strOperationsFundAddress = "AcYHNBj8C6nCFSpu1ANsJxturWp31W32cd";
 
         // Global Burn Address
         strGlobalBurnAddress = "n1BurnXXXXXXXXXXXXXXXXXXXXXXU1qejP";

@@ -179,7 +179,7 @@ public:
         nDefaultPort = 8798;
         nPruneAfterHeight = 100000;
 
-    	uint32_t nGenesisTime = 1688352006; // October 30, 2023, at 00:00:00 UTC
+    uint32_t nGenesisTime = 1688764800; // October 30, 2023, at 00:00:00 UTC
 
         genesis = CreateGenesisBlock(nGenesisTime, 28272404, 0x1e00ffff, 4, 5000 * COIN);        
     

@@ -166,8 +166,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nOverrideMinerConfirmationWindow = 2016;
 
 
-        // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000001f5f4e77ed78d4f"); // New blockchain, no work done yet
+        // The best chain should have at least this much work        
+	consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000"); // Set to zero
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 0
         consensus.defaultAssumeValid = uint256S("0xcd124d3bde18e9d787f0a972d2c6ca709793d511185a807ceb759ac8a25091e0"); // Genesis block
@@ -179,7 +179,7 @@ public:
         nDefaultPort = 8798;
         nPruneAfterHeight = 100000;
 
-    uint32_t nGenesisTime = 1688352006; // October 30, 2023, at 00:00:00 UTC
+    	uint32_t nGenesisTime = 1688352006; // October 30, 2023, at 00:00:00 UTC
 
         genesis = CreateGenesisBlock(nGenesisTime, 28272404, 0x1e00ffff, 4, 5000 * COIN);        
     
@@ -330,7 +330,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nOverrideMinerConfirmationWindow = 2016;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000001f5f4e77ed78d4f");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000"); // Set to zero
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x0000005aff34b360a6c89b853ca84fd601e1479d26b1ced17843b56044526c5e");
@@ -430,7 +430,7 @@ public:
         nMessagingActivationBlock = 1; // Messaging activated block height
         nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1688764800; // Thu Nov 10 2023 00:00:00 UTC
+        nKAAAWWWPOWActivationTime = 1668537600; // Thu Nov 15 2023 01:00:00 UTC
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** AIPG End **/
     }

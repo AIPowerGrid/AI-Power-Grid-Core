@@ -31,42 +31,44 @@ The following are some helpful notes on how to run AIPGcoin on your native platf
 
 Update apt cache and install general dependencies:
 
-```
+```bash
 sudo apt update
 sudo apt install libevent-dev libboost-all-dev libminiupnpc10 libzmq5 software-properties-common
 ```
 
-The wallet requires version 4.8 of the Berkeley DB. The easiest way to get it is to build it with the script contrib/install_db4.sh
+The wallet requires version 4.8 of the Berkeley DB. The easiest way to get it is to build it with the script `contrib/install_db4.sh`
 
-
-```
 
 The GUI wallet requires the QR Code encoding library. Install with:
-
-`sudo apt install libqrencode3`
+```bash
+sudo apt install libqrencode3
+```
 
 #### Fedora 27
 
 Install general dependencies:
-
-`sudo dnf install zeromq libevent boost libdb4-cxx miniupnpc`
+```bash
+sudo dnf install zeromq libevent boost libdb4-cxx miniupnpc
+```
 
 The GUI wallet requires the QR Code encoding library and Google's data interchange format Protocol Buffers. Install with:
-
-`sudo dnf install qrencode protobuf`
+```bash
+sudo dnf install qrencode protobuf
+```
 
 #### CentOS 7
 
 Add the EPEL repository and install general depencencies:
 
-```
+```bash
 sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 sudo yum install zeromq libevent boost libdb4-cxx miniupnpc
 ```
 
 The GUI wallet requires the QR Code encoding library and Google's data interchange format Protocol Buffers. Install with:
-
-`sudo yum install qrencode protobuf`
+```bash
+sudo yum install qrencode protobuf
+```
 
 ### OS X
 
@@ -89,18 +91,17 @@ Dyld Error Message:
   Referenced from: /Applications/AIPG-Qt.app/Contents/Frameworks/libboost_thread-mt.dylib
   Reason: image not found
 ```
-To resolve, you will need to copy libboost_system.dylib to libboost_system-mt.dylib in the /Applications/AIPG-Qt.app/Contents/Frameworks folder
+To resolve, you will need to copy `libboost_system.dylib` to `libboost_system-mt.dylib` in the `/Applications/AIPG-Qt.app/Contents/Frameworks` folder
 
 ### Windows
 
-1) Download windows-x86_64.zip and unpack executables to desired folder.
+1) Download `windows-x86_64.zip` and unpack executables to desired folder.
 
-2) Double click the aipg-qt.exe to launch it.
+2) Double click the `aipg-qt.exe` to launch it.
 
 ### Need Help?
 
-- See the documentation at the [AIPGcoin Wiki](https://aipg.wiki/wiki/AIPGcoin_Wiki)
-for help and more information.
+- See the documentation at the [AIPGcoin Wiki](https://aipg.wiki/wiki/AIPGcoin_Wiki) for help and more information.
 - Ask for help on [Discord](https://discord.gg/DUkcBst), [Telegram](https://t.me/AIPGcoinDev) or [Reddit](https://www.reddit.com/r/AIPGcoin/).
 
 Building from source

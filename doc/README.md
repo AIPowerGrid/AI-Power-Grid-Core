@@ -27,13 +27,13 @@ The following are some helpful notes on how to run AIPGcoin on your native platf
 
    `./aipgd -deamon`
 
-#### Ubuntu 16.04, 17.04/17.10 and 18.04
+#### Ubuntu
 
 Update apt cache and install general dependencies:
 
 ```bash
 sudo apt update
-sudo apt install libevent-dev libboost-all-dev libminiupnpc10 libzmq5 software-properties-common
+sudo apt install libevent-dev libboost-all-dev libminiupnpc10-dev libzmq5 software-properties-common
 ```
 
 The wallet requires version 4.8 of the Berkeley DB. The easiest way to get it is to build it with the script `contrib/install_db4.sh`

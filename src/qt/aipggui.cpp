@@ -109,11 +109,10 @@ const QString AIPGGUI::DEFAULT_WALLET = "~Default";
 /* Bit of a bodge, c++ really doesn't want you to predefine values
  * in only header files, so we do one-time value assignment here. */
 std::array<CurrencyUnitDetails, 5> CurrencyUnits::CurrencyOptions = { {
-    { "BTC",    "AIPGBTC"  , 1,          8},
-    { "mBTC",   "AIPGBTC"  , 1000,       5},
-    { "µBTC",   "AIPGBTC"  , 1000000,    2},
-    { "Satoshi","AIPGBTC"  , 100000000,  0},
-    { "USDT",   "AIPGUSDT" , 1,          5}
+    { "AIPG",    "AIPGBTC"  , 1,          8},
+    { "mAIPG",   "AIPGBTC"  , 1000,       5},
+    { "µAIPG",   "AIPGBTC"  , 1000000,    2},
+    { "Satoshi", "AIPGBTC"  , 100000000,  0}
 } };
 
 static bool ThreadSafeMessageBox(AIPGGUI *gui, const std::string& message, const std::string& caption, unsigned int style);
@@ -704,7 +703,7 @@ void AIPGGUI::createToolBars()
         labelCurrentMarket->setAlignment(Qt::AlignVCenter);
         labelCurrentMarket->setStyleSheet(STRING_LABEL_COLOR);
         labelCurrentMarket->setFont(currentMarketFont);
-        labelCurrentMarket->setText(tr("AIPGcoin Market Price"));
+        labelCurrentMarket->setText(tr("AIPG Market Price"));
 
         QString currentPriceStyleSheet = ".QLabel{color: %1;}";
         labelCurrentPrice->setContentsMargins(25,0,0,0);
@@ -739,6 +738,10 @@ void AIPGGUI::createToolBars()
         priceLayout->addWidget(comboAIPGUnit, 0 , Qt::AlignBottom| Qt::AlignLeft);
         priceLayout->addStretch();
         priceLayout->addWidget(labelVersionUpdate, 0 , Qt::AlignVCenter | Qt::AlignRight);
+
+        // Hide the "AIPG Market Price" label and dropdown
+        labelCurrentMarket->hide();
+        comboAIPGUnit->hide();
 
         // Create the layout for widget to the right of the tool bar
         QVBoxLayout* mainFrameLayout = new QVBoxLayout(mainWalletWidget);
@@ -812,8 +815,8 @@ void AIPGGUI::createToolBars()
         connect(comboAIPGUnit, SIGNAL(activated(int)), this, SLOT(currencySelectionChanged(int)));
         // Create the timer
         connect(pricingTimer, SIGNAL(timeout()), this, SLOT(getPriceInfo()));
-        pricingTimer->start(10000);
-        getPriceInfo();
+        // pricingTimer->start(10000);
+        // getPriceInfo();
         /** AIPG END */
 
         // Get the latest AIPGcoin release and let the user know if they are using the latest version

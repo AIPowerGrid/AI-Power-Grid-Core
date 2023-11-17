@@ -2987,8 +2987,8 @@ They are not recoverable !!</translation>
         <translation>&amp;Wallet</translation>
     </message>
     <message>
-        <source>AIPGcoin Market Price</source>
-        <translation>AIPGcoin Market Price</translation>
+        <source>AIPG Denomination</source>
+        <translation>AIPG Denomination</translation>
     </message>
     <message>
         <source>Brought to you by binance.com</source>

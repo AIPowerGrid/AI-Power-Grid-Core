@@ -3865,7 +3865,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+149"/>
-        <source>AIPGcoin Market Price</source>
+        <source>AIPG Denomination</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

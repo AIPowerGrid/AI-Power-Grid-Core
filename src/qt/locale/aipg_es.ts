@@ -1903,7 +1903,7 @@
         <translation>&amp;Monedero</translation>
     </message>
     <message>
-        <source>AIPGcoin Market Price</source>
+        <source>AIPG Denomination</source>
         <translation>Precio de mercado de AIPGcoin</translation>
     </message>
     <message>

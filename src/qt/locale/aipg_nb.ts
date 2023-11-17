@@ -2405,7 +2405,7 @@
         <translation>Lommebok</translation>
     </message>
     <message>
-        <source>AIPGcoin Market Price</source>
+        <source>AIPG Denomination</source>
         <translation>AIPGcoin markedspris</translation>
     </message>
     <message>

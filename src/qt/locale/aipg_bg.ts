@@ -1601,7 +1601,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Wallet</translation>
     </message>
     <message>
-        <source>AIPGcoin Market Price</source>
+        <source>AIPG Denomination</source>
         <translation>Пазарна цена на AIPGcoin</translation>
     </message>
     <message>

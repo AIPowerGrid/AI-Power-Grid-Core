@@ -1703,7 +1703,7 @@
         <translation>Ouvrir une &amp;URI...</translation>
     </message>
     <message>
-        <source>AIPGcoin Market Price</source>
+        <source>AIPG Denomination</source>
         <translation>AIPGcoin Prix du Marché</translation>
     </message>
     <message>

@@ -2777,7 +2777,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Wallet</translation>
     </message>
     <message>
-        <source>AIPGcoin Market Price</source>
+        <source>AIPG Denomination</source>
         <translation>AIPGcoin Marktpreis</translation>
     </message>
     <message>

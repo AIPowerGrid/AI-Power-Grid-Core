@@ -194,6 +194,7 @@ public:
         vSeeds.emplace_back("seed1.aipowergrid.io", false);
         vSeeds.emplace_back("seed2.aipowergrid.io", false);
         vSeeds.emplace_back("seed3.aipowergrid.io", false);
+        vSeeds.emplace_back("seed4.aipowergrid.io", false);
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix

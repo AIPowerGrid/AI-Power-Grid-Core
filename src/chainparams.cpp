@@ -257,7 +257,7 @@ public:
         strGlobalBurnAddress = "AIBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
 
         // AIPG Operations Fund
-        strOperationsFundAddress = "AT6ZfsztYGMb4Jb2drzuMkgfEZQJgk1Wvr";
+        strOperationsFundAddress = "Ab8KBCTTJgy7XnsPsHbnwRMJD4MFjG12hU";
 
         // DGW Activation
         nDGWActivationBlock = 1;

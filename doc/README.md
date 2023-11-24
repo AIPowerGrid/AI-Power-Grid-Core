@@ -1,4 +1,4 @@
-AIPGcoin Core
+AIPG Core
 ==============
 
 Setup

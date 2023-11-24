@@ -33,7 +33,7 @@ Update apt cache and install general dependencies:
 
 ```bash
 sudo apt update
-sudo apt install libevent-dev libboost-all-dev libminiupnpc10-dev libzmq5 software-properties-common
+sudo apt install libevent-dev libboost-all-dev libminiupnpc-dev libzmq5 software-properties-common
 ```
 
 The wallet requires version 4.8 of the Berkeley DB. The easiest way to get it is to build it with the script `contrib/install_db4.sh`

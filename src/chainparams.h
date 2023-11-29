@@ -100,7 +100,7 @@ public:
     const CAmount& IssueSubQualifierAssetBurnAmount() const { return nIssueSubQualifierAssetBurnAmount; }
     const CAmount& IssueRestrictedAssetBurnAmount() const { return nIssueRestrictedAssetBurnAmount; }
     const CAmount& AddNullQualifierTagBurnAmount() const { return nAddNullQualifierTagBurnAmount; }
-    const CAmount& OperationsFundAmount() const { return nOperationsFundAmount; }
+    const CAmount& CommunityAutonomousAmount() const { return nCommunityAutonomousAmount; }
     
     const std::string& IssueAssetBurnAddress() const { return strIssueAssetBurnAddress; }
     const std::string& ReissueAssetBurnAddress() const { return strReissueAssetBurnAddress; }
@@ -112,7 +112,7 @@ public:
     const std::string& IssueRestrictedAssetBurnAddress() const { return strIssueRestrictedAssetBurnAddress; }
     const std::string& AddNullQualifierTagBurnAddress() const { return strAddNullQualifierTagBurnAddress; }
     const std::string& GlobalBurnAddress() const { return strGlobalBurnAddress; }
-    const std::string& OperationsFundAddress() const { return strOperationsFundAddress; }
+    const std::string& CommunityAutonomousAddress() const { return strCommunityAutonomousAddress; }
      
     //  Indicates whether or not the provided address is a burn address
     bool IsBurnAddress(const std::string & p_address) const
@@ -128,7 +128,7 @@ public:
             || p_address == strIssueRestrictedAssetBurnAddress
             || p_address == strAddNullQualifierTagBurnAddress
             || p_address == strGlobalBurnAddress
-            || p_address == strOperationsFundAddress
+            || p_address == strCommunityAutonomousAddress
         ) {
             return true;
         }
@@ -178,7 +178,7 @@ protected:
     CAmount nIssueSubQualifierAssetBurnAmount;
     CAmount nIssueRestrictedAssetBurnAmount;
     CAmount nAddNullQualifierTagBurnAmount;
-    CAmount nOperationsFundAmount;
+    CAmount nCommunityAutonomousAmount;
     
     // Burn Addresses
     std::string strIssueAssetBurnAddress;
@@ -195,7 +195,7 @@ protected:
     std::string strGlobalBurnAddress;
 
     //Operations Fund Address   
-    std::string strOperationsFundAddress;
+    std::string strCommunityAutonomousAddress;
 
     unsigned int nDGWActivationBlock;
     unsigned int nMessagingActivationBlock;

@@ -2746,36 +2746,36 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
                          REJECT_INVALID, "bad-cb-amount");
 	
     /** AIPG Start */
-	//OperationsFundAddress Assign 10%
-	std::string  GetOperationsFundAddress 	= GetParams().OperationsFundAddress();
-	CTxDestination destOperationsFund 		= DecodeDestination(GetOperationsFundAddress);
-    if (!IsValidDestination(destOperationsFund)) {
-		LogPrintf("IsValidDestination: Invalid AIPGcoin address %s \n", GetOperationsFundAddress);
+	//CommunityAutonomousAddress Assign 10%
+	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
+	CTxDestination destCommunityAutonomous 		= DecodeDestination(GetCommunityAutonomousAddress);
+    if (!IsValidDestination(destCommunityAutonomous)) {
+		LogPrintf("IsValidDestination: Invalid AIPGcoin address %s \n", GetCommunityAutonomousAddress);
     }
 	// Parse AIPG coin address
-    CScript scriptPubKeyOperationsFund 	= GetScriptForDestination(destOperationsFund);
+    CScript scriptPubKeyCommunityAutonomous 	= GetScriptForDestination(destCommunityAutonomous);
 	
-	CAmount nOperationsFundAmount 			= GetParams().OperationsFundAmount();
+	CAmount nCommunityAutonomousAmount 			= GetParams().CommunityAutonomousAmount();
 	CAmount nSubsidy 							= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
-	CAmount nOperationsFundAmountValue		= nSubsidy*nOperationsFundAmount/100;
+	CAmount nCommunityAutonomousAmountValue		= nSubsidy*nCommunityAutonomousAmount/100;
 	/* Remove Log to console
 	LogPrintf("==>block.vtx[0]->vout[1].nValue:    %ld \n", block.vtx[0]->vout[1].nValue);
-	LogPrintf("==>nOperationsFundAmountValue: %ld \n", nOperationsFundAmountValue);
+	LogPrintf("==>nCommunityAutonomousAmountValue: %ld \n", nCommunityAutonomousAmountValue);
 	LogPrintf("==>block.vtx[0]->vout[1].scriptPubKey: %s \n", block.vtx[0]->vout[1].scriptPubKey[3]);
-	LogPrintf("==>GetOperationsFundAddress:   %s \n", GetOperationsFundAddress);
-	LogPrintf("==>scriptPubKeyOperationsFund    Actual: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey));
-	LogPrintf("==>scriptPubKeyOperationsFund Should Be: %s \n", HexStr(scriptPubKeyOperationsFund));
+	LogPrintf("==>GetCommunityAutonomousAddress:   %s \n", GetCommunityAutonomousAddress);
+	LogPrintf("==>scriptPubKeyCommunityAutonomous    Actual: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey));
+	LogPrintf("==>scriptPubKeyCommunityAutonomous Should Be: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
 	*/
 	//Check 10% Amount
-	if(block.vtx[0]->vout[1].nValue != nOperationsFundAmountValue )		{
+	if(block.vtx[0]->vout[1].nValue != nCommunityAutonomousAmountValue )		{
 		return state.DoS(100,
-                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Invalid. Actual: %ld Should be:%ld ",block.vtx[0]->vout[1].nValue, nOperationsFundAmountValue),
+                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Invalid. Actual: %ld Should be:%ld ",block.vtx[0]->vout[1].nValue, nCommunityAutonomousAmountValue),
                          REJECT_INVALID, "bad-cb-community-autonomous-amount");
 	}
 	//Check 10% Address
-	if( HexStr(block.vtx[0]->vout[1].scriptPubKey) != HexStr(scriptPubKeyOperationsFund) )		{
+	if( HexStr(block.vtx[0]->vout[1].scriptPubKey) != HexStr(scriptPubKeyCommunityAutonomous) )		{
 		return state.DoS(100,
-                         error("ConnectBlock(): coinbase Community Autonomous Address Is Invalid. Actual: %s Should Be: %s \n",HexStr(block.vtx[0]->vout[1].scriptPubKey), HexStr(scriptPubKeyOperationsFund)),
+                         error("ConnectBlock(): coinbase Community Autonomous Address Is Invalid. Actual: %s Should Be: %s \n",HexStr(block.vtx[0]->vout[1].scriptPubKey), HexStr(scriptPubKeyCommunityAutonomous)),
                          REJECT_INVALID, "bad-cb-community-autonomous-address");
 	}
 	/** AIPG END */

@@ -178,30 +178,30 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     coinbaseTx.vin[0].prevout.SetNull();
 	//vout
 	CAmount nSubsidy 					= GetBlockSubsidy(nHeight, chainparams.GetConsensus());
-	CAmount nCommunityAutonomousAmount 	= GetParams().CommunityAutonomousAmount();
+	CAmount nOperationsFundAmount 	= GetParams().OperationsFundAmount();
 	
     coinbaseTx.vout.resize(2);
     coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
-    coinbaseTx.vout[0].nValue = nFees + ( (100-nCommunityAutonomousAmount) * nSubsidy / 100 );
+    coinbaseTx.vout[0].nValue = nFees + ( (100-nOperationsFundAmount) * nSubsidy / 100 );
 	
     // Assign the set % in chainparams.cpp to the TX
-	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
-	CTxDestination destCommunityAutonomous = DecodeDestination(GetCommunityAutonomousAddress);
-    if (!IsValidDestination(destCommunityAutonomous)) {
-		LogPrintf("IsValidDestination: Invalid AIPGcoin address %s \n", GetCommunityAutonomousAddress);
+	std::string  GetOperationsFundAddress 	= GetParams().OperationsFundAddress();
+	CTxDestination destOperationsFund = DecodeDestination(GetOperationsFundAddress);
+    if (!IsValidDestination(destOperationsFund)) {
+		LogPrintf("IsValidDestination: Invalid AIPGcoin address %s \n", GetOperationsFundAddress);
     }
     // We need to parse the address ready to send to it
-    CScript scriptPubKeyCommunityAutonomous = GetScriptForDestination(destCommunityAutonomous);
+    CScript scriptPubKeyOperationsFund = GetScriptForDestination(destOperationsFund);
 	
-    coinbaseTx.vout[1].scriptPubKey = scriptPubKeyCommunityAutonomous;
-    coinbaseTx.vout[1].nValue = nSubsidy*nCommunityAutonomousAmount/100;
+    coinbaseTx.vout[1].scriptPubKey = scriptPubKeyOperationsFund;
+    coinbaseTx.vout[1].nValue = nSubsidy*nOperationsFundAmount/100;
 	LogPrintf("nSubsidy: ====================================================\n");
 	LogPrintf("Miner: %ld \n", coinbaseTx.vout[0].nValue);
 	LogPrintf("scriptPubKeyIn: %s \n", HexStr(scriptPubKeyIn));
 	
-	LogPrintf("GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
-	LogPrintf("scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
-	LogPrintf("nCommunityAutonomousAmount: %ld \n", coinbaseTx.vout[1].nValue);
+	LogPrintf("GetOperationsFundAddress: %s \n", GetOperationsFundAddress);
+	LogPrintf("scriptPubKeyOperationsFund: %s \n", HexStr(scriptPubKeyOperationsFund));
+	LogPrintf("nOperationsFundAmount: %ld \n", coinbaseTx.vout[1].nValue);
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
 	
     pblock->vtx[0] = MakeTransactionRef(std::move(coinbaseTx));

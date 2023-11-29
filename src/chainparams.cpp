@@ -238,7 +238,7 @@ public:
         nAddNullQualifierTagBurnAmount = .1 * COIN;
        
         // 5% of 5000 AIPG to operations wallet
-	    nOperationsFundAmount = 5;
+	    nCommunityAutonomousAmount = 5;
         // community wallet placeholder
 
         // Burn Addresses
@@ -257,7 +257,7 @@ public:
         strGlobalBurnAddress = "AIBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
 
         // AIPG Operations Fund
-        strOperationsFundAddress = "Ab8KBCTTJgy7XnsPsHbnwRMJD4MFjG12hU";
+        strCommunityAutonomousAddress = "Ab8KBCTTJgy7XnsPsHbnwRMJD4MFjG12hU";
 
         // DGW Activation
         nDGWActivationBlock = 1;
@@ -401,7 +401,7 @@ public:
         nAddNullQualifierTagBurnAmount = .1 * COIN;
 
         // 5% of 5000 AIPG to operations wallet
-	    nOperationsFundAmount = 5;
+	    nCommunityAutonomousAmount = 5;
 
         // Burn Addresses
         strIssueAssetBurnAddress = "n1issueAssetXXXXXXXXXXXXXXXXWdnemQ";
@@ -415,7 +415,7 @@ public:
         strAddNullQualifierTagBurnAddress = "n1addTagBurnXXXXXXXXXXXXXXXXX5oLMH";
 
         // Donation Address
-        strOperationsFundAddress = "AcYHNBj8C6nCFSpu1ANsJxturWp31W32cd";
+        strCommunityAutonomousAddress = "AcYHNBj8C6nCFSpu1ANsJxturWp31W32cd";
 
         // Global Burn Address
         strGlobalBurnAddress = "n1BurnXXXXXXXXXXXXXXXXXXXXXXU1qejP";

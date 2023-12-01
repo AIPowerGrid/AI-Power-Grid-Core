@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>AIPG-Qt</string>
+  <string>Aipg-Qt</string>
   
   <key>CFBundleName</key>
-  <string>AIPG-Qt</string>
+  <string>Aipg-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.aipgfoundation.AIPG-Qt</string>
+  <string>org.aipgfoundation.Aipg-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.aipg.AIPGPayment</string>
+      <string>org.aipg.AipgPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>aipg</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.aipg.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>AIPG payment request</string>
+      <string>Aipg payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -95,9 +95,6 @@
     <string>NSApplication</string>
 
   <key>NSHighResolutionCapable</key>
-    <string>True</string>
-
-  <key>NSRequiresAquaSystemAppearance</key>
     <string>True</string>
 
   <key>LSAppNapIsDisabled</key>

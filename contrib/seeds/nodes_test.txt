@@ -1,6 +1,7 @@
 # List of fixed seed nodes for testnet
-
+66.42.117.31:4568
+167.179.94.220:4568
 # Onion nodes
-thfsmmn2jaipg.onion
+
 
 

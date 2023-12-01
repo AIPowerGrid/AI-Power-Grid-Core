@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,68 +10,68 @@
 
 #include <QStringList>
 
-AIPGUnits::AIPGUnits(QObject *parent):
+AipgUnits::AipgUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<AIPGUnits::Unit> AIPGUnits::availableUnits()
+QList<AipgUnits::Unit> AipgUnits::availableUnits()
 {
-    QList<AIPGUnits::Unit> unitlist;
-    unitlist.append(AIPG);
-    unitlist.append(mAIPG);
-    unitlist.append(uAIPG);
+    QList<AipgUnits::Unit> unitlist;
+    unitlist.append(aipg);
+    unitlist.append(maipg);
+    unitlist.append(uaipg);
     return unitlist;
 }
 
-bool AIPGUnits::valid(int unit)
+bool AipgUnits::valid(int unit)
 {
     switch(unit)
     {
-    case AIPG:
-    case mAIPG:
-    case uAIPG:
+    case aipg:
+    case maipg:
+    case uaipg:
         return true;
     default:
         return false;
     }
 }
 
-QString AIPGUnits::name(int unit)
+QString AipgUnits::name(int unit)
 {
     switch(unit)
     {
-    case AIPG: return QString("AIPG");
-    case mAIPG: return QString("mAIPG");
-    case uAIPG: return QString::fromUtf8("μAIPG");
+    case aipg: return QString("aipg");
+    case maipg: return QString("maipg");
+    case uaipg: return QString::fromUtf8("μaipg");
     default: return QString("???");
     }
 }
 
-QString AIPGUnits::description(int unit)
+QString AipgUnits::description(int unit)
 {
     switch(unit)
     {
-    case AIPG: return QString("AIPGs");
-    case mAIPG: return QString("Milli-AIPGs (1 / 1" THIN_SP_UTF8 "000)");
-    case uAIPG: return QString("Micro-AIPGs (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case aipg: return QString("Aipg");
+    case maipg: return QString("Milli-Aipg (1 / 1" THIN_SP_UTF8 "000)");
+    case uaipg: return QString("Micro-Aipg (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
 
-qint64 AIPGUnits::factor(int unit)
+qint64 AipgUnits::factor(int unit)
 {
     switch(unit)
     {
-    case AIPG:  return 100000000;
-    case mAIPG: return 100000;
-    case uAIPG: return 100;
+    case aipg:  return 100000000;
+    case maipg: return 100000;
+    case uaipg: return 100;
     default:   return 100000000;
     }
 }
 
-qint64 AIPGUnits::factorAsset(int unit)
+qint64 AipgUnits::factorAsset(int unit)
 {
     switch(unit)
     {
@@ -87,18 +88,18 @@ qint64 AIPGUnits::factorAsset(int unit)
     }
 }
 
-int AIPGUnits::decimals(int unit)
+int AipgUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case AIPG: return 8;
-    case mAIPG: return 5;
-    case uAIPG: return 2;
+    case aipg: return 8;
+    case maipg: return 5;
+    case uaipg: return 2;
     default: return 0;
     }
 }
 
-QString AIPGUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators, const int nAssetUnit)
+QString AipgUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators, const int nAssetUnit)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -120,7 +121,7 @@ QString AIPGUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorSty
     int q_size = quotient_str.size();
     if (separators == separatorAlways || (separators == separatorStandard && q_size > 4))
         for (int i = 3; i < q_size; i += 3)
-            quotient_str.insert(q_size - i, thin_sp);
+            quotient_str.insert(q_size - i, thin_sp); 
 
     if (n < 0)
         quotient_str.insert(0, '-');
@@ -143,17 +144,17 @@ QString AIPGUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorSty
 // Please take care to use formatHtmlWithUnit instead, when
 // appropriate.
 
-QString AIPGUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString AipgUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     return format(unit, amount, plussign, separators) + QString(" ") + name(unit);
 }
 
-QString AIPGUnits::formatWithCustomName(QString customName, const CAmount& amount, int unit, bool plussign, SeparatorStyle separators)
+QString AipgUnits::formatWithCustomName(QString customName, const CAmount& amount, int unit, bool plussign, SeparatorStyle separators)
 {
-    return format(AIPG, amount / factorAsset(MAX_ASSET_UNITS - unit), plussign, separators, unit) + QString(" ") + customName;
+    return format(aipg, amount / factorAsset(MAX_ASSET_UNITS - unit), plussign, separators, unit) + QString(" ") + customName;
 }
 
-QString AIPGUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString AipgUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(formatWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
@@ -161,7 +162,7 @@ QString AIPGUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plus
 }
 
 
-bool AIPGUnits::parse(int unit, const QString &value, CAmount *val_out)
+bool AipgUnits::parse(int unit, const QString &value, CAmount *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -200,7 +201,7 @@ bool AIPGUnits::parse(int unit, const QString &value, CAmount *val_out)
     return ok;
 }
 
-bool AIPGUnits::assetParse(int assetUnit, const QString &value, CAmount *val_out)
+bool AipgUnits::assetParse(int assetUnit, const QString &value, CAmount *val_out)
 {
     if(!(assetUnit >= 0 && assetUnit <= 8) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -239,23 +240,23 @@ bool AIPGUnits::assetParse(int assetUnit, const QString &value, CAmount *val_out
     return ok;
 }
 
-QString AIPGUnits::getAmountColumnTitle(int unit)
+QString AipgUnits::getAmountColumnTitle(int unit)
 {
     QString amountTitle = QObject::tr("Amount");
-    if (AIPGUnits::valid(unit))
+    if (AipgUnits::valid(unit))
     {
-        amountTitle += " ("+AIPGUnits::name(unit) + ")";
+        amountTitle += " ("+AipgUnits::name(unit) + ")";
     }
     return amountTitle;
 }
 
-int AIPGUnits::rowCount(const QModelIndex &parent) const
+int AipgUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant AIPGUnits::data(const QModelIndex &index, int role) const
+QVariant AipgUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())
@@ -275,7 +276,7 @@ QVariant AIPGUnits::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-CAmount AIPGUnits::maxMoney()
+CAmount AipgUnits::maxMoney()
 {
     return MAX_MONEY;
 }

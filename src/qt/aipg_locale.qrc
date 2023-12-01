@@ -64,7 +64,6 @@
         <file alias="pt_PT">locale/aipg_pt_PT.qm</file>
         <file alias="ro_RO">locale/aipg_ro_RO.qm</file>
         <file alias="ro">locale/aipg_ro.qm</file>
-        <file alias="ru_RU">locale/aipg_ru_RU.qm</file>
         <file alias="ru">locale/aipg_ru.qm</file>
         <file alias="sk">locale/aipg_sk.qm</file>
         <file alias="sl_SI">locale/aipg_sl_SI.qm</file>
@@ -83,7 +82,6 @@
         <file alias="vi_VN">locale/aipg_vi_VN.qm</file>
         <file alias="zh_CN">locale/aipg_zh_CN.qm</file>
         <file alias="zh_HK">locale/aipg_zh_HK.qm</file>
-        <file alias="zh">locale/aipg_zh.qm</file>
         <file alias="zh_TW">locale/aipg_zh_TW.qm</file>
     </qresource>
 </RCC>

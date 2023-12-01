@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +14,6 @@
 #include "aipgunits.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
-#include "guiconstants.h" // for DEFAULT_IPFS_VIEWER and DEFAULT_THIRD_PARTY_BROWSERS
 
 #include "validation.h" // for DEFAULT_SCRIPTCHECK_THREADS and MAX_SCRIPTCHECK_THREADS
 #include "netbase.h"
@@ -79,7 +78,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     ui->aipgAtStartup->setToolTip(ui->aipgAtStartup->toolTip().arg(tr(PACKAGE_NAME)));
     ui->aipgAtStartup->setText(ui->aipgAtStartup->text().arg(tr(PACKAGE_NAME)));
 
-    ui->openAIPGConfButton->setToolTip(ui->openAIPGConfButton->toolTip().arg(tr(PACKAGE_NAME)));
+    ui->openAipgConfButton->setToolTip(ui->openAipgConfButton->toolTip().arg(tr(PACKAGE_NAME)));
 
     ui->lang->setToolTip(ui->lang->toolTip().arg(tr(PACKAGE_NAME)));
     ui->lang->addItem(QString("(") + tr("default") + QString(")"), QVariant(""));
@@ -111,14 +110,9 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     }
 #if QT_VERSION >= 0x040700
     ui->thirdPartyTxUrls->setPlaceholderText("https://example.com/tx/%s");
-    ui->ipfsUrl->setPlaceholderText(DEFAULT_IPFS_VIEWER);
 #endif
 
-    ui->unit->setModel(new AIPGUnits(this));
-    QStringList currencyList;
-    for(int unitNum = 0; unitNum < CurrencyUnits::count() ; unitNum++) {
-        ui->currencyUnitIndex->addItem(QString(CurrencyUnits::CurrencyOptions[unitNum].Header), unitNum);
-    }
+    ui->unit->setModel(new AipgUnits(this));
 
     /* Widget-to-option mapper */
     mapper = new QDataWidgetMapper(this);
@@ -175,7 +169,6 @@ void OptionsDialog::setModel(OptionsModel *_model)
     /* Display */
     connect(ui->lang, SIGNAL(valueChanged()), this, SLOT(showRestartWarning()));
     connect(ui->thirdPartyTxUrls, SIGNAL(textChanged(const QString &)), this, SLOT(showRestartWarning()));
-    connect(ui->ipfsUrl, SIGNAL(textChanged(const QString &)), this, SLOT(showRestartWarning()));
     connect(ui->darkModeCheckBox, SIGNAL(clicked(bool)), this, SLOT(showRestartWarning()));
 }
 
@@ -214,10 +207,7 @@ void OptionsDialog::setMapper()
     /* Display */
     mapper->addMapping(ui->lang, OptionsModel::Language);
     mapper->addMapping(ui->unit, OptionsModel::DisplayUnit);
-    mapper->addMapping(ui->currencyUnitIndex, OptionsModel::DisplayCurrencyIndex);
     mapper->addMapping(ui->thirdPartyTxUrls, OptionsModel::ThirdPartyTxUrls);
-    mapper->addMapping(ui->ipfsUrl, OptionsModel::IpfsUrl);
-    mapper->addMapping(ui->toolbarIconsOnly, OptionsModel::ToolbarIconsOnly);
 }
 
 void OptionsDialog::setOkButtonState(bool fState)
@@ -243,13 +233,7 @@ void OptionsDialog::on_resetButton_clicked()
     }
 }
 
-void OptionsDialog::on_ipfsUrlReset_clicked()
-{
-    /* reset third-party IPFS viewer URL to default setting. */
-    ui->ipfsUrl->setText(DEFAULT_IPFS_VIEWER);
-}
-
-void OptionsDialog::on_openAIPGConfButton_clicked()
+void OptionsDialog::on_openAipgConfButton_clicked()
 {
     /* explain the purpose of the config file */
     QMessageBox::information(this, tr("Configuration options"),
@@ -257,7 +241,7 @@ void OptionsDialog::on_openAIPGConfButton_clicked()
            "Additionally, any command-line options will override this configuration file."));
 
     /* show an error if there was some problem opening the file */
-    if (!GUIUtil::openAIPGConf())
+    if (!GUIUtil::openAipgConf())
         QMessageBox::critical(this, tr("Error"), tr("The configuration file could not be opened."));
 }
 
@@ -271,12 +255,6 @@ void OptionsDialog::on_okButton_clicked()
 void OptionsDialog::on_cancelButton_clicked()
 {
     reject();
-}
-
-void OptionsDialog::on_thirdPartyTxUrlsReset_clicked()
-{
-    // reset thirdPartyTxUrls to default
-    ui->thirdPartyTxUrls->setText(DEFAULT_THIRD_PARTY_BROWSERS);
 }
 
 void OptionsDialog::on_hideTrayIcon_stateChanged(int fState)

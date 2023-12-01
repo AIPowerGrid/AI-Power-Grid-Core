@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2017 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,17 +9,17 @@
 Testing messaging
 """
 
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import assert_equal, assert_raises_rpc_error, assert_contains, assert_does_not_contain, assert_contains_pair
 
-class MessagingTest(AIPGTestFramework):
+class MessagingTest(AipgTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3
         self.extra_args = [['-assetindex'], ['-assetindex'], ['-assetindex']]
 
     def activate_messaging(self):
-        self.log.info("Generating AIPG for node[0] and activating messaging...")
+        self.log.info("Generating aipg for node[0] and activating messaging...")
         n0 = self.nodes[0]
 
         n0.generate(1)

@@ -1,4 +1,6 @@
-<TS language="ta" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ta">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -45,22 +47,125 @@
     <name>AskPassphraseDialog</name>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
         <translation>IP/Netmask</translation>
+    </message>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;கண்ணோட்டம்</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;பரிவர்த்தனைகள்</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>&amp;வெளியேறு</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>விலகு</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>&amp;Qt-ஐ பற்றி</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;விருப்பங்கள்...</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;என்க்ரிப்ட் பணப்பை...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>&amp;URI-ஐ திற</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;செய்தியை சரிசெய்...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>பணப்பை</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;அனுப்பு</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;பெறு</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;காட்டு/மறை</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;கோப்பு</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;அமைப்பு</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;உதவி</translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 பின்னால்</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>தவறு</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>எச்சரிக்கை</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>தகவல்</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>தேதி: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>தொகை: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>வகை: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>முகவரி: %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>அனுப்பிய பரிவர்த்தனை</translation>
     </message>
     </context>
 <context>
@@ -103,9 +208,6 @@
     </message>
     </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     </context>
 <context>
@@ -114,12 +216,6 @@
         <source>name</source>
         <translation>பெயர்</translation>
     </message>
-    </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
     </context>
 <context>
     <name>HelpMessageDialog</name>
@@ -136,18 +232,6 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -157,9 +241,6 @@
         <source>Hide</source>
         <translation>மறை</translation>
     </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -252,6 +333,10 @@
     <message>
         <source>Immature:</source>
         <translation>முதிராத:</translation>
+    </message>
+    <message>
+        <source>Balances</source>
+        <translation>மீதி</translation>
     </message>
     <message>
         <source>Total:</source>
@@ -364,6 +449,10 @@
         <translation>&amp;பணியகம்</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;வழுநீக்கு</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>மொத்தம்</translation>
     </message>
@@ -390,6 +479,22 @@
     <message>
         <source>1 &amp;year</source>
         <translation>1 &amp;ஆண்டு</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
     </message>
     <message>
         <source>via %1</source>
@@ -420,117 +525,6 @@
         <translation>அறியப்படாத</translation>
     </message>
 </context>
-<context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;கண்ணோட்டம்</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;பரிவர்த்தனைகள்</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>&amp;வெளியேறு</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>விலகு</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>&amp;Qt-ஐ பற்றி</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;விருப்பங்கள்...</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;என்க்ரிப்ட் பணப்பை...</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>&amp;URI-ஐ திற</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;செய்தியை சரிசெய்...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>பணப்பை</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;அனுப்பு</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;பெறு</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;காட்டு/மறை</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;கோப்பு</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;உதவி</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 பின்னால்</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>தவறு</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>எச்சரிக்கை</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>தகவல்</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>தேதி: %1
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>தொகை: %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>வகை: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>முகவரி: %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>அனுப்பிய பரிவர்த்தனை</translation>
-    </message>
-    </context>
 <context>
     <name>ReceiveCoinsDialog</name>
     <message>
@@ -585,15 +579,6 @@
     <name>RecentRequestsTableModel</name>
     </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Quantity:</source>
@@ -622,6 +607,14 @@
     <message>
         <source>Hide</source>
         <translation>மறை</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>இயல்பான</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>வேகமாக</translation>
     </message>
     <message>
         <source>Balance:</source>
@@ -717,8 +710,8 @@
 <context>
     <name>aipg-core</name>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG மையம்</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

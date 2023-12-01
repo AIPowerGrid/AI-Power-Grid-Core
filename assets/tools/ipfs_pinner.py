@@ -349,8 +349,8 @@ def scan_asset_blocks():
 	        print_debug("txinfo: " + tx_info)
 	        tx_detail = decode_rawtx(tx_info)
 	        for vout in tx_detail.get('vout'):
-	            if (vout.get('scriptPubKey').get('asm')[86:98] == "OP_AIPG_ASSET"):
-	                print_debug("Found OP_AIPG_ASSET")
+	            if (vout.get('scriptPubKey').get('asm')[86:98] == "OP_aipg_ASSET"):
+	                print_debug("Found OP_aipg_ASSET")
 	                print_debug(vout.get('scriptPubKey').get('hex'))
 	                asset_script = decode_script(vout.get('scriptPubKey').get('hex'))
 	                asset_handler(asset_script)
@@ -363,7 +363,7 @@ def monitor_zmq():
 	context = zmq.Context()
 	socket = context.socket(zmq.SUB)
 
-	print("Getting AIPGcoin msgs")
+	print("Getting Aipg msgs")
 	socket.connect("tcp://localhost:28766")
 
 	#socket.setsockopt_string(zmq.SUBSCRIBE, u'hashtx')
@@ -400,8 +400,8 @@ def monitor_zmq():
 			for vout in tx_detail.get('vout'):
 			#print("vout: " + str(vout.get('value')))
 			#print(vout.get('scriptPubKey').get('asm'))
-				if (vout.get('scriptPubKey').get('asm')[86:98] == "OP_AIPG_ASSET"):
-					#print("Found OP_AIPG_ASSET")
+				if (vout.get('scriptPubKey').get('asm')[86:98] == "OP_aipg_ASSET"):
+					#print("Found OP_aipg_ASSET")
 					#print(vout.get('scriptPubKey').get('hex'))
 					asset_script = decode_script(vout.get('scriptPubKey').get('hex'))
 					asset_handler(asset_script)

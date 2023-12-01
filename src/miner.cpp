@@ -42,7 +42,7 @@
 extern std::vector<CWalletRef> vpwallets;
 //////////////////////////////////////////////////////////////////////////////
 //
-// coinMiner
+// AipgMiner
 //
 
 //
@@ -171,7 +171,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     nLastBlockTx = nBlockTx;
     nLastBlockWeight = nBlockWeight;
 
-    //AIPGCOIN START
+    //AIPG START
     // Coinbase TX is created
     CMutableTransaction coinbaseTx;
     coinbaseTx.vin.resize(1);
@@ -188,7 +188,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
 	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
 	CTxDestination destCommunityAutonomous = DecodeDestination(GetCommunityAutonomousAddress);
     if (!IsValidDestination(destCommunityAutonomous)) {
-		LogPrintf("IsValidDestination: Invalid AIPGcoin address %s \n", GetCommunityAutonomousAddress);
+		LogPrintf("IsValidDestination: Invalid Aipg address %s \n", GetCommunityAutonomousAddress);
     }
     // We need to parse the address ready to send to it
     CScript scriptPubKeyCommunityAutonomous = GetScriptForDestination(destCommunityAutonomous);
@@ -209,7 +209,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     pblocktemplate->vTxFees[0] = -nFees;
 
     LogPrintf("CreateNewBlock(): block weight: %u txs: %u fees: %ld sigops %d\n", GetBlockWeight(*pblock), nBlockTx, nFees, nBlockSigOpsCost);
-    //MEWC END
+    //aipg END
 
     // Fill in header
     pblock->hashPrevBlock  = pindexPrev->GetBlockHash();
@@ -562,11 +562,11 @@ CWallet *GetFirstWallet() {
     return(NULL);
 }
 
-void static AIPGcoinMiner(const CChainParams& chainparams)
+void static AipgMiner(const CChainParams& chainparams)
 {
-    LogPrintf("AIPGcoinMiner -- started\n");
+    LogPrintf("AipgMiner -- started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("AIPGcoin-miner");
+    RenameThread("aipg-miner");
 
     unsigned int nExtraNonce = 0;
 
@@ -578,7 +578,7 @@ void static AIPGcoinMiner(const CChainParams& chainparams)
 
 
     if (!EnsureWalletIsAvailable(pWallet, false)) {
-        LogPrintf("AIPGcoinMiner -- Wallet not available\n");
+        LogPrintf("AipgMiner -- Wallet not available\n");
     }
 #endif
 
@@ -640,13 +640,13 @@ void static AIPGcoinMiner(const CChainParams& chainparams)
 
             if (!pblocktemplate.get())
             {
-                LogPrintf("AIPGcoinMiner -- Keypool ran out, please call keypoolrefill before restarting the mining thread\n");
+                LogPrintf("AipgMiner -- Keypool ran out, please call keypoolrefill before restarting the mining thread\n");
                 return;
             }
             CBlock *pblock = &pblocktemplate->block;
             IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-            LogPrintf("AIPGcoinMiner -- Running miner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+            LogPrintf("AipgMiner -- Running miner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
                 ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
             //
@@ -667,7 +667,7 @@ void static AIPGcoinMiner(const CChainParams& chainparams)
                         pblock->mix_hash = mix_hash;
                         // Found a solution
                         SetThreadPriority(THREAD_PRIORITY_NORMAL);
-                        LogPrintf("AIPGcoinMiner:\n  proof-of-work found\n  hash: %s\n  target: %s\n", hash.GetHex(), hashTarget.GetHex());
+                        LogPrintf("AipgMiner:\n  proof-of-work found\n  hash: %s\n  target: %s\n", hash.GetHex(), hashTarget.GetHex());
                         ProcessBlockFound(pblock, chainparams);
                         SetThreadPriority(THREAD_PRIORITY_LOWEST);
                         coinbaseScript->KeepScript();
@@ -714,17 +714,17 @@ void static AIPGcoinMiner(const CChainParams& chainparams)
     }
     catch (const boost::thread_interrupted&)
     {
-        LogPrintf("AIPGcoinMiner -- terminated\n");
+        LogPrintf("AipgMiner -- terminated\n");
         throw;
     }
     catch (const std::runtime_error &e)
     {
-        LogPrintf("AIPGcoinMiner -- runtime error: %s\n", e.what());
+        LogPrintf("AipgMiner -- runtime error: %s\n", e.what());
         return;
     }
 }
 
-int GenerateAIPGcoins(bool fGenerate, int nThreads, const CChainParams& chainparams)
+int GenerateAipgs(bool fGenerate, int nThreads, const CChainParams& chainparams)
 {
 
     static boost::thread_group* minerThreads = NULL;
@@ -751,7 +751,7 @@ int GenerateAIPGcoins(bool fGenerate, int nThreads, const CChainParams& chainpar
     nHashesPerSec = 0;
 
     for (int i = 0; i < nThreads; i++){
-        minerThreads->create_thread(boost::bind(&AIPGcoinMiner, boost::cref(chainparams)));
+        minerThreads->create_thread(boost::bind(&AipgMiner, boost::cref(chainparams)));
     }
 
     return(numCores);

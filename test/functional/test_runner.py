@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2021 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,7 +14,7 @@ forward all unrecognized arguments onto the individual test scripts.
 Functional tests are disabled on Windows by default. Use --force to run them anyway.
 
 For a description of arguments recognized by test scripts, see
-`test/functional/test_framework/test_framework.py:AIPGTestFramework.main`.
+`test/functional/test_framework/test_framework.py:AipgTestFramework.main`.
 
 
 """
@@ -90,8 +91,7 @@ BASE_SCRIPTS= [
     'feature_assets_mempool.py',
     'feature_restricted_assets.py',
     'feature_raw_restricted_assets.py',
-    'wallet_bip44.py',    
-    'wallet_bip44_multilanguage.py',
+    'wallet_bip44.py',
     'mining_prioritisetransaction.py',
     'feature_maxreorgdepth.py 4 --height=60 --tip_age=0 --should_reorg=0',      # Don't Reorg
     'feature_maxreorgdepth.py 3 --height=60 --tip_age=0 --should_reorg=1',      # Reorg (low peer count)
@@ -259,8 +259,8 @@ def main():
 
     # Don't run tests on Windows by default
     if config["environment"]["EXEEXT"] == ".exe" and not args.force:
-        # https://github.com/bitcoin/bitcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
-        # https://github.com/bitcoin/bitcoin/pull/5677#issuecomment-136646964
+        # https://github.com/JustAResearcher/Aipg/commit/d52802551752140cf41f0d9a225a43e84404d3e9
+        # https://github.com/Bitcoin/bitcoin/pull/5677#issuecomment-136646964
         print("Tests currently disabled on Windows by default. Use --force option to enable")
         sys.exit(0)
 

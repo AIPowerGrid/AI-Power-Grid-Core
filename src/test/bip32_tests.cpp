@@ -1,5 +1,6 @@
 // Copyright (c) 2013-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -106,20 +107,20 @@ void RunTest(const TestVector &test)
         pubkey.Encode(data);
 
         // Test private key
-        CAIPGExtKey b58key;
+        CAipgExtKey b58key;
         b58key.SetKey(key);
         BOOST_CHECK(b58key.ToString() == derive.prv);
 
-        CAIPGExtKey b58keyDecodeCheck(derive.prv);
+        CAipgExtKey b58keyDecodeCheck(derive.prv);
         CExtKey checkKey = b58keyDecodeCheck.GetKey();
         assert(checkKey == key); //ensure a base58 decoded key also matches
 
         // Test public key
-        CAIPGExtPubKey b58pubkey;
+        CAipgExtPubKey b58pubkey;
         b58pubkey.SetKey(pubkey);
         BOOST_CHECK(b58pubkey.ToString() == derive.pub);
 
-        CAIPGExtPubKey b58PubkeyDecodeCheck(derive.pub);
+        CAipgExtPubKey b58PubkeyDecodeCheck(derive.pub);
         CExtPubKey checkPubKey = b58PubkeyDecodeCheck.GetKey();
         assert(checkPubKey == pubkey); //ensure a base58 decoded pubkey also matches
 

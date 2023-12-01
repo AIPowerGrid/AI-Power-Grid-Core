@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 # Copyright (c) 2017 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 """Test the listsincelast RPC."""
 
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import assert_equal
 
-class ListSinceBlockTest (AIPGTestFramework):
+class ListSinceBlockTest (AipgTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
         self.setup_clean_chain = True
@@ -93,8 +94,8 @@ class ListSinceBlockTest (AIPGTestFramework):
 
         Problematic case:
 
-        1. User 1 receives AIPG in tx1 from utxo1 in block aa1.
-        2. User 2 receives AIPG in tx2 from utxo1 (same) in block bb1
+        1. User 1 receives aipg in tx1 from utxo1 in block aa1.
+        2. User 2 receives aipg in tx2 from utxo1 (same) in block bb1
         3. User 1 sees 2 confirmations at block aa3.
         4. Reorg into bb chain.
         5. User 1 asks `listsinceblock aa3` and does not see that tx1 is now

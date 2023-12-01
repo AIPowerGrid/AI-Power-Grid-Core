@@ -1,20 +1,18 @@
 // Copyright (c) 2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "modaloverlay.h"
 #include "ui_modaloverlay.h"
 
-#include <clientversion.h>
 #include "guiutil.h"
 
 #include "chainparams.h"
 
 #include <QResizeEvent>
 #include <QPropertyAnimation>
-#include <QString>
 
 ModalOverlay::ModalOverlay(QWidget *parent) :
 QWidget(parent),
@@ -33,7 +31,6 @@ userClosed(false)
 
     blockProcessTime.clear();
     setVisible(false);
-    ui->versionLabel->setText(QString::fromStdString(FormatFullVersion()));
 }
 
 ModalOverlay::~ModalOverlay()

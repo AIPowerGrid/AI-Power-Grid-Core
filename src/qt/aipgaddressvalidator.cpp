@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,12 +17,12 @@
   - All lower-case letters except for 'l'
 */
 
-AIPGAddressEntryValidator::AIPGAddressEntryValidator(QObject *parent) :
+AipgAddressEntryValidator::AipgAddressEntryValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State AIPGAddressEntryValidator::validate(QString &input, int &pos) const
+QValidator::State AipgAddressEntryValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
 
@@ -81,15 +82,15 @@ QValidator::State AIPGAddressEntryValidator::validate(QString &input, int &pos) 
     return state;
 }
 
-AIPGAddressCheckValidator::AIPGAddressCheckValidator(QObject *parent) :
+AipgAddressCheckValidator::AipgAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State AIPGAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State AipgAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
-    // Validate the passed AIPG address
+    // Validate the passed aipg address
     if (IsValidDestinationString(input.toStdString())) {
         return QValidator::Acceptable;
     }

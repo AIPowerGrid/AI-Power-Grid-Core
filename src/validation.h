@@ -1,7 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -602,7 +601,6 @@ bool AreCoinbaseCheckAssetsDeployed();
 
 // Only used by test framework
 void SetEnforcedValues(bool value);
-void SetEnforcedCoinbase(bool value);
 
 bool IsRip5Active();
 

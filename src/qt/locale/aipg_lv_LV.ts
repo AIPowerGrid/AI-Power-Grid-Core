@@ -1,4 +1,6 @@
-<TS language="lv_LV" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="lv_LV">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -61,19 +63,218 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>Parakstīt &amp;ziņojumu...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Sinhronizācija ar tīklu...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Pārskats</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Node</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Rādīt vispārēju maciņa pārskatu</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transakcijas</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Skatīt transakciju vēsturi</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>&amp;Iziet</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Aizvērt programmu</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>Par &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Parādīt informāciju par Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Iespējas...</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>Šifrēt &amp;maciņu...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Maciņa Rezerves Kopija...</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>Mainīt &amp;Paroli...</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;Sūtīšanas adreses...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Saņemšanas &amp;adreses...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Atvērt &amp;URI...</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Bloku reindeksēšana no diska...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Nosūtīt bitkoinus uz Aipg adresi</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Izveidot maciņa rezerves kopiju citur</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Mainīt maciņa šifrēšanas paroli</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Atkļūdošanas logs</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Atvērt atkļūdošanas un diagnostikas konsoli</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Pārbaudīt ziņojumu...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Maciņš</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Sūtīt</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Saņemt</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Rādīt / Paslēpt</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Parādīt vai paslēpt galveno Logu</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Šifrēt privātās atslēgas kuras pieder tavam maciņam</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Parakstīt ziņojumus ar savām Aipg adresēm lai pierādītu ka tās pieder tev</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Aipg adresēm</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Fails</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Uzstādījumi</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Palīdzība</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Ciļņu rīkjosla</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un aipg: URIs)</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>Atvērt aipg URI vai maksājuma pieprasījumu</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>&amp;Komandrindas iespējas</translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 aizmugurē</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Transakcijas pēc šī vel nebūs redzamas</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Kļūda</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Brīdinājums</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Informācija</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Sinhronizēts</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Sinhronizējos...</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Transakcija nosūtīta</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Ienākoša transakcija</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Maciņš ir &lt;b&gt;šifrēts&lt;/b&gt; un pašlaik &lt;b&gt;atslēgts&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Maciņš ir &lt;b&gt;šifrēts&lt;/b&gt; un pašlaik &lt;b&gt;slēgts&lt;/b&gt;</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -131,9 +332,6 @@
     </message>
     </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -167,12 +365,6 @@
         <translation>Šeit nevar izveidot datu mapi.</translation>
     </message>
 </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
@@ -216,18 +408,6 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -237,9 +417,6 @@
         <source>Last block time</source>
         <translation>Pēdējā bloka laiks</translation>
     </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -283,12 +460,20 @@
         <translation>Skriptu &amp;pārbaudes pavedienu skaits</translation>
     </message>
     <message>
+        <source>Allow incoming connections</source>
+        <translation>Atļaut ienākošos savienojumus</translation>
+    </message>
+    <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>Starpniekservera IP adrese (piem. IPv4: 127.0.0.1 / IPv6: ::1)</translation>
     </message>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
         <translation>Minimizēt nevis aizvērt aplikāciju, kad logs tiek aizvērts. Kad šī iespēja ir ieslēgta, aplikācija tiks aizvērta, izvēloties Aizvērt izvēlnē.</translation>
+    </message>
+    <message>
+        <source>Third party transaction URLs</source>
+        <translation>Trešo personu transakciju URLs</translation>
     </message>
     <message>
         <source>Active command-line options that override above options:</source>
@@ -323,8 +508,8 @@
         <translation>&amp;Tērēt neapstiprinātu atlikumu</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Uz rūtera automātiski atvērt AIPG klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Uz rūtera automātiski atvērt Aipg klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -376,7 +561,7 @@
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
-        <translation>Vai rādīt AIPG kontroles funkcijas vai nē.</translation>
+        <translation>Vai rādīt Aipg kontroles funkcijas vai nē.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -410,8 +595,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar AIPG tīklu, taču šis process vēl nav beidzies.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar Aipg tīklu, taču šis process vēl nav beidzies.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -540,6 +725,10 @@
         <translation>&amp;Tīkla Satiksme</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;Notīrīt</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>Kopsummas</translation>
     </message>
@@ -560,207 +749,28 @@
         <translation>Notīrīt konsoli</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Izmantojiet bultiņas uz augšu un leju, lai pārvietotos pa vēsturi, un &lt;b&gt;Ctrl-L&lt;/b&gt; ekrāna notīrīšanai.</translation>
+    </message>
+    <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Ierakstiet &lt;b&gt;help&lt;/b&gt; lai iegūtu pieejamo komandu sarakstu.</translation>
     </message>
-    </context>
-<context>
-    <name>AIPGGUI</name>
     <message>
-        <source>Sign &amp;message...</source>
-        <translation>Parakstīt &amp;ziņojumu...</translation>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
     </message>
     <message>
-        <source>Synchronizing with network...</source>
-        <translation>Sinhronizācija ar tīklu...</translation>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
     </message>
     <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Pārskats</translation>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Rādīt vispārēju maciņa pārskatu</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transakcijas</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Skatīt transakciju vēsturi</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>&amp;Iziet</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Aizvērt programmu</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>Par &amp;Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Parādīt informāciju par Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Iespējas...</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>Šifrēt &amp;maciņu...</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Maciņa Rezerves Kopija...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>Mainīt &amp;Paroli...</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Sūtīšanas adreses...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Saņemšanas &amp;adreses...</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>Atvērt &amp;URI...</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Bloku reindeksēšana no diska...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Nosūtīt bitkoinus uz AIPG adresi</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Izveidot maciņa rezerves kopiju citur</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Mainīt maciņa šifrēšanas paroli</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Atvērt atkļūdošanas un diagnostikas konsoli</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;Pārbaudīt ziņojumu...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Maciņš</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Sūtīt</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Saņemt</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Rādīt / Paslēpt</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Parādīt vai paslēpt galveno Logu</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Šifrēt privātās atslēgas kuras pieder tavam maciņam</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Parakstīt ziņojumus ar savām AIPG adresēm lai pierādītu ka tās pieder tev</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām AIPG adresēm</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Fails</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Palīdzība</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un aipg: URIs)</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>Atvērt aipg URI vai maksājuma pieprasījumu</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>&amp;Komandrindas iespējas</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 aizmugurē</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Transakcijas pēc šī vel nebūs redzamas</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Kļūda</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Brīdinājums</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informācija</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Sinhronizēts</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Sinhronizējos...</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Transakcija nosūtīta</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Ienākoša transakcija</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Maciņš ir &lt;b&gt;šifrēts&lt;/b&gt; un pašlaik &lt;b&gt;atslēgts&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Maciņš ir &lt;b&gt;šifrēts&lt;/b&gt; un pašlaik &lt;b&gt;slēgts&lt;/b&gt;</translation>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
     </message>
     </context>
 <context>
@@ -837,15 +847,6 @@
     <name>RecentRequestsTableModel</name>
     </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
@@ -853,7 +854,7 @@
     </message>
     <message>
         <source>Coin Control Features</source>
-        <translation>AIPG Kontroles Funkcijas</translation>
+        <translation>Aipg Kontroles Funkcijas</translation>
     </message>
     <message>
         <source>Inputs...</source>
@@ -935,6 +936,10 @@
         <translation>Apjo&amp;ms</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>&amp;Saņēmējs:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Nosaukums:</translation>
     </message>
@@ -965,6 +970,10 @@
     <message>
         <source>Message:</source>
         <translation>Ziņojums:</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Maksāt:</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -1020,8 +1029,8 @@
         <translation>Kopēt parakstu uz sistēmas starpliktuvi</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
-        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs AIPG adreses īpašnieks.</translation>
+        <source>Sign the message to prove you own this Aipg address</source>
+        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Aipg adreses īpašnieks.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1117,8 +1126,8 @@
         <translation>Darbināt fonā kā servisu un pieņemt komandas</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>
@@ -1151,6 +1160,10 @@
     <message>
         <source>Verifying blocks...</source>
         <translation>Pārbauda blokus...</translation>
+    </message>
+    <message>
+        <source>Verifying wallet...</source>
+        <translation>Pārbauda maciņu...</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -1201,6 +1214,14 @@
         <translation>Atļaut DNS uzmeklēšanu priekš -addnode, -seednode un -connect</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Ielādē adreses...</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Nederīga -proxy adrese: '%s'</translation>
+    </message>
+    <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
         <translation>-onlynet komandā norādīts nepazīstams tīkls: '%s'</translation>
     </message>
@@ -1213,6 +1234,10 @@
         <translation>Ielādē bloku indeksu...</translation>
     </message>
     <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Pievienot mezglu, kam pievienoties un turēt savienojumu atvērtu</translation>
+    </message>
+    <message>
         <source>Loading wallet...</source>
         <translation>Ielādē maciņu...</translation>
     </message>
@@ -1221,8 +1246,16 @@
         <translation>Nevar maciņa formātu padarīt vecāku</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>Nevar ierakstīt adresi pēc noklusēšanas</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>Skanēju no jauna...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Ielāde pabeigta</translation>
     </message>
     <message>
         <source>Error</source>

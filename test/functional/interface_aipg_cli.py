@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # Copyright (c) 2017 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test aipg-cli"""
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import (assert_equal, assert_raises_process_error, get_auth_cookie)
 
-class TestAIPGCli(AIPGTestFramework):
+class TestAipgCli(AipgTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True
@@ -56,4 +57,4 @@ class TestAIPGCli(AIPGTestFramework):
         # unlocked_until is not tested because the wallet is not encrypted
 
 if __name__ == '__main__':
-    TestAIPGCli().main()
+    TestAipgCli().main()

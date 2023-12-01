@@ -18,8 +18,8 @@ AIPGD_BIN=${AIPGD_BIN:-/usr/bin/aipgd}
 AIPGD_NICE=${AIPGD_NICE:-${NICELEVEL:-0}}
 AIPGD_OPTS="${AIPGD_OPTS:-${AIPG_OPTS}}"
 
-name="AIPG Core Daemon"
-description="AIPG cryptocurrency P2P network daemon"
+name="Aipg Core Daemon"
+description="Aipg cryptocurrency P2P network daemon"
 
 command="/usr/bin/aipgd"
 command_args="-pid=\"${AIPGD_PIDFILE}\" \
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"AIPG Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Aipg Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

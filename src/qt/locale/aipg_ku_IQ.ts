@@ -1,4 +1,6 @@
-<TS language="ku_IQ" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ku_IQ">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -37,19 +39,38 @@
     <name>AskPassphraseDialog</name>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;ناردن</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;پەرگە</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;سازکارییەکان</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;یارمەتی</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>هەڵە</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>ئاگاداری</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>زانیاری</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -79,9 +100,6 @@
     </message>
     </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     </context>
 <context>
@@ -90,12 +108,6 @@
         <source>name</source>
         <translation>ناو</translation>
     </message>
-    </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
     </context>
 <context>
     <name>HelpMessageDialog</name>
@@ -116,22 +128,7 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -204,6 +201,10 @@
         <translation>&amp;کردنەوە</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;پاککردنەوە</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>گشتییەکان</translation>
     </message>
@@ -242,33 +243,6 @@
     <message>
         <source>No</source>
         <translation>نەخێر</translation>
-    </message>
-    </context>
-<context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;ناردن</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;پەرگە</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;یارمەتی</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>هەڵە</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>ئاگاداری</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>زانیاری</translation>
     </message>
     </context>
 <context>
@@ -313,15 +287,6 @@
     </message>
     </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Amount:</source>
@@ -330,6 +295,10 @@
     <message>
         <source>Fee:</source>
         <translation>تێچوون:</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>خێرا</translation>
     </message>
     </context>
 <context>

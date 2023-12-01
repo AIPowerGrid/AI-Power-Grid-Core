@@ -1,4 +1,6 @@
-<TS language="kk_KZ" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="kk_KZ">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -45,19 +47,74 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Транзакциялар</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>Шығу</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>Параметрлері</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>Әмиянды жасыру</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>Құпия сөзді өзгерту</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Биткоин</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Әмиян</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>Жіберу</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>Алу</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>Файл</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Көмек</translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 қалмады</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>қате</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Ескерту</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Информация</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Жаңартылған</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -95,9 +152,6 @@
     </message>
     </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>&amp;Label</source>
@@ -112,12 +166,6 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
-<context>
     <name>HelpMessageDialog</name>
     </context>
 <context>
@@ -128,22 +176,7 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -189,73 +222,6 @@
     </message>
     </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Транзакциялар</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>Шығу</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>Параметрлері</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>Әмиянды жасыру</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>Құпия сөзді өзгерту</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>Биткоин</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Әмиян</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>Жіберу</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>Алу</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>Файл</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>Көмек</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 қалмады</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>қате</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Ескерту</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Информация</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Жаңартылған</translation>
-    </message>
-    </context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -267,15 +233,6 @@
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
-    </context>
-<context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
     </context>
 <context>
     <name>SendCoinsDialog</name>

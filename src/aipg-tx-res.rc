@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "AIPG"
-            VALUE "FileDescription",    "aipg-tx (CLI AIPG transaction editor utility)"
+            VALUE "CompanyName",        "Aipg"
+            VALUE "FileDescription",    "aipg-tx (CLI Aipg transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "aipg-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR

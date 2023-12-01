@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -31,7 +31,6 @@
 #include <wallet/wallet.h>
 #endif
 
-#include <QDateTime>
 #include <QDir>
 #include <QKeyEvent>
 #include <QMenu>
@@ -773,7 +772,7 @@ void RPCConsole::buildParameterlist(QString arg)
     // Append repair parameter to command line.
     args.append(arg);
 
-    // Send command-line arguments to AIPGGUI::handleRestart()
+    // Send command-line arguments to AipgGUI::handleRestart()
     Q_EMIT handleRestart(args);
 }
 

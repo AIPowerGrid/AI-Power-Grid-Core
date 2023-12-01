@@ -1,6 +1,5 @@
 // Copyright (c) 2015-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -111,7 +110,7 @@ public:
     bool Enqueue(WorkItem* item)
     {
         std::unique_lock<std::mutex> lock(cs);
-        if (!running || queue.size() >= maxDepth) {
+        if (queue.size() >= maxDepth) {
             return false;
         }
         queue.emplace_back(std::unique_ptr<WorkItem>(item));
@@ -128,7 +127,7 @@ public:
                 std::unique_lock<std::mutex> lock(cs);
                 while (running && queue.empty())
                     cond.wait(lock);
-                if (!running && queue.empty())
+                if (!running)
                     break;
                 i = std::move(queue.front());
                 queue.pop_front();
@@ -479,6 +478,8 @@ void StopHTTPServer()
     if (workQueue) {
         LogPrint(BCLog::HTTP, "Waiting for HTTP worker threads to exit\n");
         workQueue->WaitExit();
+        delete workQueue;
+        workQueue = nullptr;
     }
     if (eventBase) {
         LogPrint(BCLog::HTTP, "Waiting for HTTP event thread to exit\n");
@@ -489,7 +490,7 @@ void StopHTTPServer()
         // at least libevent 2.0.21 and always introduced a delay. In libevent
         // master that appears to be solved, so in the future that solution
         // could be used again (if desirable).
-        // (see discussion in https://github.com/bitcoin/bitcoin/pull/6990)
+        // (see discussion in https://github.com/Bitcoin/bitcoin/pull/6990)
         if (threadResult.valid() && threadResult.wait_for(std::chrono::milliseconds(2000)) == std::future_status::timeout) {
             LogPrintf("HTTP event loop did not exit within allotted time, sending loopbreak\n");
             event_base_loopbreak(eventBase);
@@ -503,10 +504,6 @@ void StopHTTPServer()
     if (eventBase) {
         event_base_free(eventBase);
         eventBase = nullptr;
-    }
-    if (workQueue) {
-        delete workQueue;
-        workQueue = nullptr;
     }
     LogPrint(BCLog::HTTP, "Stopped HTTP server\n");
 }

@@ -39,12 +39,12 @@
     <item row="2" column="1">
      <layout class="QHBoxLayout" name="horizontalLayoutAmount" stretch="0,1">
       <item>
-       <widget class="AIPGAmountField" name="payAmount"/>
+       <widget class="AipgAmountField" name="payAmount"/>
       </item>
       <item>
        <widget class="QCheckBox" name="checkboxSubtractFeeFromAmount">
         <property name="toolTip">
-         <string>The fee will be deducted from the amount being sent. The recipient will receive less aipgs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
+         <string>The fee will be deducted from the amount being sent. The recipient will receive less aipg than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
         </property>
         <property name="text">
          <string>S&amp;ubtract fee from amount</string>
@@ -56,7 +56,7 @@
     <item row="3" column="1">
      <widget class="QLabel" name="messageTextLabel">
       <property name="toolTip">
-       <string>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AIPG network.</string>
+       <string>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the aipg network.</string>
       </property>
       <property name="textFormat">
        <enum>Qt::PlainText</enum>
@@ -84,7 +84,7 @@
       <item>
        <widget class="QValidatedLineEdit" name="payTo">
         <property name="toolTip">
-         <string>The AIPG address to send the payment to</string>
+         <string>The aipg address to send the payment to</string>
         </property>
        </widget>
       </item>
@@ -134,7 +134,7 @@
         </property>
        </widget>
       </item>
-      <item>
+      <item> 
        <widget class="QToolButton" name="deleteButton">
         <property name="toolTip">
          <string>Remove this entry</string>
@@ -189,7 +189,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="payToLabel">
       <property name="text">
-       <string>Send &amp;To:</string>
+       <string>Pay &amp;To:</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -633,7 +633,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="payToLabel_is">
       <property name="text">
-       <string>Send to:</string>
+       <string>Pay To:</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -695,7 +695,7 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="AIPGAmountField" name="payAmount_is">
+     <widget class="AipgAmountField" name="payAmount_is">
       <property name="acceptDrops">
        <bool>false</bool>
       </property>
@@ -1162,7 +1162,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="payToLabel_s">
       <property name="text">
-       <string>Send to:</string>
+       <string>Pay To:</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1228,7 +1228,7 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="AIPGAmountField" name="payAmount_s">
+     <widget class="AipgAmountField" name="payAmount_s">
       <property name="acceptDrops">
        <bool>false</bool>
       </property>
@@ -1244,7 +1244,7 @@
    <header>qvalidatedlineedit.h</header>
   </customwidget>
   <customwidget>
-   <class>AIPGAmountField</class>
+   <class>AipgAmountField</class>
    <extends>QLineEdit</extends>
    <header>aipgamountfield.h</header>
    <container>1</container>

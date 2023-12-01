@@ -23,7 +23,7 @@ don't have test cases for.
 - Avoid wildcard imports where possible
 - Use a module-level docstring to describe what the test is testing, and how it
   is testing it.
-- When subclassing the AIPGTestFramwork, place overrides for the
+- When subclassing the AipgTestFramwork, place overrides for the
   `set_test_params()`, `add_options()` and `setup_xxxx()` methods at the top of
   the subclass, then locally-defined helper methods, then the `run_test()` method.
 
@@ -39,7 +39,7 @@ don't have test cases for.
 - Set the `self.setup_clean_chain` variable in `set_test_params()` to control whether
   or not to use the cached data directories. The cached data directories
   contain a 200-block pre-mined blockchain and wallets for four nodes. Each node
-  has 25 mature blocks (25x5000=125000 AIPG) in its wallet.
+  has 25 mature blocks (25x5000=125000 aipg) in its wallet.
 - When calling RPCs with lots of arguments, consider using named keyword
   arguments instead of positional arguments to make the intent of the call
   clear to readers.
@@ -78,7 +78,7 @@ Examples tests are `p2p-accept-block.py`, `p2p-compactblocks.py`.
 ### test-framework modules
 
 #### [test_framework/authproxy.py](test_framework/authproxy.py)
-Taken from the [python-aipgrpc repository](https://github.com/jgarzik/python-aipgrpc).
+Taken from the [python-AipgRPC repository](https://github.com/jgarzik/python-AipgRPC).
 
 #### [test_framework/test_framework.py](test_framework/test_framework.py)
 Base class for functional tests.

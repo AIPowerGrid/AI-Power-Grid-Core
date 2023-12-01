@@ -1,7 +1,7 @@
 Description
 ------------
 
-This directory contains data-driven tests for various aspects of AIPG.
+This directory contains data-driven tests for various aspects of Aipg.
 
 License
 --------

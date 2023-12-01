@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2020 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -37,6 +38,8 @@ QString TransactionDesc::FormatTxStatus(const CWalletTx& wtx)
         int nDepth = wtx.GetDepthInMainChain();
         if (nDepth < 0)
             return tr("conflicted with a transaction with %1 confirmations").arg(-nDepth);
+        else if (GetAdjustedTime() - wtx.nTimeReceived > 2 * 60 && wtx.GetRequestCount() == 0)
+            return tr("%1/offline").arg(nDepth);
         else if (nDepth == 0)
             return tr("0/unconfirmed, %1").arg((wtx.InMempool() ? tr("in memory pool") : tr("not in memory pool"))) + (wtx.isAbandoned() ? ", "+tr("abandoned") : "");
         else if (nDepth < 6)
@@ -50,7 +53,7 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
 {
     QString strHTML;
 
-    if (rec->assetName != "AIPG") {
+    if (rec->assetName != "aipg") {
         return toAssetHTML(wallet, wtx, rec, unit);
     }
 
@@ -64,6 +67,14 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
     CAmount nNet = nCredit - nDebit;
 
     strHTML += "<b>" + tr("Status") + ":</b> " + FormatTxStatus(wtx);
+    int nRequests = wtx.GetRequestCount();
+    if (nRequests != -1)
+    {
+        if (nRequests == 0)
+            strHTML += tr(", has not been successfully broadcast yet");
+        else if (nRequests > 0)
+            strHTML += tr(", broadcast through %n node(s)", "", nRequests);
+    }
     strHTML += "<br>";
 
     strHTML += "<b>" + tr("Date") + ":</b> " + (nTime ? GUIUtil::dateTimeStr(nTime) : "") + "<br>";
@@ -131,7 +142,7 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
             nUnmatured += wallet->GetCredit(txout, ISMINE_ALL);
         strHTML += "<b>" + tr("Credit") + ":</b> ";
         if (wtx.IsInMainChain())
-            strHTML += AIPGUnits::formatHtmlWithUnit(unit, nUnmatured)+ " (" + tr("matures in %n more block(s)", "", wtx.GetBlocksToMaturity()) + ")";
+            strHTML += AipgUnits::formatHtmlWithUnit(unit, nUnmatured)+ " (" + tr("matures in %n more block(s)", "", wtx.GetBlocksToMaturity()) + ")";
         else
             strHTML += "(" + tr("not accepted") + ")";
         strHTML += "<br>";
@@ -141,7 +152,7 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
         //
         // Credit
         //
-        strHTML += "<b>" + tr("Credit") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, nNet) + "<br>";
+        strHTML += "<b>" + tr("Credit") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, nNet) + "<br>";
     }
     else
     {
@@ -192,9 +203,9 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
                     }
                 }
 
-                strHTML += "<b>" + tr("Debit") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, -txout.nValue) + "<br>";
+                strHTML += "<b>" + tr("Debit") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, -txout.nValue) + "<br>";
                 if(toSelf)
-                    strHTML += "<b>" + tr("Credit") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, txout.nValue) + "<br>";
+                    strHTML += "<b>" + tr("Credit") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, txout.nValue) + "<br>";
             }
 
             if (fAllToMe)
@@ -202,13 +213,13 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
                 // Payment to self
                 CAmount nChange = wtx.GetChange();
                 CAmount nValue = nCredit - nChange;
-                strHTML += "<b>" + tr("Total debit") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, -nValue) + "<br>";
-                strHTML += "<b>" + tr("Total credit") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, nValue) + "<br>";
+                strHTML += "<b>" + tr("Total debit") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, -nValue) + "<br>";
+                strHTML += "<b>" + tr("Total credit") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, nValue) + "<br>";
             }
 
             CAmount nTxFee = nDebit - wtx.tx->GetValueOut(AreEnforcedValuesDeployed());
             if (nTxFee > 0)
-                strHTML += "<b>" + tr("Transaction fee") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, -nTxFee) + "<br>";
+                strHTML += "<b>" + tr("Transaction fee") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, -nTxFee) + "<br>";
         }
         else
         {
@@ -217,14 +228,14 @@ QString TransactionDesc::toHTML(CWallet *wallet, CWalletTx &wtx, TransactionReco
             //
             for (const CTxIn& txin : wtx.tx->vin)
                 if (wallet->IsMine(txin))
-                    strHTML += "<b>" + tr("Debit") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, -wallet->GetDebit(txin, ISMINE_ALL)) + "<br>";
+                    strHTML += "<b>" + tr("Debit") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, -wallet->GetDebit(txin, ISMINE_ALL)) + "<br>";
             for (const CTxOut& txout : wtx.tx->vout)
                 if (wallet->IsMine(txout))
-                    strHTML += "<b>" + tr("Credit") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, wallet->GetCredit(txout, ISMINE_ALL)) + "<br>";
+                    strHTML += "<b>" + tr("Credit") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, wallet->GetCredit(txout, ISMINE_ALL)) + "<br>";
         }
     }
 
-    strHTML += "<b>" + tr("Net amount") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, nNet, true) + "<br>";
+    strHTML += "<b>" + tr("Net amount") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, nNet, true) + "<br>";
 
     //
     // Message
@@ -302,6 +313,14 @@ QString TransactionDesc::toAssetHTML(CWallet *wallet, CWalletTx &wtx, Transactio
 
     // Status
     strHTML += "<b>" + tr("Status") + ":</b> " + FormatTxStatus(wtx);
+    int nRequests = wtx.GetRequestCount();
+    if (nRequests != -1)
+    {
+        if (nRequests == 0)
+            strHTML += tr(", has not been successfully broadcast yet");
+        else if (nRequests > 0)
+            strHTML += tr(", broadcast through %n node(s)", "", nRequests);
+    }
     strHTML += "<br>";
 
     strHTML += "<b>" + tr("Date") + ":</b> " + (nTime ? GUIUtil::dateTimeStr(nTime) : "") + "<br>";
@@ -360,12 +379,12 @@ QString TransactionDesc::toAssetHTML(CWallet *wallet, CWalletTx &wtx, Transactio
         //
         // Credit
         //
-        strHTML += "<b>" + tr("Credit") + ":</b> " + AIPGUnits::formatWithCustomName(QString::fromStdString(rec->assetName), nAssetsRec, rec->units) + "<br>";
+        strHTML += "<b>" + tr("Credit") + ":</b> " + AipgUnits::formatWithCustomName(QString::fromStdString(rec->assetName), nAssetsRec, rec->units) + "<br>";
     } else {
-        strHTML += "<b>" + tr("Debit") + ":</b> " + AIPGUnits::formatWithCustomName(QString::fromStdString(rec->assetName), nAssetsRec, rec->units, true) + "<br>";
+        strHTML += "<b>" + tr("Debit") + ":</b> " + AipgUnits::formatWithCustomName(QString::fromStdString(rec->assetName), nAssetsRec, rec->units, true) + "<br>";
     }
 
-    strHTML += "<b>" + tr("Net AIPG amount") + ":</b> " + AIPGUnits::formatHtmlWithUnit(unit, nNet, true) + "<br>";
+    strHTML += "<b>" + tr("Net aipg amount") + ":</b> " + AipgUnits::formatHtmlWithUnit(unit, nNet, true) + "<br>";
 
     //
     // Message
@@ -426,10 +445,10 @@ void TransactionDesc::CreateDebugString(QString& strHTML, CWallet *wallet, CWall
             CAmount debit = wallet->GetDebit(txin, ISMINE_ALL, assetData);
             if (assetData.nAmount > 0) {
                 strHTML += "<b>" + tr("Debit") + ":</b> " +
-                           AIPGUnits::formatWithCustomName(QString::fromStdString(assetData.assetName), -assetData.nAmount) + "<br>";
+                           AipgUnits::formatWithCustomName(QString::fromStdString(assetData.assetName), -assetData.nAmount) + "<br>";
             }
             strHTML += "<b>" + tr("Debit") + ":</b> " +
-                       AIPGUnits::formatHtmlWithUnit(unit, -debit) + "<br>";
+                       AipgUnits::formatHtmlWithUnit(unit, -debit) + "<br>";
         }
 
     for (const CTxOut& txout : wtx.tx->vout)
@@ -438,10 +457,10 @@ void TransactionDesc::CreateDebugString(QString& strHTML, CWallet *wallet, CWall
                 CAssetOutputEntry assetData;
                 GetAssetData(txout.scriptPubKey, assetData);
                 strHTML += "<b>" + tr("Credit") + ":</b> " +
-                           AIPGUnits::formatWithCustomName(QString::fromStdString(assetData.assetName), assetData.nAmount) + "<br>";
+                           AipgUnits::formatWithCustomName(QString::fromStdString(assetData.assetName), assetData.nAmount) + "<br>";
             } else
                 strHTML += "<b>" + tr("Credit") + ":</b> " +
-                           AIPGUnits::formatHtmlWithUnit(unit, wallet->GetCredit(txout, ISMINE_ALL)) + "<br>";
+                           AipgUnits::formatHtmlWithUnit(unit, wallet->GetCredit(txout, ISMINE_ALL)) + "<br>";
         }
 
     strHTML += "<br><b>" + tr("Transaction") + ":</b><br>";
@@ -467,7 +486,7 @@ void TransactionDesc::CreateDebugString(QString& strHTML, CWallet *wallet, CWall
                         strHTML += GUIUtil::HtmlEscape(wallet->mapAddressBook[address].name) + " ";
                     strHTML += QString::fromStdString(EncodeDestination(address));
                 }
-                strHTML = strHTML + " " + tr("Amount") + "=" + AIPGUnits::formatHtmlWithUnit(unit, vout.nValue);
+                strHTML = strHTML + " " + tr("Amount") + "=" + AipgUnits::formatHtmlWithUnit(unit, vout.nValue);
                 strHTML = strHTML + " IsMine=" + (wallet->IsMine(vout) & ISMINE_SPENDABLE ? tr("true") : tr("false")) + "</li>";
                 strHTML = strHTML + " IsWatchOnly=" + (wallet->IsMine(vout) & ISMINE_WATCH_ONLY ? tr("true") : tr("false")) + "</li>";
             }

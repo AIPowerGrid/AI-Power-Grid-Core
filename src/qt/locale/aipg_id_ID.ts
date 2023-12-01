@@ -1,4 +1,6 @@
-<TS language="id_ID" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="id_ID">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -62,12 +64,12 @@
         <translation>Alamat-alamat penerima</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ini adalah alamat- alamat AIPG Anda untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ini adalah alamat- alamat Aipg Anda untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ini adalah alamat- alamat AIPG Anda untuk menerima pembayaran. Dianjurkan untuk menggunakan alamat penerima yang baru setiap melakukan transaksi.</translation>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ini adalah alamat- alamat Aipg Anda untuk menerima pembayaran. Dianjurkan untuk menggunakan alamat penerima yang baru setiap melakukan transaksi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -164,7 +166,7 @@
         <translation>Konfirmasi pengenkripsian dompet</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPGS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPG&lt;/b&gt;!</source>
         <translation>Peringatan: Jika Anda enkripsi dompet Anda dan lupa kata sandi anda, Anda akan &lt;b&gt;KEHILANGAN SEMUA AIPG ANDA&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -176,7 +178,7 @@
         <translation>Dompet terenkripsi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgss from being stolen by malware infecting your computer.</source>
         <translation>%1 sekarang akan ditutup untuk menyelesaikan proses enkripsi. Ingatlah bahwa mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi komputer Anda dari pencurian malware yang menginfeksi komputer Anda.</translation>
     </message>
     <message>
@@ -217,82 +219,6 @@
     </message>
 </context>
 <context>
-    <name>AssetControlDialog</name>
-    <message>
-        <source>Asset Selection</source>
-        <translation>Pemilihan Aset</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Jumlah</translation>
-    </message>
-    <message>
-        <source>Received with address</source>
-        <translation>Diterima dengan alamat</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Tanggal</translation>
-    </message>
-    <message>
-        <source>Confirmations</source>
-        <translation>Konfirmasi</translation>
-    </message>
-    <message>
-        <source>Confirmed</source>
-        <translation>Telah dikonfirmasi</translation>
-    </message>
-    <message>
-        <source>Copy address</source>
-        <translation>Salin Alamat</translation>
-    </message>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    <message>
-        <source>Name</source>
-        <translation>Nama</translation>
-    </message>
-    <message>
-        <source>Quantity</source>
-        <translation>Kuantitas</translation>
-    </message>
-</context>
-<context>
-    <name>AssetsDialog</name>
-    <message>
-        <source>Send Coins</source>
-        <translation>Kirim Token</translation>
-    </message>
-    <message>
-        <source>Amount:</source>
-        <translation>Jumlah</translation>
-    </message>
-    <message>
-        <source>Transaction Fee:</source>
-        <translation>Biaya Transaksi</translation>
-    </message>
-    <message>
-        <source>Hide</source>
-        <translation>Sembunyikan</translation>
-    </message>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    <message>
-        <source>Address:</source>
-        <translation>Alamat</translation>
-    </message>
-    <message>
-        <source>Submit</source>
-        <translation>Kirimkan</translation>
-    </message>
-    <message>
-        <source>Address already has the qualifier assigned to it</source>
-        <translation>Alamat sudah memiliki kualifikasi yang ditetapkan untuk itu</translation>
-    </message>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
@@ -301,6 +227,327 @@
     <message>
         <source>Banned Until</source>
         <translation>Di banned sampai</translation>
+    </message>
+</context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>Pesan &amp;penanda...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Sinkronisasi dengan jaringan...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Kilasan</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Node</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Tampilkan gambaran umum dompet Anda</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transaksi</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Lihat riwayat transaksi</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>K&amp;eluar</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Keluar dari aplikasi</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>&amp;Tentang%1</translation>
+    </message>
+    <message>
+        <source>Show information about %1</source>
+        <translation>Tampilkan informasi perihal %1</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>Mengenai &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Tampilkan informasi mengenai Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Pilihan...</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Pengubahan opsi konfigurasi untuk %1</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Enkripsi Dompet...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Cadangkan Dompet...</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;Ubah Kata Kunci...</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;Alamat-alamat untuk mengirim...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>&amp;Alamat-alamat untuk menerima...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Buka &amp;URI</translation>
+    </message>
+    <message>
+        <source>Click to disable network activity.</source>
+        <translation>Klik untuk menonaktifkan aktivitas jaringan.</translation>
+    </message>
+    <message>
+        <source>Network activity disabled.</source>
+        <translation>Aktivitas jaringan dinonaktifkan.</translation>
+    </message>
+    <message>
+        <source>Click to enable network activity again.</source>
+        <translation>Klik untuk mengaktifkan aktivitas jaringan lagi.</translation>
+    </message>
+    <message>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Menyinkronkan Header (%1%) ...</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Mengindex ulang blok di dalam disk...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Kirim koin ke alamat Aipg</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Cadangkan dompet ke lokasi lain</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Ubah kata kunci yang digunakan untuk enkripsi dompet</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Jendela Debug</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Buka konsol debug dan diagnosa</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Verifikasi pesan...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Dompet</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Kirim</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Menerima</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Tampilkan / Sembunyikan</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Tampilkan atau sembunyikan jendela utama</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Enkripsi private key yang dimiliki dompet Anda</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Tanda tangani sebuah pesan menggunakan alamat Aipg Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Aipg tertentu</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Berkas</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Pengaturan</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Bantuan</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Baris tab</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>Permintaan pembayaran (membuat kode QR dan aipg: URIs)</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Tampilkan daftar alamat dan label yang terkirim</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>Tampilkan daftar alamat dan label yang diterima</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>Buka URI aipg: atau permintaan pembayaran</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>&amp;pilihan Command-line</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n active connection(s) to Aipg network</source>
+        <translation><numerusform>%n koneksi aktif ke jaringan Aipg</numerusform></translation>
+    </message>
+    <message>
+        <source>Indexing blocks on disk...</source>
+        <translation>Pengindeksan blok pada disk ...</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>Memproses blok pada disk ...</translation>
+    </message>
+    <message numerus="yes">
+        <source>Processed %n block(s) of transaction history.</source>
+        <translation><numerusform>%n blok dari riwayat transaksi diproses.</numerusform></translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>kurang %1</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>Blok terakhir yang diterima %1 lalu.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Transaksi setelah ini belum akan terlihat.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Terjadi sebuah kesalahan</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Peringatan</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Informasi</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Terbaru</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible Aipg command-line options</source>
+        <translation>Tampilkan %1 pesan bantuan untuk mendapatkan daftar opsi baris perintah Aipg yang memungkinkan</translation>
+    </message>
+    <message>
+        <source>%1 client</source>
+        <translation>%1 klien</translation>
+    </message>
+    <message>
+        <source>Connecting to peers...</source>
+        <translation>Menghubungkan ke peer...</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Menyusul...</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>Tanggal: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>Jumlah: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>Tipe: %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>Label: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>Alamat: %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Transaksi terkirim</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Transaksi diterima</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>Pembuatan kunci HD &lt;b&gt;diaktifkan&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>Pembuatan kunci HD &lt;b&gt;dinonaktifkan&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Dompet saat ini &lt;b&gt;terenkripsi&lt;/b&gt; dan &lt;b&gt;terbuka&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Dompet saat ini &lt;b&gt;terenkripsi&lt;/b&gt; dan &lt;b&gt;terkunci&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. Aipg can no longer continue safely and will quit.</source>
+        <translation>Terjadi Kesalahan Fatal. Aipg Tidak Dapat Melanjutkan Dengan Aman Dan Akan Keluar</translation>
     </message>
 </context>
 <context>
@@ -439,41 +686,6 @@
     </message>
     </context>
 <context>
-    <name>CreateAssetDialog</name>
-    <message>
-        <source>Choose...</source>
-        <translation>Pilih</translation>
-    </message>
-    <message>
-        <source>Create Asset</source>
-        <translation>Buat Aset</translation>
-    </message>
-    <message>
-        <source>Copy amount</source>
-        <translation>Salin Jumlah</translation>
-    </message>
-    <message>
-        <source>Asset Type</source>
-        <translation>Jenis Aset</translation>
-    </message>
-    <message>
-        <source>Valid Asset</source>
-        <translation>Sahkan Aset</translation>
-    </message>
-    <message>
-        <source>Are you sure you want to send?</source>
-        <translation>Apakah anda yakin ingin mengirimkan?</translation>
-    </message>
-    <message>
-        <source>or</source>
-        <translation>Atau</translation>
-    </message>
-    <message>
-        <source>Invalid: </source>
-        <translation>Tidak Sah</translation>
-    </message>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -512,8 +724,8 @@
         <translation>Ubah alamat pengirim</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid AIPG address.</source>
-        <translation>Alamat yang dimasukkan "%1" bukanlah alamat AIPG yang valid.</translation>
+        <source>The entered address "%1" is not a valid Aipg address.</source>
+        <translation>Alamat yang dimasukkan "%1" bukanlah alamat Aipg yang valid.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -551,16 +763,6 @@
         <translation>Tidak bisa membuat direktori data disini.</translation>
     </message>
 </context>
-<context>
-    <name>FreezeAddress</name>
-    <message>
-        <source>Check</source>
-        <translation>Periksa</translation>
-    </message>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
@@ -646,27 +848,15 @@
         <source>Error</source>
         <translation>Kesalahan</translation>
     </message>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    <message>
-        <source>Accept</source>
-        <translation>Terima</translation>
+    <message numerus="yes">
+        <source>%n GB of free space available</source>
+        <translation><numerusform>%n GB ruang kosong tersedia.</numerusform></translation>
     </message>
-    <message>
-        <source>Go Back</source>
-        <translation>Kembali</translation>
+    <message numerus="yes">
+        <source>(of %n GB needed)</source>
+        <translation><numerusform>(dari %n GB yang dibutuhkan)</numerusform></translation>
     </message>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
+</context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -674,23 +864,8 @@
         <translation>Formulir</translation>
     </message>
     <message>
-        <source>Unknown...</source>
-        <translation>Tidak Diketahui</translation>
-    </message>
-    <message>
         <source>Last block time</source>
         <translation>Waktu blok terakhir</translation>
-    </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
-    <message>
-        <source>Frozen</source>
-        <translation>Beku</translation>
-    </message>
-    <message>
-        <source>Unfrozen</source>
-        <translation>Tidak dibekukan</translation>
     </message>
     </context>
 <context>
@@ -735,6 +910,14 @@
         <translation>Jumlah script &amp;verification threads</translation>
     </message>
     <message>
+        <source>Accept connections from outside</source>
+        <translation>Terima koneksi dari luar</translation>
+    </message>
+    <message>
+        <source>Allow incoming connections</source>
+        <translation>Perbolehkan koneksi masuk</translation>
+    </message>
+    <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>Alamat IP proxy (cth. IPv4: 127.0.0.1 / IPv6: ::1)</translation>
     </message>
@@ -745,6 +928,10 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URL pihak ketika (misalnya sebuah block explorer) yang mumcul dalam tab transaksi sebagai konteks menu. %s dalam URL diganti dengan kode transaksi. URL dipisahkan dengan tanda vertikal |.</translation>
+    </message>
+    <message>
+        <source>Third party transaction URLs</source>
+        <translation>URL transaksi pihak ketiga</translation>
     </message>
     <message>
         <source>Active command-line options that override above options:</source>
@@ -787,16 +974,16 @@
         <translation>&amp;Perubahan saldo untuk transaksi yang belum dikonfirmasi</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Otomatis membuka port client AIPG di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Otomatis membuka port client Aipg di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Petakan port dengan &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a SOCKS5 proxy.</source>
-        <translation>Hubungkan ke jaringan AIPG melalui SOCKS5 proxy.</translation>
+        <source>Connect to the Aipg network through a SOCKS5 proxy.</source>
+        <translation>Hubungkan ke jaringan Aipg melalui SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -902,8 +1089,8 @@
         <translation>Formulir</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan AIPG ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Aipg ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -930,6 +1117,10 @@
         <translation>Saldo ditambang yang masih terlalu muda</translation>
     </message>
     <message>
+        <source>Balances</source>
+        <translation>Saldo:</translation>
+    </message>
+    <message>
         <source>Total:</source>
         <translation>Jumlah:</translation>
     </message>
@@ -947,10 +1138,6 @@
         <source>User Agent</source>
         <translation>Agen Pengguna</translation>
     </message>
-    <message>
-        <source>Sent</source>
-        <translation>Terkirim</translation>
-    </message>
     </context>
 <context>
     <name>QObject</name>
@@ -959,8 +1146,8 @@
         <translation>Nilai</translation>
     </message>
     <message>
-        <source>Enter a AIPG address (e.g. %1)</source>
-        <translation>Masukkan alamat AIPG (contoh %1)</translation>
+        <source>Enter a Aipg address (e.g. %1)</source>
+        <translation>Masukkan alamat Aipg (contoh %1)</translation>
     </message>
     <message>
         <source>%1 h</source>
@@ -969,10 +1156,6 @@
     <message>
         <source>%1 m</source>
         <translation>%1 menit</translation>
-    </message>
-    <message>
-        <source>None</source>
-        <translation>Tdak Ada</translation>
     </message>
     <message>
         <source>N/A</source>
@@ -988,10 +1171,6 @@
     </context>
 <context>
     <name>QRImageWidget</name>
-    <message>
-        <source>Save QR Code</source>
-        <translation>Simpan kode QR</translation>
-    </message>
     </context>
 <context>
     <name>RPCConsole</name>
@@ -1040,16 +1219,8 @@
         <translation>Jumlah blok terkini</translation>
     </message>
     <message>
-        <source>Received</source>
-        <translation>Telah Diterima</translation>
-    </message>
-    <message>
         <source>Sent</source>
         <translation>Terkirim</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation>Arah</translation>
     </message>
     <message>
         <source>Version</source>
@@ -1080,6 +1251,10 @@
     <message>
         <source>&amp;Network Traffic</source>
         <translation>Kemacetan &amp;Jaringan </translation>
+    </message>
+    <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;Kosongkan</translation>
     </message>
     <message>
         <source>Totals</source>
@@ -1118,8 +1293,28 @@
         <translation>1 &amp;tahun</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Gunakan panah keatas dan kebawah untuk menampilkan sejarah, dan &lt;b&gt;Ctrl-L&lt;/b&gt; untuk bersihkan layar.</translation>
+    </message>
+    <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Ketik &lt;b&gt;help&lt;/b&gt; untuk menampilkan perintah tersedia.</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -1132,319 +1327,6 @@
     <message>
         <source>Unknown</source>
         <translation>Tidak diketahui</translation>
-    </message>
-</context>
-<context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>Pesan &amp;penanda...</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Sinkronisasi dengan jaringan...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Kilasan</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Tampilkan gambaran umum dompet Anda</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transaksi</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Lihat riwayat transaksi</translation>
-    </message>
-    <message>
-        <source>Coming Soon</source>
-        <translation>Segera Hadir</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>K&amp;eluar</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Keluar dari aplikasi</translation>
-    </message>
-    <message>
-        <source>&amp;About %1</source>
-        <translation>&amp;Tentang%1</translation>
-    </message>
-    <message>
-        <source>Show information about %1</source>
-        <translation>Tampilkan informasi perihal %1</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>Mengenai &amp;Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Tampilkan informasi mengenai Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Pilihan...</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for %1</source>
-        <translation>Pengubahan opsi konfigurasi untuk %1</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Enkripsi Dompet...</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Cadangkan Dompet...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Ubah Kata Kunci...</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Alamat-alamat untuk mengirim...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Alamat-alamat untuk menerima...</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>Buka &amp;URI</translation>
-    </message>
-    <message>
-        <source>&amp;Wallet</source>
-        <translation>&amp;Dompet</translation>
-    </message>
-    <message>
-        <source>Click to disable network activity.</source>
-        <translation>Klik untuk menonaktifkan aktivitas jaringan.</translation>
-    </message>
-    <message>
-        <source>Network activity disabled.</source>
-        <translation>Aktivitas jaringan dinonaktifkan.</translation>
-    </message>
-    <message>
-        <source>Click to enable network activity again.</source>
-        <translation>Klik untuk mengaktifkan aktivitas jaringan lagi.</translation>
-    </message>
-    <message>
-        <source>Syncing Headers (%1%)...</source>
-        <translation>Menyinkronkan Header (%1%) ...</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Mengindex ulang blok di dalam disk...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Kirim koin ke alamat AIPG</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Cadangkan dompet ke lokasi lain</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Ubah kata kunci yang digunakan untuk enkripsi dompet</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Buka konsol debug dan diagnosa</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;Verifikasi pesan...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Dompet</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Kirim</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Menerima</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Tampilkan / Sembunyikan</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Tampilkan atau sembunyikan jendela utama</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Enkripsi private key yang dimiliki dompet Anda</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Tanda tangani sebuah pesan menggunakan alamat AIPG Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat AIPG tertentu</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Berkas</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Bantuan</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>Permintaan pembayaran (membuat kode QR dan aipg: URIs)</translation>
-    </message>
-    <message>
-        <source>Show the list of used sending addresses and labels</source>
-        <translation>Tampilkan daftar alamat dan label yang terkirim</translation>
-    </message>
-    <message>
-        <source>Show the list of used receiving addresses and labels</source>
-        <translation>Tampilkan daftar alamat dan label yang diterima</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>Buka URI aipg: atau permintaan pembayaran</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>&amp;pilihan Command-line</translation>
-    </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>Pengindeksan blok pada disk ...</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>Memproses blok pada disk ...</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>kurang %1</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>Blok terakhir yang diterima %1 lalu.</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Transaksi setelah ini belum akan terlihat.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Terjadi sebuah kesalahan</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Peringatan</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informasi</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Terbaru</translation>
-    </message>
-    <message>
-        <source>Show the %1 help message to get a list with possible AIPG command-line options</source>
-        <translation>Tampilkan %1 pesan bantuan untuk mendapatkan daftar opsi baris perintah AIPG yang memungkinkan</translation>
-    </message>
-    <message>
-        <source>%1 client</source>
-        <translation>%1 klien</translation>
-    </message>
-    <message>
-        <source>Connecting to peers...</source>
-        <translation>Menghubungkan ke peer...</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Menyusul...</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>Tanggal: %1
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>Jumlah: %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>Tipe: %1
-</translation>
-    </message>
-    <message>
-        <source>Label: %1
-</source>
-        <translation>Label: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>Alamat: %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Transaksi terkirim</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Transaksi diterima</translation>
-    </message>
-    <message>
-        <source>Assets not yet active</source>
-        <translation>Aset belum aktif</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
-        <translation>Pembuatan kunci HD &lt;b&gt;diaktifkan&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>Pembuatan kunci HD &lt;b&gt;dinonaktifkan&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Dompet saat ini &lt;b&gt;terenkripsi&lt;/b&gt; dan &lt;b&gt;terbuka&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Dompet saat ini &lt;b&gt;terenkripsi&lt;/b&gt; dan &lt;b&gt;terkunci&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. AIPG can no longer continue safely and will quit.</source>
-        <translation>Terjadi Kesalahan Fatal. AIPG Tidak Dapat Melanjutkan Dengan Aman Dan Akan Keluar</translation>
     </message>
 </context>
 <context>
@@ -1510,16 +1392,8 @@
         <translation>Menghapus</translation>
     </message>
     <message>
-        <source>Copy URI</source>
-        <translation>Salin URL</translation>
-    </message>
-    <message>
         <source>Copy label</source>
         <translation>Salin label</translation>
-    </message>
-    <message>
-        <source>Copy message</source>
-        <translation>Salin Pesan</translation>
     </message>
     <message>
         <source>Copy amount</source>
@@ -1560,78 +1434,13 @@
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
-        <source>Date</source>
-        <translation>Tanggal</translation>
-    </message>
-    <message>
         <source>Label</source>
         <translation>Label</translation>
-    </message>
-    <message>
-        <source>Message</source>
-        <translation>Pesan</translation>
     </message>
     <message>
         <source>(no label)</source>
         <translation>(tidak ada label)</translation>
     </message>
-    <message>
-        <source>(no message)</source>
-        <translation>Tidak ada Pesan</translation>
-    </message>
-    </context>
-<context>
-    <name>ReissueAssetDialog</name>
-    <message>
-        <source>Change:</source>
-        <translation>Kembalian</translation>
-    </message>
-    <message>
-        <source>Address:</source>
-        <translation>Alamat</translation>
-    </message>
-    <message>
-        <source>123.456 AIPG</source>
-        <translation>123.456 AIPG</translation>
-    </message>
-    <message>
-        <source>Copy fee</source>
-        <translation>Salin Biaya</translation>
-    </message>
-    <message>
-        <source>Cost</source>
-        <translation>Biaya</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Ya</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Tidak</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation>Nama</translation>
-    </message>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    <message>
-        <source>Search</source>
-        <translation>Cari</translation>
-    </message>
-    <message>
-        <source>Address List</source>
-        <translation>Daftar Alamat</translation>
-    </message>
-    <message>
-        <source>Balance:</source>
-        <translation>Saldo</translation>
-    </message>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -1694,6 +1503,14 @@
     <message>
         <source>Recommended:</source>
         <translation>Disarankan</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>normal</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>cepat</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
@@ -1767,6 +1584,10 @@
         <translation>J&amp;umlah:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>Kirim &amp;Ke:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Label:</translation>
     </message>
@@ -1801,6 +1622,10 @@
     <message>
         <source>Enter a label for this address to add it to the list of used addresses</source>
         <translation>Masukkan label untuk alamat ini untuk dimasukan dalam daftar alamat yang pernah digunakan</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Kirim Ke:</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -1856,8 +1681,8 @@
         <translation>Salin tanda tangan terpilih ke sistem klipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
-        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat AIPG ini</translation>
+        <source>Sign the message to prove you own this Aipg address</source>
+        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Aipg ini</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1997,8 +1822,8 @@
         <translation>Berjalan dibelakang sebagai daemin dan menerima perintah</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
@@ -2053,8 +1878,16 @@
         <translation>Tidak bisa cari blok pertama, atau blok pertama salah. Salah direktori untuk jaringan?</translation>
     </message>
     <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>Alamat -onion salah: '%s'</translation>
+    </message>
+    <message>
         <source>Not enough file descriptors available.</source>
         <translation>Deskripsi berkas tidak tersedia dengan cukup.</translation>
+    </message>
+    <message>
+        <source>Set maximum block size in bytes (default: %d)</source>
+        <translation>Atur ukuran maksimal untuk blok dalam byte (biasanya: %d)</translation>
     </message>
     <message>
         <source>Specify wallet file (within data directory)</source>
@@ -2063,6 +1896,10 @@
     <message>
         <source>Verifying blocks...</source>
         <translation>Blok-blok sedang diverifikasi...</translation>
+    </message>
+    <message>
+        <source>Verifying wallet...</source>
+        <translation>Dompet sedang diverifikasi...</translation>
     </message>
     <message>
         <source>Wallet %s resides outside data directory %s</source>
@@ -2129,6 +1966,14 @@
         <translation>Izinkan peninjauan DNS untuk -addnote, -seednode dan -connect</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Memuat alamat...</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Alamat -proxy salah: '%s'</translation>
+    </message>
+    <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
         <translation>Jaringan tidak diketahui yang ditentukan dalam -onlynet: '%s'</translation>
     </message>
@@ -2141,6 +1986,10 @@
         <translation>Memuat indeks blok...</translation>
     </message>
     <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Tambahkan node untuk dihubungkan dan upaya untuk menjaga hubungan tetap terbuka</translation>
+    </message>
+    <message>
         <source>Loading wallet...</source>
         <translation>Memuat dompet...</translation>
     </message>
@@ -2149,8 +1998,16 @@
         <translation>Tidak dapat menurunkan versi dompet</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>Tidak dapat menyimpan alamat standar</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>Memindai ulang...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Memuat selesai</translation>
     </message>
     <message>
         <source>Error</source>

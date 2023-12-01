@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +11,7 @@ Test BIP68 implementation.
 
 import time
 import random
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import satoshi_round, assert_raises_rpc_error, get_bip9_status, assert_equal, assert_greater_than, sync_blocks
 from test_framework.blocktools import CTransaction, COIN, CTxIn, COutPoint, CTxOut, CScript, create_block, create_coinbase
 from test_framework.mininode import to_hex, from_hex
@@ -24,7 +25,7 @@ SEQUENCE_LOCKTIME_MASK = 0x0000ffff
 NOT_FINAL_ERROR = "64: non-BIP68-final"
 
 
-class BIP68Test(AIPGTestFramework):
+class BIP68Test(AipgTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.extra_args = [[], ["-acceptnonstdtxn=0"]]
@@ -46,7 +47,7 @@ class BIP68Test(AIPGTestFramework):
     def test_disable_flag(self):
         # Create some unconfirmed inputs
         new_addr = self.nodes[0].getnewaddress()
-        self.nodes[0].sendtoaddress(new_addr, 2)  # send 2 AIPG
+        self.nodes[0].sendtoaddress(new_addr, 2)  # send 2 aipg
 
         utxos = self.nodes[0].listunspent(0, 0)
         assert (len(utxos) > 0)

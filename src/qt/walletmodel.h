@@ -1,6 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -163,7 +162,7 @@ public:
     }
 };
 
-/** Interface to AIPG wallet from Qt view code. */
+/** Interface to aipg wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT
@@ -290,7 +289,7 @@ public:
 
     bool hdEnabled() const;
     bool hd44Enabled() const;
-    QString getMyWords() const;
+    QString getMnemonic() const;
 
     int getDefaultConfirmTarget() const;
 

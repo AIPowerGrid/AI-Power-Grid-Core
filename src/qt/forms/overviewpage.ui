@@ -10,12 +10,6 @@
     <height>759</height>
    </rect>
   </property>
-  <property name="minimumSize">
-   <size>
-    <width>760</width>
-    <height>0</height>
-   </size>
-  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -43,27 +37,27 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
        <property name="spacing">
-        <number>20</number>
+        <number>34</number>
        </property>
        <property name="sizeConstraint">
-        <enum>QLayout::SetMinAndMaxSize</enum>
+        <enum>QLayout::SetMaximumSize</enum>
        </property>
        <property name="leftMargin">
-        <number>20</number>
+        <number>40</number>
        </property>
        <property name="topMargin">
-        <number>20</number>
+        <number>40</number>
        </property>
        <property name="rightMargin">
-        <number>20</number>
+        <number>40</number>
        </property>
        <property name="bottomMargin">
-        <number>20</number>
+        <number>40</number>
        </property>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <property name="spacing">
-          <number>0</number>
+          <number>34</number>
          </property>
          <property name="rightMargin">
           <number>0</number>
@@ -76,12 +70,6 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="minimumSize">
-            <size>
-             <width>350</width>
-             <height>180</height>
-            </size>
-           </property>
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
            </property>
@@ -89,25 +77,16 @@
             <enum>QFrame::Raised</enum>
            </property>
            <property name="lineWidth">
-            <number>5</number>
+            <number>10</number>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <property name="spacing">
-             <number>10</number>
-            </property>
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <property name="bottomMargin">
-             <number>0</number>
+             <number>12</number>
             </property>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
-              <property name="spacing">
-               <number>6</number>
-              </property>
               <item>
-               <widget class="QLabel" name="AIPGBalancesLabel">
+               <widget class="QLabel" name="aipgBalancesLabel">
                 <property name="font">
                  <font>
                   <weight>75</weight>
@@ -115,7 +94,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>AIPG Balances</string>
+                 <string>aipg Balances</string>
                 </property>
                </widget>
               </item>
@@ -131,7 +110,7 @@
                  </size>
                 </property>
                 <property name="toolTip">
-                 <string>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</string>
+                 <string>The displayed information may be out of date. Your wallet automatically synchronizes with the aipg network after a connection is established, but this process has not completed yet.</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -176,9 +155,6 @@
             </item>
             <item>
              <layout class="QGridLayout" name="gridLayout">
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
               <property name="spacing">
                <number>12</number>
               </property>
@@ -197,7 +173,7 @@
                  <string>Mined balance in watch-only addresses that has not yet matured</string>
                 </property>
                 <property name="text">
-                 <string notr="true">0.000 000 00 AIPG</string>
+                 <string notr="true">0.000 000 00 aipg</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -242,7 +218,7 @@
                  <string>Your current balance in watch-only addresses</string>
                 </property>
                 <property name="text">
-                 <string notr="true">0.000 000 00 AIPG</string>
+                 <string notr="true">0.000 000 00 aipg</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -267,7 +243,7 @@
                  <string>Total of transactions that have yet to be confirmed, and do not yet count toward the spendable balance</string>
                 </property>
                 <property name="text">
-                 <string notr="true">0.000 000 00 AIPG</string>
+                 <string notr="true">0.000 000 00 aipg</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -328,7 +304,7 @@
                  <string>Current total balance in watch-only addresses</string>
                 </property>
                 <property name="text">
-                 <string notr="true">0.000 000 00 AIPG</string>
+                 <string notr="true">0.000 000 00 aipg</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -370,7 +346,7 @@
                  <string>Your current total balance</string>
                 </property>
                 <property name="text">
-                 <string notr="true">0.000 000 00 AIPG</string>
+                 <string notr="true">0.000 000 00 aipg</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -395,7 +371,7 @@
                  <string>Your current spendable balance</string>
                 </property>
                 <property name="text">
-                 <string notr="true">0.000 000 00 AIPG</string>
+                 <string notr="true">0.000 000 00 aipg</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -434,7 +410,7 @@
                  <string>Mined balance that has not yet matured</string>
                 </property>
                 <property name="text">
-                 <string notr="true">0.000 000 00 AIPG</string>
+                 <string notr="true">0.000 000 00 aipg</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -459,7 +435,7 @@
                  <string>Unconfirmed transactions to watch-only addresses</string>
                 </property>
                 <property name="text">
-                 <string notr="true">0.000 000 00 AIPG</string>
+                 <string notr="true">0.000 000 00 aipg</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -485,13 +461,10 @@
               <property name="orientation">
                <enum>Qt::Vertical</enum>
               </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::MinimumExpanding</enum>
-              </property>
               <property name="sizeHint" stdset="0">
                <size>
                 <width>20</width>
-                <height>10</height>
+                <height>87</height>
                </size>
               </property>
              </spacer>
@@ -501,12 +474,6 @@
          </item>
          <item>
           <widget class="QFrame" name="assetFrame">
-           <property name="minimumSize">
-            <size>
-             <width>350</width>
-             <height>150</height>
-            </size>
-           </property>
            <property name="autoFillBackground">
             <bool>true</bool>
            </property>
@@ -550,7 +517,7 @@
                  </size>
                 </property>
                 <property name="toolTip">
-                 <string>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</string>
+                 <string>The displayed information may be out of date. Your wallet automatically synchronizes with the aipg network after a connection is established, but this process has not completed yet.</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -661,7 +628,7 @@
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>20</height>
+                   <height>40</height>
                   </size>
                  </property>
                 </spacer>
@@ -677,7 +644,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <property name="spacing">
-          <number>20</number>
+          <number>34</number>
          </property>
          <property name="leftMargin">
           <number>0</number>
@@ -685,22 +652,10 @@
          <item>
           <widget class="QFrame" name="frame_2">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>350</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="sizeIncrement">
-            <size>
-             <width>0</width>
-             <height>300</height>
-            </size>
            </property>
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
@@ -712,17 +667,11 @@
             <number>0</number>
            </property>
            <layout class="QGridLayout" name="gridLayout_2">
-            <property name="topMargin">
-             <number>0</number>
-            </property>
             <property name="horizontalSpacing">
              <number>12</number>
             </property>
             <item row="0" column="0">
              <layout class="QHBoxLayout" name="horizontalLayout_2">
-              <property name="spacing">
-               <number>6</number>
-              </property>
               <item>
                <widget class="QLabel" name="recentTransactionsLabel">
                 <property name="font">
@@ -748,7 +697,7 @@
                  </size>
                 </property>
                 <property name="toolTip">
-                 <string>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</string>
+                 <string>The displayed information may be out of date. Your wallet automatically synchronizes with the aipg network after a connection is established, but this process has not completed yet.</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -812,6 +761,19 @@
             </item>
            </layout>
           </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </item>

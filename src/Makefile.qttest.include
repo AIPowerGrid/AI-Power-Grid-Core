@@ -1,5 +1,5 @@
 # Copyright (c) 2013-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2019 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -25,10 +25,10 @@ TEST_QT_H = \
   qt/test/paymentservertests.h \
   qt/test/wallettests.h
 
-TEST_AIPG_CPP = \
+test_aipg_CPP = \
   test/test_aipg.cpp
 
-TEST_AIPG_H = \
+test_aipg_H = \
   test/test_aipg.h
 
 qt_test_test_aipg_qt_CPPFLAGS = $(AM_CPPFLAGS) $(AIPG_INCLUDES) $(AIPG_QT_INCLUDES) \
@@ -40,8 +40,8 @@ qt_test_test_aipg_qt_SOURCES = \
   qt/test/test_main.cpp \
   qt/test/uritests.cpp \
   $(TEST_QT_H) \
-  $(TEST_AIPG_CPP) \
-  $(TEST_AIPG_H)
+  $(test_aipg_CPP) \
+  $(test_aipg_H)
 if ENABLE_WALLET
 qt_test_test_aipg_qt_SOURCES += \
   qt/test/paymentservertests.cpp \
@@ -58,7 +58,7 @@ endif
 if ENABLE_ZMQ
 qt_test_test_aipg_qt_LDADD += $(LIBAIPG_ZMQ) $(ZMQ_LIBS)
 endif
-qt_test_test_aipg_qt_LDADD += $(LIBAIPG_CLI) $(LIBAIPG_COMMON) $(LIBAIPG_UTIL) $(LIBAIPG_CONSENSUS) $(LIBAIPG_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) \
+qt_test_test_aipg_qt_LDADD += $(LIBaipg_cli) $(LIBAIPG_COMMON) $(LIBAIPG_UTIL) $(LIBAIPG_CONSENSUS) $(LIBAIPG_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) \
   $(LIBLEVELDB_SSE42) $(LIBMEMENV) $(BOOST_LIBS) $(QT_DBUS_LIBS) $(QT_TEST_LIBS) $(QT_LIBS) \
   $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,7 +14,7 @@ import random
 from binascii import hexlify
 from test_framework.mininode import (NodeConnCB, mininode_lock, MsgInv, CInv, MsgBlock, CBlockHeader, MsgHeaders, MsgGetdata, MsgTx, MsgWitnessTx, MsgWitnessBlock, NODE_WITNESS, CTxIn, COutPoint,
                                      CTxInWitness, CTxWitness, MAX_BLOCK_BASE_SIZE, ser_vector, MSG_WITNESS_FLAG, CBlock, NodeConn, NODE_NETWORK, NetworkThread)
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import assert_equal, connect_nodes, get_bip9_status, sync_blocks, bytes_to_hex_str, hex_str_to_bytes, sync_mempools, p2p_port
 from test_framework.script import (CScript, CScriptOp, OP_DUP, OP_HASH160, OP_EQUALVERIFY, OP_CHECKMULTISIG, segwit_version1_signature_hash, OP_CHECKSIG, CTransaction, CTxOut, OP_TRUE, CScriptNum,
                                    hash160, OP_EQUAL, sha256, OP_0, OP_RETURN, ser_uint256, OP_2DROP, uint256_from_str, OP_DROP, struct, OP_1, OP_16, SIGHASH_ANYONECANPAY, SIGHASH_ALL, SIGHASH_NONE,
@@ -168,7 +169,7 @@ class TestNode(NodeConnCB):
 
 
 # noinspection PyPep8Naming
-class SegWitTest(AIPGTestFramework):
+class SegWitTest(AipgTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3

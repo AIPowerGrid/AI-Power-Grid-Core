@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,6 +29,7 @@
 ReceiveCoinsDialog::ReceiveCoinsDialog(const PlatformStyle *_platformStyle, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ReceiveCoinsDialog),
+    columnResizingFixer(0),
     model(0),
     platformStyle(_platformStyle)
 {
@@ -97,6 +98,8 @@ void ReceiveCoinsDialog::setModel(WalletModel *_model)
         connect(tableView->selectionModel(),
             SIGNAL(selectionChanged(QItemSelection, QItemSelection)), this,
             SLOT(recentRequestsView_selectionChanged(QItemSelection, QItemSelection)));
+        // Last 2 columns are set by the columnResizingFixer, when the table geometry is ready.
+        columnResizingFixer = new GUIUtil::TableViewLastColumnResizingFixer(tableView, AMOUNT_MINIMUM_COLUMN_WIDTH, DATE_COLUMN_WIDTH, this);
 
         tableView->show();
     }
@@ -267,6 +270,14 @@ void ReceiveCoinsDialog::on_removeRequestButton_clicked()
     model->getRecentRequestsTableModel()->removeRows(firstIndex.row(), selection.length(), firstIndex.parent());
 }
 
+// We override the virtual resizeEvent of the QWidget to adjust tables column
+// sizes as the tables width is proportional to the dialogs width.
+void ReceiveCoinsDialog::resizeEvent(QResizeEvent *event)
+{
+    QWidget::resizeEvent(event);
+    columnResizingFixer->stretchColumnWidth(RecentRequestsTableModel::Message);
+}
+
 void ReceiveCoinsDialog::keyPressEvent(QKeyEvent *event)
 {
     if (event->key() == Qt::Key_Return)
@@ -323,7 +334,7 @@ void ReceiveCoinsDialog::copyURI()
     }
 
     const RecentRequestsTableModel * const submodel = model->getRecentRequestsTableModel();
-    const QString uri = GUIUtil::formatAIPGURI(submodel->entry(sel.row()).recipient);
+    const QString uri = GUIUtil::formatAipgURI(submodel->entry(sel.row()).recipient);
     GUIUtil::setClipboard(uri);
 }
 

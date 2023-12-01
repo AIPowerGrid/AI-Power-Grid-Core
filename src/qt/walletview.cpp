@@ -1,6 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -115,7 +114,7 @@ WalletView::~WalletView()
 {
 }
 
-void WalletView::setAIPGGUI(AIPGGUI *gui)
+void WalletView::setAipgGUI(AipgGUI *gui)
 {
     if (gui)
     {
@@ -187,7 +186,7 @@ void WalletView::setWalletModel(WalletModel *_walletModel)
         updateEncryptionStatus();
 
         // update HD status
-        Q_EMIT hdEnabledStatusChanged(_walletModel->hd44Enabled() ? AIPGGUI::HD44_ENABLED : _walletModel->hdEnabled() ? AIPGGUI::HD_ENABLED : AIPGGUI::HD_DISABLED);
+        Q_EMIT hdEnabledStatusChanged(_walletModel->hd44Enabled() ? AipgGUI::HD44_ENABLED : _walletModel->hdEnabled() ? AipgGUI::HD_ENABLED : AipgGUI::HD_DISABLED);
 
         // Balloon pop-up for new transaction
         connect(_walletModel->getTransactionTableModel(), SIGNAL(rowsInserted(QModelIndex,int,int)),
@@ -304,17 +303,6 @@ void WalletView::updateEncryptionStatus()
     Q_EMIT encryptionStatusChanged(walletModel->getEncryptionStatus());
 }
 
-void WalletView::encryptWallet(bool status)
-{
-    if(!walletModel)
-        return;
-    AskPassphraseDialog dlg(status ? AskPassphraseDialog::Encrypt : AskPassphraseDialog::Decrypt, this);
-    dlg.setModel(walletModel);
-    dlg.exec();
-
-    updateEncryptionStatus();
-}
-
 void WalletView::backupWallet()
 {
     QString filename = GUIUtil::getSaveFileName(this,
@@ -353,14 +341,21 @@ void WalletView::unlockWallet()
         dlg.exec();
     }
 }
-void WalletView::getMyWords()
+
+void WalletView::lockWallet()
+{
+    if (!walletModel)
+        return;
+
+    walletModel->setWalletLocked(true);
+}
+
+void WalletView::getMnemonic()
 {
     // Create the box and set the default text.
     QMessageBox box;
-    box.setWindowTitle(tr("Recovery information. (Will close after 5 min)"));
+    box.setWindowTitle(tr("Recovery information"));
     box.setText(tr("No words available."));
-    box.setStandardButtons(QMessageBox::Close);
-    box.button(QMessageBox::Close)->animateClick(300000);
 
     // Check for HD-wallet and set text if not HD-wallet.
     if(!walletModel->hd44Enabled())
@@ -372,7 +367,7 @@ void WalletView::getMyWords()
     // Make sure wallet is unlocked before trying to fetch the words.
     // When unlocked, set the text to 12words and passphrase.
     if (walletModel->getEncryptionStatus() != WalletModel::Locked)
-        box.setText(walletModel->getMyWords());
+        box.setText(walletModel->getMnemonic());
 
     // Show the box
     box.exec();

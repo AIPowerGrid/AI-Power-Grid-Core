@@ -20,19 +20,19 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <property name="spacing">
-      <number>20</number>
+      <number>34</number>
      </property>
      <property name="leftMargin">
-      <number>20</number>
+      <number>40</number>
      </property>
      <property name="topMargin">
-      <number>20</number>
+      <number>40</number>
      </property>
      <property name="rightMargin">
-      <number>20</number>
+      <number>40</number>
      </property>
      <property name="bottomMargin">
-      <number>20</number>
+      <number>40</number>
      </property>
      <item>
       <widget class="QFrame" name="frameCoinControl">
@@ -341,7 +341,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 AIPG</string>
+                    <string notr="true">0.00 aipg</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -421,7 +421,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 AIPG</string>
+                    <string notr="true">0.00 aipg</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -472,7 +472,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 AIPG</string>
+                    <string notr="true">0.00 aipg</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -501,7 +501,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 AIPG</string>
+                    <string notr="true">0.00 aipg</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -604,8 +604,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>989</width>
-          <height>355</height>
+          <width>943</width>
+          <height>263</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
@@ -633,13 +633,10 @@
            <property name="orientation">
             <enum>Qt::Vertical</enum>
            </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::MinimumExpanding</enum>
-           </property>
            <property name="sizeHint" stdset="0">
             <size>
              <width>20</width>
-             <height>200</height>
+             <height>1000</height>
             </size>
            </property>
           </spacer>
@@ -876,7 +873,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="AIPGAmountField" name="customFee"/>
+                    <widget class="AipgAmountField" name="customFee"/>
                    </item>
                    <item>
                     <spacer name="horizontalSpacer_6">
@@ -1267,7 +1264,7 @@
             <cursorShape>IBeamCursor</cursorShape>
            </property>
            <property name="text">
-            <string notr="true">123.456 AIPG</string>
+            <string notr="true">123.456 aipg</string>
            </property>
            <property name="textInteractionFlags">
             <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -1289,7 +1286,7 @@
    <header>qvalidatedlineedit.h</header>
   </customwidget>
   <customwidget>
-   <class>AIPGAmountField</class>
+   <class>AipgAmountField</class>
    <extends>QLineEdit</extends>
    <header>aipgamountfield.h</header>
    <container>1</container>

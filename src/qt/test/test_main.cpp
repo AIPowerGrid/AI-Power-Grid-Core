@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -73,11 +74,8 @@ int main(int argc, char *argv[])
 
     // Don't remove this, it's needed to access
     // QApplication:: and QCoreApplication:: in the tests
-    static int qt_argc = 1;
-    static const char* qt_argv = "AIPG-Qt-test";
-
-    QApplication app(qt_argc, const_cast<char **>(&qt_argv));
-    app.setApplicationName("AIPG-Qt-test");
+    QApplication app(argc, argv);
+    app.setApplicationName("Aipg-Qt-test");
 
     SSL_library_init();
 

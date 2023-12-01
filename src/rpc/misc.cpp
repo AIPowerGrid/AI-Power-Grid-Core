@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -59,7 +59,7 @@ UniValue getinfo(const JSONRPCRequest& request)
             "  \"version\": xxxxx,           (numeric) the server version\n"
             "  \"protocolversion\": xxxxx,   (numeric) the protocol version\n"
             "  \"walletversion\": xxxxx,     (numeric) the wallet version\n"
-            "  \"balance\": xxxxxxx,         (numeric) the total AIPGcoin balance of the wallet\n"
+            "  \"balance\": xxxxxxx,         (numeric) the total Aipg balance of the wallet\n"
             "  \"blocks\": xxxxxx,           (numeric) the current number of blocks processed in the server\n"
             "  \"timeoffset\": xxxxx,        (numeric) the time offset\n"
             "  \"connections\": xxxxx,       (numeric) the number of connections\n"
@@ -211,6 +211,149 @@ UniValue validateaddress(const JSONRPCRequest& request)
 #else
     LOCK(cs_main);
 #endif
+	
+	
+	//#################################################################
+	//AIPG START FOR LOOKING FOR BURN ADDRESS -- BEGIN
+	//Just use to looking suitable prefix address.
+	//1 use command 'aipgd -daemon=0', do not use command aipgd -daemon
+	//2 'aipg-cli validateaddress HSFs8aqGLDbYk242PQiv5oguQL5Tqk5d' in other console window.
+	//In step 1 command window will to calculate the suitable prefix address for burn address.
+	/*
+	const char *base58chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
+	std::string address_char_1,address_char_2,address_char_3,address_char_4,address_char_5,address_char_6;
+	std::string address_dest;
+	
+	//strIssueAssetBurnAddress = "HXissueAssetXXXXXXXXXXXXXXXXXhhZGt";
+	//strReissueAssetBurnAddress = "HXReissueAssetXXXXXXXXXXXXXXVEFAWu";
+	//strIssueSubAssetBurnAddress = "HXissueSubAssetXXXXXXXXXXXXXWcwhwL";
+	//strIssueUniqueAssetBurnAddress = "HXissueUniqueAssetXXXXXXXXXXWEAe58";
+	//strIssueMsgChannelAssetBurnAddress = "HXissueMsgChanneLAssetXXXXXXSjHvAY";
+	//strIssueQualifierAssetBurnAddress = "HXissueQuaLifierXXXXXXXXXXXXUgEDbC";
+	//strIssueSubQualifierAssetBurnAddress = "HXissueSubQuaLifierXXXXXXXXXVTzvv5";
+	//strIssueRestrictedAssetBurnAddress = "HXissueRestrictedXXXXXXXXXXXXzJZ1q";
+	//strAddNullQualifierTagBurnAddress = "HXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya";
+	//strGlobalBurnAddress = "HXBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
+							 //HSFs8aqGLDbYk242PQiv5oguQL5Tqk5dFg
+							 //HXissueAssetAAAAAAAAAAAAAAAAAhhZGt
+	//aipg-cli validateaddress HXissueAssetk242PQiv5oguQL5TqhhZGt
+	//std::string address_have 	= "HXissueAssetXXXXXXXXXXXXXXXX";
+	std::string address_success = "";		
+	std::string address_have 	= request.params[0].get_str();
+    int AddressNeedToCalculate 	= 34 - address_have.length();
+	std::cout << "AddressNeedToCalculate: " << AddressNeedToCalculate << " \n";
+	
+	if(AddressNeedToCalculate == 2)					{
+		for (int iiiii = 0; iiiii < 58  && address_success==""; ++iiiii)    {
+			address_char_5 = base58chars[iiiii];
+			for (int iiiiii = 0; iiiiii < 58  && address_success==""; ++iiiiii)    {
+				address_char_6 = base58chars[iiiiii];
+
+				address_dest = address_have + address_char_5 + address_char_6;
+				
+				//To calculate the address is correct.
+				CTxDestination destTEST = DecodeDestination(address_dest.c_str());
+				bool isValidTEST = IsValidDestination(destTEST);
+				if (isValidTEST) {
+					std::cout << "IsValidDestinationString: \n" << address_dest.c_str() << "\n";
+					address_success = address_dest;
+				}
+			}
+			std::cout << address_char_5 << " \n";
+		}
+	}
+	
+	if(AddressNeedToCalculate == 4)					{
+		for (int iii = 0; iii < 58  && address_success==""; ++iii)    {
+			address_char_3 = base58chars[iii];
+			for (int iiii = 0; iiii < 58  && address_success==""; ++iiii)    {
+				address_char_4 = base58chars[iiii];
+				for (int iiiii = 0; iiiii < 58  && address_success==""; ++iiiii)    {
+					address_char_5 = base58chars[iiiii];
+					for (int iiiiii = 0; iiiiii < 58  && address_success==""; ++iiiiii)    {
+						address_char_6 = base58chars[iiiiii];
+
+						address_dest = address_have + address_char_3 + address_char_4 + address_char_5 + address_char_6;
+						
+						//To calculate the address is correct.
+						CTxDestination destTEST = DecodeDestination(address_dest.c_str());
+						bool isValidTEST = IsValidDestination(destTEST);
+						if (isValidTEST) {
+							std::cout << "IsValidDestinationString: \n" << address_dest.c_str() << "\n";
+							address_success = address_dest;
+						}
+					}
+					std::cout <<  address_char_3 << " " << address_char_4 << " " << address_char_5 << " \n";
+				}
+			}
+		}
+	}
+	
+	if(AddressNeedToCalculate == 5)					{
+		for (int ii = 0; ii < 58  && address_success==""; ++ii)    {
+			address_char_2 = base58chars[ii];
+			for (int iii = 0; iii < 58  && address_success==""; ++iii)    {
+				address_char_3 = base58chars[iii];
+				for (int iiii = 0; iiii < 58  && address_success==""; ++iiii)    {
+					address_char_4 = base58chars[iiii];
+					for (int iiiii = 0; iiiii < 58  && address_success==""; ++iiiii)    {
+						address_char_5 = base58chars[iiiii];
+						for (int iiiiii = 0; iiiiii < 58  && address_success==""; ++iiiiii)    {
+							address_char_6 = base58chars[iiiiii];
+
+							address_dest = address_have + address_char_2 + address_char_3 + address_char_4 + address_char_5 + address_char_6;
+							
+							//To calculate the address is correct.
+							CTxDestination destTEST = DecodeDestination(address_dest.c_str());
+							bool isValidTEST = IsValidDestination(destTEST);
+							if (isValidTEST) {
+								std::cout << "IsValidDestinationString: \n" << address_dest.c_str() << "\n";
+								address_success = address_dest;
+							}
+						}
+						std::cout << address_char_2 << " " << address_char_3 << " " << address_char_4 << " " << address_char_5 << " \n";
+					}
+				}
+			}
+		}
+		
+	}
+	
+	
+	if(AddressNeedToCalculate == 6)					{
+		for (int i = 0; i < 58  && address_success==""; ++i)    {
+			address_char_1 = base58chars[i];
+			for (int ii = 0; ii < 58  && address_success==""; ++ii)    {
+				address_char_2 = base58chars[ii];
+				for (int iii = 0; iii < 58  && address_success==""; ++iii)    {
+					address_char_3 = base58chars[iii];
+					for (int iiii = 0; iiii < 58  && address_success==""; ++iiii)    {
+						address_char_4 = base58chars[iiii];
+						for (int iiiii = 0; iiiii < 58  && address_success==""; ++iiiii)    {
+							address_char_5 = base58chars[iiiii];
+							for (int iiiiii = 0; iiiiii < 58  && address_success==""; ++iiiiii)    {
+								address_char_6 = base58chars[iiiiii];
+
+								address_dest = address_have + address_char_1 + address_char_2 + address_char_3 + address_char_4 + address_char_5 + address_char_6;
+								
+								//To calculate the address is correct.
+								CTxDestination destTEST = DecodeDestination(address_dest.c_str());
+								bool isValidTEST = IsValidDestination(destTEST);
+								if (isValidTEST) {
+									std::cout << "IsValidDestinationString: \n" << address_dest.c_str() << "\n";
+									address_success = address_dest;
+								}
+							}
+							std::cout << address_char_1 << " " << address_char_2 << " " << address_char_3 << " " << address_char_4 << " " << address_char_5 << " \n";
+						}
+					}
+				}
+			}
+		}
+	}
+	//AIPG START FOR LOOKING FOR BURN ADDRESS -- END
+	*/
+	//#################################################################
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     bool isValid = IsValidDestination(dest);
@@ -280,7 +423,7 @@ CScript _createmultisig_redeemScript(CWallet * const pwallet, const UniValue& pa
     {
         const std::string& ks = keys[i].get_str();
 #ifdef ENABLE_WALLET
-        // Case 1: AIPG address and we have full public key:
+        // Case 1: Aipg address and we have full public key:
         CTxDestination dest = DecodeDestination(ks);
         if (pwallet && IsValidDestination(dest)) {
             const CKeyID *keyID = boost::get<CKeyID>(&dest);
@@ -447,7 +590,7 @@ UniValue signmessagewithprivkey(const JSONRPCRequest& request)
     std::string strPrivkey = request.params[0].get_str();
     std::string strMessage = request.params[1].get_str();
 
-    CAIPGSecret vchSecret;
+    CAipgSecret vchSecret;
     bool fGood = vchSecret.SetString(strPrivkey);
     if (!fGood)
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key");
@@ -655,9 +798,9 @@ UniValue echo(const JSONRPCRequest& request)
 bool getAddressFromIndex(const int &type, const uint160 &hash, std::string &address)
 {
     if (type == 2) {
-        address = CAIPGAddress(CScriptID(hash)).ToString();
+        address = CAipgAddress(CScriptID(hash)).ToString();
     } else if (type == 1) {
-        address = CAIPGAddress(CKeyID(hash)).ToString();
+        address = CAipgAddress(CKeyID(hash)).ToString();
     } else {
         return false;
     }
@@ -667,7 +810,7 @@ bool getAddressFromIndex(const int &type, const uint160 &hash, std::string &addr
 bool getAddressesFromParams(const UniValue& params, std::vector<std::pair<uint160, int> > &addresses)
 {
     if (params[0].isStr()) {
-        CAIPGAddress address(params[0].get_str());
+        CAipgAddress address(params[0].get_str());
         uint160 hashBytes;
         int type = 0;
         if (!address.GetIndexKey(hashBytes, type)) {
@@ -685,7 +828,7 @@ bool getAddressesFromParams(const UniValue& params, std::vector<std::pair<uint16
 
         for (std::vector<UniValue>::iterator it = values.begin(); it != values.end(); ++it) {
 
-            CAIPGAddress address(it->get_str());
+            CAipgAddress address(it->get_str());
             uint160 hashBytes;
             int type = 0;
             if (!address.GetIndexKey(hashBytes, type)) {
@@ -729,7 +872,7 @@ UniValue getaddressmempool(const JSONRPCRequest& request)
             "[\n"
             "  {\n"
             "    \"address\"  (string) The base58check encoded address\n"
-            "    \"assetName\"  (string) The name of the associated asset (AIPG for AIPGcoin)\n"
+            "    \"assetName\"  (string) The name of the associated asset (aipg for Aipg)\n"
             "    \"txid\"  (string) The related txid\n"
             "    \"index\"  (number) The related input or output index\n"
             "    \"satoshis\"  (number) The difference of satoshis\n"
@@ -767,7 +910,7 @@ UniValue getaddressmempool(const JSONRPCRequest& request)
             throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "No information available for address");
         }
     } else {
-        if (!mempool.getAddressIndex(addresses, AIPG, indexes)) {
+        if (!mempool.getAddressIndex(addresses, aipg, indexes)) {
             throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "No information available for address");
         }
     }
@@ -815,13 +958,13 @@ UniValue getaddressutxos(const JSONRPCRequest& request)
             "      ,...\n"
             "    ],\n"
             "  \"chainInfo\",  (boolean, optional, default false) Include chain info with results\n"
-            "  \"assetName\"   (string, optional) Get UTXOs for a particular asset instead of AIPG ('*' for all assets).\n"
+            "  \"assetName\"   (string, optional) Get UTXOs for a particular asset instead of aipg ('*' for all assets).\n"
             "}\n"
             "\nResult\n"
             "[\n"
             "  {\n"
             "    \"address\"  (string) The address base58check encoded\n"
-            "    \"assetName\" (string) The asset associated with the UTXOs (AIPG for AIPGcoin)\n"
+            "    \"assetName\" (string) The asset associated with the UTXOs (aipg for Aipg)\n"
             "    \"txid\"  (string) The output txid\n"
             "    \"height\"  (number) The block height\n"
             "    \"outputIndex\"  (number) The output index\n"
@@ -837,7 +980,7 @@ UniValue getaddressutxos(const JSONRPCRequest& request)
             );
 
     bool includeChainInfo = false;
-    std::string assetName = AIPG;
+    std::string assetName = aipg;
     if (request.params[0].isObject()) {
         UniValue chainInfo = find_value(request.params[0].get_obj(), "chainInfo");
         if (chainInfo.isBool()) {
@@ -882,8 +1025,8 @@ UniValue getaddressutxos(const JSONRPCRequest& request)
             throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Unknown address type");
         }
 
-        std::string assetNameOut = "AIPG";
-        if (assetName != "AIPG") {
+        std::string assetNameOut = "aipg";
+        if (assetName != "aipg") {
             CAmount _amount;
             if (!GetAssetInfoFromScript(it->second.script, assetNameOut, _amount)) {
                 throw JSONRPCError(RPC_INTERNAL_ERROR, "Couldn't decode asset script");
@@ -929,12 +1072,12 @@ UniValue getaddressdeltas(const JSONRPCRequest& request)
             "  \"start\" (number) The start block height\n"
             "  \"end\" (number) The end block height\n"
             "  \"chainInfo\" (boolean) Include chain info in results, only applies if start and end specified\n"
-            "  \"assetName\"   (string, optional) Get deltas for a particular asset instead of AIPG.\n"
+            "  \"assetName\"   (string, optional) Get deltas for a particular asset instead of aipg.\n"
             "}\n"
             "\nResult:\n"
             "[\n"
             "  {\n"
-            "    \"assetName\"  (string) The asset associated with the deltas (AIPG for AIPGcoin)\n"
+            "    \"assetName\"  (string) The asset associated with the deltas (aipg for Aipg)\n"
             "    \"satoshis\"  (number) The difference of satoshis\n"
             "    \"txid\"  (string) The related txid\n"
             "    \"index\"  (number) The related input or output index\n"
@@ -959,7 +1102,7 @@ UniValue getaddressdeltas(const JSONRPCRequest& request)
         includeChainInfo = chainInfo.get_bool();
     }
 
-    std::string assetName = AIPG;
+    std::string assetName = aipg;
     UniValue assetNameParam = find_value(request.params[0].get_obj(), "assetName");
     if (assetNameParam.isStr()) {
         if (!AreAssetsDeployed())
@@ -1075,7 +1218,7 @@ UniValue getaddressbalance(const JSONRPCRequest& request)
             "OR\n"
             "[\n"
             "  {\n"
-            "    \"assetName\"  (string) The asset associated with the balance (AIPG for AIPGcoin)\n"
+            "    \"assetName\"  (string) The asset associated with the balance (aipg for Aipg)\n"
             "    \"balance\"  (string) The current balance in satoshis\n"
             "    \"received\"  (string) The total number of satoshis received (including change)\n"
             "  },...\n"
@@ -1142,7 +1285,7 @@ UniValue getaddressbalance(const JSONRPCRequest& request)
         std::vector<std::pair<CAddressIndexKey, CAmount> > addressIndex;
 
         for (std::vector<std::pair<uint160, int> >::iterator it = addresses.begin(); it != addresses.end(); it++) {
-            if (!GetAddressIndex((*it).first, (*it).second, AIPG, addressIndex)) {
+            if (!GetAddressIndex((*it).first, (*it).second, aipg, addressIndex)) {
                 throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "No information available for address");
             }
         }
@@ -1237,11 +1380,11 @@ UniValue getaddresstxids(const JSONRPCRequest& request)
             }
         } else {
             if (start > 0 && end > 0) {
-                if (!GetAddressIndex((*it).first, (*it).second, AIPG, addressIndex, start, end)) {
+                if (!GetAddressIndex((*it).first, (*it).second, aipg, addressIndex, start, end)) {
                     throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "No information available for address");
                 }
             } else {
-                if (!GetAddressIndex((*it).first, (*it).second, AIPG, addressIndex)) {
+                if (!GetAddressIndex((*it).first, (*it).second, aipg, addressIndex)) {
                     throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "No information available for address");
                 }
             }

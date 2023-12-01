@@ -1,4 +1,6 @@
-<TS language="es_CO" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="es_CO">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -61,99 +63,10 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>CoinControlDialog</name>
-    </context>
-<context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
-    <name>EditAddressDialog</name>
-    </context>
-<context>
-    <name>FreespaceChecker</name>
-    </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
-<context>
-    <name>HelpMessageDialog</name>
-    </context>
-<context>
-    <name>Intro</name>
-    <message>
-        <source>Welcome</source>
-        <translation>bienvenido</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Error</translation>
-    </message>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
-    <name>ModalOverlay</name>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
-    </context>
-<context>
-    <name>OpenURIDialog</name>
-    </context>
-<context>
-    <name>OptionsDialog</name>
-    </context>
-<context>
-    <name>OverviewPage</name>
-    </context>
-<context>
-    <name>PaymentServer</name>
-    </context>
-<context>
-    <name>PeerTableModel</name>
-    </context>
-<context>
-    <name>QObject</name>
-    </context>
-<context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
-    <name>QRImageWidget</name>
-    </context>
-<context>
-    <name>RPCConsole</name>
-    </context>
-<context>
-    <name>AIPGGUI</name>
+    <name>AipgGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Sincronizando con la red...</translation>
@@ -215,12 +128,16 @@
         <translation>Abrir &amp;URL...</translation>
     </message>
     <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Enviando monedas a una dirección de AIPG</translation>
+        <source>Send coins to a Aipg address</source>
+        <translation>Enviando monedas a una dirección de Aipg</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Cambiar la contraseña usando la encriptación de la billetera</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Ventana desarrollador</translation>
     </message>
     <message>
         <source>Open debugging and diagnostic console</source>
@@ -231,8 +148,8 @@
         <translation>&amp;Verificar Mensaje...</translation>
     </message>
     <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -259,6 +176,10 @@
         <translation>&amp;Archivo</translation>
     </message>
     <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Configuraciones</translation>
+    </message>
+    <message>
         <source>&amp;Help</source>
         <translation>&amp;Ayuda</translation>
     </message>
@@ -268,6 +189,59 @@
     </message>
     </context>
 <context>
+    <name>CoinControlDialog</name>
+    </context>
+<context>
+    <name>EditAddressDialog</name>
+    </context>
+<context>
+    <name>FreespaceChecker</name>
+    </context>
+<context>
+    <name>HelpMessageDialog</name>
+    </context>
+<context>
+    <name>Intro</name>
+    <message>
+        <source>Welcome</source>
+        <translation>bienvenido</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    </context>
+<context>
+    <name>ModalOverlay</name>
+    </context>
+<context>
+    <name>OpenURIDialog</name>
+    </context>
+<context>
+    <name>OptionsDialog</name>
+    </context>
+<context>
+    <name>OverviewPage</name>
+    </context>
+<context>
+    <name>PaymentServer</name>
+    </context>
+<context>
+    <name>PeerTableModel</name>
+    </context>
+<context>
+    <name>QObject</name>
+    </context>
+<context>
+    <name>QObject::QObject</name>
+    </context>
+<context>
+    <name>QRImageWidget</name>
+    </context>
+<context>
+    <name>RPCConsole</name>
+    </context>
+<context>
     <name>ReceiveCoinsDialog</name>
     </context>
 <context>
@@ -275,15 +249,6 @@
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
-    </context>
-<context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -333,8 +298,8 @@
 <context>
     <name>aipg-core</name>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -345,8 +310,16 @@
         <translation>Cargando billetera...</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>No se puede escribir la dirección por defecto</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>Reescaneando</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Listo Cargando</translation>
     </message>
     <message>
         <source>Error</source>

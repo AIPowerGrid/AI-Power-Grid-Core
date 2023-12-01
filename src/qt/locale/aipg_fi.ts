@@ -1,4 +1,6 @@
-<TS language="fi" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="fi">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -62,12 +64,12 @@
         <translation>Vastaanotto-osoitteet</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat AIPG-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat Aipg-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tässä ovat AIPG vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tässä ovat Aipg vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +170,8 @@
         <translation>Vahvista lompakon salaaminen</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPGS&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI AIPGISI&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPG&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI Aipg&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,7 +182,7 @@
         <translation>Lompakko salattiin</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgss from being stolen by malware infecting your computer.</source>
         <translation>%1 sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
     </message>
     <message>
@@ -221,18 +223,6 @@
     </message>
 </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
@@ -241,6 +231,327 @@
     <message>
         <source>Banned Until</source>
         <translation>Estetty kunnes</translation>
+    </message>
+</context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>&amp;Allekirjoita viesti...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Synkronoidaan verkon kanssa...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Yleisnäkymä</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Solmu</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Lompakon tilanteen yleiskatsaus</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Rahansiirrot</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Selaa rahansiirtohistoriaa</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>L&amp;opeta</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Sulje ohjelma</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>&amp;Tietoja %1</translation>
+    </message>
+    <message>
+        <source>Show information about %1</source>
+        <translation>Näytä tietoa aiheesta %1</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>Tietoja &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Näytä tietoja Qt:ta</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Asetukset...</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Muuta kohteen %1 kokoonpanoasetuksia</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Salaa lompakko...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Varmuuskopioi Lompakko...</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;Vaihda Tunnuslause...</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;Lähetysosoitteet...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>&amp;Vastaanotto-osoitteet...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Avaa &amp;URI...</translation>
+    </message>
+    <message>
+        <source>Click to disable network activity.</source>
+        <translation>Paina poistaaksesi verkkoyhteysilmaisin käytöstä.</translation>
+    </message>
+    <message>
+        <source>Network activity disabled.</source>
+        <translation>Verkkoyhteysmittari pois käytöstä</translation>
+    </message>
+    <message>
+        <source>Click to enable network activity again.</source>
+        <translation>Paina ottaaksesi verkkoyhteysilmaisin uudelleen käyttöön.</translation>
+    </message>
+    <message>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Synkronoidaan Tunnisteita (%1%)...</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Ladataan lohkoindeksiä...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Lähetä kolikoita Aipg-osoitteeseen</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Varmuuskopioi lompakko toiseen sijaintiin</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Vaihda lompakon salaukseen käytettävä tunnuslause</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Testausikkuna</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Avaa debuggaus- ja diagnostiikkakonsoli</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>Varmista &amp;viesti...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Lompakko</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Lähetä</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Vastaanota</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Näytä / Piilota</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Näytä tai piilota Aipg-ikkuna</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla Aipg -osoitteellasi todistaaksesi, että omistat ne</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Aipg -osoitteella</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Tiedosto</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Asetukset</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Apua</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Välilehtipalkki</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja aipg: URIt)</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Näytä lähettämiseen käytettyjen osoitteiden ja nimien lista</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>Avaa aipg: URI tai maksupyyntö</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>&amp;Komentorivin valinnat</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n active connection(s) to Aipg network</source>
+        <translation><numerusform>%n aktiivinen yhteys Aipg-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Aipg-verkkoon</numerusform></translation>
+    </message>
+    <message>
+        <source>Indexing blocks on disk...</source>
+        <translation>Ladataan lohkoindeksiä...</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>Käsitellään lohkoja levyllä...</translation>
+    </message>
+    <message numerus="yes">
+        <source>Processed %n block(s) of transaction history.</source>
+        <translation><numerusform>Prosessoitu %n lohko rahansiirtohistoriasta.</numerusform><numerusform>Prosessoitu %n lohkoa rahansiirtohistoriasta.</numerusform></translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 jäljessä</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>Viimeisin vastaanotettu lohko tuotettu %1.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Tämän jälkeiset rahansiirrot eivät ole vielä näkyvissä.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Virhe</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Varoitus</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Tietoa</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Rahansiirtohistoria on ajan tasalla</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible Aipg command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Aipg komentorivivalinnoista</translation>
+    </message>
+    <message>
+        <source>%1 client</source>
+        <translation>%1-asiakas</translation>
+    </message>
+    <message>
+        <source>Connecting to peers...</source>
+        <translation>Yhdistetään vertaisiin...</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Saavutetaan verkkoa...</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>Päivämäärä: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>Määrä: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>Tyyppi: %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>Nimike: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>Osoite: %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Lähetetyt rahansiirrot</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Saapuva rahansiirto</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>HD avaimen generointi on &lt;b&gt;päällä&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>HD avaimen generointi on &lt;/b&gt;pois päältä&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;avoinna&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. Aipg can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. Aipg ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -387,9 +698,6 @@
     </message>
 </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -428,8 +736,8 @@
         <translation>Muokkaa lähettävää osoitetta</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid AIPG address.</source>
-        <translation>Antamasi osoite "%1" ei ole kelvollinen AIPG-osoite.</translation>
+        <source>The entered address "%1" is not a valid Aipg address.</source>
+        <translation>Antamasi osoite "%1" ei ole kelvollinen Aipg-osoite.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -467,12 +775,6 @@
         <translation>Ei voida luoda data-hakemistoa tänne.</translation>
     </message>
 </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
@@ -543,6 +845,10 @@
         <translation>Tämä on ensimmäinen kerta, kun %1 on käynnistetty, joten voit valita data-hakemiston paikan.</translation>
     </message>
     <message>
+        <source>%1 will download and store a copy of the Aipg block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 lataa ja tallentaa kopion Aipg lohkoketjusta. Vähintään %2Gt dataa tullaan tallentamaan tähän hakemistoon, ja tarve kasvaa ajan myötä. Lompakko tullaan myös tallentamaan tähän hakemistoon.</translation>
+    </message>
+    <message>
         <source>Use the default data directory</source>
         <translation>Käytä oletuskansiota</translation>
     </message>
@@ -558,19 +864,15 @@
         <source>Error</source>
         <translation>Virhe</translation>
     </message>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
+    <message numerus="yes">
+        <source>%n GB of free space available</source>
+        <translation><numerusform>%n Gt vapaata tilaa käytettävissä</numerusform><numerusform>%n Gt vapaata tilaa käytettävissä</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>(of %n GB needed)</source>
+        <translation><numerusform>(%n Gt tarvittavasta tilasta)</numerusform><numerusform>(%n Gt tarvittavasta tilasta)</numerusform></translation>
+    </message>
+</context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -605,9 +907,6 @@
         <source>Hide</source>
         <translation>Piilota</translation>
     </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -659,6 +958,14 @@
         <translation>Script &amp;varmistuksen threadien määrä</translation>
     </message>
     <message>
+        <source>Accept connections from outside</source>
+        <translation>Hyväksy yhteysiä ulkopuolelta</translation>
+    </message>
+    <message>
+        <source>Allow incoming connections</source>
+        <translation>Hyväksy sisääntulevia yhteyksiä</translation>
+    </message>
+    <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>IP osoite proxille (esim. IPv4: 127.0.0.1 / IPv6: ::1)</translation>
     </message>
@@ -669,6 +976,10 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Ulkopuoliset URL-osoitteet (esim. block explorer,) jotka esiintyvät siirrot-välilehdellä valikossa. %s URL-osoitteessa korvataan siirtotunnuksella. Useampi URL-osoite on eroteltu pystyviivalla |.</translation>
+    </message>
+    <message>
+        <source>Third party transaction URLs</source>
+        <translation>Kolmannen osapuolen rahansiirto URL:t</translation>
     </message>
     <message>
         <source>Active command-line options that override above options:</source>
@@ -711,16 +1022,16 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa AIPG-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Aipg-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Portin uudelleenohjaus &amp;UPnP:llä</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä AIPG-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <source>Connect to the Aipg network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä Aipg-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -743,6 +1054,10 @@
         <translation>Vertaisten saavuttamiseen käytettävät verkkotyypit:</translation>
     </message>
     <message>
+        <source>Shows, if the supplied default SOCKS5 proxy is used to reach peers via this network type.</source>
+        <translation>Ilmoittaa, mikäli oletetettua SOCKS5-välityspalvelinta käytetään tämän verkkotyypin kautta vertaisten saavuttamiseen.</translation>
+    </message>
+    <message>
         <source>IPv4</source>
         <translation>IPv4</translation>
     </message>
@@ -755,8 +1070,12 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä AIPG-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <source>Connect to the Aipg network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Yhdistä Aipg-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+    </message>
+    <message>
+        <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
+        <translation>Käytä erillistä SOCKS5-välityspalvelinta saavuttaaksesi vertaisia piilotettujen Tor-palveluiden kautta:</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -842,8 +1161,8 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu AIPG-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Aipg-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -874,12 +1193,16 @@
         <translation>Louhittu saldo, joka ei ole vielä kypsynyt</translation>
     </message>
     <message>
+        <source>Balances</source>
+        <translation>Saldot</translation>
+    </message>
+    <message>
         <source>Total:</source>
         <translation>Yhteensä:</translation>
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien AIPGien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien Aipg määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -905,7 +1228,7 @@
         <source>Current total balance in watch-only addresses</source>
         <translation>Nykyinen tase seurantaosoitetteissa</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>PaymentServer</name>
     </context>
@@ -923,7 +1246,7 @@
         <source>Ping</source>
         <translation>Vasteaika</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>QObject</name>
     <message>
@@ -931,8 +1254,8 @@
         <translation>Määrä</translation>
     </message>
     <message>
-        <source>Enter a AIPG address (e.g. %1)</source>
-        <translation>Syötä AIPG-osoite (esim. %1)</translation>
+        <source>Enter a Aipg address (e.g. %1)</source>
+        <translation>Syötä Aipg-osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1176,6 +1499,10 @@
         <translation>&amp;Verkkoliikenne</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;Tyhjennä</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>Yhteensä</translation>
     </message>
@@ -1216,8 +1543,28 @@
         <translation>Tervetuloa %1 RPC-konsoliin.</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Ylös- ja alas-nuolet selaavat historiaa ja &lt;b&gt;Ctrl-L&lt;/b&gt; tyhjentää ruudun.</translation>
+    </message>
+    <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Kirjoita &lt;b&gt;help&lt;/b&gt; nähdäksesi yleiskatsauksen käytettävissä olevista komennoista.</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
     </message>
     <message>
         <source>(node id: %1)</source>
@@ -1253,307 +1600,6 @@
     </message>
 </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>&amp;Allekirjoita viesti...</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Synkronoidaan verkon kanssa...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Yleisnäkymä</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Solmu</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Lompakon tilanteen yleiskatsaus</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Rahansiirrot</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Selaa rahansiirtohistoriaa</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>L&amp;opeta</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Sulje ohjelma</translation>
-    </message>
-    <message>
-        <source>&amp;About %1</source>
-        <translation>&amp;Tietoja %1</translation>
-    </message>
-    <message>
-        <source>Show information about %1</source>
-        <translation>Näytä tietoa aiheesta %1</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>Tietoja &amp;Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Näytä tietoja Qt:ta</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Asetukset...</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for %1</source>
-        <translation>Muuta kohteen %1 kokoonpanoasetuksia</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Salaa lompakko...</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Varmuuskopioi Lompakko...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Vaihda Tunnuslause...</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Lähetysosoitteet...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Vastaanotto-osoitteet...</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>Avaa &amp;URI...</translation>
-    </message>
-    <message>
-        <source>Click to disable network activity.</source>
-        <translation>Paina poistaaksesi verkkoyhteysilmaisin käytöstä.</translation>
-    </message>
-    <message>
-        <source>Network activity disabled.</source>
-        <translation>Verkkoyhteysmittari pois käytöstä</translation>
-    </message>
-    <message>
-        <source>Click to enable network activity again.</source>
-        <translation>Paina ottaaksesi verkkoyhteysilmaisin uudelleen käyttöön.</translation>
-    </message>
-    <message>
-        <source>Syncing Headers (%1%)...</source>
-        <translation>Synkronoidaan Tunnisteita (%1%)...</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Ladataan lohkoindeksiä...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Lähetä kolikoita AIPG-osoitteeseen</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Varmuuskopioi lompakko toiseen sijaintiin</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Vaihda lompakon salaukseen käytettävä tunnuslause</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Avaa debuggaus- ja diagnostiikkakonsoli</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>Varmista &amp;viesti...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Lompakko</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Lähetä</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Vastaanota</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Näytä / Piilota</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota AIPG-ikkuna</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla AIPG -osoitteellasi todistaaksesi, että omistat ne</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä AIPG -osoitteella</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Tiedosto</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Apua</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja aipg: URIt)</translation>
-    </message>
-    <message>
-        <source>Show the list of used sending addresses and labels</source>
-        <translation>Näytä lähettämiseen käytettyjen osoitteiden ja nimien lista</translation>
-    </message>
-    <message>
-        <source>Show the list of used receiving addresses and labels</source>
-        <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>Avaa aipg: URI tai maksupyyntö</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>&amp;Komentorivin valinnat</translation>
-    </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>Ladataan lohkoindeksiä...</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>Käsitellään lohkoja levyllä...</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 jäljessä</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>Viimeisin vastaanotettu lohko tuotettu %1.</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Tämän jälkeiset rahansiirrot eivät ole vielä näkyvissä.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Virhe</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Varoitus</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Tietoa</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Rahansiirtohistoria on ajan tasalla</translation>
-    </message>
-    <message>
-        <source>Show the %1 help message to get a list with possible AIPG command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista AIPGin komentorivivalinnoista</translation>
-    </message>
-    <message>
-        <source>%1 client</source>
-        <translation>%1-asiakas</translation>
-    </message>
-    <message>
-        <source>Connecting to peers...</source>
-        <translation>Yhdistetään vertaisiin...</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Saavutetaan verkkoa...</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>Päivämäärä: %1
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>Määrä: %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>Tyyppi: %1
-</translation>
-    </message>
-    <message>
-        <source>Label: %1
-</source>
-        <translation>Nimike: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>Osoite: %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Lähetetyt rahansiirrot</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Saapuva rahansiirto</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
-        <translation>HD avaimen generointi on &lt;b&gt;päällä&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>HD avaimen generointi on &lt;/b&gt;pois päältä&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;avoinna&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. AIPG can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. AIPG ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
-    </message>
-</context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -1576,8 +1622,8 @@
         <translation>&amp;Uudelleenkäytä vastaanotto-osoitetta (ei suositella)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AIPG network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä AIPG-verkkoon.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aipg network.</source>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Aipg-verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1699,19 +1745,10 @@
     </message>
 </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Lähetä AIPGeja</translation>
+        <translation>Lähetä Aipg</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -1782,6 +1819,10 @@
         <translation>Piilota</translation>
     </message>
     <message>
+        <source>total at least</source>
+        <translation>yhteensä ainakin</translation>
+    </message>
+    <message>
         <source>(read the tooltip)</source>
         <translation>(lue työkaluvinkki)</translation>
     </message>
@@ -1796,6 +1837,14 @@
     <message>
         <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
         <translation>(Älykästä rahansiirtokulua ei ole vielä alustettu. Tähän kuluu yleensä aikaa muutaman lohkon verran...)</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>normaali</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>nopea</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
@@ -1877,6 +1926,10 @@
         <translation>M&amp;äärä:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>Maksun saaja:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Nimi:</translation>
     </message>
@@ -1889,8 +1942,8 @@
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The AIPG address to send the payment to</source>
-        <translation>AIPG-osoite johon maksu lähetetään</translation>
+        <source>The Aipg address to send the payment to</source>
+        <translation>Aipg-osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1909,8 +1962,8 @@
         <translation>Poista tämä alkio</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän aipgeja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgss than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän aipgseja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1933,8 +1986,12 @@
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AIPG network.</source>
-        <translation>Viesti joka liitettiin aipg: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä AIPG-verkkoon.</translation>
+        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aipg network.</source>
+        <translation>Viesti joka liitettiin aipg: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Aipg-verkkoon.</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Saaja:</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -1970,8 +2027,8 @@
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>The AIPG address to sign the message with</source>
-        <translation>AIPG-osoite jolla viesti allekirjoitetaan</translation>
+        <source>The Aipg address to sign the message with</source>
+        <translation>Aipg-osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2002,8 +2059,8 @@
         <translation>Kopioi tämänhetkinen allekirjoitus leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän AIPG-osoitteen</translation>
+        <source>Sign the message to prove you own this Aipg address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Aipg-osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2022,12 +2079,12 @@
         <translation>&amp;Varmista viesti</translation>
     </message>
     <message>
-        <source>The AIPG address the message was signed with</source>
-        <translation>AIPG-osoite jolla viesti on allekirjoitettu</translation>
+        <source>The Aipg address the message was signed with</source>
+        <translation>Aipg-osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AIPG address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä AIPG-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Aipg address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Aipg-osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2288,7 +2345,7 @@
         <source>Send Coins</source>
         <translation>Lähetä kolikoita</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -2375,8 +2432,8 @@
         <translation>HTTP-palvelinta ei voitu käynnistää. Katso debug-lokista lisätietoja.</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG-ydin</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg-ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -2413,6 +2470,10 @@
     <message>
         <source>Use UPnP to map the listening port (default: 1 when listening and no -proxy)</source>
         <translation>Käytä UPnP:ta kuuntelevan portin kartoitukseen (oletus: 1 kun kuunnellaan ja -proxy ei käytössä)</translation>
+    </message>
+    <message>
+        <source>You need to rebuild the database using -reindex-chainstate to change -txindex</source>
+        <translation>Sinun tulee uudelleenrakentaa tietokanta käyttäen -reindex-chainstate vaihtaaksesi -txindex</translation>
     </message>
     <message>
         <source>%s corrupt, salvage failed</source>
@@ -2511,6 +2572,10 @@
         <translation>Virheellinen tai olematon alkulohko löydetty. Väärä data-hakemisto verkolle?</translation>
     </message>
     <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>Virheellinen -onion osoite: '%s'</translation>
+    </message>
+    <message>
         <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
         <translation>Virheellinen määrä -%s=&lt;amount&gt;: '%s'</translation>
     </message>
@@ -2555,6 +2620,10 @@
         <translation>Aseta tietokannan välimuistin koko megatavuissa (%d - %d, oletus: %d</translation>
     </message>
     <message>
+        <source>Set maximum block size in bytes (default: %d)</source>
+        <translation>Aseta lohkon maksimikoko tavuissa (oletus: %d)</translation>
+    </message>
+    <message>
         <source>Specify wallet file (within data directory)</source>
         <translation>Aseta lompakkotiedosto (data-hakemiston sisällä)</translation>
     </message>
@@ -2583,6 +2652,10 @@
         <translation>Varmistetaan lohkoja...</translation>
     </message>
     <message>
+        <source>Verifying wallet...</source>
+        <translation>Varmistetaan lompakko...</translation>
+    </message>
+    <message>
         <source>Wallet %s resides outside data directory %s</source>
         <translation>Lompakko %s sijaitsee data-hakemiston ulkopuolella %s</translation>
     </message>
@@ -2609,6 +2682,10 @@
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
         <translation>Aja komento kun olennainen hälytys vastaanotetaan tai nähdään todella pitkä haara (%s komennossa korvataan viestillä)</translation>
+    </message>
+    <message>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
+        <translation>Aseta maksimikoko korkea prioriteetti/pieni palkkio rahansiirtoihin tavuissa (oletus: %d)</translation>
     </message>
     <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
@@ -2751,6 +2828,10 @@
         <translation>Salli DNS kyselyt -addnode, -seednode ja -connect yhteydessä</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Ladataan osoitteita...</translation>
+    </message>
+    <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
         <translation>-maxtxfee on asetettu erittäin suureksi! Tämänkokoisia kuluja saatetaan maksaa yhdessä rahansiirrossa.</translation>
     </message>
@@ -2789,6 +2870,10 @@
     <message>
         <source>Include IP addresses in debug output (default: %u)</source>
         <translation>Sisällytä IP-osoitteet virheenkorjauslokissa (oletus: %u)</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Virheellinen proxy-osoite '%s'</translation>
     </message>
     <message>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>
@@ -2887,6 +2972,10 @@
         <translation>Ladataan lohkoindeksiä...</translation>
     </message>
     <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Linää solmu mihin liittyä pitääksesi yhteyden auki</translation>
+    </message>
+    <message>
         <source>Loading wallet...</source>
         <translation>Ladataan lompakkoa...</translation>
     </message>
@@ -2895,8 +2984,16 @@
         <translation>Et voi päivittää lompakkoasi vanhempaan versioon</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>Oletusosoitetta ei voi kirjoittaa</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>Skannataan uudelleen...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Lataus on valmis</translation>
     </message>
     <message>
         <source>Error</source>

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,10 +16,10 @@ RPCs tested are:
     - move (with account arguments)
 """
 
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import assert_equal
 
-class WalletAccountsTest(AIPGTestFramework):
+class WalletAccountsTest(AipgTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -36,7 +37,7 @@ class WalletAccountsTest(AIPGTestFramework):
         assert_equal(node.getbalance(), 10000)
 
         # there should be 2 address groups
-        # each with 1 address with a balance of 50 AIPGs
+        # each with 1 address with a balance of 50 Aipg
         address_groups = node.listaddressgroupings()
         assert_equal(len(address_groups), 2)
         # the addresses aren't linked now, but will be after we send to the

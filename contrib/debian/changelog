@@ -36,7 +36,7 @@ aipg (0.13.2-trusty1) trusty; urgency=medium
 
 aipg (0.13.1-trusty2) trusty; urgency=medium
 
-  * Revert to Qt4, due to https://github.com/bitcoin/bitcoin/issues/9038
+  * Revert to Qt4, due to https://github.com/JustAResearcher/Aipg/issues/9038
 
  -- Matt Corallo (BlueMatt) <matt@mattcorallo.com>  Mon, 31 Oct 2016 11:16:00 -0400
 
@@ -378,7 +378,7 @@ aipg (0.4.0-1) unstable; urgency=low
   * Drop dpkg-source local-options hint: Declared options are default
     since dpkg-source 1.16.1.
     + Add irc URL to Upstream-Contact.
-    + Add comment on AIPG Developers to catch-all Files section.
+    + Add comment on Aipg Developers to catch-all Files section.
     + Add Files sections for newly readded src/cryptopp/* (new custom
       BSD-like license), and newly added doc/build-osx.txt and
       src/makefile.osx (Expat).

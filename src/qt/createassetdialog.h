@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -94,14 +95,12 @@ private:
     void updateFeeMinimizedLabel();
     void minimizeFeeSection(bool fMinimize);
 
-    // Validation
-    // Returns true if this is an IPFS-hash or TXID.
+    //Validation
     bool checkIPFSHash(QString hash);
 
 private Q_SLOTS:
     void ipfsStateChanged();
     void checkAvailabilityClicked();
-    void openIpfsBrowser();
     void onNameChanged(QString name);
     void onAddressNameChanged(QString address);
     void onIPFSHashChanged(QString hash);

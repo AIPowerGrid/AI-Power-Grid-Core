@@ -1,6 +1,6 @@
 // Copyright (c) 2017 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -99,7 +99,7 @@ BOOST_FIXTURE_TEST_SUITE(script_standard_tests, BasicTestingSetup)
 
         // TX_RESTRICTED_ASSET_DATA
         s.clear();
-        s << OP_AIPG_ASSET <<
+        s << OP_aipg_ASSET <<
           std::vector<unsigned char>({0}) <<
           std::vector<unsigned char>({75}) <<
           std::vector<unsigned char>({255});
@@ -189,7 +189,7 @@ BOOST_FIXTURE_TEST_SUITE(script_standard_tests, BasicTestingSetup)
 
         // TX_RESTRICTED_ASSET_DATA with other opcodes
         s.clear();
-        s << OP_AIPG_ASSET << std::vector<unsigned char>({75}) << OP_ADD;
+        s << OP_aipg_ASSET << std::vector<unsigned char>({75}) << OP_ADD;
         BOOST_CHECK(!Solver(s, whichType, solutions));
 
         // TX_WITNESS with unknown version
@@ -249,7 +249,7 @@ BOOST_FIXTURE_TEST_SUITE(script_standard_tests, BasicTestingSetup)
 
         // TX_RESTRICTED_ASSET_DATA without an address
         s.clear();
-        s << OP_AIPG_ASSET << std::vector<unsigned char>({75});
+        s << OP_aipg_ASSET << std::vector<unsigned char>({75});
         BOOST_CHECK(!ExtractDestination(s, address));
 
         // TX_RESTRICTED_ASSET_DATA with an address
@@ -339,7 +339,7 @@ BOOST_FIXTURE_TEST_SUITE(script_standard_tests, BasicTestingSetup)
 
         // TX_RESTRICTED_ASSET_DATA
         s.clear();
-        s << OP_AIPG_ASSET << std::vector<unsigned char>({75});
+        s << OP_aipg_ASSET << std::vector<unsigned char>({75});
         BOOST_CHECK(!ExtractDestinations(s, whichType, addresses, nRequired));
 
         // TX_WITNESS_V0_KEYHASH
@@ -773,13 +773,13 @@ BOOST_FIXTURE_TEST_SUITE(script_standard_tests, BasicTestingSetup)
             BOOST_CHECK(!isInvalid);
         }
 
-        // OP_AIPG_ASSET at front of script
+        // OP_aipg_ASSET at front of script
         {
             CBasicKeyStore keystore;
             keystore.AddKey(keys[0]);
 
             scriptPubKey.clear();
-            scriptPubKey << OP_AIPG_ASSET << ToByteVector(pubkeys[0]);
+            scriptPubKey << OP_aipg_ASSET << ToByteVector(pubkeys[0]);
 
             result = IsMine(keystore, scriptPubKey, isInvalid);
             BOOST_CHECK_EQUAL(result, ISMINE_NO);

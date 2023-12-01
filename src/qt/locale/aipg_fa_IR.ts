@@ -1,4 +1,6 @@
-<TS language="fa_IR" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="fa_IR">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -62,11 +64,11 @@
         <translation>آدرس‌های گیرنده</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>اینها آدرس‌های بیتکوین شما برای ارسال وجوه هستند. همیشه قبل از ارسال، مقدار و آدرس گیرنده را بررسی کنید.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>اینها آدرس‌های بیتکوین شما برای دریافت وجوه هستند. توصیه می‌شود برای هر دریافت از یک آدرس جدید استفاده کنید.</translation>
     </message>
     <message>
@@ -141,19 +143,150 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>امضا و پیام</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>به روز رسانی با شبکه...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>بازبینی</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>نمای کلی از wallet را نشان بده</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>تراکنش</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>تاریخچه تراکنش را باز کن</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>خروج</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>از "درخواست نامه"/ application خارج شو</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>درباره Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>نمایش اطلاعات درباره Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>انتخاب ها</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>رمزگذاری کیف پول</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>تهیه نسخه پشتیبان از کیف پول</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>تغییر رمز/پَس فرِیز</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>دریافت آدرس ها</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>ارسال کوین به آدرس بیت کوین</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>گرفتن نسخه پیشتیبان در آدرسی دیگر</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>رمز عبور مربوط به رمزگذاریِ کیف پول  را تغییر دهید</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>پنجره دیباگ</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>تایید پیام</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>بیت کوین</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>کیف پول</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>ارسال</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>نمایش/ عدم نمایش</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>فایل</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>تنظیمات</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>راهنما</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>نوار ابزار</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>خطا</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>به روز</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>در حال روزآمد سازی..</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>تراکنش ارسالی</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>تراکنش دریافتی</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>wallet رمزگذاری شد و در حال حاضر از حالت قفل در آمده است</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>wallet رمزگذاری شد و در حال حاضر قفل است</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -239,9 +372,6 @@
     </message>
     </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -280,12 +410,6 @@
     </message>
     </context>
 <context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
-<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -308,18 +432,6 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -337,9 +449,6 @@
         <source>Hide</source>
         <translation>پنهان کردن</translation>
     </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -398,7 +507,7 @@
         <translation>فرم</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
         <translation>اطلاعات نمایش داده شده ممکن است روزآمد نباشد. wallet شما به صورت خودکار بعد از برقراری اتصال با شبکه aipg به روز می شود اما این فرایند هنوز تکمیل نشده است.</translation>
     </message>
     <message>
@@ -465,137 +574,6 @@
     </message>
     </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>امضا و پیام</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>به روز رسانی با شبکه...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>بازبینی</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>نمای کلی از wallet را نشان بده</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>تراکنش</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>تاریخچه تراکنش را باز کن</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>خروج</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>از "درخواست نامه"/ application خارج شو</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>درباره Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>نمایش اطلاعات درباره Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>انتخاب ها</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>رمزگذاری کیف پول</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>تهیه نسخه پشتیبان از کیف پول</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>تغییر رمز/پَس فرِیز</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>دریافت آدرس ها</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>ارسال کوین به آدرس بیت کوین</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>گرفتن نسخه پیشتیبان در آدرسی دیگر</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>رمز عبور مربوط به رمزگذاریِ کیف پول  را تغییر دهید</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>تایید پیام</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>بیت کوین</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>کیف پول</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>ارسال</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>نمایش/ عدم نمایش</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>فایل</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>راهنما</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>خطا</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>به روز</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>در حال روزآمد سازی..</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>تراکنش ارسالی</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>تراکنش دریافتی</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>wallet رمزگذاری شد و در حال حاضر از حالت قفل در آمده است</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>wallet رمزگذاری شد و در حال حاضر قفل است</translation>
-    </message>
-    </context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -643,15 +621,6 @@
         <source>Label</source>
         <translation>برچسب</translation>
     </message>
-    </context>
-<context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -723,6 +692,10 @@
         <translation>میزان وجه</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>پرداخت به:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>برچسب:</translation>
     </message>
@@ -733,6 +706,10 @@
     <message>
         <source>Message:</source>
         <translation>پیام:</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>پرداخت به:</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -933,6 +910,10 @@
         <translation>ارسال اطلاعات پیگیری/خطایابی به کنسول به جای ارسال به فایل debug.log</translation>
     </message>
     <message>
+        <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
+        <translation>ارسال تراکنش ها به صورت بدون کارمزد در صورت امکان (پیش فرض: %u)</translation>
+    </message>
+    <message>
         <source>Username for JSON-RPC connections</source>
         <translation>شناسه کاربری برای ارتباطاتِ JSON-RPC</translation>
     </message>
@@ -943,6 +924,10 @@
     <message>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>دستور را وقتی بهترین بلاک تغییر کرد اجرا کن (%s در دستور توسط block hash جایگزین شده است)</translation>
+    </message>
+    <message>
+        <source>Loading addresses...</source>
+        <translation>لود شدن آدرسها..</translation>
     </message>
     <message>
         <source>Set the number of threads to service RPC calls (default: %d)</source>
@@ -965,6 +950,10 @@
         <translation>لود شدن نمایه بلاکها..</translation>
     </message>
     <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>یک گره برای اتصال اضافه کنید و تلاش کنید تا اتصال را باز نگاه دارید</translation>
+    </message>
+    <message>
         <source>Loading wallet...</source>
         <translation>wallet در حال لود شدن است...</translation>
     </message>
@@ -973,8 +962,16 @@
         <translation>قابلیت برگشت به نسخه قبلی برای wallet امکان پذیر نیست</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>آدرس پیش فرض قابل ذخیره نیست</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>اسکنِ دوباره...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>اتمام لود شدن</translation>
     </message>
     <message>
         <source>Error</source>

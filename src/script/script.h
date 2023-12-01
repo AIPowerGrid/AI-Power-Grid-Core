@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -186,7 +186,7 @@ enum opcodetype
     OP_NOP10 = 0xb9,
 
     /** AIPG START */
-    OP_AIPG_ASSET = 0xc0,
+    OP_aipg_ASSET = 0xc0,
     /** AIPG END */
 
 
@@ -576,9 +576,9 @@ public:
             pc += nSize;
         }
 
-        // If we see an op AIPG asset, we consider all data after it has data, and not op codes
+        // If we see an op neox asset, we consider all data after it has data, and not op codes
         // Move the pc to the end of the script
-        if (opcode == OP_AIPG_ASSET) {
+        if (opcode == OP_aipg_ASSET) {
             unsigned int nSize = end() - pc;
             if (pvchRet)
                 pvchRet->assign(pc, pc + nSize);
@@ -643,7 +643,7 @@ public:
     }
 
     /**
-     * Pre-version-0.6, AIPG always counted CHECKMULTISIGs
+     * Pre-version-0.6, Aipg always counted CHECKMULTISIGs
      * as 20 sigops. With pay-to-script-hash, that changed:
      * CHECKMULTISIGs serialized in scriptSigs are
      * counted more accurately, assuming they are of the form

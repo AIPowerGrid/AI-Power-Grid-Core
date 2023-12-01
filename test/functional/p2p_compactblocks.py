@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +16,7 @@ from test_framework.mininode import (NodeConnCB, mininode_lock, MsgGetHeaders, M
                                      P2PHeaderAndShortIDs, PrefilledTransaction, from_hex, CBlock, HeaderAndShortIDs, CInv, MsgGetdata, MsgInv, calculate_shortid, MsgWitnessBlocktxn, MsgBlockTxn,
                                      BlockTransactions, MsgTx, MSG_WITNESS_FLAG, MsgWitnessBlock, MsgGetBlockTxn, BlockTransactionsRequest, to_hex, CTxInWitness, ser_uint256, NodeConn, NODE_NETWORK,
                                      NetworkThread, NODE_WITNESS)
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import wait_until, assert_equal, satoshi_round, Decimal, random, get_bip9_status, p2p_port, sync_blocks
 from test_framework.blocktools import create_block, create_coinbase, add_witness_commitment
 from test_framework.script import CScript, OP_TRUE
@@ -94,7 +95,7 @@ class TestNode(NodeConnCB):
         self.send_message(message)
         wait_until(lambda: not self.connected, timeout=timeout, lock=mininode_lock, err_msg="send_wait_disconnect")
 
-class CompactBlocksTest(AIPGTestFramework):
+class CompactBlocksTest(AipgTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         # Node0 = pre-segwit, node1 = segwit-aware

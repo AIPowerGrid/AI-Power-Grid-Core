@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2019 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,10 +18,10 @@ disconnected.
 from decimal import Decimal
 import os
 import shutil
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import assert_equal, connect_nodes, disconnect_nodes, sync_blocks
 
-class ReorgsRestoreTest(AIPGTestFramework):
+class ReorgsRestoreTest(AipgTestFramework):
     def set_test_params(self):
         self.num_nodes = 3
 

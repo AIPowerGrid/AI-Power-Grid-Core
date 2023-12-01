@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2020 The AIPG Core developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,12 +12,9 @@
 #include "crypto/common.h"
 
 
-// Mainnet activation time for X16RV2
-static const uint32_t MAINNET_X16RV2ACTIVATIONTIME = 1569945600; // Fri, 01 Oct 2020 00:00:00 GMT
-// Testnet activation time for X16RV2
-static const uint32_t TESTNET_X16RV2ACTIVATIONTIME = 1569945600; // Fri, 01 Oct 2020 00:00:00 GMT
-// Regtest activation time for X16RV2
-static const uint32_t REGTEST_X16RV2ACTIVATIONTIME = 1569945600; // Fri, 01 Oct 2020 00:00:00 GMT
+static const uint32_t MAINNET_X16RV2ACTIVATIONTIME = 1569945600;
+static const uint32_t TESTNET_X16RV2ACTIVATIONTIME = 1567533600;
+static const uint32_t REGTEST_X16RV2ACTIVATIONTIME = 1569931200;
 
 uint32_t nKAWPOWActivationTime;
 

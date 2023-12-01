@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -94,13 +95,13 @@ public:
     bool operator< (const CBase58Data& b58) const { return CompareTo(b58) <  0; }
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
-/** base58-encoded AIPG addresses.
+/** base58-encoded Aipg addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CAIPGAddress : public CBase58Data {
+class CAipgAddress : public CBase58Data {
 public:
     bool Set(const CKeyID &id);
     bool Set(const CScriptID &id);
@@ -108,10 +109,10 @@ public:
     bool IsValid() const;
     bool IsValid(const CChainParams &params) const;
 
-    CAIPGAddress() {}
-    CAIPGAddress(const CTxDestination &dest) { Set(dest); }
-    CAIPGAddress(const std::string& strAddress) { SetString(strAddress); }
-    CAIPGAddress(const char* pszAddress) { SetString(pszAddress); }
+    CAipgAddress() {}
+    CAipgAddress(const CTxDestination &dest) { Set(dest); }
+    CAipgAddress(const std::string& strAddress) { SetString(strAddress); }
+    CAipgAddress(const char* pszAddress) { SetString(pszAddress); }
 
     CTxDestination Get() const;
     bool GetIndexKey(uint160& hashBytes, int& type) const;
@@ -120,7 +121,7 @@ public:
 /**
  * A base58-encoded secret key
  */
-class CAIPGSecret : public CBase58Data
+class CAipgSecret : public CBase58Data
 {
 public:
     void SetKey(const CKey& vchSecret);
@@ -129,11 +130,11 @@ public:
     bool SetString(const char* pszSecret);
     bool SetString(const std::string& strSecret);
 
-    CAIPGSecret(const CKey& vchSecret) { SetKey(vchSecret); }
-    CAIPGSecret() {}
+    CAipgSecret(const CKey& vchSecret) { SetKey(vchSecret); }
+    CAipgSecret() {}
 };
 
-template<typename K, int Size, CChainParams::Base58Type Type> class CAIPGExtKeyBase : public CBase58Data
+template<typename K, int Size, CChainParams::Base58Type Type> class CAipgExtKeyBase : public CBase58Data
 {
 public:
     void SetKey(const K &key) {
@@ -151,19 +152,19 @@ public:
         return ret;
     }
 
-    CAIPGExtKeyBase(const K &key) {
+    CAipgExtKeyBase(const K &key) {
         SetKey(key);
     }
 
-    CAIPGExtKeyBase(const std::string& strBase58c) {
+    CAipgExtKeyBase(const std::string& strBase58c) {
         SetString(strBase58c.c_str(), GetParams().Base58Prefix(Type).size());
     }
 
-    CAIPGExtKeyBase() {}
+    CAipgExtKeyBase() {}
 };
 
-typedef CAIPGExtKeyBase<CExtKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_SECRET_KEY> CAIPGExtKey;
-typedef CAIPGExtKeyBase<CExtPubKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_PUBLIC_KEY> CAIPGExtPubKey;
+typedef CAipgExtKeyBase<CExtKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_SECRET_KEY> CAipgExtKey;
+typedef CAipgExtKeyBase<CExtPubKey, BIP32_EXTKEY_SIZE, CChainParams::EXT_PUBLIC_KEY> CAipgExtPubKey;
 
 std::string EncodeDestination(const CTxDestination& dest);
 CTxDestination DecodeDestination(const std::string& str);

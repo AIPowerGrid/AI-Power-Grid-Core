@@ -10,18 +10,6 @@
     <height>1051</height>
    </rect>
   </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>600</width>
-    <height>800</height>
-   </size>
-  </property>
   <property name="windowTitle">
    <string notr="true">Transaction details</string>
   </property>
@@ -50,12 +38,6 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>600</width>
-         <height>194</height>
-        </size>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -338,7 +320,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 AIPG</string>
+                    <string notr="true">0.00 aipg</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -418,7 +400,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 AIPG</string>
+                    <string notr="true">0.00 aipg</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -469,7 +451,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 AIPG</string>
+                    <string notr="true">0.00 aipg</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -498,7 +480,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 AIPG</string>
+                    <string notr="true">0.00 aipg</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -542,7 +524,7 @@
                <bool>false</bool>
               </property>
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -596,18 +578,6 @@
      </item>
      <item>
       <widget class="QFrame" name="frame">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>600</width>
-         <height>220</height>
-        </size>
-       </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
        </property>
@@ -618,50 +588,9 @@
         <property name="spacing">
          <number>0</number>
         </property>
-        <property name="sizeConstraint">
-         <enum>QLayout::SetDefaultConstraint</enum>
-        </property>
         <property name="bottomMargin">
          <number>12</number>
         </property>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayoutReissueAsset">
-          <property name="bottomMargin">
-           <number>15</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="labelReissueAsset">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">font-weight:bold;</string>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="text">
-             <string>Reissue Asset</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_6">
           <property name="spacing">
@@ -669,43 +598,15 @@
           </property>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
-            <property name="bottomMargin">
-             <number>3</number>
-            </property>
             <item>
              <widget class="QLabel" name="assetNameLabel">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
               <property name="text">
                <string>Select an asset to reissue:</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>250</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="sizeAdjustPolicy">
-               <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-              </property>
-             </widget>
+             <widget class="QComboBox" name="comboBox"/>
             </item>
             <item>
              <widget class="QLabel" name="reissueCostLabel">
@@ -734,9 +635,6 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
-            <property name="bottomMargin">
-             <number>3</number>
-            </property>
             <item>
              <widget class="QLabel" name="addressLabel">
               <property name="text">
@@ -750,7 +648,7 @@
                <string/>
               </property>
               <property name="placeholderText">
-               <string>The AIPG address that will hold this asset (You must own this address). Leave blank to create a new address.</string>
+               <string>The aipg address that will hold this asset (You must own this address). Leave blank to create a new address.</string>
               </property>
              </widget>
             </item>
@@ -758,9 +656,6 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_15">
-            <property name="bottomMargin">
-             <number>3</number>
-            </property>
             <item>
              <widget class="QLabel" name="labelVerifierString">
               <property name="text">
@@ -788,9 +683,6 @@
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <property name="spacing">
              <number>34</number>
-            </property>
-            <property name="bottomMargin">
-             <number>3</number>
             </property>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -876,9 +768,6 @@
             <property name="spacing">
              <number>0</number>
             </property>
-            <property name="bottomMargin">
-             <number>3</number>
-            </property>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_10">
               <property name="rightMargin">
@@ -943,13 +832,6 @@
                 </property>
                </widget>
               </item>
-              <item>
-               <widget class="QPushButton" name="openIpfsButton">
-                <property name="text">
-                 <string>Browse IPFS</string>
-                </property>
-               </widget>
-              </item>
              </layout>
             </item>
            </layout>
@@ -993,27 +875,12 @@
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,0">
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
        <property name="spacing">
-        <number>20</number>
-       </property>
-       <property name="sizeConstraint">
-        <enum>QLayout::SetMinimumSize</enum>
+        <number>34</number>
        </property>
        <item>
         <widget class="QFrame" name="frame_3">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>150</height>
-          </size>
-         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -1082,18 +949,6 @@
        </item>
        <item>
         <widget class="QFrame" name="frame_2">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>150</height>
-          </size>
-         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -1378,7 +1233,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="AIPGAmountField" name="customFee"/>
+                    <widget class="AipgAmountField" name="customFee"/>
                    </item>
                    <item>
                     <spacer name="horizontalSpacer_6">
@@ -1663,9 +1518,6 @@
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_8">
-       <property name="sizeConstraint">
-        <enum>QLayout::SetFixedSize</enum>
-       </property>
        <item>
         <widget class="QPushButton" name="reissueAssetButton">
          <property name="minimumSize">
@@ -1714,7 +1566,7 @@
          <item>
           <widget class="QLabel" name="labelBalance">
            <property name="text">
-            <string>123.456 AIPG</string>
+            <string>123.456 aipg</string>
            </property>
           </widget>
          </item>
@@ -1733,7 +1585,7 @@
    <header>qvalidatedlineedit.h</header>
   </customwidget>
   <customwidget>
-   <class>AIPGAmountField</class>
+   <class>AipgAmountField</class>
    <extends>QLineEdit</extends>
    <header>aipgamountfield.h</header>
    <container>1</container>

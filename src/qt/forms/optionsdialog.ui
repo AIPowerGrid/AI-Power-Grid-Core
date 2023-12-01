@@ -20,7 +20,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabMain">
       <attribute name="title">
@@ -196,7 +196,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the aipg client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -216,7 +216,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the AIPG network through a SOCKS5 proxy.</string>
+          <string>Connect to the aipg network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
@@ -403,7 +403,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocksTor">
          <property name="toolTip">
-          <string>Connect to the AIPG network through a separate SOCKS5 proxy for Tor hidden services.</string>
+          <string>Connect to the aipg network through a separate SOCKS5 proxy for Tor hidden services.</string>
          </property>
          <property name="text">
           <string>Use separate SOCKS&amp;5 proxy to reach peers via Tor hidden services:</string>
@@ -542,16 +542,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="toolbarIconsOnly">
-         <property name="statusTip">
-          <string>Only show toolbar icons. No text.</string>
-         </property>
-         <property name="text">
-          <string>&amp;Icons only</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <spacer name="verticalSpacer_Window">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -620,30 +610,6 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_DisplayCurrency">
-         <item>
-          <widget class="QLabel" name="currencyUnitIndexLabel">
-           <property name="text">
-            <string>&amp;Currency Unit:</string>
-           </property>
-           <property name="textFormat">
-            <enum>Qt::PlainText</enum>
-           </property>
-           <property name="buddy">
-            <cstring>currencyUnitIndex</cstring>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QValueComboBox" name="currencyUnitIndex">
-           <property name="toolTip">
-            <string>Choose which currency to display the realtime value of AIPG in (ie: BTC/AIPG).</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3_Display">
          <item>
           <widget class="QLabel" name="thirdPartyTxUrlsLabel">
@@ -662,41 +628,6 @@
           <widget class="QLineEdit" name="thirdPartyTxUrls">
            <property name="toolTip">
             <string>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="thirdPartyTxUrlsReset">
-           <property name="text">
-            <string>Reset</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4_Display" stretch="0,0,0">
-         <item>
-          <widget class="QLabel" name="ipfsUrlLabel">
-           <property name="toolTip">
-            <string>Third party URL for IPFS-viewer. %s in the URL is replaced by IPFS hash.</string>
-           </property>
-           <property name="text">
-            <string>IPFS Viewer URL</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="ipfsUrl">
-           <property name="toolTip">
-            <string>Third party URL for IPFS-viewer. %s in the URL is replaced by IPFS hash.</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="ipfsUrlReset">
-           <property name="text">
-            <string>Reset</string>
            </property>
           </widget>
          </item>
@@ -780,7 +711,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_Buttons">
        <item>
-        <widget class="QPushButton" name="openAIPGConfButton">
+        <widget class="QPushButton" name="openAipgConfButton">
          <property name="toolTip">
           <string>Open the %1 configuration file from the working directory.</string>
          </property>

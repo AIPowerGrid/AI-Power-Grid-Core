@@ -1,5 +1,6 @@
 // Copyright (c) 2013-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -23,7 +24,7 @@ BOOST_FIXTURE_TEST_SUITE(hash_tests, BasicTestingSetup)
 
         // Test MurmurHash3 with various inputs. Of course this is retested in the
         // bloom filter tests - they would fail if MurmurHash3() had any problems -
-        // but is useful for those trying to implement AIPG libraries as a
+        // but is useful for those trying to implement Aipg libraries as a
         // source of test data for their MurmurHash3() primitive during
         // development.
         //

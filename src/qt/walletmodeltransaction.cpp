@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,6 +12,7 @@
 WalletModelTransaction::WalletModelTransaction(const QList<SendCoinsRecipient> &_recipients) :
     recipients(_recipients),
     walletTransaction(0),
+    keyChange(0),
     fee(0)
 {
     walletTransaction = new CWalletTx();
@@ -18,6 +20,7 @@ WalletModelTransaction::WalletModelTransaction(const QList<SendCoinsRecipient> &
 
 WalletModelTransaction::~WalletModelTransaction()
 {
+    delete keyChange;
     delete walletTransaction;
 }
 
@@ -90,10 +93,10 @@ CAmount WalletModelTransaction::getTotalTransactionAmount() const
 
 void WalletModelTransaction::newPossibleKeyChange(CWallet *wallet)
 {
-    keyChange.reset(new CReserveKey(wallet));
+    keyChange = new CReserveKey(wallet);
 }
 
 CReserveKey *WalletModelTransaction::getPossibleKeyChange()
 {
-    return keyChange.get();
+    return keyChange;
 }

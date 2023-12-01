@@ -1,4 +1,5 @@
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +36,7 @@
 
 std::string MessageActivationWarning()
 {
-    return AreMessagesDeployed() ? "" : "\nTHIS COMMAND IS NOT YET ACTIVE!\nhttps://github.com/AIPGProject/rips/blob/master/rip-0005.mediawiki\n";
+    return AreMessagesDeployed() ? "" : "\nTHIS COMMAND IS NOT YET ACTIVE!\n\n";
 }
 
 UniValue viewallmessages(const JSONRPCRequest& request) {

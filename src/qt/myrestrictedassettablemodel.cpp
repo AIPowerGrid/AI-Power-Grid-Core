@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2020 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -455,7 +456,7 @@ QVariant MyRestrictedAssetsTableModel::headerData(int section, Qt::Orientation o
                 case ToAddress:
                     return tr("User-defined intent/purpose of the transaction.");
                 case AssetName:
-                    return tr("The asset (or AIPG) removed or added to balance.");
+                    return tr("The asset (or aipg) removed or added to balance.");
             }
         }
     }

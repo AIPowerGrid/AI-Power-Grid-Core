@@ -1,9 +1,10 @@
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef AIPGCOIN_ASSETFILTERPROXY_H
-#define AIPGCOIN_ASSETFILTERPROXY_H
+#ifndef AIPG_ASSETFILTERPROXY_H
+#define AIPG_ASSETFILTERPROXY_H
 
 #include <QSortFilterProxyModel>
 
@@ -15,15 +16,13 @@ public:
     explicit AssetFilterProxy(QObject *parent = 0);
 
     void setAssetNamePrefix(const QString &assetNamePrefix);
-    void setAssetNameContains(const QString &assetNameContains);
 
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const;
 
 private:
     QString assetNamePrefix;
-    QString assetNameContains;
 };
 
 
-#endif //AIPGCOIN_ASSETFILTERPROXY_H
+#endif //AIPG_ASSETFILTERPROXY_H

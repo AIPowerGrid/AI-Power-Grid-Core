@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +15,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 
-WalletFrame::WalletFrame(const PlatformStyle *_platformStyle, AIPGGUI *_gui) :
+WalletFrame::WalletFrame(const PlatformStyle *_platformStyle, AipgGUI *_gui) :
     QFrame(_gui),
     gui(_gui),
     platformStyle(_platformStyle)
@@ -47,7 +47,7 @@ bool WalletFrame::addWallet(const QString& name, WalletModel *walletModel)
         return false;
 
     WalletView *walletView = new WalletView(platformStyle, this);
-    walletView->setAIPGGUI(gui);
+    walletView->setAipgGUI(gui);
     walletView->setClientModel(clientModel);
     walletView->setWalletModel(walletModel);
     walletView->showOutOfSyncWarning(bOutOfSync);
@@ -154,13 +154,6 @@ void WalletFrame::gotoVerifyMessageTab(QString addr)
         walletView->gotoVerifyMessageTab(addr);
 }
 
-void WalletFrame::encryptWallet(bool status)
-{
-    WalletView *walletView = currentWalletView();
-    if (walletView)
-        walletView->encryptWallet(status);
-}
-
 void WalletFrame::backupWallet()
 {
     WalletView *walletView = currentWalletView();
@@ -182,13 +175,19 @@ void WalletFrame::unlockWallet()
         walletView->unlockWallet();
 }
 
-void WalletFrame::getMyWords()
+void WalletFrame::lockWallet()
+{
+    WalletView* walletView = currentWalletView();
+    if (walletView)
+        walletView->lockWallet();
+}
+
+void WalletFrame::getMnemonic()
 {
     WalletView *walletView = currentWalletView();
     if (walletView)
-        walletView->getMyWords();
+        walletView->getMnemonic();
 }
-
 
 void WalletFrame::usedSendingAddresses()
 {

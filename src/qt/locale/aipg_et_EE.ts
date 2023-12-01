@@ -1,4 +1,6 @@
-<TS language="et_EE" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="et_EE">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -101,19 +103,86 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Võrguga sünkroniseerimine...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Ülevaade</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Välju rakendusest</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Valikud...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Ava &amp;URI...</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Rahakott</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Saada</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Näita / Peida</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Fail</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Seaded</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Abi</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>&amp;Käsurea valikud</translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 ajast maas</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Hilisemad transaktsioonid ei ole veel nähtavad.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Viga</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Hoiatus</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Informatsioon</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -163,9 +232,6 @@
     </message>
     </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>&amp;Address</source>
@@ -182,12 +248,6 @@
         <source>name</source>
         <translation>nimi</translation>
     </message>
-    </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
     </context>
 <context>
     <name>HelpMessageDialog</name>
@@ -220,22 +280,7 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -401,81 +446,6 @@
     </message>
     </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Võrguga sünkroniseerimine...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Ülevaade</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Välju rakendusest</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Valikud...</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>Ava &amp;URI...</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Rahakott</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Saada</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Näita / Peida</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Fail</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Abi</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>&amp;Käsurea valikud</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 ajast maas</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Hilisemad transaktsioonid ei ole veel nähtavad.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Viga</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Hoiatus</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informatsioon</translation>
-    </message>
-    </context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -545,15 +515,6 @@
     </message>
     </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Amount:</source>
@@ -562,6 +523,14 @@
     <message>
         <source>Choose...</source>
         <translation>Vali...</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>normaalne</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>kiire</translation>
     </message>
     <message>
         <source>Copy amount</source>
@@ -793,8 +762,8 @@
         <translation>Valikud:</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>Information</source>

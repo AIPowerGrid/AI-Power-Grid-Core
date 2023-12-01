@@ -1,5 +1,6 @@
 // Copyright (c) 2014-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -214,13 +215,13 @@ int CBase58Data::CompareTo(const CBase58Data& b58) const
 namespace
 {
 
-class CAIPGAddressVisitor : public boost::static_visitor<bool>
+class CAipgAddressVisitor : public boost::static_visitor<bool>
 {
 private:
-    CAIPGAddress* addr;
+    CAipgAddress* addr;
 
 public:
-    explicit CAIPGAddressVisitor(CAIPGAddress* addrIn) : addr(addrIn) {}
+    explicit CAipgAddressVisitor(CAipgAddress* addrIn) : addr(addrIn) {}
 
     bool operator()(const CKeyID& id) const { return addr->Set(id); }
     bool operator()(const CScriptID& id) const { return addr->Set(id); }
@@ -229,29 +230,29 @@ public:
 
 } // namespace
 
-bool CAIPGAddress::Set(const CKeyID& id)
+bool CAipgAddress::Set(const CKeyID& id)
 {
     SetData(GetParams().Base58Prefix(CChainParams::PUBKEY_ADDRESS), &id, 20);
     return true;
 }
 
-bool CAIPGAddress::Set(const CScriptID& id)
+bool CAipgAddress::Set(const CScriptID& id)
 {
     SetData(GetParams().Base58Prefix(CChainParams::SCRIPT_ADDRESS), &id, 20);
     return true;
 }
 
-bool CAIPGAddress::Set(const CTxDestination& dest)
+bool CAipgAddress::Set(const CTxDestination& dest)
 {
-    return boost::apply_visitor(CAIPGAddressVisitor(this), dest);
+    return boost::apply_visitor(CAipgAddressVisitor(this), dest);
 }
 
-bool CAIPGAddress::IsValid() const
+bool CAipgAddress::IsValid() const
 {
     return IsValid(GetParams());
 }
 
-bool CAIPGAddress::IsValid(const CChainParams& params) const
+bool CAipgAddress::IsValid(const CChainParams& params) const
 {
     bool fCorrectSize = vchData.size() == 20;
     bool fKnownVersion = vchVersion == params.Base58Prefix(CChainParams::PUBKEY_ADDRESS) ||
@@ -259,7 +260,7 @@ bool CAIPGAddress::IsValid(const CChainParams& params) const
     return fCorrectSize && fKnownVersion;
 }
 
-CTxDestination CAIPGAddress::Get() const
+CTxDestination CAipgAddress::Get() const
 {
     if (!IsValid())
         return CNoDestination();
@@ -273,7 +274,7 @@ CTxDestination CAIPGAddress::Get() const
         return CNoDestination();
 }
 
-bool CAIPGAddress::GetIndexKey(uint160& hashBytes, int& type) const
+bool CAipgAddress::GetIndexKey(uint160& hashBytes, int& type) const
 {
     if (!IsValid()) {
         return false;
@@ -290,7 +291,7 @@ bool CAIPGAddress::GetIndexKey(uint160& hashBytes, int& type) const
     return false;
 }
 
-void CAIPGSecret::SetKey(const CKey& vchSecret)
+void CAipgSecret::SetKey(const CKey& vchSecret)
 {
     assert(vchSecret.IsValid());
     SetData(GetParams().Base58Prefix(CChainParams::SECRET_KEY), vchSecret.begin(), vchSecret.size());
@@ -298,7 +299,7 @@ void CAIPGSecret::SetKey(const CKey& vchSecret)
         vchData.push_back(1);
 }
 
-CKey CAIPGSecret::GetKey()
+CKey CAipgSecret::GetKey()
 {
     CKey ret;
     assert(vchData.size() >= 32);
@@ -306,41 +307,41 @@ CKey CAIPGSecret::GetKey()
     return ret;
 }
 
-bool CAIPGSecret::IsValid() const
+bool CAipgSecret::IsValid() const
 {
     bool fExpectedFormat = vchData.size() == 32 || (vchData.size() == 33 && vchData[32] == 1);
     bool fCorrectVersion = vchVersion == GetParams().Base58Prefix(CChainParams::SECRET_KEY);
     return fExpectedFormat && fCorrectVersion;
 }
 
-bool CAIPGSecret::SetString(const char* pszSecret)
+bool CAipgSecret::SetString(const char* pszSecret)
 {
     return CBase58Data::SetString(pszSecret) && IsValid();
 }
 
-bool CAIPGSecret::SetString(const std::string& strSecret)
+bool CAipgSecret::SetString(const std::string& strSecret)
 {
     return SetString(strSecret.c_str());
 }
 
 std::string EncodeDestination(const CTxDestination& dest)
 {
-    CAIPGAddress addr(dest);
+    CAipgAddress addr(dest);
     if (!addr.IsValid()) return "";
     return addr.ToString();
 }
 
 CTxDestination DecodeDestination(const std::string& str)
 {
-    return CAIPGAddress(str).Get();
+    return CAipgAddress(str).Get();
 }
 
 bool IsValidDestinationString(const std::string& str, const CChainParams& params)
 {
-    return CAIPGAddress(str).IsValid(params);
+    return CAipgAddress(str).IsValid(params);
 }
 
 bool IsValidDestinationString(const std::string& str)
 {
-    return CAIPGAddress(str).IsValid();
+    return CAipgAddress(str).IsValid();
 }

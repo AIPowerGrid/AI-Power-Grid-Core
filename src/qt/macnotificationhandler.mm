@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2013 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,13 +15,13 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.aipgfoundation.AIPG-Qt";
+        return @"org.aipgfoundation.Aipg-Qt";
     } else {
         return [self __bundleIdentifier];
     }
 }
 @end
-
+ 
 void MacNotificationHandler::showNotification(const QString &title, const QString &text)
 {
     // check if users OS has support for NSUserNotification

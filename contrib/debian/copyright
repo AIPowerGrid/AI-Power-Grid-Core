@@ -1,12 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: AIPGcoin
-Source: https://github.com/AIPGProject/AIPGcoin
+Upstream-Name: Aipg
+Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
+ irc://#aipg@freenode.net
+Source: https://github.com/JustAResearcher/Aipg
 
 Files: *
-Copyright: 2009-2017, Bitcoin Core Developers
-           2017-2020, AIPG Core Developers
+Copyright: 2009-2017, Aipg Core Developers
 License: Expat
-Comment: The Bitcoin Core Developers encompasses the current developers listed on bitcoin.org,
+Comment: The Aipg__Core developers encompasses the current developers listed on aipgcoin.net,
          as well as the numerous contributors to the project.
 
 Files: debian/*
@@ -80,8 +81,9 @@ Files: src/qt/res/icons/about.png
        src/qt/res/icons/aipg.*
        share/pixmaps/aipg*
        src/qt/res/src/aipg.svg
-Copyright: The AIPG Core Developers
+Copyright: Bitboy, Jonas Schnelli
 License: public-domain
+Comment: Site: https://bitcointalk.org/?topic=1756.0
 
 
 License: Expat

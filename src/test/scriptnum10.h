@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -25,7 +26,7 @@ public:
 class CScriptNum10
 {
 /**
- * The ScriptNum implementation from AIPG Core 0.10.0, for cross-comparison.
+ * The ScriptNum implementation from Aipg Core 0.10.0, for cross-comparison.
  */
 public:
 

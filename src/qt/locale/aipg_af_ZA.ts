@@ -1,4 +1,6 @@
-<TS language="af_ZA" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="af_ZA">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -173,19 +175,86 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Sinchroniseer met die netwerk ...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Oorsig</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Wys algemene oorsig van die beursie</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transaksies</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Besoek transaksie geskiedenis</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>S&amp;luit af</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Sluit af</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Wys inligting oor Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Opsies</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Beursie</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Lêer</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Instellings</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Hulp</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Blad nutsbalk</translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 agter</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>Ontvangs van laaste blok is %1 terug.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Fout</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Informasie</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -213,9 +282,6 @@
         <source>(no label)</source>
         <translation>(geen etiket)</translation>
     </message>
-    </context>
-<context>
-    <name>CreateAssetDialog</name>
     </context>
 <context>
     <name>EditAddressDialog</name>
@@ -252,12 +318,6 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
-<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>Usage:</source>
@@ -272,26 +332,11 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
         <translation>Vorm</translation>
     </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -337,77 +382,6 @@
     <name>RPCConsole</name>
     <message>
         <source>&amp;Information</source>
-        <translation>Informasie</translation>
-    </message>
-    </context>
-<context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Sinchroniseer met die netwerk ...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Oorsig</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Wys algemene oorsig van die beursie</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transaksies</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Besoek transaksie geskiedenis</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>S&amp;luit af</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Sluit af</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Wys inligting oor Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Opsies</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Beursie</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Lêer</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Hulp</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 agter</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>Ontvangs van laaste blok is %1 terug.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Fout</translation>
-    </message>
-    <message>
-        <source>Information</source>
         <translation>Informasie</translation>
     </message>
     </context>
@@ -463,15 +437,6 @@
         <source>(no label)</source>
         <translation>(geen etiket)</translation>
     </message>
-    </context>
-<context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -794,7 +759,7 @@
         <source>Send Coins</source>
         <translation>Stuur Munstukke</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -821,6 +786,10 @@
         <translation>Informasie</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Laai adresse...</translation>
+    </message>
+    <message>
         <source>Insufficient funds</source>
         <translation>Onvoldoende fondse</translation>
     </message>
@@ -831,6 +800,10 @@
     <message>
         <source>Loading wallet...</source>
         <translation>Laai beursie...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Klaar gelaai</translation>
     </message>
     <message>
         <source>Error</source>

@@ -1,5 +1,6 @@
 // Copyright (c) 2014-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +13,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between aipg-cli and aipgd)
- * of a given instance of the AIPG system.
+ * of a given instance of the Aipg system.
  */
 class CBaseChainParams
 {

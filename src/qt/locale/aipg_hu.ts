@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS version="2.1" language="hu">
 <context>
     <name>AddressBookPage</name>
@@ -238,8 +240,8 @@
         <translation type="vanished">Saját adatkönyvtár használata:</translation>
     </message>
     <message>
-        <source>Error: Specified data directory "%1" cannot be created.</source>
-        <translation type="vanished">Hiba: A megadott "%1" adatkönyvtár nem hozható létre. </translation>
+        <source>Error: Specified data directory &quot;%1&quot; cannot be created.</source>
+        <translation type="vanished">Hiba: A megadott &quot;%1&quot; adatkönyvtár nem hozható létre. </translation>
     </message>
     <message>
         <source>Error</source>
@@ -341,16 +343,16 @@
         <translation type="vanished">Szakértő</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="vanished">A AIPG-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="vanished">A Aipg-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation type="vanished">&amp;UPnP port-feltérképezés</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a SOCKS5 proxy.</source>
-        <translation type="vanished">Csatlakozás a AIPG hálózatához SOCKS5 proxyn keresztül</translation>
+        <source>Connect to the Aipg network through a SOCKS5 proxy.</source>
+        <translation type="vanished">Csatlakozás a Aipg hálózatához SOCKS5 proxyn keresztül</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -444,8 +446,8 @@
         <translation type="vanished">Űrlap</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation type="vanished">A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a AIPG hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation type="vanished">A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Aipg hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -510,8 +512,8 @@
         <translation type="vanished">Összeg</translation>
     </message>
     <message>
-        <source>Enter a AIPG address (e.g. %1)</source>
-        <translation type="vanished">Ad meg egy AIPG címet (pl: %1)</translation>
+        <source>Enter a Aipg address (e.g. %1)</source>
+        <translation type="vanished">Ad meg egy Aipg címet (pl: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -758,7 +760,7 @@
     </message>
 </context>
 <context>
-    <name>AIPGGUI</name>
+    <name>AipgGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation type="vanished">Üzenet aláírása...</translation>
@@ -840,8 +842,8 @@
         <translation type="vanished">Lemezen lévő blokkok újraindexelése...</translation>
     </message>
     <message>
-        <source>Send coins to a AIPG address</source>
-        <translation type="vanished">AIPG küldése megadott címre</translation>
+        <source>Send coins to a Aipg address</source>
+        <translation type="vanished">Aipg küldése megadott címre</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -864,8 +866,8 @@
         <translation type="vanished">Üzenet &amp;valódiságának ellenőrzése</translation>
     </message>
     <message>
-        <source>AIPG</source>
-        <translation type="vanished">AIPG</translation>
+        <source>Aipg</source>
+        <translation type="vanished">Aipg</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -892,12 +894,12 @@
         <translation type="vanished">A tárcádhoz tartozó privát kulcsok titkosítása</translation>
     </message>
     <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation type="vanished">Üzenetek aláírása a AIPG-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation type="vanished">Üzenetek aláírása a Aipg-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation type="vanished">Üzenetek ellenőrzése, hogy valóban a megjelölt AIPG-címekkel vannak-e aláírva</translation>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation type="vanished">Üzenetek ellenőrzése, hogy valóban a megjelölt Aipg-címekkel vannak-e aláírva</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -917,7 +919,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation type="vanished">Fizetési kérelem (QR-kódot és "aipg:" URI azonosítót hoz létre)</translation>
+        <translation type="vanished">Fizetési kérelem (QR-kódot és &quot;aipg:&quot; URI azonosítót hoz létre)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -929,16 +931,16 @@
     </message>
     <message>
         <source>Open a aipg: URI or payment request</source>
-        <translation type="vanished">"aipg:" URI azonosító vagy fizetési kérelem megnyitása</translation>
+        <translation type="vanished">&quot;aipg:&quot; URI azonosító vagy fizetési kérelem megnyitása</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation type="vanished">Paran&amp;cssor kapcsolók</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to AIPG network</source>
+        <source>%n active connection(s) to Aipg network</source>
         <translation type="vanished">
-            <numerusform>%n aktív kapcsolat a AIPG hálózathoz</numerusform>
+            <numerusform>%n aktív kapcsolat a Aipg hálózathoz</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -1299,7 +1301,7 @@
         <translation type="vanished">A jelenleg kiválasztott aláírás másolása a rendszer-vágólapra</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
+        <source>Sign the message to prove you own this Aipg address</source>
         <translation type="vanished">Üzenet </translation>
     </message>
     <message>
@@ -1385,8 +1387,8 @@
 </translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation type="vanished">AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation type="vanished">Aipg Core</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
@@ -1531,16 +1533,16 @@
         <translation type="vanished">IP-címek megjelenítése a naplóban (alapértelmezett: %u)</translation>
     </message>
     <message>
-        <source>Invalid -proxy address: '%s'</source>
-        <translation type="vanished">Érvénytelen -proxy cím: '%s'</translation>
+        <source>Invalid -proxy address: &apos;%s&apos;</source>
+        <translation type="vanished">Érvénytelen -proxy cím: &apos;%s&apos;</translation>
     </message>
     <message>
-        <source>Unknown network specified in -onlynet: '%s'</source>
-        <translation type="vanished">Ismeretlen hálózat lett megadva -onlynet: '%s'</translation>
+        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
+        <translation type="vanished">Ismeretlen hálózat lett megadva -onlynet: &apos;%s&apos;</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
-        <translation type="vanished">Nincs elég aipgod.</translation>
+        <translation type="vanished">Nincs elég aipgsod.</translation>
     </message>
     <message>
         <source>Loading block index...</source>

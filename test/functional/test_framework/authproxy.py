@@ -1,7 +1,8 @@
 # Copyright (c) 2011 Jeff Garzik
 # Previous copyright, from python-jsonrpc/jsonrpc/proxy.py:
 # Copyright (c) 2007 Jan-Klaas Kollhof
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 #
 # This file is part of jsonrpc.
 #
@@ -48,7 +49,7 @@ import urllib.parse
 HTTP_TIMEOUT = 30
 USER_AGENT = "AuthServiceProxy/0.1"
 
-log = logging.getLogger("AIPGRPC")
+log = logging.getLogger("AipgRPC")
 
 
 class JSONRPCException(Exception):

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +10,7 @@
 from struct import unpack, pack
 from io import BytesIO
 from codecs import encode
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import connect_nodes_bi, assert_equal, Decimal, json, hex_str_to_bytes, assert_greater_than
 
 import http.client
@@ -44,7 +45,7 @@ def http_post_call(host, port, path, requestdata = '', response_object = 0):
 
 
 # noinspection PyTypeChecker
-class RESTTest (AIPGTestFramework):
+class RESTTest (AipgTestFramework):
     FORMAT_SEPARATOR = "."
 
     def set_test_params(self):

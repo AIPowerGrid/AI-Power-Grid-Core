@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -48,24 +48,24 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** AIPG unit definitions. Encapsulates parsing and formatting
+/** aipg unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class AIPGUnits: public QAbstractListModel
+class AipgUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit AIPGUnits(QObject *parent);
+    explicit AipgUnits(QObject *parent);
 
-    /** AIPG units.
+    /** aipg units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
-        AIPG,
-        mAIPG,
-        uAIPG
+        aipg,
+        maipg,
+        uaipg
     };
 
     enum SeparatorStyle
@@ -133,8 +133,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<AIPGUnits::Unit> unitlist;
+    QList<AipgUnits::Unit> unitlist;
 };
-typedef AIPGUnits::Unit AIPGUnit;
+typedef AipgUnits::Unit AipgUnit;
 
 #endif // AIPG_QT_AIPGUNITS_H

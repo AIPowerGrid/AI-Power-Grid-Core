@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2020 The AIPG Core developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -40,7 +40,7 @@ struct ChainTxData {
 
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
- * AIPG system. There are three: the main network on which people trade goods
+ * Aipg system. There are three: the main network on which people trade goods
  * and services, the public test network which gets reset from time to time and
  * a regression test mode which is intended for private networks only. It has
  * minimal difficulty to ensure that blocks can be found instantly.
@@ -101,7 +101,7 @@ public:
     const CAmount& IssueRestrictedAssetBurnAmount() const { return nIssueRestrictedAssetBurnAmount; }
     const CAmount& AddNullQualifierTagBurnAmount() const { return nAddNullQualifierTagBurnAmount; }
     const CAmount& CommunityAutonomousAmount() const { return nCommunityAutonomousAmount; }
-    
+
     const std::string& IssueAssetBurnAddress() const { return strIssueAssetBurnAddress; }
     const std::string& ReissueAssetBurnAddress() const { return strReissueAssetBurnAddress; }
     const std::string& IssueSubAssetBurnAddress() const { return strIssueSubAssetBurnAddress; }
@@ -113,7 +113,7 @@ public:
     const std::string& AddNullQualifierTagBurnAddress() const { return strAddNullQualifierTagBurnAddress; }
     const std::string& GlobalBurnAddress() const { return strGlobalBurnAddress; }
     const std::string& CommunityAutonomousAddress() const { return strCommunityAutonomousAddress; }
-     
+
     //  Indicates whether or not the provided address is a burn address
     bool IsBurnAddress(const std::string & p_address) const
     {
@@ -179,7 +179,7 @@ protected:
     CAmount nIssueRestrictedAssetBurnAmount;
     CAmount nAddNullQualifierTagBurnAmount;
     CAmount nCommunityAutonomousAmount;
-    
+
     // Burn Addresses
     std::string strIssueAssetBurnAddress;
     std::string strReissueAssetBurnAddress;
@@ -193,8 +193,8 @@ protected:
 
     // Global Burn Address
     std::string strGlobalBurnAddress;
-
-    //Operations Fund Address   
+	
+	//Community Autonomous Address   
     std::string strCommunityAutonomousAddress;
 
     unsigned int nDGWActivationBlock;

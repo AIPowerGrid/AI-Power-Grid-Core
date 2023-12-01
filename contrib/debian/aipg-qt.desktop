@@ -1,10 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=AIPG Core
-Comment=Connect to the AIPG P2P Network
-Comment[de]=Verbinde mit dem AIPG peer-to-peer Netzwerk
-Comment[fr]=AIPG, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=AIPG, eşten eşe kriptografik sanal para birimi
+Name=Aipg Core
+Comment=Connect to the Aipg P2P Network
+Comment[de]=Verbinde mit dem Aipg peer-to-peer Netzwerk
+Comment[fr]=Aipg, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Aipg, eşten eşe kriptografik sanal para birimi
 Exec=aipg-qt %u
 Terminal=false
 Type=Application

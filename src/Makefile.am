@@ -1,5 +1,5 @@
 # Copyright (c) 2013-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2019 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -27,7 +27,7 @@ AIPG_INCLUDES += $(UNIVALUE_CFLAGS)
 LIBAIPG_SERVER=libaipg_server.a
 LIBAIPG_COMMON=libaipg_common.a
 LIBAIPG_CONSENSUS=libaipg_consensus.a
-LIBAIPG_CLI=libaipg_cli.a
+LIBaipg_cli=libaipg_cli.a
 LIBAIPG_UTIL=libaipg_util.a
 LIBAIPG_CRYPTO=crypto/libaipg_crypto.a
 LIBAIPGQT=qt/libaipgqt.a
@@ -54,7 +54,7 @@ EXTRA_LIBRARIES += \
   $(LIBAIPG_COMMON) \
   $(LIBAIPG_CONSENSUS) \
   $(LIBAIPG_SERVER) \
-  $(LIBAIPG_CLI) \
+  $(LIBaipg_cli) \
   $(LIBAIPG_WALLET) \
   $(LIBAIPG_ZMQ)
 
@@ -512,7 +512,7 @@ aipg_cli_SOURCES += aipg-cli-res.rc
 endif
 
 aipg_cli_LDADD = \
-  $(LIBAIPG_CLI) \
+  $(LIBaipg_cli) \
   $(LIBUNIVALUE) \
   $(LIBAIPG_UTIL) \
   $(LIBAIPG_CRYPTO)

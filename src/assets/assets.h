@@ -1,5 +1,5 @@
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,12 +17,14 @@
 #include <unordered_map>
 #include <list>
 
-#define AIPG_R 114
-#define AIPG_V 118
-#define AIPG_N 110
-#define AIPG_Q 113
-#define AIPG_T 116
-#define AIPG_O 111
+
+#define aipg_N 114
+#define aipg_E 118
+#define aipg_X 110
+#define aipg_Q 113
+#define aipg_T 116
+#define aipg_O 111
+
 
 #define DEFAULT_UNITS 0
 #define DEFAULT_REISSUABLE 1
@@ -50,6 +52,9 @@
 #define ASSET_REISSUE_STRING "reissue_asset"
 
 #define MINIMUM_REWARDS_PAYOUT_HEIGHT 60
+
+#define BAD_HASH "e6cdd54445e6bf69710d54e4340a6486167f866575a878eaedecbb345da056ae"
+#define BAD_HASH2 "3ba63518dc12599f9b83449c8b5338e224caf363d0327f5156fa4b6efeca5724"
 
 class CScript;
 class CDataStream;
@@ -464,10 +469,10 @@ bool CheckIssueBurnTx(const CTxOut& txOut, const AssetType& type);
 bool CheckReissueBurnTx(const CTxOut& txOut);
 
 //! issue asset scripts to make sure script meets the standards
-bool CheckIssueDataTx(const CTxOut& txOut); // OP_AIPG_ASSET AIPGQ (That is a Q as in Que not an O)
-bool CheckOwnerDataTx(const CTxOut& txOut);// OP_AIPG_ASSET AIPGO
-bool CheckReissueDataTx(const CTxOut& txOut);// OP_AIPG_ASSET AIPGR
-bool CheckTransferOwnerTx(const CTxOut& txOut);// OP_AIPG_ASSET AIPGT
+bool CheckIssueDataTx(const CTxOut& txOut); // OP_AIPG_ASSET aipgQ (That is a Q as in Que not an O)
+bool CheckOwnerDataTx(const CTxOut& txOut);// OP_AIPG_ASSET aipgO
+bool CheckReissueDataTx(const CTxOut& txOut);// OP_AIPG_ASSET aipgR
+bool CheckTransferOwnerTx(const CTxOut& txOut);// OP_AIPG_ASSET aipgT
 
 //! Check the Encoded hash and make sure it is either an IPFS hash or a OIP hash
 bool CheckEncoded(const std::string& hash, std::string& strError);

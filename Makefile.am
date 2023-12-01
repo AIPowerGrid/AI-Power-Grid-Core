@@ -1,5 +1,6 @@
 # Copyright (c) 2013-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2019 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,14 +21,14 @@ endif
 
 AIPGD_BIN=$(top_builddir)/src/$(AIPG_DAEMON_NAME)$(EXEEXT)
 AIPG_QT_BIN=$(top_builddir)/src/qt/$(AIPG_GUI_NAME)$(EXEEXT)
-AIPG_CLI_BIN=$(top_builddir)/src/$(AIPG_CLI_NAME)$(EXEEXT)
+aipg_cli_BIN=$(top_builddir)/src/$(aipg_cli_NAME)$(EXEEXT)
 AIPG_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win$(WINDOWS_BITS)-setup$(EXEEXT)
-AIPG_CLI_INSTALL=$(top_builddir)/contrib/install_cli.sh
+aipg_cli_INSTALL=$(top_builddir)/contrib/install_cli.sh
 
 empty :=
 space := $(empty) $(empty)
 
-OSX_APP=AIPG-Qt.app
+OSX_APP=Aipg-Qt.app
 OSX_VOLNAME = $(subst $(space),-,$(PACKAGE_NAME))
 OSX_DMG = $(OSX_VOLNAME).dmg
 OSX_BACKGROUND_SVG=background.svg
@@ -76,7 +77,7 @@ $(AIPG_WIN_INSTALLER): all-recursive
 	$(MKDIR_P) $(top_builddir)/release
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(AIPGD_BIN) $(top_builddir)/release
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(AIPG_QT_BIN) $(top_builddir)/release
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(AIPG_CLI_BIN) $(top_builddir)/release
+	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(aipg_cli_BIN) $(top_builddir)/release
 	@test -f $(MAKENSIS) && $(MAKENSIS) -V2 $(top_builddir)/share/setup.nsi || \
 	  echo error: could not build $@
 	@echo built $@
@@ -97,11 +98,11 @@ $(OSX_APP)/Contents/Resources/aipg.icns: $(OSX_INSTALLER_ICONS)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/MacOS/install_cli.sh: $(AIPG_CLI_INSTALL)
+$(OSX_APP)/Contents/MacOS/install_cli.sh: $(aipg_cli_INSTALL)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/MacOS/AIPG-Qt: $(AIPG_QT_BIN)
+$(OSX_APP)/Contents/MacOS/Aipg-Qt: $(AIPG_QT_BIN)
 	$(MKDIR_P) $(@D)
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM)  $< $@
 
@@ -109,7 +110,7 @@ $(OSX_APP)/Contents/MacOS/aipgd: $(AIPGD_BIN)
 	$(MKDIR_P) $(@D)
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM)  $< $@
 
-$(OSX_APP)/Contents/MacOS/aipg-cli: $(AIPG_CLI_BIN)
+$(OSX_APP)/Contents/MacOS/aipg-cli: $(aipg_cli_BIN)
 	$(MKDIR_P) $(@D)
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM)  $< $@
 
@@ -119,7 +120,7 @@ $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings:
 
 OSX_APP_BUILT=$(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lproj \
   $(OSX_APP)/Contents/Resources/aipg.icns $(OSX_APP)/Contents/Info.plist \
-  $(OSX_APP)/Contents/MacOS/AIPG-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings \
+  $(OSX_APP)/Contents/MacOS/Aipg-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings \
   $(OSX_APP)/Contents/MacOS/aipgd $(OSX_APP)/Contents/MacOS/aipg-cli $(OSX_APP)/Contents/MacOS/install_cli.sh
 
 osx_volname:
@@ -145,7 +146,7 @@ $(APP_DIST_DIR)/Applications:
 	@rm -f $@
 	@cd $(@D); $(LN_S) /Applications $(@F)
 
-$(APP_DIST_EXTRAS): $(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/AIPG-Qt
+$(APP_DIST_EXTRAS): $(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Aipg-Qt
 
 $(OSX_DMG): $(APP_DIST_EXTRAS)
 	$(GENISOIMAGE) -no-cache-inodes -D -l -probe -V "$(OSX_VOLNAME)" -no-pad -r -dir-mode 0755 -apple -o $@ dist
@@ -160,7 +161,7 @@ $(APP_DIST_DIR)/.background/$(OSX_BACKGROUND_IMAGE): $(OSX_BACKGROUND_IMAGE_DPIF
 $(APP_DIST_DIR)/.DS_Store: $(OSX_DSSTORE_GEN)
 	$(PYTHON) $< "$@" "$(OSX_VOLNAME)"
 
-$(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/AIPG-Qt: $(OSX_APP_BUILT) $(OSX_PACKAGING)
+$(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Aipg-Qt: $(OSX_APP_BUILT) $(OSX_PACKAGING)
 	INSTALLNAMETOOL=$(INSTALLNAMETOOL)  OTOOL=$(OTOOL) STRIP=$(STRIP) $(PYTHON) $(OSX_DEPLOY_SCRIPT) $(OSX_APP) -translations-dir=$(QT_TRANSLATION_DIR) -add-qt-tr $(OSX_QT_TRANSLATIONS) -verbose 2
 
 deploydir: $(APP_DIST_EXTRAS)
@@ -180,7 +181,7 @@ $(AIPG_QT_BIN): FORCE
 $(AIPGD_BIN): FORCE
 	$(MAKE) -C src $(@F)
 
-$(AIPG_CLI_BIN): FORCE
+$(aipg_cli_BIN): FORCE
 	$(MAKE) -C src $(@F)
 
 if USE_LCOV

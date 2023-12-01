@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -25,12 +25,11 @@ namespace Ui {
 }
 
 QT_BEGIN_NAMESPACE
-class QDateTime;
 class QMenu;
 class QItemSelection;
 QT_END_NAMESPACE
 
-/** Local AIPG RPC console. */
+/** Local aipg RPC console. */
 class RPCConsole: public QWidget
 {
     Q_OBJECT

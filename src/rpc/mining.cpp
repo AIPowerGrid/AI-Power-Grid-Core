@@ -1,7 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -38,7 +37,7 @@
 
 extern uint64_t nHashesPerSec;
 
-std::map<std::string, CBlock> mapAIPGKAWBlockTemplates;
+std::map<std::string, CBlock> mapHVNKAWBlockTemplates;
 
 unsigned int ParseConfirmTarget(const UniValue& value)
 {
@@ -250,7 +249,7 @@ UniValue getmininginfo(const JSONRPCRequest& request)
 }
 
 
-// NOTE: Unlike wallet RPC (which use AIPG values), mining RPCs follow GBT (BIP 22) in using satoshi amounts
+// NOTE: Unlike wallet RPC (which use aipg values), mining RPCs follow GBT (BIP 22) in using satoshi amounts
 UniValue prioritisetransaction(const JSONRPCRequest& request)
 {
     if (request.fHelp || request.params.size() != 3)
@@ -321,10 +320,10 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
             "\nIf the request parameters include a 'mode' key, that is used to explicitly select between the default 'template' request or a 'proposal'.\n"
             "It returns data needed to construct a block to work on.\n"
             "For full specification, see BIPs 22, 23, 9, and 145:\n"
-            "    https://github.com/aipg/bips/blob/master/bip-0022.mediawiki\n"
-            "    https://github.com/aipg/bips/blob/master/bip-0023.mediawiki\n"
-            "    https://github.com/aipg/bips/blob/master/bip-0009.mediawiki#getblocktemplate_changes\n"
-            "    https://github.com/aipg/bips/blob/master/bip-0145.mediawiki\n"
+            "    https://github.com/Bitcoin/bips/blob/master/bip-0022.mediawiki\n"
+            "    https://github.com/Bitcoin/bips/blob/master/bip-0023.mediawiki\n"
+            "    https://github.com/Bitcoin/bips/blob/master/bip-0009.mediawiki#getblocktemplate_changes\n"
+            "    https://github.com/Bitcoin/bips/blob/master/bip-0145.mediawiki\n"
 
             "\nArguments:\n"
             "1. template_request         (json object, optional) A json object in the following spec\n"
@@ -371,6 +370,8 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
             "      \"flags\" : \"xx\"                  (string) key name is to be ignored, and value included in scriptSig\n"
             "  },\n"
             "  \"coinbasevalue\" : n,              (numeric) maximum allowable input to coinbase transaction, including the generation award and transaction fees (in satoshis)\n"
+            "  \"CommunityAutonomousAddress\" : n, (string) Community Autonomous Address\n"
+            "  \"CommunityAutonomousValue\" : n,   (numeric) Community Autonomous Value, 10% of the coinbase\n"
             "  \"coinbasetxn\" : { ... },          (json object) information for coinbase transaction\n"
             "  \"target\" : \"xxxx\",                (string) The hash target\n"
             "  \"mintime\" : xxx,                  (numeric) The minimum timestamp appropriate for next block time in seconds since epoch (Jan 1 1970 GMT)\n"
@@ -464,10 +465,10 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
         throw JSONRPCError(RPC_CLIENT_P2P_DISABLED, "Error: Peer-to-peer functionality missing or disabled");
 
     if (g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL) == 0 && !gArgs.GetBoolArg("-bypassdownload", false))
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "AIPG is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Aipg is not connected!");
 
     if (IsInitialBlockDownload() && !gArgs.GetBoolArg("-bypassdownload", false))
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "AIPG is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Aipg is downloading blocks...");
 
     static unsigned int nTransactionsUpdatedLast;
 
@@ -536,7 +537,7 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
     {
         // Clear pindexPrev so future calls make a new block, despite any failures from here on
         pindexPrev = nullptr;
-        mapAIPGKAWBlockTemplates.clear();
+        mapHVNKAWBlockTemplates.clear();
 
         // Store the pindexBest used before CreateNewBlock, to avoid races
         nTransactionsUpdatedLast = mempool.GetTransactionsUpdated();
@@ -689,6 +690,8 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
     result.push_back(Pair("transactions", transactions));
     result.push_back(Pair("coinbaseaux", aux));
     result.push_back(Pair("coinbasevalue", (int64_t)pblock->vtx[0]->vout[0].nValue));
+    result.push_back(Pair("CommunityAutonomousAddress", GetParams().CommunityAutonomousAddress()));
+    result.push_back(Pair("CommunityAutonomousValue", (int64_t)pblock->vtx[0]->vout[1].nValue) );
     result.push_back(Pair("longpollid", chainActive.Tip()->GetBlockHash().GetHex() + i64tostr(nTransactionsUpdatedLast)));
     result.push_back(Pair("target", hashTarget.GetHex()));
     result.push_back(Pair("mintime", (int64_t)pindexPrev->GetMedianTimePast()+1));
@@ -719,8 +722,8 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
         std::string address = gArgs.GetArg("-miningaddress", "");
         if (IsValidDestinationString(address)) {
             static std::string lastheader = "";
-            if (mapAIPGKAWBlockTemplates.count(lastheader)) {
-                if (pblock->nTime - 30 < mapAIPGKAWBlockTemplates.at(lastheader).nTime) {
+            if (mapHVNKAWBlockTemplates.count(lastheader)) {
+                if (pblock->nTime - 30 < mapHVNKAWBlockTemplates.at(lastheader).nTime) {
                     result.pushKV("pprpcheader", lastheader);
                     result.pushKV("pprpcepoch", ethash::get_epoch_number(pblock->nHeight));
                     return result;
@@ -730,7 +733,7 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
             pblock->hashMerkleRoot = BlockMerkleRoot(*pblock);
             result.pushKV("pprpcheader", pblock->GetKAWPOWHeaderHash().GetHex());
             result.pushKV("pprpcepoch", ethash::get_epoch_number(pblock->nHeight));
-            mapAIPGKAWBlockTemplates[pblock->GetKAWPOWHeaderHash().GetHex()] = *pblock;
+            mapHVNKAWBlockTemplates[pblock->GetKAWPOWHeaderHash().GetHex()] = *pblock;
             lastheader = pblock->GetKAWPOWHeaderHash().GetHex();
         }
     }
@@ -859,11 +862,11 @@ static UniValue pprpcsb(const JSONRPCRequest& request) {
     if (!ParseUInt64(str_nonce, &nonce, 16))
         throw JSONRPCError(RPC_INVALID_PARAMS, "Invalid hex nonce");
 
-    if (!mapAIPGKAWBlockTemplates.count(header_hash))
+    if (!mapHVNKAWBlockTemplates.count(header_hash))
         throw JSONRPCError(RPC_INVALID_PARAMS, "Block header hash not found in block data");
 
     std::shared_ptr<CBlock> blockptr = std::make_shared<CBlock>();
-    *blockptr = mapAIPGKAWBlockTemplates.at(header_hash);
+    *blockptr = mapHVNKAWBlockTemplates.at(header_hash);
 
     blockptr->nNonce64 = nonce;
     blockptr->mix_hash = uint256S(mix_hash);
@@ -934,7 +937,7 @@ UniValue submitblock(const JSONRPCRequest& request)
         throw std::runtime_error(
             "submitblock \"hexdata\"  ( \"dummy\" )\n"
             "\nAttempts to submit new block to network.\n"
-            "See https://en.bitcoin.it/wiki/BIP_0022 for full specification.\n"
+            "See https://en.aipg.it/wiki/BIP_0022 for full specification.\n"
 
             "\nArguments\n"
             "1. \"hexdata\"        (string, required) the hex-encoded block data to submit\n"
@@ -1268,7 +1271,7 @@ UniValue setgenerate(const JSONRPCRequest& request)
     gArgs.SoftSetArg("-genproclimit", itostr(nGenProcLimit));
     //mapArgs["-gen"] = (fGenerate ? "1" : "0");
     //mapArgs ["-genproclimit"] = itostr(nGenProcLimit);
-    int numCores = GenerateAIPGcoins(fGenerate, nGenProcLimit, GetParams());
+    int numCores = GenerateAipgs(fGenerate, nGenProcLimit, GetParams());
 
     nGenProcLimit = nGenProcLimit >= 0 ? nGenProcLimit : numCores;
     std::string msg = std::to_string(nGenProcLimit) + " of " + std::to_string(numCores);

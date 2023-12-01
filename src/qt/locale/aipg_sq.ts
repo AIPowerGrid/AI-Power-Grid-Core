@@ -1,4 +1,6 @@
-<TS language="sq" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="sq">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -46,12 +48,12 @@
         <translation>Duke marr adresen</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Këto janë AIPG adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Këto janë Aipg adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Këto janë AIPG adresat e juaja për të pranuar pagesa. Rekomandohet që gjithmon të përdorni një adresë të re për çdo transaksion.</translation>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Këto janë Aipg adresat e juaja për të pranuar pagesa. Rekomandohet që gjithmon të përdorni një adresë të re për çdo transaksion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -173,19 +175,118 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Duke u sinkronizuar me rrjetin...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Përmbledhje</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Trego një përmbledhje te përgjithshme të portofolit</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transaksionet</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Shfleto historinë e transaksioneve</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Mbyllni aplikacionin</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Opsione</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Duke marr adresen</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Portofol</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Dergo</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Merr</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Shfaq / Fsheh</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Skedar</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Konfigurimet</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Ndihmë</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Shiriti i mjeteve</translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 Pas</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Problem</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Informacion</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>I azhornuar</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Duke u azhornuar...</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Dërgo transaksionin</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Transaksion në ardhje</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Portofoli po &lt;b&gt; enkriptohet&lt;/b&gt; dhe është &lt;b&gt; i ç'kyçur&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Portofoli po &lt;b&gt; enkriptohet&lt;/b&gt; dhe është &lt;b&gt; i kyçur&lt;/b&gt;</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -221,9 +322,6 @@
         <source>(no label)</source>
         <translation>(pa etiketë)</translation>
     </message>
-    </context>
-<context>
-    <name>CreateAssetDialog</name>
     </context>
 <context>
     <name>EditAddressDialog</name>
@@ -276,12 +374,6 @@
     </message>
     </context>
 <context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
-<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -300,26 +392,11 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
         <translation>Formilarë</translation>
     </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -376,6 +453,10 @@
         <translation>&amp;Hap</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;Pastro</translation>
+    </message>
+    <message>
         <source>never</source>
         <translation>asnjehere</translation>
     </message>
@@ -384,109 +465,6 @@
         <translation>i/e panjohur</translation>
     </message>
 </context>
-<context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Duke u sinkronizuar me rrjetin...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Përmbledhje</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Trego një përmbledhje te përgjithshme të portofolit</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transaksionet</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Shfleto historinë e transaksioneve</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Mbyllni aplikacionin</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Opsione</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Duke marr adresen</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Portofol</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Dergo</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Merr</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Shfaq / Fsheh</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Skedar</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Ndihmë</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 Pas</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Problem</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informacion</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>I azhornuar</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Duke u azhornuar...</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Dërgo transaksionin</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Transaksion në ardhje</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Portofoli po &lt;b&gt; enkriptohet&lt;/b&gt; dhe është &lt;b&gt; i ç'kyçur&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Portofoli po &lt;b&gt; enkriptohet&lt;/b&gt; dhe është &lt;b&gt; i kyçur&lt;/b&gt;</translation>
-    </message>
-    </context>
 <context>
     <name>ReceiveCoinsDialog</name>
     <message>
@@ -537,15 +515,6 @@
     </message>
     </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
@@ -591,6 +560,10 @@
         <translation>Sh&amp;uma:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>Paguaj &amp;drejt:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Etiketë:</translation>
     </message>
@@ -605,6 +578,10 @@
     <message>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Paguaj drejt:</translation>
     </message>
     <message>
         <source>Enter a label for this address to add it to your address book</source>
@@ -794,7 +771,7 @@
         <source>Send Coins</source>
         <translation>Dërgo Monedha</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -809,8 +786,8 @@
         <translation>Opsionet:</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>Berthama AIPG</translation>
+        <source>Aipg Core</source>
+        <translation>Berthama Aipg</translation>
     </message>
     <message>
         <source>Information</source>

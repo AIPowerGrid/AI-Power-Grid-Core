@@ -1,6 +1,5 @@
 // Copyright (c) 2017-2017 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -198,7 +197,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
             return state.DoS(100, false, REJECT_INVALID, "bad-txns-txouttotal-toolarge");
 
         /** AIPG START */
-        // Find and handle all new OP_AIPG_ASSET null data transactions
+        // Find and handle all new OP_aipg_ASSET null data transactions
         if (txout.scriptPubKey.IsNullAsset()) {
             CNullAssetTxData data;
             std::string address;
@@ -526,7 +525,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
     }
     else {
         // Fail if transaction contains any non-transfer asset scripts and hasn't conformed to one of the
-        // above transaction types.  Also fail if it contains OP_AIPG_ASSET opcode but wasn't a valid script.
+        // above transaction types.  Also fail if it contains OP_aipg_ASSET opcode but wasn't a valid script.
         for (auto out : tx.vout) {
             int nType;
             bool _isOwner;
@@ -535,10 +534,10 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
                     return state.DoS(100, false, REJECT_INVALID, "bad-txns-bad-asset-transaction");
                 }
             } else {
-                if (out.scriptPubKey.Find(OP_AIPG_ASSET)) {
-                    if (out.scriptPubKey[0] != OP_AIPG_ASSET) {
+                if (out.scriptPubKey.Find(OP_aipg_ASSET)) {
+                    if (out.scriptPubKey[0] != OP_aipg_ASSET) {
                         return state.DoS(100, false, REJECT_INVALID,
-                                         "bad-txns-op-AIPG-asset-not-in-right-script-location");
+                                         "bad-txns-op-neox-asset-not-in-right-script-location");
                     }
                 }
             }
@@ -835,11 +834,11 @@ bool Consensus::CheckTxAssets(const CTransaction& tx, CValidationState& state, c
                         return state.DoS(100, false, REJECT_INVALID, "bad-txns-bad-asset-transaction", false, "", tx.GetHash());
                     }
                 } else {
-                    if (out.scriptPubKey.Find(OP_AIPG_ASSET)) {
+                    if (out.scriptPubKey.Find(OP_aipg_ASSET)) {
                         if (AreRestrictedAssetsDeployed()) {
-                            if (out.scriptPubKey[0] != OP_AIPG_ASSET) {
+                            if (out.scriptPubKey[0] != OP_aipg_ASSET) {
                                 return state.DoS(100, false, REJECT_INVALID,
-                                                 "bad-txns-op-AIPG-asset-not-in-right-script-location", false, "", tx.GetHash());
+                                                 "bad-txns-op-neox-asset-not-in-right-script-location", false, "", tx.GetHash());
                             }
                         } else {
                             return state.DoS(100, false, REJECT_INVALID, "bad-txns-bad-asset-script", false, "", tx.GetHash());

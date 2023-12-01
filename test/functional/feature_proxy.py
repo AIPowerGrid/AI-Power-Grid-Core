@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2015-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,8 +22,8 @@ Test plan:
     - proxy on IPv6
 
 - Create various proxies (as threads)
-- Create aipgds that connect to them
-- Manipulate the aipgds using addnode (onetry) an observe effects
+- Create AIPGDs that connect to them
+- Manipulate the AIPGDs using addnode (onetry) an observe effects
 
 addnode connect to IPv4
 addnode connect to IPv6
@@ -33,13 +34,13 @@ addnode connect to generic DNS name
 import socket
 import os
 from test_framework.socks5 import Socks5Configuration, Socks5Command, Socks5Server, AddressType
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import PORT_MIN, PORT_RANGE, assert_equal
 from test_framework.netutil import test_ipv6_local
 
 RANGE_BEGIN = PORT_MIN + 2 * PORT_RANGE  # Start after p2p and rpc ports
 
-class ProxyTest(AIPGTestFramework):
+class ProxyTest(AipgTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
 

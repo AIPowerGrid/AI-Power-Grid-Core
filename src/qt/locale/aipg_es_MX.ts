@@ -1,4 +1,6 @@
-<TS language="es_MX" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="es_MX">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -65,18 +67,6 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
@@ -84,184 +74,7 @@
     </message>
     </context>
 <context>
-    <name>CoinControlDialog</name>
-    <message>
-        <source>Quantity:</source>
-        <translation>Cantidad</translation>
-    </message>
-    <message>
-        <source>Bytes:</source>
-        <translation>Bytes:</translation>
-    </message>
-    <message>
-        <source>Amount:</source>
-        <translation>Monto:</translation>
-    </message>
-    <message>
-        <source>Fee:</source>
-        <translation>Cuota:</translation>
-    </message>
-    <message>
-        <source>After Fee:</source>
-        <translation>Después de los cargos por comisión. </translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Cambio</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Monto</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Fecha</translation>
-    </message>
-    <message>
-        <source>Confirmed</source>
-        <translation>Confirmado </translation>
-    </message>
-    </context>
-<context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
-    <name>EditAddressDialog</name>
-    <message>
-        <source>Edit Address</source>
-        <translation>Editar dirección</translation>
-    </message>
-    <message>
-        <source>&amp;Label</source>
-        <translation>&amp;Etiqueta</translation>
-    </message>
-    <message>
-        <source>&amp;Address</source>
-        <translation>&amp;Dirección</translation>
-    </message>
-    </context>
-<context>
-    <name>FreespaceChecker</name>
-    <message>
-        <source>name</source>
-        <translation>nombre</translation>
-    </message>
-    </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
-<context>
-    <name>HelpMessageDialog</name>
-    <message>
-        <source>version</source>
-        <translation>versión</translation>
-    </message>
-    <message>
-        <source>(%1-bit)</source>
-        <translation>(%1-bit)</translation>
-    </message>
-    <message>
-        <source>Command-line options</source>
-        <translation>opciones de la Linea de comandos</translation>
-    </message>
-    <message>
-        <source>Usage:</source>
-        <translation>Uso:</translation>
-    </message>
-    <message>
-        <source>command-line options</source>
-        <translation>Opciones de comando de lineas</translation>
-    </message>
-    </context>
-<context>
-    <name>Intro</name>
-    <message>
-        <source>Error</source>
-        <translation>Error</translation>
-    </message>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
-    <name>ModalOverlay</name>
-    <message>
-        <source>Form</source>
-        <translation>Formulario</translation>
-    </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
-    </context>
-<context>
-    <name>OpenURIDialog</name>
-    </context>
-<context>
-    <name>OptionsDialog</name>
-    <message>
-        <source>Options</source>
-        <translation>Opciones</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Activar las opciones de linea de comando que sobre escriben las siguientes opciones:</translation>
-    </message>
-    <message>
-        <source>W&amp;allet</source>
-        <translation>Cartera</translation>
-    </message>
-    <message>
-        <source>none</source>
-        <translation>Ninguno </translation>
-    </message>
-    </context>
-<context>
-    <name>OverviewPage</name>
-    <message>
-        <source>Form</source>
-        <translation>Formulario</translation>
-    </message>
-    </context>
-<context>
-    <name>PaymentServer</name>
-    </context>
-<context>
-    <name>PeerTableModel</name>
-    </context>
-<context>
-    <name>QObject</name>
-    <message>
-        <source>Amount</source>
-        <translation>Monto</translation>
-    </message>
-    </context>
-<context>
-    <name>QObject::QObject</name>
-    </context>
-<context>
-    <name>QRImageWidget</name>
-    </context>
-<context>
-    <name>RPCConsole</name>
-    <message>
-        <source>Debug window</source>
-        <translation>Depurar ventana</translation>
-    </message>
-    </context>
-<context>
-    <name>AIPGGUI</name>
+    <name>AipgGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje</translation>
@@ -339,8 +152,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Enviar monedas a una dirección AIPG</translation>
+        <source>Send coins to a Aipg address</source>
+        <translation>Enviar monedas a una dirección Aipg</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -351,6 +164,10 @@
         <translation>Cambiar la contraseña usada para la encriptación de la cartera</translation>
     </message>
     <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Depurar ventana</translation>
+    </message>
+    <message>
         <source>Open debugging and diagnostic console</source>
         <translation>Abrir consola de depuración y diagnostico</translation>
     </message>
@@ -359,8 +176,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -383,8 +200,16 @@
         <translation>&amp;Archivo</translation>
     </message>
     <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Configuraciones</translation>
+    </message>
+    <message>
         <source>&amp;Help</source>
         <translation>&amp;Ayuda</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Pestañas</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -428,6 +253,159 @@
     </message>
     </context>
 <context>
+    <name>CoinControlDialog</name>
+    <message>
+        <source>Quantity:</source>
+        <translation>Cantidad</translation>
+    </message>
+    <message>
+        <source>Bytes:</source>
+        <translation>Bytes:</translation>
+    </message>
+    <message>
+        <source>Amount:</source>
+        <translation>Monto:</translation>
+    </message>
+    <message>
+        <source>Fee:</source>
+        <translation>Cuota:</translation>
+    </message>
+    <message>
+        <source>After Fee:</source>
+        <translation>Después de los cargos por comisión. </translation>
+    </message>
+    <message>
+        <source>Change:</source>
+        <translation>Cambio</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Monto</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Fecha</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Confirmado </translation>
+    </message>
+    </context>
+<context>
+    <name>EditAddressDialog</name>
+    <message>
+        <source>Edit Address</source>
+        <translation>Editar dirección</translation>
+    </message>
+    <message>
+        <source>&amp;Label</source>
+        <translation>&amp;Etiqueta</translation>
+    </message>
+    <message>
+        <source>&amp;Address</source>
+        <translation>&amp;Dirección</translation>
+    </message>
+    </context>
+<context>
+    <name>FreespaceChecker</name>
+    <message>
+        <source>name</source>
+        <translation>nombre</translation>
+    </message>
+    </context>
+<context>
+    <name>HelpMessageDialog</name>
+    <message>
+        <source>version</source>
+        <translation>versión</translation>
+    </message>
+    <message>
+        <source>(%1-bit)</source>
+        <translation>(%1-bit)</translation>
+    </message>
+    <message>
+        <source>Command-line options</source>
+        <translation>opciones de la Linea de comandos</translation>
+    </message>
+    <message>
+        <source>Usage:</source>
+        <translation>Uso:</translation>
+    </message>
+    <message>
+        <source>command-line options</source>
+        <translation>Opciones de comando de lineas</translation>
+    </message>
+    </context>
+<context>
+    <name>Intro</name>
+    <message>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    </context>
+<context>
+    <name>ModalOverlay</name>
+    <message>
+        <source>Form</source>
+        <translation>Formulario</translation>
+    </message>
+    </context>
+<context>
+    <name>OpenURIDialog</name>
+    </context>
+<context>
+    <name>OptionsDialog</name>
+    <message>
+        <source>Options</source>
+        <translation>Opciones</translation>
+    </message>
+    <message>
+        <source>Active command-line options that override above options:</source>
+        <translation>Activar las opciones de linea de comando que sobre escriben las siguientes opciones:</translation>
+    </message>
+    <message>
+        <source>W&amp;allet</source>
+        <translation>Cartera</translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation>Ninguno </translation>
+    </message>
+    </context>
+<context>
+    <name>OverviewPage</name>
+    <message>
+        <source>Form</source>
+        <translation>Formulario</translation>
+    </message>
+    </context>
+<context>
+    <name>PaymentServer</name>
+    </context>
+<context>
+    <name>PeerTableModel</name>
+    </context>
+<context>
+    <name>QObject</name>
+    <message>
+        <source>Amount</source>
+        <translation>Monto</translation>
+    </message>
+    </context>
+<context>
+    <name>QObject::QObject</name>
+    </context>
+<context>
+    <name>QRImageWidget</name>
+    </context>
+<context>
+    <name>RPCConsole</name>
+    <message>
+        <source>Debug window</source>
+        <translation>Depurar ventana</translation>
+    </message>
+    </context>
+<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -442,8 +420,8 @@
         <translation>Mensaje:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AIPG network.</source>
-        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de AIPG.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aipg network.</source>
+        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Aipg.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -463,15 +441,6 @@
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
-    </context>
-<context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -504,6 +473,10 @@
         <translation>Cambio</translation>
     </message>
     <message>
+        <source>fast</source>
+        <translation>rápido</translation>
+    </message>
+    <message>
         <source>Send to multiple recipients at once</source>
         <translation>Enviar a múltiples receptores a la vez</translation>
     </message>
@@ -521,6 +494,10 @@
     <message>
         <source>A&amp;mount:</source>
         <translation>M&amp;onto</translation>
+    </message>
+    <message>
+        <source>Pay &amp;To:</source>
+        <translation>Pagar &amp;a:</translation>
     </message>
     <message>
         <source>&amp;Label:</source>
@@ -549,6 +526,10 @@
     <message>
         <source>Message:</source>
         <translation>Mensaje:</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Pago para:</translation>
     </message>
     </context>
 <context>
@@ -614,7 +595,7 @@
         <source>Send Coins</source>
         <translation>Enviar monedas</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -629,8 +610,8 @@
         <translation>Opciones:</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>nucleo AIPG</translation>
+        <source>Aipg Core</source>
+        <translation>nucleo Aipg</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>
@@ -639,6 +620,10 @@
     <message>
         <source>Verifying blocks...</source>
         <translation>Verificando bloques...</translation>
+    </message>
+    <message>
+        <source>Verifying wallet...</source>
+        <translation>Verificando cartera...</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -653,12 +638,20 @@
         <translation>Aviso</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Cargando direcciones...</translation>
+    </message>
+    <message>
         <source>Loading block index...</source>
         <translation>Cargando indice de bloques... </translation>
     </message>
     <message>
         <source>Loading wallet...</source>
         <translation>Cargando billetera...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Carga completa</translation>
     </message>
     <message>
         <source>Error</source>

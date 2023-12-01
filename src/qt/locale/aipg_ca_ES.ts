@@ -1,4 +1,6 @@
-<TS language="ca_ES" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ca_ES">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -62,12 +64,12 @@
         <translation>Adreces de recepció</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Aquestes són les vostres adreces de AIPG per enviar els pagaments. Sempre reviseu l'import i l'adreça del destinatari abans de transferir monedes.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Aquestes són les vostres adreces de Aipg per enviar els pagaments. Sempre reviseu l'import i l'adreça del destinatari abans de transferir monedes.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Aquestes són les vostres adreces AIPG per rebre pagaments. Es recomana utilitzar una adreça nova de recepció per a cada transacció.</translation>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Aquestes són les vostres adreces Aipg per rebre pagaments. Es recomana utilitzar una adreça nova de recepció per a cada transacció.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +170,8 @@
         <translation>Confirma l'encriptació del moneder</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPGS&lt;/b&gt;!</source>
-        <translation>Avís: si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES AIPGS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPG&lt;/b&gt;!</source>
+        <translation>Avís: si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES AIPG&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,8 +182,8 @@
         <translation>Moneder encriptat</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgs from being stolen by malware infecting your computer.</source>
-        <translation>Ara es tancarà el %1 per finalitzar el procés d'encriptació. Recordeu que encriptar el vostre moneder no garanteix que les vostres aipgs no puguin ser robades per programari maliciós que infecti l'ordinador.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgss from being stolen by malware infecting your computer.</source>
+        <translation>Ara es tancarà el %1 per finalitzar el procés d'encriptació. Recordeu que encriptar el vostre moneder no garanteix que les vostres aipgss no puguin ser robades per programari maliciós que infecti l'ordinador.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -221,18 +223,6 @@
     </message>
 </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
@@ -241,6 +231,319 @@
     <message>
         <source>Banned Until</source>
         <translation>Bandejat fins</translation>
+    </message>
+</context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>Signa el &amp;missatge...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>S'està sincronitzant amb la xarxa ...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Panorama general</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Node</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Mostra el panorama general del moneder</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transaccions</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Cerca a l'historial de transaccions</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>S&amp;urt</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Surt de l'aplicació</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>Qu&amp;ant al %1</translation>
+    </message>
+    <message>
+        <source>Show information about %1</source>
+        <translation>Mosta informació sobre el %1</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>Quant a &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Mostra informació sobre Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Opcions...</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Modifica les opcions de configuració de %1</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Encripta el moneder...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Realitza una còpia de seguretat del moneder...</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;Canvia la contrasenya...</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>Adreces d'e&amp;nviament...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Adreces de &amp;recepció...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Obre un &amp;URI...</translation>
+    </message>
+    <message>
+        <source>Click to disable network activity.</source>
+        <translation>Feu clic per inhabilitar l'activitat de la xarxa.</translation>
+    </message>
+    <message>
+        <source>Network activity disabled.</source>
+        <translation>S'ha inhabilitat l'activitat de la xarxa.</translation>
+    </message>
+    <message>
+        <source>Click to enable network activity again.</source>
+        <translation>Feu clic per tornar a habilitar l'activitat de la xarxa.</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>S'estan reindexant els blocs al disc...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Envia monedes a una adreça Aipg</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Realitza una còpia de seguretat del moneder a una altra ubicació</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Canvia la contrasenya d'encriptació del moneder</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Finestra de depuració</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Obre la consola de diagnòstic i depuració</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Verifica el missatge...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Moneder</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Envia</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Rep</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Mostra / Amaga</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Mostra o amaga la finestra principal</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Encripta les claus privades pertanyents al moneder</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Signa el missatges amb la seva adreça de Aipg per provar que les poseeixes</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Aipg específica.</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Fitxer</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Configuració</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Ajuda</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Barra d'eines de les pestanyes</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>Sol·licita pagaments (genera codis QR i aipg: URI)</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Mostra la llista d'adreces d'enviament i etiquetes utilitzades</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>Mostra la llista d'adreces de recepció i etiquetes utilitzades</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>Obre una aipg: sol·licitud d'URI o pagament</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>Opcions de la &amp;línia d'ordres</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n active connection(s) to Aipg network</source>
+        <translation><numerusform>%n connexió activa a la xarxa Aipg</numerusform><numerusform>%n connexions actives a la xarxa Aipg</numerusform></translation>
+    </message>
+    <message>
+        <source>Indexing blocks on disk...</source>
+        <translation>S'estan indexant els blocs al disc...</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>S'estan processant els blocs al disc...</translation>
+    </message>
+    <message numerus="yes">
+        <source>Processed %n block(s) of transaction history.</source>
+        <translation><numerusform>S'ha processat %n bloc de l'historial de transacció.</numerusform><numerusform>S'han processat %n blocs de l'historial de transacció.</numerusform></translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 darrere</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>El darrer bloc rebut ha estat generat fa %1.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Les transaccions a partir d'això no seran visibles.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Avís</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>&amp;Informació</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Al dia</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible Aipg command-line options</source>
+        <translation>Mostra el missatge d'ajuda del %1 per obtenir una llista amb les possibles opcions de línia d'ordres de Aipg</translation>
+    </message>
+    <message>
+        <source>%1 client</source>
+        <translation>Client de %1</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>S'està posant al dia ...</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>Data: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>Import: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>Tipus: %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>Etiqueta: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>Adreça: %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Transacció enviada</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Transacció entrant</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>La generació de la clau HD és &lt;b&gt;habilitada&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>La generació de la clau HD és &lt;b&gt;inhabilitada&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>El moneder està &lt;b&gt;encriptat&lt;/b&gt; i actualment &lt;b&gt;desbloquejat&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>El moneder està &lt;b&gt;encriptat&lt;/b&gt; i actualment &lt;b&gt;bloquejat&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. Aipg can no longer continue safely and will quit.</source>
+        <translation>S'ha produït un error fatal. Aipg no pot continuar amb seguretat i finalitzarà.</translation>
     </message>
 </context>
 <context>
@@ -395,9 +698,6 @@
     </message>
 </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -436,8 +736,8 @@
         <translation>Edita l'adreça d'enviament</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid AIPG address.</source>
-        <translation>L'adreça introduïda «%1» no és una adreça de AIPG vàlida.</translation>
+        <source>The entered address "%1" is not a valid Aipg address.</source>
+        <translation>L'adreça introduïda «%1» no és una adreça de Aipg vàlida.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -475,12 +775,6 @@
         <translation>No es pot crear el directori de dades aquí.</translation>
     </message>
 </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
@@ -551,6 +845,10 @@
         <translation>Com és la primera vegada que s'executa el programa, podeu triar on %1 emmagatzemarà les dades.</translation>
     </message>
     <message>
+        <source>%1 will download and store a copy of the Aipg block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 baixarà i emmagatzemarà una còpia de la cadena de blocs de Aipg. Com a mínim %2GB de dades s'emmagatzemaran en aquest directori, i augmentarà al llarg del temps. El moneder també s'emmagatzemarà en aquest directori.</translation>
+    </message>
+    <message>
         <source>Use the default data directory</source>
         <translation>Utilitza el directori de dades per defecte</translation>
     </message>
@@ -566,19 +864,15 @@
         <source>Error</source>
         <translation>Error</translation>
     </message>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
+    <message numerus="yes">
+        <source>%n GB of free space available</source>
+        <translation><numerusform>%n GB d'espai lliure disponible</numerusform><numerusform>%n GB d'espai lliure disponible</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>(of %n GB needed)</source>
+        <translation><numerusform>(de %n GB necessari)</numerusform><numerusform>(de %n GB necessaris)</numerusform></translation>
+    </message>
+</context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -614,9 +908,6 @@
         <translation>Desconegut. Sincronització de les capçaleres (%1)...</translation>
     </message>
 </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
-    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -671,6 +962,14 @@
         <translation>Nombre de fils de &amp;verificació d'scripts</translation>
     </message>
     <message>
+        <source>Accept connections from outside</source>
+        <translation>Accepta connexions de fora</translation>
+    </message>
+    <message>
+        <source>Allow incoming connections</source>
+        <translation>Permet connexions entrants</translation>
+    </message>
+    <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>Adreça IP del proxy (p. ex. IPv4: 127.0.0.1 / IPv6: ::1)</translation>
     </message>
@@ -681,6 +980,10 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URL de terceres parts (p. ex. explorador de blocs) que apareix en la pestanya de transaccions com elements del menú contextual. %s en l'URL es reemplaçat pel resum de la transacció. Diferents URL estan separades per una barra vertical |.</translation>
+    </message>
+    <message>
+        <source>Third party transaction URLs</source>
+        <translation>URL de transaccions de terceres parts</translation>
     </message>
     <message>
         <source>Active command-line options that override above options:</source>
@@ -723,16 +1026,16 @@
         <translation>&amp;Gasta el canvi sense confirmar</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obre el port del client de AIPG al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obre el port del client de Aipg al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Port obert amb &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a SOCKS5 proxy.</source>
-        <translation>Connecta a la xarxa AIPG a través d'un proxy SOCKS5.</translation>
+        <source>Connect to the Aipg network through a SOCKS5 proxy.</source>
+        <translation>Connecta a la xarxa Aipg a través d'un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -755,6 +1058,10 @@
         <translation>Utilitzat per arribar als iguals mitjançant:</translation>
     </message>
     <message>
+        <source>Shows, if the supplied default SOCKS5 proxy is used to reach peers via this network type.</source>
+        <translation>Mostra si el proxy SOCKS5 per defecte proporcionat s'utilitza per arribar als iguals mitjançant aquest tipus de xarxa.</translation>
+    </message>
+    <message>
         <source>IPv4</source>
         <translation>IPv4</translation>
     </message>
@@ -767,12 +1074,24 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Conectar a la red de AIPG a través de un proxy SOCKS5 per als serveis ocults de Tor</translation>
+        <source>Connect to the Aipg network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Conectar a la red de Aipg a través de un proxy SOCKS5 per als serveis ocults de Tor</translation>
+    </message>
+    <message>
+        <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
+        <translation>Utilitza un proxy SOCKS4 apart per a arribar als iguals a través de serveis ocults de Tor:</translation>
     </message>
     <message>
         <source>&amp;Window</source>
         <translation>&amp;Finestra</translation>
+    </message>
+    <message>
+        <source>&amp;Hide the icon from the system tray.</source>
+        <translation>Ama&amp;ga la icona de la safata del sistema.</translation>
+    </message>
+    <message>
+        <source>Hide tray icon</source>
+        <translation>Amaga la icona de la safata</translation>
     </message>
     <message>
         <source>Show only a tray icon after minimizing the window.</source>
@@ -854,8 +1173,8 @@
         <translation>Formulari</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa AIPG un cop s'ha establert connexió, però aquest proces no s'ha completat encara.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa Aipg un cop s'ha establert connexió, però aquest proces no s'ha completat encara.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -884,6 +1203,10 @@
     <message>
         <source>Mined balance that has not yet matured</source>
         <translation>Balanç minat que encara no ha madurat</translation>
+    </message>
+    <message>
+        <source>Balances</source>
+        <translation>Balances</translation>
     </message>
     <message>
         <source>Total:</source>
@@ -917,7 +1240,7 @@
         <source>Current total balance in watch-only addresses</source>
         <translation>Balanç total actual en adreces de només lectura</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>PaymentServer</name>
     <message>
@@ -941,8 +1264,8 @@
         <translation>Adreça de pagament no vàlida %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid AIPG address or malformed URI parameters.</source>
-        <translation>L'URI no pot ser analitzat! Això pot ser a causa d'una adreça de AIPG no vàlida o per paràmetres URI amb mal format.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Aipg address or malformed URI parameters.</source>
+        <translation>L'URI no pot ser analitzat! Això pot ser a causa d'una adreça de Aipg no vàlida o per paràmetres URI amb mal format.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1027,8 +1350,8 @@
         <translation>Import</translation>
     </message>
     <message>
-        <source>Enter a AIPG address (e.g. %1)</source>
-        <translation>Introduïu una adreça de AIPG (p. ex. %1)</translation>
+        <source>Enter a Aipg address (e.g. %1)</source>
+        <translation>Introduïu una adreça de Aipg (p. ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1256,6 +1579,10 @@
         <translation>Trà&amp;nsit de la xarxa</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>Nete&amp;ja</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>Totals</translation>
     </message>
@@ -1292,8 +1619,28 @@
         <translation>1 &amp;any</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Utilitza les fletxes d'amunt i avall per navegar per l'historial, i &lt;b&gt;Ctrl-L&lt;\b&gt; per netejar la pantalla.</translation>
+    </message>
+    <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Escriviu &lt;b&gt;help&lt;\b&gt; per a obtenir un llistat de les ordres disponibles.</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
     </message>
     <message>
         <source>(node id: %1)</source>
@@ -1329,299 +1676,6 @@
     </message>
 </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>Signa el &amp;missatge...</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>S'està sincronitzant amb la xarxa ...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Panorama general</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Mostra el panorama general del moneder</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transaccions</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Cerca a l'historial de transaccions</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>S&amp;urt</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Surt de l'aplicació</translation>
-    </message>
-    <message>
-        <source>&amp;About %1</source>
-        <translation>Qu&amp;ant al %1</translation>
-    </message>
-    <message>
-        <source>Show information about %1</source>
-        <translation>Mosta informació sobre el %1</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>Quant a &amp;Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Mostra informació sobre Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Opcions...</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for %1</source>
-        <translation>Modifica les opcions de configuració de %1</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Encripta el moneder...</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Realitza una còpia de seguretat del moneder...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Canvia la contrasenya...</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Adreces d'e&amp;nviament...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Adreces de &amp;recepció...</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>Obre un &amp;URI...</translation>
-    </message>
-    <message>
-        <source>Click to disable network activity.</source>
-        <translation>Feu clic per inhabilitar l'activitat de la xarxa.</translation>
-    </message>
-    <message>
-        <source>Network activity disabled.</source>
-        <translation>S'ha inhabilitat l'activitat de la xarxa.</translation>
-    </message>
-    <message>
-        <source>Click to enable network activity again.</source>
-        <translation>Feu clic per tornar a habilitar l'activitat de la xarxa.</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>S'estan reindexant els blocs al disc...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Envia monedes a una adreça AIPG</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Realitza una còpia de seguretat del moneder a una altra ubicació</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Canvia la contrasenya d'encriptació del moneder</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Obre la consola de diagnòstic i depuració</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;Verifica el missatge...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Moneder</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Envia</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Rep</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Mostra / Amaga</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Mostra o amaga la finestra principal</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Encripta les claus privades pertanyents al moneder</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Signa el missatges amb la seva adreça de AIPG per provar que les poseeixes</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça AIPG específica.</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Fitxer</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Ajuda</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>Sol·licita pagaments (genera codis QR i aipg: URI)</translation>
-    </message>
-    <message>
-        <source>Show the list of used sending addresses and labels</source>
-        <translation>Mostra la llista d'adreces d'enviament i etiquetes utilitzades</translation>
-    </message>
-    <message>
-        <source>Show the list of used receiving addresses and labels</source>
-        <translation>Mostra la llista d'adreces de recepció i etiquetes utilitzades</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>Obre una aipg: sol·licitud d'URI o pagament</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>Opcions de la &amp;línia d'ordres</translation>
-    </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>S'estan indexant els blocs al disc...</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>S'estan processant els blocs al disc...</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 darrere</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>El darrer bloc rebut ha estat generat fa %1.</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Les transaccions a partir d'això no seran visibles.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Error</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Avís</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>&amp;Informació</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Al dia</translation>
-    </message>
-    <message>
-        <source>Show the %1 help message to get a list with possible AIPG command-line options</source>
-        <translation>Mostra el missatge d'ajuda del %1 per obtenir una llista amb les possibles opcions de línia d'ordres de AIPG</translation>
-    </message>
-    <message>
-        <source>%1 client</source>
-        <translation>Client de %1</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>S'està posant al dia ...</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>Data: %1
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>Import: %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>Tipus: %1
-</translation>
-    </message>
-    <message>
-        <source>Label: %1
-</source>
-        <translation>Etiqueta: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>Adreça: %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Transacció enviada</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Transacció entrant</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
-        <translation>La generació de la clau HD és &lt;b&gt;habilitada&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>La generació de la clau HD és &lt;b&gt;inhabilitada&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>El moneder està &lt;b&gt;encriptat&lt;/b&gt; i actualment &lt;b&gt;desbloquejat&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>El moneder està &lt;b&gt;encriptat&lt;/b&gt; i actualment &lt;b&gt;bloquejat&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. AIPG can no longer continue safely and will quit.</source>
-        <translation>S'ha produït un error fatal. AIPG no pot continuar amb seguretat i finalitzarà.</translation>
-    </message>
-</context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -1644,8 +1698,8 @@
         <translation>R&amp;eutilitza una adreça de recepció anterior (no recomanat)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AIPG network.</source>
-        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'obri la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa AIPG.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aipg network.</source>
+        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'obri la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Aipg.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1791,15 +1845,6 @@
     </message>
 </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
@@ -1878,8 +1923,12 @@
         <translation>Amaga</translation>
     </message>
     <message>
+        <source>total at least</source>
+        <translation>total com a mínim</translation>
+    </message>
+    <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for aipg transactions than the network can process.</source>
-        <translation>No hi ha cap problema en pagar només la comissió mínima sempre que hi hagi menys volum de transacció que espai en els blocs. Però tingueu present que això pot acabar en una transacció que mai es confirmi una vegada hi hagi més demanda de transaccions de aipgs que la xarxa pugui processar.</translation>
+        <translation>No hi ha cap problema en pagar només la comissió mínima sempre que hi hagi menys volum de transacció que espai en els blocs. Però tingueu present que això pot acabar en una transacció que mai es confirmi una vegada hi hagi més demanda de transaccions de aipgss que la xarxa pugui processar.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1896,6 +1945,14 @@
     <message>
         <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
         <translation>(No s'ha inicialitzat encara la comissió intel·ligent. Normalment pren uns pocs blocs...)</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>normal</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>ràpid</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
@@ -2018,8 +2075,8 @@
         <translation>Paga només la comissió necessària de %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid AIPG address</source>
-        <translation>Avís: adreça AIPG no vàlida</translation>
+        <source>Warning: Invalid Aipg address</source>
+        <translation>Avís: adreça Aipg no vàlida</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2037,6 +2094,10 @@
         <translation>Q&amp;uantitat:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>Paga &amp;a:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Etiqueta:</translation>
     </message>
@@ -2049,8 +2110,8 @@
         <translation>Això és un pagament normal.</translation>
     </message>
     <message>
-        <source>The AIPG address to send the payment to</source>
-        <translation>L'adreça AIPG on enviar el pagament</translation>
+        <source>The Aipg address to send the payment to</source>
+        <translation>L'adreça Aipg on enviar el pagament</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2069,8 +2130,8 @@
         <translation>Elimina aquesta entrada</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>La comissió es deduirà de l'import que s'enviarà. El destinatari rebrà menys aipgs que les que introduïu al camp d'import. Si se seleccionen múltiples destinataris, la comissió es dividirà per igual.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgss than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>La comissió es deduirà de l'import que s'enviarà. El destinatari rebrà menys aipgss que les que introduïu al camp d'import. Si se seleccionen múltiples destinataris, la comissió es dividirà per igual.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2093,8 +2154,12 @@
         <translation>Introduïu una etiqueta per a aquesta adreça per afegir-la a la llista d'adreces utilitzades</translation>
     </message>
     <message>
-        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AIPG network.</source>
-        <translation>Un missatge que s'ha adjuntat al aipg: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa AIPG.</translation>
+        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aipg network.</source>
+        <translation>Un missatge que s'ha adjuntat al aipg: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Aipg.</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Paga a:</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2130,12 +2195,12 @@
         <translation>&amp;Signa el missatge</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive aipgs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les aipgs que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive aipgss sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les aipgss que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
     </message>
     <message>
-        <source>The AIPG address to sign the message with</source>
-        <translation>L'adreça AIPG amb què signar el missatge</translation>
+        <source>The Aipg address to sign the message with</source>
+        <translation>L'adreça Aipg amb què signar el missatge</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2166,8 +2231,8 @@
         <translation>Copia la signatura actual al porta-retalls del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
-        <translation>Signa el missatge per provar que ets propietari d'aquesta adreça AIPG</translation>
+        <source>Sign the message to prove you own this Aipg address</source>
+        <translation>Signa el missatge per provar que ets propietari d'aquesta adreça Aipg</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2190,12 +2255,12 @@
         <translation>Introduïu l'adreça del receptor, el missatge (assegureu-vos de copiar els salts de línia, espais, tabuladors, etc. exactament) i signatura de sota per verificar el missatge. Tingueu cura de no llegir més en la signatura del que està al missatge signat, per evitar ser enganyat per un atac d'home-en-el-mig. Tingueu en compte que això només demostra que la part que signa rep amb l'adreça, i no es pot provar l'enviament de qualsevol transacció!</translation>
     </message>
     <message>
-        <source>The AIPG address the message was signed with</source>
-        <translation>L'adreça AIPG amb què va ser signat el missatge</translation>
+        <source>The Aipg address the message was signed with</source>
+        <translation>L'adreça Aipg amb què va ser signat el missatge</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AIPG address</source>
-        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça AIPG específica</translation>
+        <source>Verify the message to ensure it was signed with the specified Aipg address</source>
+        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça Aipg específica</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2532,7 +2597,7 @@
         <source>Amount removed from or added to balance.</source>
         <translation>Import extret o afegit del balanç.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>TransactionView</name>
     <message>
@@ -2704,7 +2769,7 @@
         <source>Send Coins</source>
         <translation>Envia monedes</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -2739,7 +2804,7 @@
         <source>The wallet data was successfully saved to %1.</source>
         <translation>S'han desat les dades del moneder correctament a %1.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>aipg-core</name>
     <message>
@@ -2799,8 +2864,8 @@
         <translation>No s'ha pogut iniciar el servidor HTTP. Vegeu debug.log per a més detalls.</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -2879,6 +2944,10 @@
         <translation>No s'ha trobat el bloc de gènesi o és incorrecte. El directori de dades de la xarxa és incorrecte?</translation>
     </message>
     <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>Adreça -onion no vàlida: '%s'</translation>
+    </message>
+    <message>
         <source>Not enough file descriptors available.</source>
         <translation>No hi ha suficient descriptors de fitxers disponibles.</translation>
     </message>
@@ -2899,6 +2968,10 @@
         <translation>Defineix la mida de la memòria cau de la base de dades en megabytes (%d a %d, per defecte: %d)</translation>
     </message>
     <message>
+        <source>Set maximum block size in bytes (default: %d)</source>
+        <translation>Defineix la mida màxim del bloc en bytes (per defecte: %d)</translation>
+    </message>
+    <message>
         <source>Specify wallet file (within data directory)</source>
         <translation>Especifica un fitxer de moneder (dins del directori de dades)</translation>
     </message>
@@ -2913,6 +2986,10 @@
     <message>
         <source>Verifying blocks...</source>
         <translation>S'estan verificant els blocs...</translation>
+    </message>
+    <message>
+        <source>Verifying wallet...</source>
+        <translation>S'està verificant el moneder...</translation>
     </message>
     <message>
         <source>Wallet %s resides outside data directory %s</source>
@@ -2937,6 +3014,10 @@
     <message>
         <source>Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6</source>
         <translation>Vincula l'adreça donada i posa a la llista blanca els iguals que s'hi connectin. Feu servir la notació [host]:port per a IPv6</translation>
+    </message>
+    <message>
+        <source>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</source>
+        <translation>Vincula a l'adreça donada per a escoltar les connexions JSON-RPC. Feu servir la notació [host]:port per a IPv6. Aquesta opció pot ser especificada moltes vegades (per defecte: vincula a totes les interfícies)</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -2969,6 +3050,10 @@
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
         <translation>Genera a l'atzar credencials per a cada connexió proxy. Això habilita l'aïllament del flux de Tor (per defecte: %u)</translation>
+    </message>
+    <message>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
+        <translation>Defineix la mida màxima de transaccions d'alta prioritat / baixa comissió en bytes (per defecte: %d)</translation>
     </message>
     <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
@@ -3029,6 +3114,10 @@
     <message>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Envia informació de traça/depuració a la consola en comptes del fitxer debug.log</translation>
+    </message>
+    <message>
+        <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
+        <translation>Envia les transaccions com a transaccions de comissió zero sempre que sigui possible (per defecte: %u) </translation>
     </message>
     <message>
         <source>Show all debugging options (usage: --help -help-debug)</source>
@@ -3095,6 +3184,10 @@
         <translation>Permet consultes DNS per a -addnode, -seednode i -connect</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>S'estan carregant les adreces...</translation>
+    </message>
+    <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = manté les metadades de les tx, p. ex., propietari del compte i informació de sol·licitud del pagament, 2 = prescindeix de les metadades de les tx)</translation>
     </message>
@@ -3133,6 +3226,10 @@
     <message>
         <source>Include IP addresses in debug output (default: %u)</source>
         <translation>Inclou l'adreça IP a la sortida de depuració (per defecte: %u)</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Adreça -proxy invalida: '%s'</translation>
     </message>
     <message>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>
@@ -3223,6 +3320,10 @@
         <translation>S'està carregant l'índex de blocs...</translation>
     </message>
     <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Afegeix un node per a connectar-s'hi i intenta mantenir-hi la connexió oberta</translation>
+    </message>
+    <message>
         <source>Loading wallet...</source>
         <translation>S'està carregant el moneder...</translation>
     </message>
@@ -3231,8 +3332,16 @@
         <translation>No es pot reduir la versió del moneder</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>No es pot escriure l'adreça per defecte</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>S'està reescanejant...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Ha acabat la càrrega</translation>
     </message>
     <message>
         <source>Error</source>

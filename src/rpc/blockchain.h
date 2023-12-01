@@ -1,5 +1,5 @@
 // Copyright (c) 2017 The Bitcoin Core developers
-// Copyright (c) 2017-2020 The AIPG Core developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +14,7 @@ class UniValue;
 
 
 // To be used by local rpc GPU mining only
-extern std::map<std::string, CBlock> mapAIPGKAWBlockTemplates;
+extern std::map<std::string, CBlock> mapaipgKAWBlockTemplates;
 
 /**
  * Get the difficulty of the net wrt to the given block index, or the chain tip if

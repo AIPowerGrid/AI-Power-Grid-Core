@@ -10,7 +10,7 @@
 #include "amount.h"
 #include "script/script.h"
 
-static const std::string AIPG = "AIPG";
+static const std::string aipg = "aipg";
 
 struct CAddressUnspentKey {
     unsigned int type;
@@ -42,7 +42,7 @@ struct CAddressUnspentKey {
     CAddressUnspentKey(unsigned int addressType, uint160 addressHash, uint256 txid, size_t indexValue) {
         type = addressType;
         hashBytes = addressHash;
-        asset = AIPG;
+        asset = aipg;
         txhash = txid;
         index = indexValue;
     }
@@ -146,7 +146,7 @@ struct CAddressIndexKey {
                      uint256 txid, size_t indexValue, bool isSpending) {
         type = addressType;
         hashBytes = addressHash;
-        asset = AIPG;
+        asset = aipg;
         blockHeight = height;
         txindex = blockindex;
         txhash = txid;
@@ -240,7 +240,7 @@ struct CAddressIndexIteratorAssetKey {
     CAddressIndexIteratorAssetKey(unsigned int addressType, uint160 addressHash) {
         type = addressType;
         hashBytes = addressHash;
-        asset = AIPG;
+        asset = aipg;
     }
 
     CAddressIndexIteratorAssetKey(unsigned int addressType, uint160 addressHash, std::string assetName) {
@@ -287,7 +287,7 @@ struct CAddressIndexIteratorHeightKey {
     CAddressIndexIteratorHeightKey(unsigned int addressType, uint160 addressHash, int height) {
         type = addressType;
         hashBytes = addressHash;
-        asset = AIPG;
+        asset = aipg;
         blockHeight = height;
     }
 

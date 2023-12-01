@@ -20,8 +20,8 @@ Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://aipg.org/
-Source0:	https://aipg.org/bin/aipg-core-%{version}/aipg-%{version}.tar.gz
+URL:		https://aipgcrypto.com
+Source0:	https://aipgcrypto.com/bin/aipg-core-%{version}/aipg-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
 Source10:	https://raw.githubusercontent.com/aipg/aipg/v%{version}/contrib/debian/examples/aipg.conf
@@ -37,7 +37,7 @@ Source30:	https://raw.githubusercontent.com/aipg/aipg/v%{version}/contrib/rpm/ai
 Source31:	https://raw.githubusercontent.com/aipg/aipg/v%{version}/contrib/rpm/aipg.fc
 Source32:	https://raw.githubusercontent.com/aipg/aipg/v%{version}/contrib/rpm/aipg.if
 
-Source100:	https://upload.wikimedia.org/wikipedia/commons/4/46/AIPG.svg
+Source100:	https://upload.wikimedia.org/wikipedia/commons/4/46/Aipg.svg
 
 %if 0%{?_use_libressl:1}
 BuildRequires:	libressl-devel
@@ -54,9 +54,9 @@ Patch0:		aipg-0.12.0-libressl.patch
 
 
 %description
-AIPG is a digital cryptographic currency that uses peer-to-peer technology to
+Aipg is a digital cryptographic currency that uses peer-to-peer technology to
 operate with no central authority or banks; managing transactions and the
-issuing of aipgs is carried out collectively by the network.
+issuing of aipg is carried out collectively by the network.
 
 %if %{_buildqt}
 %package core
@@ -79,17 +79,17 @@ BuildRequires:	%{_bindir}/inkscape
 BuildRequires:	%{_bindir}/convert
 
 %description core
-AIPG is a digital cryptographic currency that uses peer-to-peer technology to
+Aipg is a digital cryptographic currency that uses peer-to-peer technology to
 operate with no central authority or banks; managing transactions and the
-issuing of aipgs is carried out collectively by the network.
+issuing of aipg is carried out collectively by the network.
 
 This package contains the Qt based graphical client and node. If you are looking
-to run a AIPG wallet, this is probably the package you want.
+to run a Aipg wallet, this is probably the package you want.
 %endif
 
 
 %package libs
-Summary:	AIPG shared libraries
+Summary:	Aipg shared libraries
 Group:		System Environment/Libraries
 
 %description libs
@@ -134,7 +134,7 @@ If you use the graphical aipg-core client then you almost certainly do not
 need this package.
 
 %package utils
-Summary:	AIPG utilities
+Summary:	Aipg utilities
 Group:		Applications/System
 
 %description utils
@@ -209,7 +209,7 @@ touch -a -m -t 201504280000 %{buildroot}%{_sysconfdir}/sysconfig/aipg
 mkdir -p %{buildroot}%{_unitdir}
 cat <<EOF > %{buildroot}%{_unitdir}/aipg.service
 [Unit]
-Description=AIPG daemon
+Description=Aipg daemon
 After=syslog.target network.target
 
 [Service]
@@ -265,10 +265,10 @@ mkdir -p %{buildroot}%{_datadir}/applications
 cat <<EOF > %{buildroot}%{_datadir}/applications/aipg-core.desktop
 [Desktop Entry]
 Encoding=UTF-8
-Name=AIPG
-Comment=AIPG P2P Cryptocurrency
-Comment[fr]=AIPG, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=AIPG, eşten eşe kriptografik sanal para birimi
+Name=Aipg
+Comment=Aipg P2P Cryptocurrency
+Comment[fr]=Aipg, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Aipg, eşten eşe kriptografik sanal para birimi
 Exec=aipg-qt %u
 Terminal=false
 Type=Application
@@ -322,7 +322,7 @@ test/functional/test_runner.py --extended
 getent group aipg >/dev/null || groupadd -r aipg
 getent passwd aipg >/dev/null ||
 	useradd -r -g aipg -d /var/lib/aipg -s /sbin/nologin \
-	-c "AIPG wallet server" aipg
+	-c "Aipg wallet server" aipg
 exit 0
 
 %post server

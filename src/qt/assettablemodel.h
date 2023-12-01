@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2020 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -38,13 +39,13 @@ public:
     enum RoleIndex {
         /** Net amount of transaction */
             AmountRole = 100,
-        /** AIPG or name of an asset */
+        /** aipg or name of an asset */
             AssetNameRole = 101,
         /** Formatted amount, without brackets when unconfirmed */
             FormattedAmountRole = 102,
         /** AdministratorRole */
             AdministratorRole = 103,
-        /** AIPG or name of an asset */
+        /** aipg or name of an asset */
             AssetIPFSHashRole = 104,
         /** IPFS Decoration Role */
             AssetIPFSHashDecorationRole = 105

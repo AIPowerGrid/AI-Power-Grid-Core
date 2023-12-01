@@ -65,7 +65,6 @@ src/qt/test/moc*.cpp
 *.pyc
 *.o
 *.o-*
-*.patch
 *.a
 *.pb.cc
 *.pb.h
@@ -85,7 +84,7 @@ src/qt/test/moc*.cpp
 *.qm
 Makefile
 aipg-qt
-AIPG-Qt.app
+Aipg-Qt.app
 
 # Unit-tests
 Makefile.test
@@ -123,3 +122,5 @@ contrib/devtools/split-debug.sh
 cmake-build-debug
 
 CMakeLists.txt
+db-4.8.30.NC/
+db4/

@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # Copyright (c) 2017-2018 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 """Test that we don't leak txs to inbound peers that we haven't yet announced to"""
 
 from test_framework.mininode import MsgGetdata, CInv, NetworkThread, NodeConn, NodeConnCB
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import assert_equal, p2p_port
 
 class TestNode(NodeConnCB):
@@ -15,7 +16,7 @@ class TestNode(NodeConnCB):
         pass
 
 
-class P2PLeakTxTest(AIPGTestFramework):
+class P2PLeakTxTest(AipgTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 

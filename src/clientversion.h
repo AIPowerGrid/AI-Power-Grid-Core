@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef AIPG_CLIENTVERSION_H
-#define AIPG_CLIENTVERSION_H
+#ifndef aipg_cliENTVERSION_H
+#define aipg_cliENTVERSION_H
 
 #if defined(HAVE_CONFIG_H)
 #include "config/aipg-config.h"
@@ -51,4 +52,4 @@ std::string FormatSubVersion(const std::string& name, int nClientVersion, const 
 
 #endif // WINDRES_PREPROC
 
-#endif // AIPG_CLIENTVERSION_H
+#endif // aipg_cliENTVERSION_H

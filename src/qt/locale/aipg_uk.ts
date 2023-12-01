@@ -1,4 +1,6 @@
-<TS language="uk" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="uk">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -62,12 +64,12 @@
         <translation>Адреса отримання</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Це ваші адреси AIPG для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Це ваші адреси Aipg для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Це ваші адреси AIPG для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Це ваші адреси Aipg для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,7 +170,7 @@
         <translation>Підтвердіть шифрування гаманця</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPGS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPG&lt;/b&gt;!</source>
         <translation>УВАГА: Якщо ви зашифруєте гаманець і забудете пароль, ви &lt;b&gt;ВТРАТИТЕ ВСІ СВОЇ БІТКОІНИ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -180,7 +182,7 @@
         <translation>Гаманець зашифровано</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgss from being stolen by malware infecting your computer.</source>
         <translation>%1 буде закрито зараз, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші біткойни від крадіжки шкідливими програмами, у випадку якщо ваш комп'ютер буде інфіковано.</translation>
     </message>
     <message>
@@ -221,18 +223,6 @@
     </message>
 </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
@@ -241,6 +231,327 @@
     <message>
         <source>Banned Until</source>
         <translation>Заблоковано До</translation>
+    </message>
+</context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>&amp;Підписати повідомлення...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Синхронізація з мережею...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Огляд</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Вузол</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Показати стан гаманця</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Транзакції</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Переглянути історію транзакцій</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>&amp;Вихід</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Вийти</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>П&amp;ро %1</translation>
+    </message>
+    <message>
+        <source>Show information about %1</source>
+        <translation>Показати інформацію про %1</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>&amp;Про Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Показати інформацію про Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Параметри...</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Редагувати параметри для %1</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Шифрування гаманця...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Резервне копіювання гаманця...</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>Змінити парол&amp;ь...</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>Адреси для &amp;відправлення...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Адреси для &amp;отримання...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Відкрити &amp;URI</translation>
+    </message>
+    <message>
+        <source>Click to disable network activity.</source>
+        <translation>Натисніть, щоб вимкнути активність мережі.</translation>
+    </message>
+    <message>
+        <source>Network activity disabled.</source>
+        <translation>Мережева активність вимкнена.</translation>
+    </message>
+    <message>
+        <source>Click to enable network activity again.</source>
+        <translation>Натисніть, щоб знову активувати мережеву активність.</translation>
+    </message>
+    <message>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Синхронізація заголовків (%1%)...</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Переіндексація блоків на диску ...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Відправити монети на вказану адресу</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Резервне копіювання гаманця в інше місце</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Змінити пароль, який використовується для шифрування гаманця</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>В&amp;ікно зневадження</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Відкрити консоль зневадження і діагностики</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>П&amp;еревірити повідомлення...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Гаманець</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Відправити</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Отримати</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>Показа&amp;ти / Приховати</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Показує або приховує головне вікно</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Зашифрувати закриті ключі, що знаходяться у вашому гаманці</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Підтвердіть, що Ви є власником повідомлення підписавши його Вашою Aipg-адресою </translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Перевірте повідомлення для впевненості, що воно підписано вказаною Aipg-адресою</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Файл</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Налаштування</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Довідка</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Панель вкладок</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>Створити запит платежу (генерує QR-код та aipg: URI)</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Показати список адрес і міток, що були використані для відправлення</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>Показати список адрес і міток, що були використані для отримання</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>Відкрити aipg: URI чи запит платежу</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>П&amp;араметри командного рядка</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n active connection(s) to Aipg network</source>
+        <translation><numerusform>%n активне з'єднання з мережею Aipg</numerusform><numerusform>%n активні з'єднання з мережею Aipg</numerusform><numerusform>%n активних з'єднань з мережею Aipg</numerusform></translation>
+    </message>
+    <message>
+        <source>Indexing blocks on disk...</source>
+        <translation>Індексація блоків на диску ...</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>Обробка блоків на диску...</translation>
+    </message>
+    <message numerus="yes">
+        <source>Processed %n block(s) of transaction history.</source>
+        <translation><numerusform>Оброблено %n блок історії транзакцій.</numerusform><numerusform>Оброблено %n блоки історії транзакцій.</numerusform><numerusform>Оброблено %n блоків історії транзакцій.</numerusform></translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 тому</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>Останній отриманий блок було згенеровано %1 тому.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Пізніші транзакції не буде видно.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Помилка</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Попередження</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Інформація</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Синхронізовано</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible Aipg command-line options</source>
+        <translation>Показати довідку %1 для отримання переліку можливих параметрів командного рядка.</translation>
+    </message>
+    <message>
+        <source>%1 client</source>
+        <translation>%1 клієнт</translation>
+    </message>
+    <message>
+        <source>Connecting to peers...</source>
+        <translation>Підключення до вузлів...</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Синхронізується...</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>Дата: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>Кількість: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>Тип: %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>Мітка: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>Адреса: %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Надіслані транзакції</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Отримані транзакції</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>Генерація HD ключа &lt;b&gt;увімкнена&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>Генерація HD ключа&lt;b&gt;вимкнена&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Зашифрований&lt;/b&gt; гаманець &lt;b&gt;розблоковано&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Зашифрований&lt;/b&gt; гаманець &lt;b&gt;заблоковано&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. Aipg can no longer continue safely and will quit.</source>
+        <translation>Сталася фатальна помилка. Помилки не сумісні з подальщою роботою. Гаманець буде закрито.</translation>
     </message>
 </context>
 <context>
@@ -391,9 +702,6 @@
     </message>
 </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -432,8 +740,8 @@
         <translation>Редагувати адресу для відправлення</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid AIPG address.</source>
-        <translation>Введена адреса "%1" не є адресою в мережі AIPG.</translation>
+        <source>The entered address "%1" is not a valid Aipg address.</source>
+        <translation>Введена адреса "%1" не є адресою в мережі Aipg.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -471,12 +779,6 @@
         <translation>Тут неможливо створити каталог даних.</translation>
     </message>
 </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
@@ -562,19 +864,15 @@
         <source>Error</source>
         <translation>Помилка</translation>
     </message>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
+    <message numerus="yes">
+        <source>%n GB of free space available</source>
+        <translation><numerusform>Доступно %n ГБ вільного простору</numerusform><numerusform>Доступно %n ГБ вільного простору</numerusform><numerusform>Доступно %n ГБ вільного простору</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>(of %n GB needed)</source>
+        <translation><numerusform>(в той час, як необхідно %n ГБ)</numerusform><numerusform>(в той час, як необхідно %n ГБ)</numerusform><numerusform>(в той час, як необхідно %n ГБ)</numerusform></translation>
+    </message>
+</context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -586,7 +884,7 @@
         <translation>Нещодавні транзакції ще не відображаються, тому баланс вашого гаманця може бути неточним. Ця інформація буде вірною після того, як ваш гаманець завершить синхронізацію з мережею біткойн, врахровуйте показники нижче.</translation>
     </message>
     <message>
-        <source>Attempting to spend aipgs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Спроба видправити біткойни, які ще не відображаються, не буде прийнята мережею.</translation>
     </message>
     <message>
@@ -626,9 +924,6 @@
         <translation>Невідомо. Синхронізація заголовків (%1%)...</translation>
     </message>
 </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
-    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -679,6 +974,14 @@
         <translation>Кількість потоків &amp;сценарію перевірки</translation>
     </message>
     <message>
+        <source>Accept connections from outside</source>
+        <translation>Приймати підключення ззовні</translation>
+    </message>
+    <message>
+        <source>Allow incoming connections</source>
+        <translation>Дозволити вхідні з’єднання</translation>
+    </message>
+    <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>IP-адреса проксі-сервера (наприклад IPv4: 127.0.0.1 / IPv6: ::1)</translation>
     </message>
@@ -689,6 +992,10 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Сторонні URL (наприклад, block explorer), що з'являться на вкладці транзакцій у вигляді пункту контекстного меню. %s в URL буде замінено на хеш транзакції. Для відокремлення URLів використовуйте вертикальну риску |.</translation>
+    </message>
+    <message>
+        <source>Third party transaction URLs</source>
+        <translation>Сторонні URL транзакцій</translation>
     </message>
     <message>
         <source>Active command-line options that override above options:</source>
@@ -731,7 +1038,7 @@
         <translation>&amp;Витрачати непідтверджену решту</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Автоматично відкривати порт для клієнту біткоін на роутері. Працює лише якщо ваш роутер підтримує UPnP і ця функція увімкнена.</translation>
     </message>
     <message>
@@ -739,8 +1046,8 @@
         <translation>Відображення порту через &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a SOCKS5 proxy.</source>
-        <translation>Підключення до мережі AIPG через SOCKS5 проксі.</translation>
+        <source>Connect to the Aipg network through a SOCKS5 proxy.</source>
+        <translation>Підключення до мережі Aipg через SOCKS5 проксі.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -763,6 +1070,10 @@
         <translation>Приєднуватися до учасників через:</translation>
     </message>
     <message>
+        <source>Shows, if the supplied default SOCKS5 proxy is used to reach peers via this network type.</source>
+        <translation>Вказує на використання наявного типового проксі SOCKS5, що використувується задля встановлення зв'язку з пірами через мережу такого типу.</translation>
+    </message>
+    <message>
         <source>IPv4</source>
         <translation>IPv4</translation>
     </message>
@@ -775,12 +1086,20 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Підключатися до мережі AIPG через окремий SOCKS5 проксі для прихованих сервісів Tor.</translation>
+        <source>Connect to the Aipg network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Підключатися до мережі Aipg через окремий SOCKS5 проксі для прихованих сервісів Tor.</translation>
+    </message>
+    <message>
+        <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
+        <translation>Використовувати окремий SOCKS5-проксі для з'єднання з учасниками через приховані сервіси Tor:</translation>
     </message>
     <message>
         <source>&amp;Window</source>
         <translation>&amp;Вікно</translation>
+    </message>
+    <message>
+        <source>Hide tray icon</source>
+        <translation>Сховати іконку в треї</translation>
     </message>
     <message>
         <source>Show only a tray icon after minimizing the window.</source>
@@ -858,8 +1177,8 @@
         <translation>Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation>Показана інформація вже може бути застарілою. Ваш гаманець буде автоматично синхронізовано з мережею AIPG після встановлення підключення, але цей процес ще не завершено.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation>Показана інформація вже може бути застарілою. Ваш гаманець буде автоматично синхронізовано з мережею Aipg після встановлення підключення, але цей процес ще не завершено.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -888,6 +1207,10 @@
     <message>
         <source>Mined balance that has not yet matured</source>
         <translation>Баланс видобутих та ще недозрілих монет</translation>
+    </message>
+    <message>
+        <source>Balances</source>
+        <translation>Баланси</translation>
     </message>
     <message>
         <source>Total:</source>
@@ -921,7 +1244,7 @@
         <source>Current total balance in watch-only addresses</source>
         <translation>Поточний сукупний баланс в адресах для спостереження</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>PaymentServer</name>
     <message>
@@ -947,7 +1270,7 @@
         <source>Ping</source>
         <translation>Затримка</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>QObject</name>
     <message>
@@ -955,8 +1278,8 @@
         <translation>Кількість</translation>
     </message>
     <message>
-        <source>Enter a AIPG address (e.g. %1)</source>
-        <translation>Введіть адресу AIPG (наприклад %1)</translation>
+        <source>Enter a Aipg address (e.g. %1)</source>
+        <translation>Введіть адресу Aipg (наприклад %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1188,6 +1511,10 @@
         <translation>&amp;Мережевий трафік</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;Очистити</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>Всього</translation>
     </message>
@@ -1224,12 +1551,32 @@
         <translation>1 &amp;рік</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Використовуйте стрілки вгору вниз для навігації по історії, і &lt;b&gt;Ctrl-L&lt;/b&gt; для очищення екрана.</translation>
+    </message>
+    <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Наберіть &lt;b&gt;help&lt;/b&gt; для перегляду доступних команд.</translation>
     </message>
     <message>
         <source>Network activity disabled</source>
         <translation>Мережева активність вимкнена.</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 Б</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 КБ</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 МБ</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 ГБ</translation>
     </message>
     <message>
         <source>(node id: %1)</source>
@@ -1265,307 +1612,6 @@
     </message>
 </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>&amp;Підписати повідомлення...</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Синхронізація з мережею...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Огляд</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Вузол</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Показати стан гаманця</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Транзакції</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Переглянути історію транзакцій</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>&amp;Вихід</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Вийти</translation>
-    </message>
-    <message>
-        <source>&amp;About %1</source>
-        <translation>П&amp;ро %1</translation>
-    </message>
-    <message>
-        <source>Show information about %1</source>
-        <translation>Показати інформацію про %1</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>&amp;Про Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Показати інформацію про Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Параметри...</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for %1</source>
-        <translation>Редагувати параметри для %1</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Шифрування гаманця...</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Резервне копіювання гаманця...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>Змінити парол&amp;ь...</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Адреси для &amp;відправлення...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Адреси для &amp;отримання...</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>Відкрити &amp;URI</translation>
-    </message>
-    <message>
-        <source>Click to disable network activity.</source>
-        <translation>Натисніть, щоб вимкнути активність мережі.</translation>
-    </message>
-    <message>
-        <source>Network activity disabled.</source>
-        <translation>Мережева активність вимкнена.</translation>
-    </message>
-    <message>
-        <source>Click to enable network activity again.</source>
-        <translation>Натисніть, щоб знову активувати мережеву активність.</translation>
-    </message>
-    <message>
-        <source>Syncing Headers (%1%)...</source>
-        <translation>Синхронізація заголовків (%1%)...</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Переіндексація блоків на диску ...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Відправити монети на вказану адресу</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Резервне копіювання гаманця в інше місце</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Змінити пароль, який використовується для шифрування гаманця</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Відкрити консоль зневадження і діагностики</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>П&amp;еревірити повідомлення...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Гаманець</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Відправити</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Отримати</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>Показа&amp;ти / Приховати</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Показує або приховує головне вікно</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Зашифрувати закриті ключі, що знаходяться у вашому гаманці</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Підтвердіть, що Ви є власником повідомлення підписавши його Вашою AIPG-адресою </translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Перевірте повідомлення для впевненості, що воно підписано вказаною AIPG-адресою</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Файл</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Довідка</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>Створити запит платежу (генерує QR-код та aipg: URI)</translation>
-    </message>
-    <message>
-        <source>Show the list of used sending addresses and labels</source>
-        <translation>Показати список адрес і міток, що були використані для відправлення</translation>
-    </message>
-    <message>
-        <source>Show the list of used receiving addresses and labels</source>
-        <translation>Показати список адрес і міток, що були використані для отримання</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>Відкрити aipg: URI чи запит платежу</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>П&amp;араметри командного рядка</translation>
-    </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>Індексація блоків на диску ...</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>Обробка блоків на диску...</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 тому</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>Останній отриманий блок було згенеровано %1 тому.</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Пізніші транзакції не буде видно.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Помилка</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Попередження</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Інформація</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Синхронізовано</translation>
-    </message>
-    <message>
-        <source>Show the %1 help message to get a list with possible AIPG command-line options</source>
-        <translation>Показати довідку %1 для отримання переліку можливих параметрів командного рядка.</translation>
-    </message>
-    <message>
-        <source>%1 client</source>
-        <translation>%1 клієнт</translation>
-    </message>
-    <message>
-        <source>Connecting to peers...</source>
-        <translation>Підключення до вузлів...</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Синхронізується...</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>Дата: %1
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>Кількість: %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>Тип: %1
-</translation>
-    </message>
-    <message>
-        <source>Label: %1
-</source>
-        <translation>Мітка: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>Адреса: %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Надіслані транзакції</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Отримані транзакції</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
-        <translation>Генерація HD ключа &lt;b&gt;увімкнена&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>Генерація HD ключа&lt;b&gt;вимкнена&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Зашифрований&lt;/b&gt; гаманець &lt;b&gt;розблоковано&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Зашифрований&lt;/b&gt; гаманець &lt;b&gt;заблоковано&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. AIPG can no longer continue safely and will quit.</source>
-        <translation>Сталася фатальна помилка. Помилки не сумісні з подальщою роботою. Гаманець буде закрито.</translation>
-    </message>
-</context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -1588,8 +1634,8 @@
         <translation>По&amp;вторно використати адресу для отримання (не рекомендується)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AIPG network.</source>
-        <translation>Необов'язкове повідомлення на додаток до запиту платежу, котре буде показане під час відкриття запиту. Примітка: Це повідомлення не буде відправлено з платежем через мережу AIPG.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aipg network.</source>
+        <translation>Необов'язкове повідомлення на додаток до запиту платежу, котре буде показане під час відкриття запиту. Примітка: Це повідомлення не буде відправлено з платежем через мережу Aipg.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1723,15 +1769,6 @@
     </message>
 </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
@@ -1810,8 +1847,12 @@
         <translation>Приховати</translation>
     </message>
     <message>
+        <source>total at least</source>
+        <translation>всього щонайменше</translation>
+    </message>
+    <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for aipg transactions than the network can process.</source>
-        <translation>Оплата тільки мінімальної комісії є прийнятною, допоки обсяг транзакцій є меншим простору в блоках. Але майте на увазі, що це може анулювати транзакцію, якщо попит на AIPG транзакції стане більшим, ніж мережа зможе обробити.</translation>
+        <translation>Оплата тільки мінімальної комісії є прийнятною, допоки обсяг транзакцій є меншим простору в блоках. Але майте на увазі, що це може анулювати транзакцію, якщо попит на Aipg транзакції стане більшим, ніж мережа зможе обробити.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1828,6 +1869,14 @@
     <message>
         <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
         <translation>(Розумну оплату ще не ініціалізовано. Це, зазвичай, триває кілька блоків...)</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>звичайний</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>швидкий</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
@@ -1905,6 +1954,10 @@
         <translation>&amp;Кількість:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>&amp;Отримувач:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Мітка:</translation>
     </message>
@@ -1917,8 +1970,8 @@
         <translation>Це звичайний платіж.</translation>
     </message>
     <message>
-        <source>The AIPG address to send the payment to</source>
-        <translation>Адреса AIPG для відправлення платежу</translation>
+        <source>The Aipg address to send the payment to</source>
+        <translation>Адреса Aipg для відправлення платежу</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1937,7 +1990,7 @@
         <translation>Видалити цей запис</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgss than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>Комісію буде знято зі вказаної суми. До отримувача надійде менше біткоінів, ніж було вказано в полі кількості. Якщо ж отримувачів декілька - комісію буде розподілено між ними.</translation>
     </message>
     <message>
@@ -1961,8 +2014,12 @@
         <translation>Введіть мітку для цієї адреси для додавання її в список використаних адрес</translation>
     </message>
     <message>
-        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AIPG network.</source>
-        <translation>Повідомлення, що було додане до aipg:URI та буде збережено разом з транзакцією для довідки. Примітка: Це повідомлення не буде відправлено в мережу AIPG.</translation>
+        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aipg network.</source>
+        <translation>Повідомлення, що було додане до aipg:URI та буде збережено разом з транзакцією для довідки. Примітка: Це повідомлення не буде відправлено в мережу Aipg.</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Отримувач:</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -1998,12 +2055,12 @@
         <translation>&amp;Підписати повідомлення</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive aipgs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive aipgss sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Ви можете підписувати повідомлення/угоди своїми адресами, щоб довести можливість отримання біткоінів, що будуть надіслані на них. Остерігайтеся підписувати будь-що нечітке чи неочікуване, так як за допомогою фішинг-атаки вас можуть спробувати ввести в оману для отримання вашого підпису під чужими словами. Підписуйте лише чіткі твердження, з якими ви повністю згодні.</translation>
     </message>
     <message>
-        <source>The AIPG address to sign the message with</source>
-        <translation>Адреса AIPG для підпису цього повідомлення</translation>
+        <source>The Aipg address to sign the message with</source>
+        <translation>Адреса Aipg для підпису цього повідомлення</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2034,7 +2091,7 @@
         <translation>Копіювати поточну сигнатуру до системного буферу обміну</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
+        <source>Sign the message to prove you own this Aipg address</source>
         <translation>Підпишіть повідомлення щоб довести, що ви є власником цієї адреси</translation>
     </message>
     <message>
@@ -2058,12 +2115,12 @@
         <translation>Введіть нижче адресу отримувача, повідомлення (впевніться, що ви точно скопіювали символи завершення рядка, табуляцію, пробіли тощо) та підпис для перевірки повідомлення. Впевніться, що в підпис не було додано зайвих символів: це допоможе уникнути атак типу «людина посередині». Зауважте, що це лише засвідчує можливість отримання транзакцій підписувачем, але не в стані підтвердити джерело жодної транзакції!</translation>
     </message>
     <message>
-        <source>The AIPG address the message was signed with</source>
-        <translation>Адреса AIPG, якою було підписано це повідомлення</translation>
+        <source>The Aipg address the message was signed with</source>
+        <translation>Адреса Aipg, якою було підписано це повідомлення</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AIPG address</source>
-        <translation>Перевірте повідомлення для впевненості, що воно підписано вказаною AIPG-адресою</translation>
+        <source>Verify the message to ensure it was signed with the specified Aipg address</source>
+        <translation>Перевірте повідомлення для впевненості, що воно підписано вказаною Aipg-адресою</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2360,7 +2417,7 @@
         <source>Amount removed from or added to balance.</source>
         <translation>Сума, додана чи знята з балансу.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>TransactionView</name>
     <message>
@@ -2539,7 +2596,7 @@
         <source>The wallet data was successfully saved to %1.</source>
         <translation>Дані гаманця успішно збережено в %1.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>aipg-core</name>
     <message>
@@ -2599,8 +2656,8 @@
         <translation>Неможливо запустити HTTP-сервер. Детальніший опис наведено в журналі зневадження.</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -2711,6 +2768,10 @@
         <translation>Початковий блок некоректний/відсутній. Чи правильно вказано каталог даних для обраної мережі?</translation>
     </message>
     <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>Помилка в адресі -onion: «%s»</translation>
+    </message>
+    <message>
         <source>Keep the transaction memory pool below &lt;n&gt; megabytes (default: %u)</source>
         <translation>Утримувати розмір пам'яті для пулу транзакцій меншим за &lt;n&gt; мегабайтів (типово: %u)</translation>
     </message>
@@ -2747,6 +2808,10 @@
         <translation>Встановити розмір кешу бази даних в мегабайтах (від %d до %d, типово: %d)</translation>
     </message>
     <message>
+        <source>Set maximum block size in bytes (default: %d)</source>
+        <translation>Встановити максимальний розмір блоку у байтах (типово: %d)</translation>
+    </message>
+    <message>
         <source>Specify wallet file (within data directory)</source>
         <translation>Вкажіть файл гаманця (в межах каталогу даних)</translation>
     </message>
@@ -2775,6 +2840,10 @@
         <translation>Перевірка блоків...</translation>
     </message>
     <message>
+        <source>Verifying wallet...</source>
+        <translation>Перевірка гаманця... </translation>
+    </message>
+    <message>
         <source>Wallet %s resides outside data directory %s</source>
         <translation>Гаманець %s знаходиться поза каталогом даних %s</translation>
     </message>
@@ -2789,6 +2858,10 @@
     <message>
         <source>Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6</source>
         <translation>Прив'язатися до даної адреси та вносити до білого списку учасників, що під'єднуються до неї. Використовуйте запис виду [хост]:порт для IPv6</translation>
+    </message>
+    <message>
+        <source>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</source>
+        <translation>Прив'язатися до даної адреси для прослуховування JSON-RPC підключень. Використовуйте запис виду [хост]:порт для IPv6. Цей параметр можна вказувати декілька разів (типово: прив'язуватися до всіх інтерфейсів)</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -2825,6 +2898,10 @@
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
         <translation>Надавати випадкові дані доступу для кожного проксі-з'єднання. Це дозволяє ввімкнути ізоляцію потоків Tor'у (типово: %u)</translation>
+    </message>
+    <message>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
+        <translation>Встановити максимальний розмір транзакцій з високим пріоритетом та низькою комісією (в байтах) (типово: %d)</translation>
     </message>
     <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
@@ -2901,6 +2978,10 @@
     <message>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Відсилати налагоджувальну інформацію на консоль, а не у файл debug.log</translation>
+    </message>
+    <message>
+        <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
+        <translation>Не сплачувати комісію за надсилання транзакцій, якщо це можливо (типово: %u)</translation>
     </message>
     <message>
         <source>Show all debugging options (usage: --help -help-debug)</source>
@@ -2983,6 +3064,10 @@
         <translation>Дозволити пошук в DNS для команд -addnode, -seednode та -connect</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Завантаження адрес...</translation>
+    </message>
+    <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = утримувати метадані транзакцій (до яких відноситься інформація про власника рахунку та запити платежів), 2 - відкинути)</translation>
     </message>
@@ -3049,6 +3134,10 @@
     <message>
         <source>Include IP addresses in debug output (default: %u)</source>
         <translation>Включити IP-адреси до налагоджувального виводу (типово: %u)</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Помилка в адресі проксі-сервера: «%s»</translation>
     </message>
     <message>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>
@@ -3163,6 +3252,10 @@
         <translation>Завантаження індексу блоків...</translation>
     </message>
     <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Додати вузол до підключення і лишити його відкритим</translation>
+    </message>
+    <message>
         <source>Loading wallet...</source>
         <translation>Завантаження гаманця...</translation>
     </message>
@@ -3171,8 +3264,16 @@
         <translation>Не вдається понизити версію гаманця</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>Неможливо записати типову адресу</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>Сканування...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Завантаження завершене</translation>
     </message>
     <message>
         <source>Error</source>

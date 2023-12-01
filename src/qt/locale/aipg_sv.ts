@@ -1,4 +1,6 @@
-<TS language="sv" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="sv">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -62,12 +64,12 @@
         <translation>Mottagaradresser</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Detta är dina AIPG adresser för att skicka betalningar. Kolla alltid summan och den mottagande adressen innan du skickar AIPGs.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Detta är dina Aipg adresser för att skicka betalningar. Kolla alltid summan och den mottagande adressen innan du skickar Aipg.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Detta är dina AIPG adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Detta är dina Aipg adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -169,7 +171,7 @@ Var vänlig och försök igen.</translation>
         <translation>Bekräfta kryptering av plånbok</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPGS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPG&lt;/b&gt;!</source>
         <translation>VARNING: Om du krypterar din plånbok och glömmer ditt lösenord, kommer du att &lt;b&gt;FÖRLORA ALLA DINA AIPG&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -181,7 +183,7 @@ Var vänlig och försök igen.</translation>
         <translation>Plånbok krypterad</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgss from being stolen by malware infecting your computer.</source>
         <translation>%1 kommer nu att stänga ner för att färdigställa krypteringen. Tänk på att en krypterad plånbok inte skyddar mot stöld om din dator är infekterad med en keylogger.</translation>
     </message>
     <message>
@@ -222,18 +224,6 @@ Var vänlig och försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
@@ -242,6 +232,327 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Banned Until</source>
         <translation>Bannad tills</translation>
+    </message>
+</context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>Signera &amp;meddelande...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Synkroniserar med nätverk...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Översikt</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Nod</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Visa generell översikt av plånboken</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transaktioner</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Bläddra i transaktionshistorik</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>&amp;Avsluta</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Avsluta programmet</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>&amp;Om %1</translation>
+    </message>
+    <message>
+        <source>Show information about %1</source>
+        <translation>Visa information om %1</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>Om &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Visa information om Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Alternativ...</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Ändra konfigurationsalternativ för %1</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Kryptera plånbok...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Säkerhetskopiera plånbok...</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;Byt lösenord...</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>Av&amp;sändaradresser...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Mottaga&amp;radresser...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Öppna &amp;URI...</translation>
+    </message>
+    <message>
+        <source>Click to disable network activity.</source>
+        <translation>Klicka för att inaktivera nätverksaktivitet.</translation>
+    </message>
+    <message>
+        <source>Network activity disabled.</source>
+        <translation>Nätverksaktivitet inaktiverad.</translation>
+    </message>
+    <message>
+        <source>Click to enable network activity again.</source>
+        <translation>Klicka för att aktivera nätverksaktivitet igen.</translation>
+    </message>
+    <message>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Synkar huvuden (%1%)...</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Återindexerar block på disken...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Skicka aipgss till en Aipg-adress</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Säkerhetskopiera plånboken till en annan plats</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Byt lösenfras för kryptering av plånbok</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Debug-fönster</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Öppna debug- och diagnostikkonsolen</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Verifiera meddelande...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Plånbok</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Skicka</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Ta emot</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Visa / Göm</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Visa eller göm huvudfönstret</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Kryptera de privata nycklar som tillhör din plånbok</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Signera meddelanden med din Aipg-adress för att bevisa att du äger dem</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Verifiera meddelanden för att vara säker på att de var signerade med specificerade Aipg-adresser</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Arkiv</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Inställningar</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Hjälp</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Verktygsfält för tabbar</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>Begär betalning (genererar QR-koder och aipg-URI)</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Visa listan av använda avsändaradresser och etiketter</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>Visa listan av använda mottagningsadresser och etiketter</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>Öppna en aipg: URI eller betalningsbegäran</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>&amp;Kommandoradsalternativ</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n active connection(s) to Aipg network</source>
+        <translation><numerusform>%n aktiva anslutningar till Aipg-nätverket.</numerusform><numerusform>%n aktiva anslutningar till Aipg-nätverket.</numerusform></translation>
+    </message>
+    <message>
+        <source>Indexing blocks on disk...</source>
+        <translation>Indexerar block på disken...</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>Bearbetar block på disken...</translation>
+    </message>
+    <message numerus="yes">
+        <source>Processed %n block(s) of transaction history.</source>
+        <translation><numerusform>Bearbetade %n block av transaktionshistoriken.</numerusform><numerusform>Bearbetade %n block av transaktionshistoriken.</numerusform></translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 efter</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>Senast mottagna block genererades för %1 sen.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Transaktioner efter denna kommer inte ännu vara synliga.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Fel</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Varning</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Information</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Uppdaterad</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible Aipg command-line options</source>
+        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga Aipg kommandoradsalternativ.</translation>
+    </message>
+    <message>
+        <source>%1 client</source>
+        <translation>%1-klient</translation>
+    </message>
+    <message>
+        <source>Connecting to peers...</source>
+        <translation>Ansluter till noder...</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Hämtar senaste...</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>Datum: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>Belopp: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>Typ: %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>Etikett: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>Adress: %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Transaktion skickad</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Inkommande transaktion</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>HD-nyckelgenerering är &lt;b&gt;aktiverad&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>HD-nyckelgenerering är &lt;b&gt;inaktiverad&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;olåst&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;låst&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. Aipg can no longer continue safely and will quit.</source>
+        <translation>Ett kritiskt fel uppstod. Aipg kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
     </message>
 </context>
 <context>
@@ -396,9 +707,6 @@ Var vänlig och försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -437,8 +745,8 @@ Var vänlig och försök igen.</translation>
         <translation>Redigera avsändaradress</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid AIPG address.</source>
-        <translation>Den angivna adressen "%1" är inte en giltig AIPG-adress.</translation>
+        <source>The entered address "%1" is not a valid Aipg address.</source>
+        <translation>Den angivna adressen "%1" är inte en giltig Aipg-adress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -476,12 +784,6 @@ Var vänlig och försök igen.</translation>
         <translation>Kan inte skapa datakatalog här.</translation>
     </message>
 </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
@@ -552,6 +854,10 @@ Var vänlig och försök igen.</translation>
         <translation>Eftersom detta är första gången programmet startas får du välja var %1 skall lagra sitt data.</translation>
     </message>
     <message>
+        <source>%1 will download and store a copy of the Aipg block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 kommer att ladda ner och spara en kopia av Aipg blockkedjan. Åtminstone %2GB av data kommer att sparas i denna katalog, och den kommer att växa över tiden. Plånboken kommer också att sparas i denna katalog.</translation>
+    </message>
+    <message>
         <source>Use the default data directory</source>
         <translation>Använd den förvalda datakatalogen</translation>
     </message>
@@ -567,19 +873,15 @@ Var vänlig och försök igen.</translation>
         <source>Error</source>
         <translation>Fel</translation>
     </message>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
+    <message numerus="yes">
+        <source>%n GB of free space available</source>
+        <translation><numerusform>%n GB fritt utrymme kvar</numerusform><numerusform>%n GB fritt utrymme kvar</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>(of %n GB needed)</source>
+        <translation><numerusform>(av %n GB behövs)</numerusform><numerusform>(av %n GB behövs)</numerusform></translation>
+    </message>
+</context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -627,9 +929,6 @@ Var vänlig och försök igen.</translation>
         <translation>Okänd. Synkar huvuden (%1)...</translation>
     </message>
 </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
-    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -684,6 +983,14 @@ Var vänlig och försök igen.</translation>
         <translation>Antalet skript&amp;verifikationstrådar</translation>
     </message>
     <message>
+        <source>Accept connections from outside</source>
+        <translation>Acceptera anslutningar utifrån</translation>
+    </message>
+    <message>
+        <source>Allow incoming connections</source>
+        <translation>Acceptera inkommande anslutningar</translation>
+    </message>
+    <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>Proxyns IP-adress (t.ex.  IPv4: 127.0.0.1 / IPv6: ::1)</translation>
     </message>
@@ -694,6 +1001,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Tredjeparts URL:er (t.ex. en blockutforskare) som finns i transaktionstabben som ett menyval i sammanhanget. %s i URL:en ersätts med tansaktionshashen. Flera URL:er är separerade med vertikala streck |.</translation>
+    </message>
+    <message>
+        <source>Third party transaction URLs</source>
+        <translation>Tredjeparts transaktions-URL:er</translation>
     </message>
     <message>
         <source>Active command-line options that override above options:</source>
@@ -736,16 +1047,16 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Spendera obekräftad växel</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna automatiskt AIPG-klientens port på routern. Detta fungerar endast om din router har UPnP aktiverat.</translation>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna automatiskt Aipg-klientens port på routern. Detta fungerar endast om din router har UPnP aktiverat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Tilldela port med hjälp av &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a SOCKS5 proxy.</source>
-        <translation>Anslut till AIPG-nätverket genom en SOCKS5-proxy.</translation>
+        <source>Connect to the Aipg network through a SOCKS5 proxy.</source>
+        <translation>Anslut till Aipg-nätverket genom en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -768,6 +1079,10 @@ Var vänlig och försök igen.</translation>
         <translation>Används för att nå noder via:</translation>
     </message>
     <message>
+        <source>Shows, if the supplied default SOCKS5 proxy is used to reach peers via this network type.</source>
+        <translation>Visas, om den angivna standard-SOCKS5-proxyn används för att nå noder via den här nätverkstypen.</translation>
+    </message>
+    <message>
         <source>IPv4</source>
         <translation>IPv4</translation>
     </message>
@@ -780,12 +1095,24 @@ Var vänlig och försök igen.</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Anslut till AIPG-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
+        <source>Connect to the Aipg network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Anslut till Aipg-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
+    </message>
+    <message>
+        <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
+        <translation>Använd separat SOCKS5-proxy för att nå noder via dolda tjänster i Tor:</translation>
     </message>
     <message>
         <source>&amp;Window</source>
         <translation>&amp;Fönster</translation>
+    </message>
+    <message>
+        <source>&amp;Hide the icon from the system tray.</source>
+        <translation>&amp;Göm ikonen från systemfältet.</translation>
+    </message>
+    <message>
+        <source>Hide tray icon</source>
+        <translation>Göm systemfältsikonen</translation>
     </message>
     <message>
         <source>Show only a tray icon after minimizing the window.</source>
@@ -867,8 +1194,8 @@ Var vänlig och försök igen.</translation>
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med AIPG-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med Aipg-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -897,6 +1224,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Mined balance that has not yet matured</source>
         <translation>Den genererade balansen som ännu inte har mognat</translation>
+    </message>
+    <message>
+        <source>Balances</source>
+        <translation>Balanser</translation>
     </message>
     <message>
         <source>Total:</source>
@@ -930,7 +1261,7 @@ Var vänlig och försök igen.</translation>
         <source>Current total balance in watch-only addresses</source>
         <translation>Nuvarande total balans i granska-bara adresser</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>PaymentServer</name>
     <message>
@@ -954,8 +1285,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ogiltig betalningsadress %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid AIPG address or malformed URI parameters.</source>
-        <translation>URI kan inte tolkas! Detta kan orsakas av en ogiltig AIPG-adress eller felaktiga URI parametrar.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Aipg address or malformed URI parameters.</source>
+        <translation>URI kan inte tolkas! Detta kan orsakas av en ogiltig Aipg-adress eller felaktiga URI parametrar.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1036,7 +1367,7 @@ Var vänlig och försök igen.</translation>
         <source>Ping</source>
         <translation>Ping</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>QObject</name>
     <message>
@@ -1044,8 +1375,8 @@ Var vänlig och försök igen.</translation>
         <translation>Mängd</translation>
     </message>
     <message>
-        <source>Enter a AIPG address (e.g. %1)</source>
-        <translation>Ange en AIPG-adress (t.ex. %1)</translation>
+        <source>Enter a Aipg address (e.g. %1)</source>
+        <translation>Ange en Aipg-adress (t.ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1075,15 +1406,39 @@ Var vänlig och försök igen.</translation>
         <source>%1 ms</source>
         <translation>%1 ms</translation>
     </message>
+    <message numerus="yes">
+        <source>%n second(s)</source>
+        <translation><numerusform>%n sekund</numerusform><numerusform>%n sekunder</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n minut</numerusform><numerusform>%n minuter</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n hour(s)</source>
+        <translation><numerusform>%n timme</numerusform><numerusform>%n timmar</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n day(s)</source>
+        <translation><numerusform>%n dag</numerusform><numerusform>%n dagar</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n week(s)</source>
+        <translation><numerusform>%n vecka</numerusform><numerusform>%n veckor</numerusform></translation>
+    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 och %2</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n year(s)</source>
+        <translation><numerusform>%n år</numerusform><numerusform>%n år</numerusform></translation>
     </message>
     <message>
         <source>%1 didn't yet exit safely...</source>
         <translation>%1 avslutades inte ännu säkert...</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>QObject::QObject</name>
     <message>
@@ -1297,6 +1652,10 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Nätverkstrafik</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;Rensa</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>Totalt:</translation>
     </message>
@@ -1349,12 +1708,32 @@ Var vänlig och försök igen.</translation>
         <translation>Välkommen till %1 RPC-konsolen.</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Använd upp- och ner-pilarna för att navigera i historiken, och &lt;b&gt;Ctrl-L&lt;/b&gt; för att rensa skärmen.</translation>
+    </message>
+    <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Skriv &lt;b&gt;help&lt;/b&gt; för en översikt av alla kommandon.</translation>
     </message>
     <message>
         <source>Network activity disabled</source>
         <translation>Nätverksaktivitet inaktiverad</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
     </message>
     <message>
         <source>(node id: %1)</source>
@@ -1390,307 +1769,6 @@ Var vänlig och försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>Signera &amp;meddelande...</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Synkroniserar med nätverk...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Översikt</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Nod</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Visa generell översikt av plånboken</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transaktioner</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Bläddra i transaktionshistorik</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>&amp;Avsluta</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Avsluta programmet</translation>
-    </message>
-    <message>
-        <source>&amp;About %1</source>
-        <translation>&amp;Om %1</translation>
-    </message>
-    <message>
-        <source>Show information about %1</source>
-        <translation>Visa information om %1</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>Om &amp;Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Visa information om Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Alternativ...</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for %1</source>
-        <translation>Ändra konfigurationsalternativ för %1</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Kryptera plånbok...</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Säkerhetskopiera plånbok...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Byt lösenord...</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Av&amp;sändaradresser...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Mottaga&amp;radresser...</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>Öppna &amp;URI...</translation>
-    </message>
-    <message>
-        <source>Click to disable network activity.</source>
-        <translation>Klicka för att inaktivera nätverksaktivitet.</translation>
-    </message>
-    <message>
-        <source>Network activity disabled.</source>
-        <translation>Nätverksaktivitet inaktiverad.</translation>
-    </message>
-    <message>
-        <source>Click to enable network activity again.</source>
-        <translation>Klicka för att aktivera nätverksaktivitet igen.</translation>
-    </message>
-    <message>
-        <source>Syncing Headers (%1%)...</source>
-        <translation>Synkar huvuden (%1%)...</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Återindexerar block på disken...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Skicka aipgs till en AIPG-adress</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Säkerhetskopiera plånboken till en annan plats</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Byt lösenfras för kryptering av plånbok</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Öppna debug- och diagnostikkonsolen</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;Verifiera meddelande...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Plånbok</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Skicka</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Ta emot</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Visa / Göm</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Visa eller göm huvudfönstret</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Kryptera de privata nycklar som tillhör din plånbok</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Signera meddelanden med din AIPG-adress för att bevisa att du äger dem</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Verifiera meddelanden för att vara säker på att de var signerade med specificerade AIPG-adresser</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Arkiv</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Hjälp</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>Begär betalning (genererar QR-koder och aipg-URI)</translation>
-    </message>
-    <message>
-        <source>Show the list of used sending addresses and labels</source>
-        <translation>Visa listan av använda avsändaradresser och etiketter</translation>
-    </message>
-    <message>
-        <source>Show the list of used receiving addresses and labels</source>
-        <translation>Visa listan av använda mottagningsadresser och etiketter</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>Öppna en aipg: URI eller betalningsbegäran</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>&amp;Kommandoradsalternativ</translation>
-    </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>Indexerar block på disken...</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>Bearbetar block på disken...</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 efter</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>Senast mottagna block genererades för %1 sen.</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Transaktioner efter denna kommer inte ännu vara synliga.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Fel</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Varning</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Information</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Uppdaterad</translation>
-    </message>
-    <message>
-        <source>Show the %1 help message to get a list with possible AIPG command-line options</source>
-        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga AIPG kommandoradsalternativ.</translation>
-    </message>
-    <message>
-        <source>%1 client</source>
-        <translation>%1-klient</translation>
-    </message>
-    <message>
-        <source>Connecting to peers...</source>
-        <translation>Ansluter till noder...</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Hämtar senaste...</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>Datum: %1
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>Belopp: %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>Typ: %1
-</translation>
-    </message>
-    <message>
-        <source>Label: %1
-</source>
-        <translation>Etikett: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>Adress: %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Transaktion skickad</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Inkommande transaktion</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
-        <translation>HD-nyckelgenerering är &lt;b&gt;aktiverad&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>HD-nyckelgenerering är &lt;b&gt;inaktiverad&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;olåst&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;låst&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. AIPG can no longer continue safely and will quit.</source>
-        <translation>Ett kritiskt fel uppstod. AIPG kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
-    </message>
-</context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -1713,8 +1791,8 @@ Var vänlig och försök igen.</translation>
         <translation>Åt&amp;eranvänd en existerande mottagningsadress (rekommenderas inte)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AIPG network.</source>
-        <translation>Ett frivilligt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. NB: Meddelandet kommer inte att sändas med betalningen över AIPGnätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aipg network.</source>
+        <translation>Ett frivilligt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. NB: Meddelandet kommer inte att sändas med betalningen över Aipg nätverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1864,15 +1942,6 @@ Var vänlig och försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
@@ -1951,6 +2020,10 @@ Var vänlig och försök igen.</translation>
         <translation>Göm</translation>
     </message>
     <message>
+        <source>total at least</source>
+        <translation>totalt minst</translation>
+    </message>
+    <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for aipg transactions than the network can process.</source>
         <translation>Att betala endast den minsta avgiften är bara bra så länge det är mindre transaktionsvolym än utrymme i blocken. Men tänk på att det kan hamna i en aldrig bekräftar transaktion när det finns mer efterfrågan på aipg transaktioner än nätverket kan bearbeta.</translation>
     </message>
@@ -1969,6 +2042,14 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
         <translation>(Smartavgiften är inte initierad än. Detta tar vanligen några block...)</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>normal</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>snabb</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
@@ -2094,13 +2175,17 @@ Var vänlig och försök igen.</translation>
         <source>Payment request expired.</source>
         <translation>Betalningsbegäran löpte ut.</translation>
     </message>
+    <message numerus="yes">
+        <source>%n block(s)</source>
+        <translation><numerusform>%n block</numerusform><numerusform>%n block</numerusform></translation>
+    </message>
     <message>
         <source>Pay only the required fee of %1</source>
         <translation>Betala endast den nödvändiga avgiften på %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid AIPG address</source>
-        <translation>Varning: Felaktig AIPGadress</translation>
+        <source>Warning: Invalid Aipg address</source>
+        <translation>Varning: Felaktig Aipg adress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2126,6 +2211,10 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Belopp:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>Betala &amp;Till:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Etikett:</translation>
     </message>
@@ -2138,8 +2227,8 @@ Var vänlig och försök igen.</translation>
         <translation>Detta är en normal betalning.</translation>
     </message>
     <message>
-        <source>The AIPG address to send the payment to</source>
-        <translation>AIPGadress att sända betalning till</translation>
+        <source>The Aipg address to send the payment to</source>
+        <translation>Aipg adress att sända betalning till</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2158,8 +2247,8 @@ Var vänlig och försök igen.</translation>
         <translation>Radera denna post</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Avgiften dras från beloppet som skickas. Mottagaren kommer att få mindre aipgs än du angivit i belopp-fältet. Om flera mottagare valts kommer avgiften delas jämt.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgss than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Avgiften dras från beloppet som skickas. Mottagaren kommer att få mindre aipgss än du angivit i belopp-fältet. Om flera mottagare valts kommer avgiften delas jämt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2182,8 +2271,12 @@ Var vänlig och försök igen.</translation>
         <translation>Ange en etikett för denna adress att adderas till listan över använda adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AIPG network.</source>
-        <translation>Ett meddelande som bifogades aipg-URI, vilket lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över AIPGnätverket.</translation>
+        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aipg network.</source>
+        <translation>Ett meddelande som bifogades aipg-URI, vilket lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över Aipg nätverket.</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Betala Till:</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2223,12 +2316,12 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Signera Meddelande</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive aipgs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan underteckna meddelanden/avtal med dina adresser för att bevisa att du kan ta emot aipgs som skickats till dem. Var försiktig så du inte undertecknar något oklart eller konstigt, eftersom phishing-angrepp kan försöka få dig att underteckna din identitet till dem. Underteckna endast väldetaljerade meddelanden som du godkänner.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive aipgss sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Du kan underteckna meddelanden/avtal med dina adresser för att bevisa att du kan ta emot aipgss som skickats till dem. Var försiktig så du inte undertecknar något oklart eller konstigt, eftersom phishing-angrepp kan försöka få dig att underteckna din identitet till dem. Underteckna endast väldetaljerade meddelanden som du godkänner.</translation>
     </message>
     <message>
-        <source>The AIPG address to sign the message with</source>
-        <translation>AIPGadress att signera meddelandet med</translation>
+        <source>The Aipg address to sign the message with</source>
+        <translation>Aipg adress att signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2259,7 +2352,7 @@ Var vänlig och försök igen.</translation>
         <translation>Kopiera signaturen till systemets Urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
+        <source>Sign the message to prove you own this Aipg address</source>
         <translation>Signera meddelandet för att bevisa att du äger denna adress</translation>
     </message>
     <message>
@@ -2283,12 +2376,12 @@ Var vänlig och försök igen.</translation>
         <translation>Ange mottagarens adress, meddelande (kopiera radbrytningar, mellanrum, flikar, etc. exakt) och signatur nedan för att verifiera meddelandet. Undvik att läsa in mera information i signaturen än vad som stod i själva undertecknade meddelandet, för att undvika ett man-in-the-middle-angrepp. Notera att detta endast bevisar att undertecknad tar emot med adressen, det bevisar inte vem som skickat transaktionen!</translation>
     </message>
     <message>
-        <source>The AIPG address the message was signed with</source>
-        <translation>AIPGadressen som meddelandet signerades med</translation>
+        <source>The Aipg address the message was signed with</source>
+        <translation>Aipg adressen som meddelandet signerades med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AIPG address</source>
-        <translation>Verifiera meddelandet för att vara säker på att den var signerad med den angivna AIPG-adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified Aipg address</source>
+        <translation>Verifiera meddelandet för att vara säker på att den var signerad med den angivna Aipg-adressen</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2367,6 +2460,10 @@ Var vänlig och försök igen.</translation>
 </context>
 <context>
     <name>TransactionDesc</name>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Öppet för %n mer block</numerusform><numerusform>Öppet för %n mer block</numerusform></translation>
+    </message>
     <message>
         <source>Open until %1</source>
         <translation>Öppet till %1</translation>
@@ -2442,6 +2539,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>label</source>
         <translation>etikett</translation>
+    </message>
+    <message numerus="yes">
+        <source>matures in %n more block(s)</source>
+        <translation><numerusform>mognar om %n mer block</numerusform><numerusform>mognar om %n fler block</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -2528,6 +2629,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Label</source>
         <translation>Etikett</translation>
+    </message>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Öppet för %n mer block</numerusform><numerusform>Öppet för %n mer block</numerusform></translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -2625,7 +2730,7 @@ Var vänlig och försök igen.</translation>
         <source>Amount removed from or added to balance.</source>
         <translation>Belopp draget eller tillagt till balans.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>TransactionView</name>
     <message>
@@ -2791,9 +2896,9 @@ Var vänlig och försök igen.</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Skicka AIPGs</translation>
+        <translation>Skicka Aipg</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -2828,7 +2933,7 @@ Var vänlig och försök igen.</translation>
         <source>The wallet data was successfully saved to %1.</source>
         <translation>Plånbokens data sparades utan problem till %1.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>aipg-core</name>
     <message>
@@ -2850,6 +2955,14 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Tillåt kommandon från kommandotolken och JSON-RPC-kommandon</translation>
+    </message>
+    <message>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect/-noconnect)</source>
+        <translation>Acceptera anslutningar utifrån (förvalt: 1 om ingen -proxy eller -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <source>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</source>
+        <translation>Anslut endast till angivna nod(er); -noconnect eller -connect=0 ensam för att inaktivera automatiska anslutningar</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
@@ -2892,8 +3005,8 @@ Var vänlig och försök igen.</translation>
         <translation>Kunde inte starta HTTP-server. Se avlusningsloggen för detaljer.</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -2918,6 +3031,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Ta bort alla plånbokstransaktioner och återskapa bara dom som är en del av blockkedjan genom att ange -rescan vid uppstart</translation>
+    </message>
+    <message>
+        <source>Error loading %s: You can't enable HD on a already existing non-HD wallet</source>
+        <translation>Fel vid laddning av %s: Du kan inte aktivera HD på en existerande icke-HD plånbok</translation>
     </message>
     <message>
         <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
@@ -2982,6 +3099,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</source>
         <translation>Varning: Vi verkar inte helt överens med våra peers! Du kan behöva uppgradera, eller andra noder kan behöva uppgradera.</translation>
+    </message>
+    <message>
+        <source>You need to rebuild the database using -reindex-chainstate to change -txindex</source>
+        <translation>Du måste återskapa databasen med -reindex-chainstate för att ändra -txindex</translation>
     </message>
     <message>
         <source>%s corrupt, salvage failed</source>
@@ -3080,6 +3201,10 @@ Var vänlig och försök igen.</translation>
         <translation>Fel vid inläsningen av %s: Plånboken kräver en senare version av %s</translation>
     </message>
     <message>
+        <source>Error loading %s: You can't disable HD on a already existing HD wallet</source>
+        <translation>Fel vid laddning av %s: Du kan inte avaktivera HD på en redan existerande HD plånbok</translation>
+    </message>
+    <message>
         <source>Error loading block database</source>
         <translation>Fel vid inläsning av blockdatabasen</translation>
     </message>
@@ -3106,6 +3231,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Initialization sanity check failed. %s is shutting down.</source>
         <translation>Initieringschecken fallerade. %s stängs av.</translation>
+    </message>
+    <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>Ogiltig -onion adress:'%s'</translation>
     </message>
     <message>
         <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
@@ -3168,6 +3297,10 @@ Var vänlig och försök igen.</translation>
         <translation>Sätt databasens cachestorlek i megabyte (%d till %d, förvalt: %d)</translation>
     </message>
     <message>
+        <source>Set maximum block size in bytes (default: %d)</source>
+        <translation>Sätt maximal blockstorlek i byte (förvalt: %d)</translation>
+    </message>
+    <message>
         <source>Specify wallet file (within data directory)</source>
         <translation>Ange plånboksfil (inom datakatalogen)</translation>
     </message>
@@ -3208,6 +3341,10 @@ Var vänlig och försök igen.</translation>
         <translation>Verifierar block...</translation>
     </message>
     <message>
+        <source>Verifying wallet...</source>
+        <translation>Verifierar plånboken...</translation>
+    </message>
+    <message>
         <source>Wallet %s resides outside data directory %s</source>
         <translation>Plånbok %s ligger utanför datakatalogen %s</translation>
     </message>
@@ -3230,6 +3367,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6</source>
         <translation>Bind till given adress och vitlista klienter som ansluter till den. Använd [värd]:port notation för IPv6</translation>
+    </message>
+    <message>
+        <source>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</source>
+        <translation>Bind till angiven adress för att lyssna på JSON-RPC-anslutningar. Använd [värd]:port-format for IPv6. Detta alternativ kan anges flera gånger (förvalt: bind till alla gränssnitt)</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -3268,8 +3409,16 @@ Var vänlig och försök igen.</translation>
         <translation>Slumpa autentiseringen för varje proxyanslutning. Detta möjliggör Tor ström-isolering (förvalt: %u)</translation>
     </message>
     <message>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
+        <translation>Sätt den maximala storleken av hög-prioriterade/låg-avgifts transaktioner i byte (förvalt: %d)</translation>
+    </message>
+    <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
         <translation>Transaktionen är för liten att skicka efter det att avgiften har dragits</translation>
+    </message>
+    <message>
+        <source>Use hierarchical deterministic key generation (HD) after BIP32. Only has effect during wallet creation/first start</source>
+        <translation>Använd hierarkisk deterministisk nyckel generering (HD) efter BIP32. Har bara effekt under plånbokens skapande/första användning.</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
@@ -3342,6 +3491,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Skicka trace-/debuginformation till terminalen istället för till debug.log</translation>
+    </message>
+    <message>
+        <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
+        <translation>Sänd transaktioner som nollavgiftstransaktioner om möjligt (förvalt: %u)</translation>
     </message>
     <message>
         <source>Show all debugging options (usage: --help -help-debug)</source>
@@ -3428,6 +3581,10 @@ Var vänlig och försök igen.</translation>
         <translation>Tillåt DNS-sökningar för -addnode, -seednode och -connect</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Laddar adresser...</translation>
+    </message>
+    <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = spara tx metadata t.ex. kontoägare och betalningsbegäransinformation, 2 = släng tx metadata)</translation>
     </message>
@@ -3466,6 +3623,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>Skriv ut avlusningsinformation (förvalt: %u, att ange &lt;category&gt; är frivilligt)</translation>
+    </message>
+    <message>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
+        <translation>Sök efter klientadresser med DNS sökningen, om det finns otillräckligt med adresser (förvalt: 1 om inte -connect/-noconnect)</translation>
     </message>
     <message>
         <source>Support filtering of blocks and transaction with bloom filters (default: %u)</source>
@@ -3526,6 +3687,10 @@ Var vänlig och försök igen.</translation>
     <message>
         <source>Include IP addresses in debug output (default: %u)</source>
         <translation>Inkludera IP-adresser i debugutskrift (förvalt: %u)</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Ogiltig -proxy adress: '%s'</translation>
     </message>
     <message>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: %u or testnet: %u)</source>
@@ -3629,11 +3794,15 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
-        <translation>Otillräckligt med aipgs</translation>
+        <translation>Otillräckligt med aipgss</translation>
     </message>
     <message>
         <source>Loading block index...</source>
         <translation>Laddar blockindex...</translation>
+    </message>
+    <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Lägg till en nod att koppla upp mot och försök att hålla anslutningen öppen</translation>
     </message>
     <message>
         <source>Loading wallet...</source>
@@ -3644,8 +3813,16 @@ Var vänlig och försök igen.</translation>
         <translation>Kan inte nedgradera plånboken</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>Kan inte skriva standardadress</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>Söker igen...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Klar med laddning</translation>
     </message>
     <message>
         <source>Error</source>

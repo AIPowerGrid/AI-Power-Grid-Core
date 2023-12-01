@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -27,6 +27,7 @@
 #ifdef ENABLE_WALLET
 #include "paymentserver.h"
 #include "walletmodel.h"
+#include "encryptdialog.h"
 #endif
 
 #include "init.h"
@@ -77,7 +78,6 @@ Q_IMPORT_PLUGIN(QXcbIntegrationPlugin);
 Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin);
 #elif defined(QT_QPA_PLATFORM_COCOA)
 Q_IMPORT_PLUGIN(QCocoaIntegrationPlugin);
-Q_IMPORT_PLUGIN(QMacStylePlugin);
 #endif
 #endif
 #endif
@@ -178,14 +178,14 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 }
 #endif
 
-/** Class encapsulating AIPG Core startup and shutdown.
+/** Class encapsulating OLDNAMENEEDKEEP__Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class AIPGCore: public QObject
+class AipgCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit AIPGCore();
+    explicit AipgCore();
     /** Basic initialization, before starting initialization/shutdown thread.
      * Return true on success.
      */
@@ -209,13 +209,13 @@ private:
     void handleRunawayException(const std::exception *e);
 };
 
-/** Main AIPG application object */
-class AIPGApplication: public QApplication
+/** Main aipg application object */
+class AipgApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit AIPGApplication();
-    ~AIPGApplication();
+    explicit AipgApplication(int &argc, char **argv);
+    ~AipgApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -238,7 +238,7 @@ public:
     /// Get process return value
     int getReturnValue() const { return returnValue; }
 
-    /// Get window identifier of QMainWindow (AIPGGUI)
+    /// Get window identifier of QMainWindow (AipgGUI)
     WId getMainWinId() const;
 
     OptionsModel* getOptionsModel() const { return optionsModel; }
@@ -260,7 +260,7 @@ private:
     QThread *coreThread;
     OptionsModel *optionsModel;
     ClientModel *clientModel;
-    AIPGGUI *window;
+    AipgGUI *window;
     QTimer *pollShutdownTimer;
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer;
@@ -275,18 +275,18 @@ private:
 
 #include "aipg.moc"
 
-AIPGCore::AIPGCore():
+AipgCore::AipgCore():
     QObject()
 {
 }
 
-void AIPGCore::handleRunawayException(const std::exception *e)
+void AipgCore::handleRunawayException(const std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(GetWarnings("gui")));
 }
 
-bool AIPGCore::baseInitialize()
+bool AipgCore::baseInitialize()
 {
     if (!AppInitBasicSetup())
     {
@@ -307,7 +307,7 @@ bool AIPGCore::baseInitialize()
     return true;
 }
 
-void AIPGCore::initialize()
+void AipgCore::initialize()
 {
     try
     {
@@ -321,7 +321,7 @@ void AIPGCore::initialize()
     }
 }
 
-void AIPGCore::restart(QStringList args)
+void AipgCore::restart(QStringList args)
 {
     static bool executing_restart{false};
 
@@ -348,7 +348,7 @@ void AIPGCore::restart(QStringList args)
     }
 }
 
-void AIPGCore::shutdown()
+void AipgCore::shutdown()
 {
     try
     {
@@ -365,11 +365,8 @@ void AIPGCore::shutdown()
     }
 }
 
-static int qt_argc = 1;
-static const char* qt_argv = "aipg-qt";
-
-AIPGApplication::AIPGApplication():
-    QApplication(qt_argc, const_cast<char **>(&qt_argv)),
+AipgApplication::AipgApplication(int &argc, char **argv):
+    QApplication(argc, argv),
     coreThread(0),
     optionsModel(0),
     clientModel(0),
@@ -384,17 +381,17 @@ AIPGApplication::AIPGApplication():
     setQuitOnLastWindowClosed(false);
 
     // UI per-platform customization
-    // This must be done inside the AIPGApplication constructor, or after it, because
+    // This must be done inside the AipgApplication constructor, or after it, because
     // PlatformStyle::instantiate requires a QApplication
     std::string platformName;
-    platformName = gArgs.GetArg("-uiplatform", AIPGGUI::DEFAULT_UIPLATFORM);
+    platformName = gArgs.GetArg("-uiplatform", AipgGUI::DEFAULT_UIPLATFORM);
     platformStyle = PlatformStyle::instantiate(QString::fromStdString(platformName));
     if (!platformStyle) // Fall back to "other" if specified name not found
         platformStyle = PlatformStyle::instantiate("other");
     assert(platformStyle);
 }
 
-AIPGApplication::~AIPGApplication()
+AipgApplication::~AipgApplication()
 {
     if(coreThread)
     {
@@ -417,31 +414,31 @@ AIPGApplication::~AIPGApplication()
 }
 
 #ifdef ENABLE_WALLET
-void AIPGApplication::createPaymentServer()
+void AipgApplication::createPaymentServer()
 {
     paymentServer = new PaymentServer(this);
 }
 #endif
 
-void AIPGApplication::createOptionsModel(bool resetSettings)
+void AipgApplication::createOptionsModel(bool resetSettings)
 {
     optionsModel = new OptionsModel(nullptr, resetSettings);
 }
 
-void AIPGApplication::createWindow(const NetworkStyle *networkStyle)
+void AipgApplication::createWindow(const NetworkStyle *networkStyle)
 {
-    window = new AIPGGUI(platformStyle, networkStyle, 0);
-    window->setMinimumSize(1024,700);
-    window->setBaseSize(1024,700);
+    window = new AipgGUI(platformStyle, networkStyle, 0);
+    window->setMinimumSize(200,200);
+    window->setBaseSize(640,640);
 
     pollShutdownTimer = new QTimer(window);
     connect(pollShutdownTimer, SIGNAL(timeout()), window, SLOT(detectShutdown()));
     pollShutdownTimer->start(200);
 }
 
-void AIPGApplication::createSplashScreen(const NetworkStyle *networkStyle)
+void AipgApplication::createSplashScreen(const NetworkStyle *networkStyle)
 {
-    SplashScreen *splash = new SplashScreen(networkStyle);
+    SplashScreen *splash = new SplashScreen(0, networkStyle);
     // We don't hold a direct pointer to the splash screen after creation, but the splash
     // screen will take care of deleting itself when slotFinish happens.
     splash->show();
@@ -449,12 +446,12 @@ void AIPGApplication::createSplashScreen(const NetworkStyle *networkStyle)
     connect(this, SIGNAL(requestedShutdown()), splash, SLOT(close()));
 }
 
-void AIPGApplication::startThread()
+void AipgApplication::startThread()
 {
     if(coreThread)
         return;
     coreThread = new QThread(this);
-    AIPGCore *executor = new AIPGCore();
+    AipgCore *executor = new AipgCore();
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
@@ -471,20 +468,20 @@ void AIPGApplication::startThread()
     coreThread->start();
 }
 
-void AIPGApplication::parameterSetup()
+void AipgApplication::parameterSetup()
 {
     InitLogging();
     InitParameterInteraction();
 }
 
-void AIPGApplication::requestInitialize()
+void AipgApplication::requestInitialize()
 {
     qDebug() << __func__ << ": Requesting initialize";
     startThread();
     Q_EMIT requestedInitialize();
 }
 
-void AIPGApplication::requestShutdown()
+void AipgApplication::requestShutdown()
 {
     // Show a simple window indicating shutdown status
     // Do this first as some of the steps may take some time below,
@@ -511,7 +508,7 @@ void AIPGApplication::requestShutdown()
     Q_EMIT requestedShutdown();
 }
 
-void AIPGApplication::initializeResult(bool success)
+void AipgApplication::initializeResult(bool success)
 {
     qDebug() << __func__ << ": Initialization result: " << success;
     // Set exit result.
@@ -534,8 +531,8 @@ void AIPGApplication::initializeResult(bool success)
         {
             walletModel = new WalletModel(platformStyle, vpwallets[0], optionsModel);
 
-            window->addWallet(AIPGGUI::DEFAULT_WALLET, walletModel);
-            window->setCurrentWallet(AIPGGUI::DEFAULT_WALLET);
+            window->addWallet(AipgGUI::DEFAULT_WALLET, walletModel);
+            window->setCurrentWallet(AipgGUI::DEFAULT_WALLET);
 
             connect(walletModel, SIGNAL(coinsSent(CWallet*,SendCoinsRecipient,QByteArray)),
                              paymentServer, SLOT(fetchPaymentACK(CWallet*,const SendCoinsRecipient&,QByteArray)));
@@ -563,26 +560,36 @@ void AIPGApplication::initializeResult(bool success)
         connect(paymentServer, SIGNAL(message(QString,QString,unsigned int)),
                          window, SLOT(message(QString,QString,unsigned int)));
         QTimer::singleShot(100, paymentServer, SLOT(uiReady()));
+
+        if (walletModel->getEncryptionStatus() == WalletModel::Unencrypted) {
+            EncryptDialog dlg;
+
+            dlg.setModel(walletModel);
+            dlg.setWindowTitle("Encrypt Wallet");
+            dlg.exec();
+
+            walletModel->updateStatus();
+        }
 #endif
     } else {
         quit(); // Exit main loop
     }
 }
 
-void AIPGApplication::shutdownResult(bool success)
+void AipgApplication::shutdownResult(bool success)
 {
     returnValue = success ? EXIT_SUCCESS : EXIT_FAILURE;
     qDebug() << __func__ << ": Shutdown result: " << returnValue;
     quit(); // Exit main loop after shutdown finished
 }
 
-void AIPGApplication::handleRunawayException(const QString &message)
+void AipgApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", AIPGGUI::tr("A fatal error occurred. AIPG can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", AipgGUI::tr("A fatal error occurred. aipg can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
-WId AIPGApplication::getMainWinId() const
+WId AipgApplication::getMainWinId() const
 {
     if (!window)
         return 0;
@@ -611,15 +618,16 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(aipg);
     Q_INIT_RESOURCE(aipg_locale);
 
-#if QT_VERSION > 0x050600
+#if QT_VERSION > 0x050100
     // Generate high-dpi pixmaps
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+#endif
+#if QT_VERSION >= 0x050600
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
 #ifdef Q_OS_MAC
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
-
 #if QT_VERSION >= 0x050500
     // Because of the POODLE attack it is recommended to disable SSLv3 (https://disablessl3.com/),
     // so set SSL protocols to TLS1.0+.
@@ -628,9 +636,7 @@ int main(int argc, char *argv[])
     QSslConfiguration::setDefaultConfiguration(sslconf);
 #endif
 
-    // This should be after the attributes.
-    AIPGApplication app;
-
+    AipgApplication app(argc, argv);
     // Register meta types used for QMetaObject::invokeMethod
     qRegisterMetaType< bool* >();
     //   Need to pass name here as CAmount is a typedef (see http://qt-project.org/doc/qt-5/qmetatype.html#qRegisterMetaType)
@@ -761,7 +767,7 @@ int main(int argc, char *argv[])
         // Perform base initialization before spinning up initialization/shutdown thread
         // This is acceptable because this function only contains steps that are quick to execute,
         // so the GUI thread won't be held up.
-        if (AIPGCore::baseInitialize()) {
+        if (AipgCore::baseInitialize()) {
             app.requestInitialize();
 #if defined(Q_OS_WIN) && QT_VERSION >= 0x050000
             WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("%1 didn't yet exit safely...").arg(QObject::tr(PACKAGE_NAME)), (HWND)app.getMainWinId());

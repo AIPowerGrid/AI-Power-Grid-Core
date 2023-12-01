@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2017 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,11 +18,11 @@ Also test that nodes that send unsupported service bits to aipgd are disconnecte
 and don't receive a VERACK. Unsupported service bits are currently 1 << 5 and
 1 << 7 (until August 1st 2018).
 
-UPDATE: AIPG RIP-2 uses bit 1 << 5.  Currently there are no unsupported service bits.
+UPDATE: Aipg HIP-2 uses bit 1 << 5.  Currently there are no unsupported service bits.
 """
 
 from test_framework.mininode import NodeConnCB, NodeConn, MsgVerack, MsgPing, MsgGetAddr, NetworkThread, mininode_lock
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import logger, p2p_port, wait_until, time
 
 banscore = 10
@@ -99,7 +100,7 @@ class CNodeNoVerackIdle(CLazyNode):
         conn.send_message(MsgPing())
         conn.send_message(MsgGetAddr())
 
-class P2PLeakTest(AIPGTestFramework):
+class P2PLeakTest(AipgTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [['-banscore='+str(banscore)]]

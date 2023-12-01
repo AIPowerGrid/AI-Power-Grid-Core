@@ -1,4 +1,6 @@
-<TS language="eu_ES" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="eu_ES">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -62,12 +64,12 @@
         <translation>Helbideak jasotzen</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Hauek dira zure AIPG helbideak dirua bidaltzeko. Beti egiaztatu diru-kantitatea eta jasotzeko helbidea bidali baino lehen.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Hauek dira zure Aipg helbideak dirua bidaltzeko. Beti egiaztatu diru-kantitatea eta jasotzeko helbidea bidali baino lehen.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hauek dira zure AIPG helbideak dirua jasotzeko. Gomendagarria da erabiltzea jasotzeko helbide berri bat operazio bakoitzeko.</translation>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Hauek dira zure Aipg helbideak dirua jasotzeko. Gomendagarria da erabiltzea jasotzeko helbide berri bat operazio bakoitzeko.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,7 +162,7 @@
         <translation>Berretsi zorroaren enkriptazioa</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPGS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPG&lt;/b&gt;!</source>
         <translation>Abisua: Zuk enkriptatzen baduzu zure diruzorroa eta zure pasahitza galtzen baduzu, &lt;b&gt;AIPG GUZTIAK GALDUKO DITUZU&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -201,19 +203,98 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Sarearekin sinkronizatzen...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Gainbegiratu</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Ikusi zorroaren begirada orokorra</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transakzioak</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Ikusi transakzioen historia</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>Irten</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Irten aplikaziotik</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>&amp;Qt-ari buruz</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Erakutsi Aipg-i buruzko informazioa</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Aukerak...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Helbideak jasotzen</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Aldatu zorroa enkriptatzeko erabilitako pasahitza</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Artxiboa</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Ezarpenak</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Laguntza</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Fitxen tresna-barra</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Egunean</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Eguneratzen...</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Bidalitako transakzioa</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Sarrerako transakzioa</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Zorroa &lt;b&gt;enkriptatuta&lt;/b&gt; eta &lt;b&gt;desblokeatuta&lt;/b&gt; dago une honetan</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Zorroa &lt;b&gt;enkriptatuta&lt;/b&gt; eta &lt;b&gt;blokeatuta&lt;/b&gt; dago une honetan</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -241,9 +322,6 @@
         <source>(no label)</source>
         <translation>(etiketarik ez)</translation>
     </message>
-    </context>
-<context>
-    <name>CreateAssetDialog</name>
     </context>
 <context>
     <name>EditAddressDialog</name>
@@ -292,28 +370,10 @@
     <name>FreespaceChecker</name>
     </context>
 <context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
-<context>
     <name>HelpMessageDialog</name>
     </context>
 <context>
     <name>Intro</name>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -321,9 +381,6 @@
         <source>Form</source>
         <translation>Inprimakia</translation>
     </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -363,89 +420,6 @@
     </context>
 <context>
     <name>RPCConsole</name>
-    </context>
-<context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Sarearekin sinkronizatzen...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Gainbegiratu</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Ikusi zorroaren begirada orokorra</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transakzioak</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Ikusi transakzioen historia</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>Irten</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Irten aplikaziotik</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>&amp;Qt-ari buruz</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Erakutsi AIPG-i buruzko informazioa</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Aukerak...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Helbideak jasotzen</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Aldatu zorroa enkriptatzeko erabilitako pasahitza</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Artxiboa</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Laguntza</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Egunean</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Eguneratzen...</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Bidalitako transakzioa</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Sarrerako transakzioa</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Zorroa &lt;b&gt;enkriptatuta&lt;/b&gt; eta &lt;b&gt;desblokeatuta&lt;/b&gt; dago une honetan</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Zorroa &lt;b&gt;enkriptatuta&lt;/b&gt; eta &lt;b&gt;blokeatuta&lt;/b&gt; dago une honetan</translation>
-    </message>
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>
@@ -509,15 +483,6 @@
     </message>
     </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
@@ -559,6 +524,10 @@
         <translation>K&amp;opurua:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>Ordaindu &amp;honi:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Etiketa:</translation>
     </message>
@@ -577,6 +546,10 @@
     <message>
         <source>Message:</source>
         <translation>Mezua</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Ordaindu honi:</translation>
     </message>
     <message>
         <source>Enter a label for this address to add it to your address book</source>
@@ -730,7 +703,7 @@
         <source>Amount removed from or added to balance.</source>
         <translation>Saldoan kendu edo gehitutako kopurua.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>TransactionView</name>
     <message>
@@ -834,7 +807,7 @@
         <source>Send Coins</source>
         <translation>Bidali txanponak</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -855,6 +828,10 @@
     <message>
         <source>Rescanning...</source>
         <translation>Birbilatzen...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Zamaketa amaitua</translation>
     </message>
     </context>
 </TS>

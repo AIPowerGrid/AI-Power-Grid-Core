@@ -1,11 +1,11 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef AIPG_QT_AIPGAMOUNTFIELD_H
-#define AIPG_QT_AIPGAMOUNTFIELD_H
+#ifndef AIPG_QT_AipgAmountField_H
+#define AIPG_QT_AipgAmountField_H
 
 #include "amount.h"
 
@@ -19,7 +19,7 @@ QT_END_NAMESPACE
 
 /** Widget for entering aipg amounts.
   */
-class AIPGAmountField: public QWidget
+class AipgAmountField: public QWidget
 {
     Q_OBJECT
 
@@ -28,7 +28,7 @@ class AIPGAmountField: public QWidget
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
 
 public:
-    explicit AIPGAmountField(QWidget *parent = 0);
+    explicit AipgAmountField(QWidget *parent = 0);
 
     CAmount value(bool *value=0) const;
     void setValue(const CAmount& value);
@@ -128,4 +128,4 @@ private:
 };
 
 
-#endif // AIPG_QT_AIPGAMOUNTFIELD_H
+#endif // AIPG_QT_AipgAmountField_H

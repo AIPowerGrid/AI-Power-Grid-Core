@@ -1,4 +1,6 @@
-<TS language="hr" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="hr">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -54,8 +56,8 @@
         <translation>&amp;Odaberi</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ovo su vaše AIPG adrese za slanje novca. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ovo su vaše Aipg adrese za slanje novca. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -89,19 +91,268 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>P&amp;otpišite poruku...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Usklađivanje s mrežom ...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Pregled</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Čvor</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Prikaži opći pregled novčanika</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transakcije</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Pretraži povijest transakcija</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>&amp;Izlaz</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Izlazak iz programa</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>&amp;Više o %1</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>Više o &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Prikaži informacije o Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>Pos&amp;tavke...</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>Ši&amp;friraj novčanik...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>Spremi &amp;kopiju novčanika...</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>Promjena &amp;lozinke...</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>Adrese za &amp;slanje</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Adrese za &amp;primanje</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Otvori &amp;URI...</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Re-indeksiranje blokova na disku...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Slanje novca na aipg adresu</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Napravite sigurnosnu kopiju novčanika na drugoj lokaciji</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Promijenite lozinku za šifriranje novčanika</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>Konzola za dijagnostiku</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Otvori konzolu za dijagnostiku</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Potvrdite poruku...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Novčanik</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Pošalji</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>Pri&amp;mi</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>Po&amp;kaži / Sakrij</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Prikaži ili sakrij glavni prozor</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Šifriranje privatnih ključeva koji u novčaniku</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Poruku potpišemo s aipg adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Provjeravanje poruke, kao dokaz, da je potpisana navedenom aipg adresom</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Datoteka</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Postavke</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Pomoć</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Traka kartica</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>Zatraži uplatu (stvara QR kod i aipg: URI adresu)</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Prikaži popis korištenih adresa i oznaka za slanje novca</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>Prikaži popis korištenih adresa i oznaka za primanje novca</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>Otvori aipg: URI adresu ili zahtjev za uplatu</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>Opcije &amp;naredbene linije</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n active connection(s) to Aipg network</source>
+        <translation><numerusform>%n aktivna veza na Aipg mrežu</numerusform><numerusform>%n aktivnih veza na Aipg mrežu</numerusform><numerusform>%n aktivnih veza na Aipg mrežu</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>Processed %n block(s) of transaction history.</source>
+        <translation><numerusform>Obrađen %n blok povijesti transakcije.</numerusform><numerusform>Obrađeno %n bloka povijesti transakcije.</numerusform><numerusform>Obrađeno %n blokova povijesti transakcije.</numerusform></translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>Zadnji primljeni blok je bio ustvaren prije %1.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Transakcije izvršene za tim blokom nisu još prikazane.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Greška</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Upozorenje</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Informacija</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Ažurno</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Ažuriranje...</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>Datum: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>Iznos: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>Vrsta: %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>Oznaka: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>Adresa: %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Poslana transakcija</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Dolazna transakcija</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Novčanik je &lt;b&gt;šifriran&lt;/b&gt; i trenutno &lt;b&gt;otključan&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Novčanik je &lt;b&gt;šifriran&lt;/b&gt; i trenutno &lt;b&gt;zaključan&lt;/b&gt;</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -163,9 +414,6 @@
     </message>
     </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -181,7 +429,7 @@
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
-        <translation>AIPG adresa. Izmjene adrese su moguće samo za adrese za slanje.</translation>
+        <translation>Aipg adresa. Izmjene adrese su moguće samo za adrese za slanje.</translation>
     </message>
     <message>
         <source>&amp;Address</source>
@@ -203,12 +451,6 @@
         <translation>Nije moguće stvoriti direktorij za podatke na tom mjestu.</translation>
     </message>
 </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
@@ -244,18 +486,6 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -265,9 +495,6 @@
         <source>Last block time</source>
         <translation>Posljednje vrijeme bloka</translation>
     </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -311,6 +538,10 @@
         <translation>Broj CPU niti za verifikaciju transakcija</translation>
     </message>
     <message>
+        <source>Allow incoming connections</source>
+        <translation>Dozvoli povezivanje izvana</translation>
+    </message>
+    <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>IP adresa proxy servera (npr. IPv4: 127.0.0.1 / IPv6: ::1)</translation>
     </message>
@@ -339,8 +570,8 @@
         <translation>&amp;Trošenje nepotvrđenih vraćenih iznosa</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatski otvori port AIPG klijenta na ruteru. To radi samo ako ruter podržava UPnP i ako je omogućen.</translation>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatski otvori port Aipg klijenta na ruteru. To radi samo ako ruter podržava UPnP i ako je omogućen.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -388,7 +619,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Izaberite željeni najmanji dio aipga koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
+        <translation>Izaberite željeni najmanji dio aipgsa koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -414,8 +645,8 @@
         <translation>Oblik</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation>Prikazani podatci mogu biti zastarjeli. Vaš novčanik se automatski sinkronizira s AIPG mrežom kada je veza uspostavljena, ali taj proces još nije završen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation>Prikazani podatci mogu biti zastarjeli. Vaš novčanik se automatski sinkronizira s Aipg mrežom kada je veza uspostavljena, ali taj proces još nije završen.</translation>
     </message>
     <message>
         <source>Total:</source>
@@ -532,251 +763,14 @@
         <translation>Očisti konzolu</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Koristite tipke gore i dolje za izbor već korištenih naredbi. &lt;b&gt;Ctrl-L&lt;/b&gt; kako bi očistili ekran i povijest naredbi.</translation>
+    </message>
+    <message>
         <source>Unknown</source>
         <translation>Nepoznato</translation>
     </message>
 </context>
-<context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>P&amp;otpišite poruku...</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Usklađivanje s mrežom ...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Pregled</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Čvor</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Prikaži opći pregled novčanika</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transakcije</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Pretraži povijest transakcija</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>&amp;Izlaz</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Izlazak iz programa</translation>
-    </message>
-    <message>
-        <source>&amp;About %1</source>
-        <translation>&amp;Više o %1</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>Više o &amp;Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Prikaži informacije o Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>Pos&amp;tavke...</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>Ši&amp;friraj novčanik...</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>Spremi &amp;kopiju novčanika...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>Promjena &amp;lozinke...</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Adrese za &amp;slanje</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Adrese za &amp;primanje</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>Otvori &amp;URI...</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Re-indeksiranje blokova na disku...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Slanje novca na aipg adresu</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Napravite sigurnosnu kopiju novčanika na drugoj lokaciji</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Promijenite lozinku za šifriranje novčanika</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Otvori konzolu za dijagnostiku</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;Potvrdite poruku...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Novčanik</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Pošalji</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>Pri&amp;mi</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>Po&amp;kaži / Sakrij</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Prikaži ili sakrij glavni prozor</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Šifriranje privatnih ključeva koji u novčaniku</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Poruku potpišemo s aipg adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Provjeravanje poruke, kao dokaz, da je potpisana navedenom aipg adresom</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Datoteka</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Pomoć</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>Zatraži uplatu (stvara QR kod i aipg: URI adresu)</translation>
-    </message>
-    <message>
-        <source>Show the list of used sending addresses and labels</source>
-        <translation>Prikaži popis korištenih adresa i oznaka za slanje novca</translation>
-    </message>
-    <message>
-        <source>Show the list of used receiving addresses and labels</source>
-        <translation>Prikaži popis korištenih adresa i oznaka za primanje novca</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>Otvori aipg: URI adresu ili zahtjev za uplatu</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>Opcije &amp;naredbene linije</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>Zadnji primljeni blok je bio ustvaren prije %1.</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Transakcije izvršene za tim blokom nisu još prikazane.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Greška</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Upozorenje</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informacija</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Ažurno</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Ažuriranje...</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>Datum: %1
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>Iznos: %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>Vrsta: %1
-</translation>
-    </message>
-    <message>
-        <source>Label: %1
-</source>
-        <translation>Oznaka: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>Adresa: %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Poslana transakcija</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Dolazna transakcija</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Novčanik je &lt;b&gt;šifriran&lt;/b&gt; i trenutno &lt;b&gt;otključan&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Novčanik je &lt;b&gt;šifriran&lt;/b&gt; i trenutno &lt;b&gt;zaključan&lt;/b&gt;</translation>
-    </message>
-    </context>
 <context>
     <name>ReceiveCoinsDialog</name>
     <message>
@@ -825,15 +819,6 @@
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
-    </context>
-<context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -909,6 +894,10 @@
         <translation>&amp;Iznos:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>&amp;Primatelj plaćanja:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Oznaka:</translation>
     </message>
@@ -927,6 +916,10 @@
     <message>
         <source>Message:</source>
         <translation>Poruka:</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Primatelj plaćanja:</translation>
     </message>
     </context>
 <context>
@@ -1043,8 +1036,8 @@
         <translation>Izvršavaj u pozadini kao uslužnik i prihvaćaj komande</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>Block creation options:</source>
@@ -1083,12 +1076,24 @@
         <translation>Dozvoli DNS upite za -addnode, -seednode i -connect</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Učitavanje adresa...</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Nevaljala -proxy adresa: '%s'</translation>
+    </message>
+    <message>
         <source>Insufficient funds</source>
         <translation>Nedovoljna sredstva</translation>
     </message>
     <message>
         <source>Loading block index...</source>
         <translation>Učitavanje indeksa blokova...</translation>
+    </message>
+    <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Doda čvor s kojim se želite povezati i nastoji održati vezu otvorenu</translation>
     </message>
     <message>
         <source>Loading wallet...</source>
@@ -1099,8 +1104,16 @@
         <translation>Nije moguće novčanik vratiti na prijašnju verziju.</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>Nije moguće upisati zadanu adresu.</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>Ponovno pretraživanje...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Učitavanje gotovo</translation>
     </message>
     <message>
         <source>Error</source>

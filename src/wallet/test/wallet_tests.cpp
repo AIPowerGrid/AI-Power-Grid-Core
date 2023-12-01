@@ -1,5 +1,6 @@
 // Copyright (c) 2012-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -197,11 +198,11 @@ BOOST_FIXTURE_TEST_SUITE(wallet_tests, WalletTestingSetup)
             add_coin(3 * COIN);
             add_coin(4 * COIN); // now we have 5+6+7+8+18+20+30+100+200+300+400 = 1094 cents
             BOOST_CHECK(testWallet.SelectCoinsMinConf(95 * CENT, 1, 1, 0, vCoins, setCoinsRet, nValueRet));
-            BOOST_CHECK_EQUAL(nValueRet, 1 * COIN);  // we should get 1 AIPG in 1 coin
+            BOOST_CHECK_EQUAL(nValueRet, 1 * COIN);  // we should get 1 aipg in 1 coin
             BOOST_CHECK_EQUAL(setCoinsRet.size(), 1U);
 
             BOOST_CHECK(testWallet.SelectCoinsMinConf(195 * CENT, 1, 1, 0, vCoins, setCoinsRet, nValueRet));
-            BOOST_CHECK_EQUAL(nValueRet, 2 * COIN);  // we should get 2 AIPG in 1 coin
+            BOOST_CHECK_EQUAL(nValueRet, 2 * COIN);  // we should get 2 aipg in 1 coin
             BOOST_CHECK_EQUAL(setCoinsRet.size(), 1U);
 
             // empty the wallet and start again, now with fractions of a cent, to test small change avoidance

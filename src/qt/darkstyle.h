@@ -11,8 +11,8 @@
 ###############################################################################
 */
 
-#ifndef AIPGCOIN_DARKSTYLE_H
-#define AIPGCOIN_DARKSTYLE_H
+#ifndef AIPG_DARKSTYLE_H
+#define AIPG_DARKSTYLE_H
 
 #include <QApplication>
 #include <QProxyStyle>
@@ -37,4 +37,4 @@ private:
     QStyle *styleBase(QStyle *style = Q_NULLPTR) const;
 };
 
-#endif //AIPGCOIN_DARKSTYLE_H
+#endif //AIPG_DARKSTYLE_H

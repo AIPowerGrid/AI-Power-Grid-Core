@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2018 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,10 +10,10 @@ Test coinbase transactions return the correct categories.
 Tests listtransactions, listsinceblock, and gettransaction.
 """
 
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import assert_array_result
 
-class CoinbaseCategoryTest(AIPGTestFramework):
+class CoinbaseCategoryTest(AipgTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 

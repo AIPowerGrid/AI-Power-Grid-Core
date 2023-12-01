@@ -1,10 +1,11 @@
 // Copyright (c) 2015-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef AIPG_TEST_TEST_AIPG_H
-#define AIPG_TEST_TEST_AIPG_H
+#ifndef AIPG_TEST_test_aipg_H
+#define AIPG_TEST_test_aipg_H
 
 #include "chainparamsbase.h"
 #include "fs.h"

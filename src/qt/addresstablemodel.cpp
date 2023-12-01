@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -197,38 +197,42 @@ QVariant AddressTableModel::data(const QModelIndex &index, int role) const
 
     AddressTableEntry *rec = static_cast<AddressTableEntry*>(index.internalPointer());
 
-    const auto column = static_cast<ColumnIndex>(index.column());
-    if (role == Qt::DisplayRole || role == Qt::EditRole) {
-        switch (column) {
+    if(role == Qt::DisplayRole || role == Qt::EditRole)
+    {
+        switch(index.column())
+        {
         case Label:
-            if (rec->label.isEmpty() && role == Qt::DisplayRole) {
+            if(rec->label.isEmpty() && role == Qt::DisplayRole)
+            {
                 return tr("(no label)");
-            } else {
+            }
+            else
+            {
                 return rec->label;
             }
         case Address:
             return rec->address;
-        } // no default case, so the compiler can warn about missing cases
-        assert(false);
-    } else if (role == Qt::FontRole) {
-        switch (column) {
-        case Label:
-            return QFont();
-        case Address:
-            return GUIUtil::fixedPitchFont();
-        } // no default case, so the compiler can warn about missing cases
-        assert(false);
-    } else if (role == TypeRole) {
+        }
+    }
+    else if (role == Qt::FontRole)
+    {
+        QFont font;
+        if(index.column() == Address)
+        {
+            font = GUIUtil::fixedPitchFont();
+        }
+        return font;
+    }
+    else if (role == TypeRole)
+    {
         switch(rec->type)
         {
         case AddressTableEntry::Sending:
             return Send;
         case AddressTableEntry::Receiving:
             return Receive;
-        case AddressTableEntry::Hidden:
-            return {};
-        } // no default case, so the compiler can warn about missing cases
-        assert(false);
+        default: break;
+        }
     }
     return QVariant();
 }
@@ -303,7 +307,8 @@ QVariant AddressTableModel::headerData(int section, Qt::Orientation orientation,
 
 Qt::ItemFlags AddressTableModel::flags(const QModelIndex &index) const
 {
-    if(!index.isValid()) return Qt::NoItemFlags;
+    if(!index.isValid())
+        return 0;
     AddressTableEntry *rec = static_cast<AddressTableEntry*>(index.internalPointer());
 
     Qt::ItemFlags retval = Qt::ItemIsSelectable | Qt::ItemIsEnabled;
@@ -334,7 +339,7 @@ QModelIndex AddressTableModel::index(int row, int column, const QModelIndex &par
 void AddressTableModel::updateEntry(const QString &address,
         const QString &label, bool isMine, const QString &purpose, int status)
 {
-    // Update address book model from AIPG core
+    // Update address book model from Aipg core
     priv->updateEntry(address, label, isMine, purpose, status);
 }
 
@@ -389,8 +394,11 @@ QString AddressTableModel::addRow(const QString &type, const QString &label, con
     }
 
     // Add entry
-    wallet->SetAddressBook(DecodeDestination(strAddress), strLabel,
-                           (type == Send ? "send" : "receive"));
+    {
+        LOCK(wallet->cs_wallet);
+        wallet->SetAddressBook(DecodeDestination(strAddress), strLabel,
+                               (type == Send ? "send" : "receive"));
+    }
     return QString::fromStdString(strAddress);
 }
 
@@ -404,7 +412,10 @@ bool AddressTableModel::removeRows(int row, int count, const QModelIndex &parent
         // Also refuse to remove receiving addresses.
         return false;
     }
-    wallet->DelAddressBook(DecodeDestination(rec->address.toStdString()));
+    {
+        LOCK(wallet->cs_wallet);
+        wallet->DelAddressBook(DecodeDestination(rec->address.toStdString()));
+    }
     return true;
 }
 

@@ -1,4 +1,6 @@
-<TS language="es_VE" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="es_VE">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -65,19 +67,166 @@
     </message>
     </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
+    </context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>Firmar &amp;mensaje...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Sincronizando con la red...</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Nodo</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Mostrar visión general de la billetera</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transacciones</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Buscar historial de transacciones</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>S&amp;alir</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Quitar aplicación</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Opciones...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>Recepción de direcciones</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Reindexando bloques en el disco...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Enviar monedas a una dirección Aipg</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Respaldar billetera en otra ubicación</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Cambiar frase secreta usada para la encriptación de la billetera</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Abre la consola de depuración y diágnostico</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Billetera</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Enviar</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Recibir</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Mostar / Ocultar</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Mostar u ocultar la ventana principal</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones Aipg para probar que eres dueño de ellas</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Aipg especificas</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Archivo</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Configuración</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>Opciones de línea de comandos</translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 detrás</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>El último bloque recibido fue generado hace %1 hora(s).</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Transacciones después de esta no serán visibles todavía.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Advertencia</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Información</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Al día</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Alcanzando...</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Transacción enviada</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Transacción entrante</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>La billetera está encriptada y desbloqueada recientemente</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>La billetera está encriptada y bloqueada recientemente</translation>
+    </message>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -147,9 +296,6 @@
     </message>
     </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -196,12 +342,6 @@
     </message>
 </context>
 <context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
-<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
@@ -244,22 +384,7 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -357,161 +482,6 @@
     </message>
     </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>Firmar &amp;mensaje...</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Sincronizando con la red...</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Nodo</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Mostrar visión general de la billetera</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transacciones</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Buscar historial de transacciones</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>S&amp;alir</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Quitar aplicación</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Opciones...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Recepción de direcciones</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Reindexando bloques en el disco...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Enviar monedas a una dirección AIPG</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Respaldar billetera en otra ubicación</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Cambiar frase secreta usada para la encriptación de la billetera</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Abre la consola de depuración y diágnostico</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Billetera</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Enviar</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Recibir</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Mostar / Ocultar</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Mostar u ocultar la ventana principal</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones AIPG para probar que eres dueño de ellas</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones AIPG especificas</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Archivo</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>Opciones de línea de comandos</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 detrás</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>El último bloque recibido fue generado hace %1 hora(s).</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Transacciones después de esta no serán visibles todavía.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Error</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Advertencia</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Información</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Al día</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Alcanzando...</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Transacción enviada</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Transacción entrante</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>La billetera está encriptada y desbloqueada recientemente</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>La billetera está encriptada y bloqueada recientemente</translation>
-    </message>
-    </context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -535,15 +505,6 @@
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
-    </context>
-<context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -649,8 +610,8 @@
         <translation>Correr en segundo plano como daemon y aceptar comandos</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -549,13 +550,13 @@ void PrintExceptionContinue(const std::exception *pex, const char *pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\AIPG
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\AIPG
-    // Mac: ~/Library/Application Support/AIPG
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Aipg
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Aipg
+    // Mac: ~/Library/Application Support/Aipg
     // Unix: ~/.aipg
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "AIPG";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Aipg";
 #else
     fs::path pathRet;
     char *pszHome = getenv("HOME");
@@ -565,7 +566,7 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/AIPG";
+    return pathRet / "Library/Application Support/Aipg";
 #else
     // Unix
     return pathRet / ".aipg";
@@ -629,8 +630,13 @@ fs::path GetConfigFile(const std::string &confPath)
 void ArgsManager::ReadConfigFile(const std::string &confPath)
 {
     fs::ifstream streamConfig(GetConfigFile(confPath));
-    if (!streamConfig.good())
-        return; // No aipg.conf file is OK
+    if (!streamConfig.good()){
+        // Create empty aipg.conf if it does not exist
+        FILE* configFile = fopen(GetConfigFile(confPath).string().c_str(), "a");
+        if (configFile != nullptr)
+            fclose(configFile);
+        return; // Nothing to read, so just return
+    }
 
     {
         LOCK(cs_args);
@@ -926,10 +932,10 @@ std::string CopyrightHolders(const std::string &strPrefix)
 {
     std::string strCopyrightHolders = strPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 
-    // Check for untranslated substitution to make sure AIPG Core copyright is not removed by accident
-    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("AIPG Core") == std::string::npos)
+    // Check for untranslated substitution to make sure Aipg Core copyright is not removed by accident
+    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Aipg Core") == std::string::npos)
     {
-        strCopyrightHolders += "\n" + strPrefix + "The AIPG Core developers";
+        strCopyrightHolders += "\n" + strPrefix + "The Aipg Core developers";
     }
     return strCopyrightHolders;
 }

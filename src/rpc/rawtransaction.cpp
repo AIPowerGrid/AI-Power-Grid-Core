@@ -1,7 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -63,9 +62,9 @@ void TxToJSON(const CTransaction& tx, const uint256 hashBlock, UniValue& entry, 
                     in.pushKV("value", ValueFromAmount(spentInfo.satoshis));
                     in.pushKV("valueSat", spentInfo.satoshis);
                     if (spentInfo.addressType == 1) {
-                        in.pushKV("address", CAIPGAddress(CKeyID(spentInfo.addressHash)).ToString());
+                        in.pushKV("address", CAipgAddress(CKeyID(spentInfo.addressHash)).ToString());
                     } else if (spentInfo.addressType == 2) {
-                        in.pushKV("address", CAIPGAddress(CScriptID(spentInfo.addressHash)).ToString());
+                        in.pushKV("address", CAipgAddress(CScriptID(spentInfo.addressHash)).ToString());
                     }
                 }
                 newVin.push_back(in);
@@ -351,13 +350,13 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
             "createrawtransaction [{\"txid\":\"id\",\"vout\":n},...] {\"address\":(amount or object),\"data\":\"hex\",...}\n"
             "                     ( locktime ) ( replaceable )\n"
             "\nCreate a transaction spending the given inputs and creating new outputs.\n"
-            "Outputs are addresses (paired with a AIPG amount, data or object specifying an asset operation) or data.\n"
+            "Outputs are addresses (paired with a aipg amount, data or object specifying an asset operation) or data.\n"
             "Returns hex-encoded raw transaction.\n"
             "Note that the transaction's inputs are not signed, and\n"
             "it is not stored in the wallet or transmitted to the network.\n"
 
             "\nPaying for Asset Operations:\n"
-            "  Some operations require an amount of AIPG to be sent to a burn address:\n"
+            "  Some operations require an amount of aipg to be sent to a burn address:\n"
             "\n"
             "    Operation          Amount + Burn Address\n"
             "    transfer                 0\n"
@@ -415,7 +414,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
             "     {\n"
             "       \"address\":                          (string, required) The destination aipg address.\n"
             "                                               Each output must have a different address.\n"
-            "         x.xxx                             (number or string, required) The AIPG amount\n"
+            "         x.xxx                             (number or string, required) The aipg amount\n"
             "           or\n"
             "         {                                 (object) A json object of assets to send\n"
             "           \"transfer\":\n"
@@ -445,7 +444,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
             "               \"reissuable\":[0-1],         (number, required) 1=reissuable asset\n"
             "               \"has_ipfs\":[0-1],           (number, required) 1=passing ipfs_hash\n"
             "               \"ipfs_hash\":\"hash\"          (string, optional) an ipfs hash for discovering asset metadata\n"
-            // TODO if we decide to remove the consensus check from issue 675 https://github.com/AIPGProject/AIPGcoin/issues/675
+            // TODO if we decide to remove the consensus check from issue 675 https://github.com/JustAResearcher/Aipg/issues/675
    //TODO"               \"custom_owner_address\": \"addr\" (string, optional) owner token will get sent to this address if set\n"
             "             }\n"
             "         }\n"
@@ -513,7 +512,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
             "               \"has_ipfs\":[0-1],            (boolean, optional, default=false), whether ifps hash is going \n"
             "                                                to be added to the asset\n"
             "               \"ipfs_hash\":\"hash\",        (string, optional but required if has_ipfs = 1), an ipfs hash or a \n"
-            "                                                txid hash once RIP5 is activated\n"
+            "                                                txid hash once HIP5 is activated\n"
             "               \"root_change_address\"        (string, optional) Only applies when issuing subqualifiers.\n"
             "                                                The address where the root qualifier will be sent.\n"
             "                                                If not specified, it will be sent to the output address.\n"
@@ -673,7 +672,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
         } else {
             CTxDestination destination = DecodeDestination(name_);
             if (!IsValidDestination(destination)) {
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid AIPG address: ") + name_);
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Aipg address: ") + name_);
             }
 
             if (!destinations.insert(destination).second) {
@@ -689,7 +688,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
                 CTxOut out(nAmount, scriptPubKey);
                 rawTx.vout.push_back(out);
             }
-            /** AIPG COIN START **/
+            /** aipg COIN START **/
             else if (sendTo[name_].type() == UniValue::VOBJ) {
                 auto asset_ = sendTo[name_].get_obj();
                 auto assetKey_ = asset_.getKeys()[0];
@@ -722,7 +721,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
                     const UniValue& has_ipfs = find_value(assetData, "has_ipfs");
                     if (!has_ipfs.isNum())
                         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, missing asset metadata for key: has_ipfs");
-// TODO, if we decide to remove the consensus check https://github.com/AIPGProject/AIPGcoin/issues/675, remove or add the code (requires consensus change)
+// TODO, if we decide to remove the consensus check https://github.com/JustAResearcher/Aipg/issues/675, remove or add the code (requires consensus change)
 //                    const UniValue& custom_owner_address = find_value(assetData, "custom_owner_address");
 //                    if (!custom_owner_address.isNull()) {
 //                        CTxDestination dest = DecodeDestination(custom_owner_address.get_str());
@@ -892,7 +891,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
                     }
 
                     if (fHasOwnerChange && !IsValidDestinationString(owner_change_address.get_str()))
-                        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, owner_change_address is not a valid AIPGcoin address");
+                        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, owner_change_address is not a valid Aipg address");
 
                     if (IsAssetNameAnRestricted(asset_name.get_str()))
                         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, asset_name can't be a restricted asset name. Please use reissue_restricted with the correct parameters");
@@ -971,52 +970,54 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
                                 "Invalid parameter, the format must follow { \"transferwithmessage\": {\"asset_name\": amount, \"message\": messagehash, \"expire_time\": utc_time} }"));
 
                     UniValue transferData = asset_.getValues()[0].get_obj();
+
                     auto keys = transferData.getKeys();
 
                     if (keys.size() == 0)
                         throw JSONRPCError(RPC_INVALID_PARAMETER, std::string(
                                 "Invalid parameter, the format must follow { \"transferwithmessage\": {\"asset_name\": amount, \"message\": messagehash, \"expire_time\": utc_time} }"));
 
+                    UniValue asset_quantity;
                     std::string asset_name = keys[0];
 
-                    if (!IsAssetNameValid(asset_name)) 
+                    if (!IsAssetNameValid(asset_name)) {
                         throw JSONRPCError(RPC_INVALID_PARAMETER,
                                            "Invalid parameter, missing valid asset name to transferwithmessage");
 
-                    const UniValue &asset_quantity = find_value(transferData, asset_name);
-                    if (!asset_quantity.isNum())
-                        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, missing or invalid quantity");
+                        const UniValue &asset_quantity = find_value(transferData, asset_name);
+                        if (!asset_quantity.isNum())
+                            throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, missing or invalid quantity");
 
-                    const UniValue &message = find_value(transferData, "message");
-                    if (!message.isStr())
-                        throw JSONRPCError(RPC_INVALID_PARAMETER,
-                                           "Invalid parameter, missing reissue data for key: message");
+                        const UniValue &message = find_value(transferData, "message");
+                        if (!message.isStr())
+                            throw JSONRPCError(RPC_INVALID_PARAMETER,
+                                               "Invalid parameter, missing reissue data for key: message");
 
-                    const UniValue &expire_time = find_value(transferData, "expire_time");
-                    if (!expire_time.isNum())
-                        throw JSONRPCError(RPC_INVALID_PARAMETER,
-                                           "Invalid parameter, missing reissue data for key: expire_time");
+                        const UniValue &expire_time = find_value(transferData, "expire_time");
+                        if (!expire_time.isNum())
+                            throw JSONRPCError(RPC_INVALID_PARAMETER,
+                                               "Invalid parameter, missing reissue data for key: expire_time");
 
-                    CAmount nAmount = AmountFromValue(asset_quantity);
+                        CAmount nAmount = AmountFromValue(asset_quantity);
 
-                    // Create a new transfer
-                    CAssetTransfer transfer(asset_name, nAmount, DecodeAssetData(message.get_str()),
+                        // Create a new transfer
+                        CAssetTransfer transfer(asset_name, nAmount, DecodeAssetData(message.get_str()),
                                                 expire_time.get_int64());
 
-                    // Verify
-                    std::string strError = "";
-                    if (!transfer.IsValid(strError)) {
-                        throw JSONRPCError(RPC_INVALID_PARAMETER, strError);
+                        // Verify
+                        std::string strError = "";
+                        if (!transfer.IsValid(strError)) {
+                            throw JSONRPCError(RPC_INVALID_PARAMETER, strError);
+                        }
+
+                        // Construct transaction
+                        CScript scriptPubKey = GetScriptForDestination(destination);
+                        transfer.ConstructTransaction(scriptPubKey);
+
+                        // Push into vouts
+                        CTxOut out(0, scriptPubKey);
+                        rawTx.vout.push_back(out);
                     }
-
-                    // Construct transaction
-                    CScript scriptPubKey = GetScriptForDestination(destination);
-                    transfer.ConstructTransaction(scriptPubKey);
-
-                    // Push into vouts
-                    CTxOut out(0, scriptPubKey);
-                    rawTx.vout.push_back(out);
-                    
                 } else if (assetKey_ == "issue_restricted") {
                     if (asset_[0].type() != UniValue::VOBJ)
                         throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid parameter, the format must follow { \"issue_restricted\": {\"key\": value}, ...}"));
@@ -1059,7 +1060,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
                     }
 
                     if (fHasOwnerChange && !IsValidDestinationString(owner_change_address.get_str()))
-                        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, owner_change_address is not a valid AIPGcoin address");
+                        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, owner_change_address is not a valid Aipg address");
 
                     UniValue ipfs_hash = "";
                     if (has_ipfs.get_int() == 1) {
@@ -1185,7 +1186,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
 
                     if (fHasOwnerChange && !IsValidDestinationString(owner_change_address.get_str()))
                         throw JSONRPCError(RPC_INVALID_PARAMETER,
-                                           "Invalid parameter, owner_change_address is not a valid AIPGcoin address");
+                                           "Invalid parameter, owner_change_address is not a valid Aipg address");
 
                     std::string strAssetName = asset_name.get_str();
 
@@ -1296,7 +1297,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
                     }
 
                     if (fHasRootChange && !IsValidDestinationString(root_change_address.get_str()))
-                        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, root_change_address is not a valid AIPGcoin address");
+                        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, root_change_address is not a valid Aipg address");
 
                     CAmount nAmount = AmountFromValue(asset_quantity);
                     if (nAmount < QUALIFIER_ASSET_MIN_AMOUNT || nAmount > QUALIFIER_ASSET_MAX_AMOUNT)
@@ -1369,7 +1370,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
                         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, value for key address must be an array of size 1 to 10");
                     for (int i = 0; i < (int)addresses.size(); i++) {
                         if (!IsValidDestinationString(addresses[i].get_str()))
-                            throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, supplied address is not a valid AIPGcoin address");
+                            throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, supplied address is not a valid Aipg address");
                     }
 
                     CAmount changeQty = COIN;
@@ -1414,7 +1415,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
                         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, value for key address must be an array of size 1 to 10");
                     for (int i = 0; i < (int)addresses.size(); i++) {
                         if (!IsValidDestinationString(addresses[i].get_str()))
-                            throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, supplied address is not a valid AIPGcoin address");
+                            throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, supplied address is not a valid Aipg address");
                     }
 
                     // owner change
@@ -1466,7 +1467,7 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
             } else {
                 throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid parameter, Output must be of the type object"));
             }
-            /** AIPG COIN STOP **/
+            /** aipg COIN STOP **/
         }
     }
 
@@ -1891,7 +1892,7 @@ UniValue signrawtransaction(const JSONRPCRequest& request)
         UniValue keys = request.params[2].get_array();
         for (unsigned int idx = 0; idx < keys.size(); idx++) {
             UniValue k = keys[idx];
-            CAIPGSecret vchSecret;
+            CAipgSecret vchSecret;
             bool fGood = vchSecret.SetString(k.get_str());
             if (!fGood)
                 throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key");

@@ -1,4 +1,6 @@
-<TS language="nl" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="nl">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -62,12 +64,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw AIPGadressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw aipgs verzendt.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw Aipg adressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw aipgss verzendt.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw AIPG-adressen waarmee u betalingen kunt ontvangen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw Aipg-adressen waarmee u betalingen kunt ontvangen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +170,8 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPGS&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW AIPGS VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPG&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW Aipg VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,8 +182,8 @@
         <translation>Portemonnee versleuteld</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgs from being stolen by malware infecting your computer.</source>
-        <translation>%1 zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw aipgs stelen.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgss from being stolen by malware infecting your computer.</source>
+        <translation>%1 zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw aipgss stelen.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -221,186 +223,6 @@
     </message>
 </context>
 <context>
-    <name>AssetControlDialog</name>
-    <message>
-        <source>Asset Selection</source>
-        <translation>Asset Selectie</translation>
-    </message>
-    <message>
-        <source>Quantity:</source>
-        <translation>Hoeveelheid: </translation>
-    </message>
-    <message>
-        <source>Bytes:</source>
-        <translation>Bytes: </translation>
-    </message>
-    <message>
-        <source>Amount:</source>
-        <translation>Bedrag:</translation>
-    </message>
-    <message>
-        <source>Dust:</source>
-        <translation>Stof:</translation>
-    </message>
-    <message>
-        <source>Fee:</source>
-        <translation>Transactiekosten:</translation>
-    </message>
-    <message>
-        <source>After Fee:</source>
-        <translation>Na transactiekosten:</translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Verander: </translation>
-    </message>
-    <message>
-        <source>(un)select all</source>
-        <translation>(de)selecteer alles </translation>
-    </message>
-    <message>
-        <source>Tree mode</source>
-        <translation>Boom modus</translation>
-    </message>
-    <message>
-        <source>List mode</source>
-        <translation>Lijst modus</translation>
-    </message>
-    <message>
-        <source>View assets that you have the ownership asset for</source>
-        <translation>Bekijk de assets waarvan u eigenaarsasset bezit</translation>
-    </message>
-    <message>
-        <source>View Administrator Assets</source>
-        <translation>Bekijk Eigenaarsassets</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Bedrag: </translation>
-    </message>
-    <message>
-        <source>Received with label</source>
-        <translation>Ontvangen met etiket</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Datum</translation>
-    </message>
-    <message>
-        <source>Confirmations</source>
-        <translation>Bevestigingen</translation>
-    </message>
-    <message>
-        <source>Confirmed</source>
-        <translation>Bevestigd</translation>
-    </message>
-    <message>
-        <source>Copy address</source>
-        <translation>Kopieer adres</translation>
-    </message>
-    <message>
-        <source>Copy label</source>
-        <translation>Kopieer label</translation>
-    </message>
-    <message>
-        <source>Copy amount</source>
-        <translation>Kopieer bedrag</translation>
-    </message>
-    <message>
-        <source>Copy transaction ID</source>
-        <translation>Kopieer transactie-ID</translation>
-    </message>
-    <message>
-        <source>Lock unspent</source>
-        <translation>Blokkeer ongebruikte</translation>
-    </message>
-    <message>
-        <source>Unlock unspent</source>
-        <translation>Deblokkeer ongebruikte</translation>
-    </message>
-    <message>
-        <source>Copy quantity</source>
-        <translation>Kopieer aantal</translation>
-    </message>
-    <message>
-        <source>Copy fee</source>
-        <translation>Kopieer vergoeding</translation>
-    </message>
-    <message>
-        <source>yes</source>
-        <translation>ja</translation>
-    </message>
-    <message>
-        <source>no</source>
-        <translation>nee</translation>
-    </message>
-    <message>
-        <source>(no label)</source>
-        <translation>(geen label)</translation>
-    </message>
-    <message>
-        <source>(change)</source>
-        <translation>(aanpassen)</translation>
-    </message>
-</context>
-<context>
-    <name>AssetTableModel</name>
-    <message>
-        <source>Name</source>
-        <translation>Naam</translation>
-    </message>
-    <message>
-        <source>Quantity</source>
-        <translation>Hoeveelheid</translation>
-    </message>
-</context>
-<context>
-    <name>AssetsDialog</name>
-    <message>
-        <source>Send Coins</source>
-        <translation>Verzend munten</translation>
-    </message>
-    <message>
-        <source>Inputs...</source>
-        <translation>Invoer..</translation>
-    </message>
-    <message>
-        <source>Amount:</source>
-        <translation>Aantal:</translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Verander: </translation>
-    </message>
-    <message>
-        <source>Choose...</source>
-        <translation>Kies...</translation>
-    </message>
-    <message>
-        <source>Hide</source>
-        <translation>Verbergen</translation>
-    </message>
-    <message>
-        <source>Recommended:</source>
-        <translation>Aanbevolen:</translation>
-    </message>
-    <message>
-        <source>Clear all fields of the form.</source>
-        <translation>Wis alle formulier velden</translation>
-    </message>
-    <message>
-        <source>Balance:</source>
-        <translation>Balans:</translation>
-    </message>
-    <message>
-        <source>%1 to %2</source>
-        <translation>%1 naar %2</translation>
-    </message>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
@@ -409,6 +231,327 @@
     <message>
         <source>Banned Until</source>
         <translation>Geband tot</translation>
+    </message>
+</context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>&amp;Onderteken bericht...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Synchroniseren met netwerk...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Overzicht</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Node</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Toon algemeen overzicht van uw portemonnee</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transacties</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Blader door transactiegescheidenis</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>A&amp;fsluiten</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Programma afsluiten</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>&amp;Over %1</translation>
+    </message>
+    <message>
+        <source>Show information about %1</source>
+        <translation>Toon informatie over %1</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>Over &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Toon informatie over Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Opties...</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Wijzig configuratieopties voor %1</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Versleutel Portemonnee...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Backup Portemonnee...</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;Wijzig Wachtwoord</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;Verstuuradressen...</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>&amp;Ontvang adressen...</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>Open &amp;URI...</translation>
+    </message>
+    <message>
+        <source>Click to disable network activity.</source>
+        <translation>Klik om de netwerkactiviteit te stoppen.</translation>
+    </message>
+    <message>
+        <source>Network activity disabled.</source>
+        <translation>Netwerkactiviteit gestopt.</translation>
+    </message>
+    <message>
+        <source>Click to enable network activity again.</source>
+        <translation>Klik om de netwerkactiviteit opnieuw te starten.</translation>
+    </message>
+    <message>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Kopteksten synchroniseren (%1%)...</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Bezig met herindexeren van blokken op harde schijf...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Verstuur munten naar een Aipg adres</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Backup portemonnee naar een andere locatie</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Wijzig het wachtwoord voor uw portemonneversleuteling</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Debugscherm</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Open debugging en diagnostische console</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Verifiëer bericht...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Portemonnee</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Verstuur</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Ontvangen</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Toon / Verberg</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Toon of verberg het hoofdvenster</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Versleutel de geheime sleutels die bij uw portemonnee horen</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw Aipg adressen om te bewijzen dat u deze adressen bezit</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Aipg adressen</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Bestand</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Instellingen</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Hulp</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Tab-werkbalk</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR-codes en aipg: URI's)</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Toon de lijst met gebruikte verstuuradressen en -labels</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>Toon de lijst met gebruikte ontvangst adressen en labels</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>Open een aipg: URI of betalingsverzoek</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>&amp;Opdrachtregelopties</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n active connection(s) to Aipg network</source>
+        <translation><numerusform>%n actieve verbinding met Aipg netwerk</numerusform></translation>
+    </message>
+    <message>
+        <source>Indexing blocks on disk...</source>
+        <translation>Bezig met indexeren van blokken op harde schijf...</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>Bezig met verwerken van blokken op harde schijf...</translation>
+    </message>
+    <message numerus="yes">
+        <source>Processed %n block(s) of transaction history.</source>
+        <translation><numerusform>%n blok aan transactiegeschiedenis verwerkt.</numerusform></translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 achter</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>Laatst ontvangen blok was %1 geleden gegenereerd.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Transacties na dit moment zullen nu nog niet zichtbaar zijn.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Fout</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Waarschuwing</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Informatie</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Bijgewerkt</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible Aipg command-line options</source>
+        <translation>Toon het %1 hulpbericht om een lijst te krijgen met mogelijke Aipg commandoregelopties</translation>
+    </message>
+    <message>
+        <source>%1 client</source>
+        <translation>%1 client</translation>
+    </message>
+    <message>
+        <source>Connecting to peers...</source>
+        <translation>Gelijke worden verbonden...</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Aan het bijwerken...</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>Datum: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>Aantal: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>Type: %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>Label: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>Adres: %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Verstuurde transactie</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Binnenkomende transactie</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>HD sleutel voortbrenging is &lt;b&gt;ingeschakeld&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>HD sleutel voortbrenging is &lt;b&gt;uitgeschakeld&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Portemonnee is &lt;b&gt;versleuteld&lt;/b&gt; en momenteel &lt;b&gt;geopend&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Portemonnee is &lt;b&gt;versleuteld&lt;/b&gt; en momenteel &lt;b&gt;gesloten&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. Aipg can no longer continue safely and will quit.</source>
+        <translation>Een fatale fout heeft zich voorgedaan. Aipg kan niet veilig worden verdergezet en wordt afgesloten.</translation>
     </message>
 </context>
 <context>
@@ -563,85 +706,6 @@
     </message>
 </context>
 <context>
-    <name>CreateAssetDialog</name>
-    <message>
-        <source>automatically selected</source>
-        <translation>automatisch geselecteerd</translation>
-    </message>
-    <message>
-        <source>Quantity:</source>
-        <translation>Aantal:</translation>
-    </message>
-    <message>
-        <source>Bytes:</source>
-        <translation>Bytes:</translation>
-    </message>
-    <message>
-        <source>Name:</source>
-        <translation>Naam:</translation>
-    </message>
-    <message>
-        <source>Check Availabilty</source>
-        <translation>Controleer beschikbaarheid</translation>
-    </message>
-    <message>
-        <source>Address:</source>
-        <translation>Adres:</translation>
-    </message>
-    <message>
-        <source>Warning:</source>
-        <translation>Waarschuwing:</translation>
-    </message>
-    <message>
-        <source>Choose...</source>
-        <translation>Kies...</translation>
-    </message>
-    <message>
-        <source>Hide</source>
-        <translation>Verberg</translation>
-    </message>
-    <message>
-        <source>Recommended:</source>
-        <translation>Aanbevolen:</translation>
-    </message>
-    <message>
-        <source>Create Asset</source>
-        <translation>Maak Asset</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>Wis</translation>
-    </message>
-    <message>
-        <source>123.456 AIPG</source>
-        <translation>123.456 AIPG</translation>
-    </message>
-    <message>
-        <source>Warning: Invalid AIPG address</source>
-        <translation>Waarschuwing: Ongeldig AIPGadres</translation>
-    </message>
-    <message>
-        <source>or</source>
-        <translation>of</translation>
-    </message>
-    <message>
-        <source>Invalid: </source>
-        <translation>Ongeldig:</translation>
-    </message>
-    <message>
-        <source>Copy</source>
-        <translation>Kopie</translation>
-    </message>
-    <message>
-        <source>Transaction ID Copied</source>
-        <translation>Transactie ID gekopieerd</translation>
-    </message>
-    <message>
-        <source>(no label)</source>
-        <translation>(geen label)</translation>
-    </message>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -680,8 +744,8 @@
         <translation>Bewerk verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid AIPG address.</source>
-        <translation>Het opgegeven adres "%1" is een ongeldig AIPGadres.</translation>
+        <source>The entered address "%1" is not a valid Aipg address.</source>
+        <translation>Het opgegeven adres "%1" is een ongeldig Aipg adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -717,42 +781,6 @@
     <message>
         <source>Cannot create data directory here.</source>
         <translation>Kan hier geen gegevensmap aanmaken.</translation>
-    </message>
-</context>
-<context>
-    <name>FreezeAddress</name>
-    <message>
-        <source>Address:</source>
-        <translation>Adres:</translation>
-    </message>
-    <message>
-        <source>Check</source>
-        <translation>Controle</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>Wis</translation>
-    </message>
-    <message>
-        <source>Submit</source>
-        <translation>Bevestig</translation>
-    </message>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    <message>
-        <source>Warning: transaction while syncing wallet!</source>
-        <translation>Waarschuwing: transactie tijdens portemonnee synchronisatie!</translation>
-    </message>
-    <message>
-        <source>You are trying to send a transaction while your wallet is not fully synced. This is not recommended because the transaction might get stuck in your wallet. Are you sure you want to proceed?
-
-Recommended action: Fully sync your wallet before sending a transaction.
-</source>
-        <translation>U probeert om een transactie te doen terwijl uw wallet nog niet volledig gesynchroniseerd is. Dit is niet aanbevolen want de transactie kan mogelijk vastlopen in uw wallet. Weet u zeker dat u verder wil gaan?
-
-Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te verzenden.
-</translation>
     </message>
 </context>
 <context>
@@ -825,24 +853,16 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Omdat dit de eerste keer is dat het programma gestart is, kunt u nu kiezen waar %1 de data moet opslaan.</translation>
     </message>
     <message>
+        <source>%1 will download and store a copy of the Aipg block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 zal een kopie van de Aipg blokketen downloaden en opslaan. Tenminste %2 GB aan data wordt opgeslagen in deze map en het zal groeien in de tijd. De portemonnee wordt ook in deze map opgeslagen.</translation>
+    </message>
+    <message>
         <source>Use the default data directory</source>
         <translation>Gebruik de standaard gegevensmap</translation>
     </message>
     <message>
         <source>Use a custom data directory:</source>
         <translation>Gebruik een persoonlijke gegevensmap:</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation>Ongeveer %1 GB data zal in deze directory worden opgeslagen.</translation>
-    </message>
-    <message>
-        <source>The wallet will also be stored in this directory.</source>
-        <translation>De portemonnee zal ook in deze directory worden opgeslagen.</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -852,71 +872,15 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <source>Error</source>
         <translation>Fout</translation>
     </message>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    <message>
-        <source>HD Wallet Setup</source>
-        <translation>HD Portemonnee Setup</translation>
+    <message numerus="yes">
+        <source>%n GB of free space available</source>
+        <translation><numerusform>%n GB aan vrije opslagruimte beschikbaar</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>(of %n GB needed)</source>
+        <translation><numerusform>(van %n GB nodig)</numerusform></translation>
     </message>
 </context>
-<context>
-    <name>MnemonicDialog1</name>
-    <message>
-        <source>HD Wallet Setup</source>
-        <translation>HD portemonnee Setup</translation>
-    </message>
-    <message>
-        <source>Select the type of wallet to create.</source>
-        <translation>Selecteer het type portemonnee om aan te maken</translation>
-    </message>
-    <message>
-        <source>Please choose what you would like to do:</source>
-        <translation>Selecteer aub wat u wilt doen:</translation>
-    </message>
-    <message>
-        <source>Accept</source>
-        <translation>Accepteer</translation>
-    </message>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    <message>
-        <source>Passphrase:</source>
-        <translation>Wachtwoordzin:</translation>
-    </message>
-    <message>
-        <source>Warning: </source>
-        <translation>Waarschuwing:</translation>
-    </message>
-    <message>
-        <source>Accept</source>
-        <translation>Accepteer</translation>
-    </message>
-    <message>
-        <source>Go Back</source>
-        <translation>Terug</translation>
-    </message>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    <message>
-        <source>Passphrase:</source>
-        <translation>Wachtwoordzin:</translation>
-    </message>
-    <message>
-        <source>Warning: </source>
-        <translation>Waarschuwing</translation>
-    </message>
-    <message>
-        <source>Accept</source>
-        <translation>Accepteer</translation>
-    </message>
-    <message>
-        <source>Go Back</source>
-        <translation>Terug</translation>
-    </message>
-    </context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -925,11 +889,11 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the aipg network, as detailed below.</source>
-        <translation>Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de geldbeugel is daarom mogelijk niet correct. Deze informatie is correct van zodra de synchronisatie met het AIPG-netwerk werd voltooid, zoals onderaan beschreven.</translation>
+        <translation>Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de geldbeugel is daarom mogelijk niet correct. Deze informatie is correct van zodra de synchronisatie met het Aipg-netwerk werd voltooid, zoals onderaan beschreven.</translation>
     </message>
     <message>
-        <source>Attempting to spend aipgs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Poging om aipgs te besteden die door "nog niet weergegeven" transacties worden beïnvloed, worden niet door het netwerk geaccepteerd.</translation>
+        <source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Poging om aipgss te besteden die door "nog niet weergegeven" transacties worden beïnvloed, worden niet door het netwerk geaccepteerd.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -968,33 +932,6 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Onbekend. Kopteksten synchroniseren (%1%)...</translation>
     </message>
 </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
-    <message>
-        <source>Date</source>
-        <translation>Datum</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Type</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <translation>Adres</translation>
-    </message>
-    <message>
-        <source>Frozen</source>
-        <translation>Bevroren</translation>
-    </message>
-    <message>
-        <source>Other</source>
-        <translation>Anders</translation>
-    </message>
-    <message>
-        <source>(no label)</source>
-        <translation>(geen label)</translation>
-    </message>
-    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -1049,12 +986,16 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Aantal threads voor &amp;scriptverificatie</translation>
     </message>
     <message>
-        <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
-        <translation>IP-adres van de proxy (bijv. IPv4: 127.0.0.1 / IPv6: ::1)</translation>
+        <source>Accept connections from outside</source>
+        <translation>Accepteer binnenkomende verbindingen</translation>
     </message>
     <message>
-        <source>&amp;Hide tray icon</source>
-        <translation>&amp;Verberg prullenbak</translation>
+        <source>Allow incoming connections</source>
+        <translation>Sta inkomende verbindingen toe</translation>
+    </message>
+    <message>
+        <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
+        <translation>IP-adres van de proxy (bijv. IPv4: 127.0.0.1 / IPv6: ::1)</translation>
     </message>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
@@ -1065,12 +1006,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>URL's van derden (bijvoorbeeld block explorer) die in de transacties tab verschijnen als contextmenuelementen. %s in de URL is vervangen door transactiehash. Verscheidene URL's zijn gescheiden door een verticale streep |.  </translation>
     </message>
     <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Actieve opdrachtregelopties die bovenstaande opties overschrijven:</translation>
+        <source>Third party transaction URLs</source>
+        <translation>Transactie-URLs van derde partijen</translation>
     </message>
     <message>
-        <source>Open Configuration File</source>
-        <translation>Open configuratie bestand</translation>
+        <source>Active command-line options that override above options:</source>
+        <translation>Actieve opdrachtregelopties die bovenstaande opties overschrijven:</translation>
     </message>
     <message>
         <source>Reset all client options to default.</source>
@@ -1109,20 +1050,16 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>&amp;Spendeer onbevestigd wisselgeld</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de AIPGpoort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Open de Aipg poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Portmapping via &amp;UPnP</translation>
     </message>
     <message>
-        <source>Allow incomin&amp;g connections</source>
-        <translation>Accepteer inkomende connecties</translation>
-    </message>
-    <message>
-        <source>Connect to the AIPG network through a SOCKS5 proxy.</source>
-        <translation>Verbind met het AIPGnetwerk via een SOCKS5 proxy.</translation>
+        <source>Connect to the Aipg network through a SOCKS5 proxy.</source>
+        <translation>Verbind met het Aipg netwerk via een SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1145,6 +1082,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Gebruikt om peers te bereiken via:</translation>
     </message>
     <message>
+        <source>Shows, if the supplied default SOCKS5 proxy is used to reach peers via this network type.</source>
+        <translation>Vertoningen, als de opgegeven standaard SOCKS5-proxy is gebruikt om peers te benaderen via dit type netwerk.</translation>
+    </message>
+    <message>
         <source>IPv4</source>
         <translation>IPv4</translation>
     </message>
@@ -1157,12 +1098,24 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Maak verbinding met AIPGnetwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
+        <source>Connect to the Aipg network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Maak verbinding met Aipg netwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
+    </message>
+    <message>
+        <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
+        <translation>Gebruikt aparte SOCKS5-proxy om peers te bereiken via verborgen diensten van Tor:</translation>
     </message>
     <message>
         <source>&amp;Window</source>
         <translation>&amp;Scherm</translation>
+    </message>
+    <message>
+        <source>&amp;Hide the icon from the system tray.</source>
+        <translation>&amp;Verberg het icoon van de systeembalk.</translation>
+    </message>
+    <message>
+        <source>Hide tray icon</source>
+        <translation>Verberg systeembalk icoon</translation>
     </message>
     <message>
         <source>Show only a tray icon after minimizing the window.</source>
@@ -1201,14 +1154,6 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Munt controle functies weergeven of niet.</translation>
     </message>
     <message>
-        <source>Reset</source>
-        <translation>Herstel</translation>
-    </message>
-    <message>
-        <source>Enable Dark Mode</source>
-        <translation>Inschakelen Dark Mode</translation>
-    </message>
-    <message>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
@@ -1237,14 +1182,6 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Applicatie zal worden afgesloten. Wilt u doorgaan?</translation>
     </message>
     <message>
-        <source>Configuration options</source>
-        <translation>Configuratie opties</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Fout</translation>
-    </message>
-    <message>
         <source>This change would require a client restart.</source>
         <translation>Om dit aan te passen moet de client opnieuw gestart worden.</translation>
     </message>
@@ -1260,8 +1197,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het AIPGnetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het Aipg netwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1292,6 +1229,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Gedolven saldo dat nog niet tot wasdom is gekomen</translation>
     </message>
     <message>
+        <source>Balances</source>
+        <translation>Saldi</translation>
+    </message>
+    <message>
         <source>Total:</source>
         <translation>Totaal:</translation>
     </message>
@@ -1300,20 +1241,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Uw totale saldo</translation>
     </message>
     <message>
-        <source>AIPG Balances</source>
-        <translation>AIPG Balance</translation>
-    </message>
-    <message>
         <source>Your current balance in watch-only addresses</source>
         <translation>Uw huidige balans in alleen-bekijkbare adressen</translation>
     </message>
     <message>
         <source>Spendable:</source>
         <translation>Besteedbaar:</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Zoeken</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -1331,19 +1264,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <source>Current total balance in watch-only addresses</source>
         <translation>Huidige balans in alleen-bekijkbare adressen.</translation>
     </message>
-    <message>
-        <source>Send Asset</source>
-        <translation>Verstuur Asset</translation>
-    </message>
-    <message>
-        <source>Copy Name</source>
-        <translation>Kopieer naam</translation>
-    </message>
-    <message>
-        <source>Copy Hash</source>
-        <translation>Kopieer Hash</translation>
-    </message>
-    </context>
+</context>
 <context>
     <name>PaymentServer</name>
     <message>
@@ -1367,8 +1288,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Ongeldig betalingsadres %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid AIPG address or malformed URI parameters.</source>
-        <translation>URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig AIPG adres of misvormde URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Aipg address or malformed URI parameters.</source>
+        <translation>URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig Aipg adres of misvormde URI parameters.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1453,14 +1374,6 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <source>Ping</source>
         <translation>Ping</translation>
     </message>
-    <message>
-        <source>Sent</source>
-        <translation>Versturen</translation>
-    </message>
-    <message>
-        <source>Received</source>
-        <translation>Ontvangen</translation>
-    </message>
 </context>
 <context>
     <name>QObject</name>
@@ -1469,8 +1382,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a AIPG address (e.g. %1)</source>
-        <translation>Voer een AIPGadres in (bijv. %1)</translation>
+        <source>Enter a Aipg address (e.g. %1)</source>
+        <translation>Voer een Noexa adres in (bijv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1500,17 +1413,37 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <source>%1 ms</source>
         <translation>%1 ms</translation>
     </message>
+    <message numerus="yes">
+        <source>%n second(s)</source>
+        <translation><numerusform>%n seconde</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n minuut</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n hour(s)</source>
+        <translation><numerusform>%n uur</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n day(s)</source>
+        <translation><numerusform>%n dag</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n week(s)</source>
+        <translation><numerusform>%n week</numerusform></translation>
+    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 en %2</translation>
     </message>
+    <message numerus="yes">
+        <source>%n year(s)</source>
+        <translation><numerusform>%n jaar</numerusform></translation>
+    </message>
     <message>
         <source>%1 didn't yet exit safely...</source>
         <translation>%1 sloot nog niet veilig af...</translation>
-    </message>
-    <message>
-        <source>unknown</source>
-        <translation>onbekend</translation>
     </message>
 </context>
 <context>
@@ -1658,10 +1591,6 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Gesynchroniseerde blokken</translation>
     </message>
     <message>
-        <source>Recover transactions</source>
-        <translation>Herstel transacties</translation>
-    </message>
-    <message>
         <source>User Agent</source>
         <translation>User Agent</translation>
     </message>
@@ -1734,6 +1663,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>&amp;Netwerkverkeer</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;Wissen</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>Totalen</translation>
     </message>
@@ -1786,12 +1719,36 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Welkom bij de %1 RPC-console.</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Gebruik de pijltjestoetsen om door de geschiedenis te navigeren, en &lt;b&gt;Ctrl-L&lt;/b&gt; om het scherm leeg te maken.</translation>
+    </message>
+    <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Typ &lt;b&gt;help&lt;/b&gt; voor een overzicht van de beschikbare opdrachten.</translation>
     </message>
     <message>
+        <source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramification of a command.</source>
+        <translation>WAARSCHUWING: Er zijn Scammers actief geweest, die gebruikers vragen om hier commando's te typen, waardoor de inhoud van hun portefeuille werd gestolen. Gebruik deze console niet zonder de toedracht van een opdracht volledig te begrijpen.</translation>
+    </message>
+    <message>
         <source>Network activity disabled</source>
         <translation>Netwerkactiviteit uitgeschakeld</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 Kb</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 Gb</translation>
     </message>
     <message>
         <source>(node id: %1)</source>
@@ -1827,315 +1784,6 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     </message>
 </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>&amp;Onderteken bericht...</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Synchroniseren met netwerk...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Overzicht</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Toon algemeen overzicht van uw portemonnee</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transacties</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Blader door transactiegescheidenis</translation>
-    </message>
-    <message>
-        <source>Coming Soon</source>
-        <translation>Binnenkort beschikbaar</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>A&amp;fsluiten</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Programma afsluiten</translation>
-    </message>
-    <message>
-        <source>&amp;About %1</source>
-        <translation>&amp;Over %1</translation>
-    </message>
-    <message>
-        <source>Show information about %1</source>
-        <translation>Toon informatie over %1</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>Over &amp;Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Toon informatie over Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Opties...</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for %1</source>
-        <translation>Wijzig configuratieopties voor %1</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Versleutel Portemonnee...</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Backup Portemonnee...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Wijzig Wachtwoord</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Verstuuradressen...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Ontvang adressen...</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>Open &amp;URI...</translation>
-    </message>
-    <message>
-        <source>Click to disable network activity.</source>
-        <translation>Klik om de netwerkactiviteit te stoppen.</translation>
-    </message>
-    <message>
-        <source>Network activity disabled.</source>
-        <translation>Netwerkactiviteit gestopt.</translation>
-    </message>
-    <message>
-        <source>Click to enable network activity again.</source>
-        <translation>Klik om de netwerkactiviteit opnieuw te starten.</translation>
-    </message>
-    <message>
-        <source>Syncing Headers (%1%)...</source>
-        <translation>Kopteksten synchroniseren (%1%)...</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Bezig met herindexeren van blokken op harde schijf...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Verstuur munten naar een AIPGadres</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Backup portemonnee naar een andere locatie</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Wijzig het wachtwoord voor uw portemonneversleuteling</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Open debugging en diagnostische console</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;Verifiëer bericht...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Portemonnee</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Verstuur</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Ontvangen</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Toon / Verberg</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Toon of verberg het hoofdvenster</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Versleutel de geheime sleutels die bij uw portemonnee horen</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw AIPGadressen om te bewijzen dat u deze adressen bezit</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde AIPGadressen</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Bestand</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Hulp</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en aipg: URI's)</translation>
-    </message>
-    <message>
-        <source>Show the list of used sending addresses and labels</source>
-        <translation>Toon de lijst met gebruikte verstuuradressen en -labels</translation>
-    </message>
-    <message>
-        <source>Show the list of used receiving addresses and labels</source>
-        <translation>Toon de lijst met gebruikte ontvangst adressen en labels</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>Open een aipg: URI of betalingsverzoek</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>&amp;Opdrachtregelopties</translation>
-    </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>Bezig met indexeren van blokken op harde schijf...</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>Bezig met verwerken van blokken op harde schijf...</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 achter</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>Laatst ontvangen blok was %1 geleden gegenereerd.</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Transacties na dit moment zullen nu nog niet zichtbaar zijn.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Fout</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Waarschuwing</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Informatie</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Bijgewerkt</translation>
-    </message>
-    <message>
-        <source>Show the %1 help message to get a list with possible AIPG command-line options</source>
-        <translation>Toon het %1 hulpbericht om een lijst te krijgen met mogelijke AIPG commandoregelopties</translation>
-    </message>
-    <message>
-        <source>%1 client</source>
-        <translation>%1 client</translation>
-    </message>
-    <message>
-        <source>Connecting to peers...</source>
-        <translation>Gelijke worden verbonden...</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Aan het bijwerken...</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>Datum: %1
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>Aantal: %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>Type: %1
-</translation>
-    </message>
-    <message>
-        <source>Label: %1
-</source>
-        <translation>Label: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>Adres: %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Verstuurde transactie</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Binnenkomende transactie</translation>
-    </message>
-    <message>
-        <source>Assets not yet active</source>
-        <translation>Assets nog niet actief</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
-        <translation>HD sleutel voortbrenging is &lt;b&gt;ingeschakeld&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>HD sleutel voortbrenging is &lt;b&gt;uitgeschakeld&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Portemonnee is &lt;b&gt;versleuteld&lt;/b&gt; en momenteel &lt;b&gt;geopend&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Portemonnee is &lt;b&gt;versleuteld&lt;/b&gt; en momenteel &lt;b&gt;gesloten&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. AIPG can no longer continue safely and will quit.</source>
-        <translation>Een fatale fout heeft zich voorgedaan. AIPG kan niet veilig worden verdergezet en wordt afgesloten.</translation>
-    </message>
-</context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -2158,8 +1806,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>H&amp;ergebruik en bestaand ontvangstadres (niet aanbevolen)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AIPG network.</source>
-        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, welke zal getoond worden wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het AIPGnetwerk.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aipg network.</source>
+        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, welke zal getoond worden wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het Hivenetwerk.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2309,119 +1957,6 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     </message>
 </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    <message>
-        <source>Inputs...</source>
-        <translation>Invoer...</translation>
-    </message>
-    <message>
-        <source>automatically selected</source>
-        <translation>automatisch geselecteerd</translation>
-    </message>
-    <message>
-        <source>Address:</source>
-        <translation>Adres:</translation>
-    </message>
-    <message>
-        <source>Warning:</source>
-        <translation>Waarschuwing:</translation>
-    </message>
-    <message>
-        <source>Choose...</source>
-        <translation>Kies...</translation>
-    </message>
-    <message>
-        <source>Hide</source>
-        <translation>Verbergen</translation>
-    </message>
-    <message>
-        <source>per kilobyte</source>
-        <translation>per kilobyte</translation>
-    </message>
-    <message>
-        <source>Recommended:</source>
-        <translation>Aanbevolen:</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>Wissen</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Ja</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Nee</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation>Naam</translation>
-    </message>
-    <message>
-        <source>or</source>
-        <translation>of</translation>
-    </message>
-    <message>
-        <source>Copy</source>
-        <translation>Kopie</translation>
-    </message>
-    <message>
-        <source>(no label)</source>
-        <translation>(geen label)</translation>
-    </message>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    <message>
-        <source>Send Coins</source>
-        <translation>Verstuur munten</translation>
-    </message>
-    <message>
-        <source>Address List</source>
-        <translation>Adreslijst</translation>
-    </message>
-    <message>
-        <source>or</source>
-        <translation>of</translation>
-    </message>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    <message>
-        <source>Memo:</source>
-        <translation>Nota:</translation>
-    </message>
-    <message>
-        <source>Amount:</source>
-        <translation>Hoeveelheid:</translation>
-    </message>
-    <message>
-        <source>&amp;Label:</source>
-        <translation>&amp;Label: </translation>
-    </message>
-    <message>
-        <source>Alt+A</source>
-        <translation>ALT+A</translation>
-    </message>
-    <message>
-        <source>Alt+P</source>
-        <translation>ALT+P</translation>
-    </message>
-    <message>
-        <source>Remove this entry</source>
-        <translation>Verwijder dit item</translation>
-    </message>
-    <message>
-        <source>Message:</source>
-        <translation>Bericht:</translation>
-    </message>
-    <message>
-        <source>Transfer to:</source>
-        <translation>Verzenden naar:</translation>
-    </message>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
@@ -2500,8 +2035,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Verbergen</translation>
     </message>
     <message>
+        <source>total at least</source>
+        <translation>totaal ten minste</translation>
+    </message>
+    <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for aipg transactions than the network can process.</source>
-        <translation>De minimale toeslag betalen is prima mits het transactievolume kleiner is dan de ruimte in de blokken. Let wel op dat dit tot gevolg kan hebben dat een transactie nooit wordt bevestigd als er meer vraag is naar aipgtransacties dan het netwerk kan verwerken.</translation>
+        <translation>De minimale toeslag betalen is prima mits het transactievolume kleiner is dan de ruimte in de blokken. Let wel op dat dit tot gevolg kan hebben dat een transactie nooit wordt bevestigd als er meer vraag is naar aipgstransacties dan het netwerk kan verwerken.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2518,6 +2057,14 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
         <translation>(Slimme transactiekosten is nog niet geïnitialiseerd. Dit duurt meestal een paar blokken...)</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>normaal</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>snel</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
@@ -2643,13 +2190,21 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <source>Payment request expired.</source>
         <translation>Betalingsverzoek verlopen.</translation>
     </message>
+    <message numerus="yes">
+        <source>%n block(s)</source>
+        <translation><numerusform>%n blok</numerusform></translation>
+    </message>
     <message>
         <source>Pay only the required fee of %1</source>
         <translation>Betaal alleen de verplichte transactiekosten van %1</translation>
     </message>
+    <message numerus="yes">
+        <source>Estimated to begin confirmation within %n block(s).</source>
+        <translation><numerusform>Schatting is dat bevestiging begint over %n blok.</numerusform></translation>
+    </message>
     <message>
-        <source>Warning: Invalid AIPG address</source>
-        <translation>Waarschuwing: Ongeldig AIPGadres</translation>
+        <source>Warning: Invalid Aipg address</source>
+        <translation>Waarschuwing: Ongeldig Aipg adres</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2675,6 +2230,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>B&amp;edrag:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>Betaal &amp;Aan:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Label:</translation>
     </message>
@@ -2687,8 +2246,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Dit is een normale betaling.</translation>
     </message>
     <message>
-        <source>The AIPG address to send the payment to</source>
-        <translation>Het AIPGadres om betaling aan te versturen</translation>
+        <source>The Aipg address to send the payment to</source>
+        <translation>Het Aipg adres om betaling aan te versturen</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2707,8 +2266,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Verwijder deze toevoeging</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>De transactiekosten zal worden afgetrokken van het bedrag dat verstuurd wordt. De ontvangers zullen minder aipgs ontvangen dan ingevoerd is in het hoeveelheidsveld. Als er meerdere ontvangers geselecteerd zijn, dan worden de transactiekosten gelijk verdeeld.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgss than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>De transactiekosten zal worden afgetrokken van het bedrag dat verstuurd wordt. De ontvangers zullen minder aipgss ontvangen dan ingevoerd is in het hoeveelheidsveld. Als er meerdere ontvangers geselecteerd zijn, dan worden de transactiekosten gelijk verdeeld.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2731,8 +2290,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Vul een label voor dit adres in om het aan de lijst met gebruikte adressen toe te voegen</translation>
     </message>
     <message>
-        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AIPG network.</source>
-        <translation>Een bericht dat werd toegevoegd aan de aipg: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het AIPGnetwerk.</translation>
+        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aipg network.</source>
+        <translation>Een bericht dat werd toegevoegd aan de aipg: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Aipg netwerk.</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Betaal Aan:</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2772,12 +2335,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>&amp;Onderteken Bericht</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive aipgs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u AIPGs kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive aipgss sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u Aipg kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
     </message>
     <message>
-        <source>The AIPG address to sign the message with</source>
-        <translation>Het AIPGadres om bericht mee te ondertekenen</translation>
+        <source>The Aipg address to sign the message with</source>
+        <translation>Het Aipg adres om bericht mee te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2808,8 +2371,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald AIPGadres bezit</translation>
+        <source>Sign the message to prove you own this Aipg address</source>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald Aipg adres bezit</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2832,12 +2395,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Voer het adres van de ontvanger in, bericht (zorg ervoor dat de regeleinden, spaties, tabs etc. precies kloppen) en onderteken onderaan om het bericht te verifiëren. Wees voorzicht om niet meer in de ondertekening te lezen dan in het getekende bericht zelf, om te voorkomen dat je wordt aangevallen met een man-in-the-middle attack. Houd er mee rekening dat dit alleen de ondertekende partij bewijst met het ontvangen adres, er kan niet bewezen worden dat er een transactie heeft plaatsgevonden!</translation>
     </message>
     <message>
-        <source>The AIPG address the message was signed with</source>
-        <translation>Het AIPGadres waarmee het bericht ondertekend is</translation>
+        <source>The Aipg address the message was signed with</source>
+        <translation>Het Noexa adres waarmee het bericht ondertekend is</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AIPG address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde AIPGadres het bericht heeft ondertekend.</translation>
+        <source>Verify the message to ensure it was signed with the specified Aipg address</source>
+        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde Aipg adres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2916,6 +2479,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
 </context>
 <context>
     <name>TransactionDesc</name>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Open voor nog %n blok</numerusform></translation>
+    </message>
     <message>
         <source>Open until %1</source>
         <translation>Open tot %1</translation>
@@ -2999,6 +2566,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>Credit</source>
         <translation>Credit</translation>
+    </message>
+    <message numerus="yes">
+        <source>matures in %n more block(s)</source>
+        <translation><numerusform>komt beschikbaar na %n nieuwe blok</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -3102,6 +2673,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <source>Label</source>
         <translation>Label</translation>
     </message>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Open voor nog %n blok</numerusform></translation>
+    </message>
     <message>
         <source>Open until %1</source>
         <translation>Open tot %1</translation>
@@ -3198,7 +2773,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <source>Amount removed from or added to balance.</source>
         <translation>Bedrag verwijderd van of toegevoegd aan saldo.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>TransactionView</name>
     <message>
@@ -3374,7 +2949,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <source>Send Coins</source>
         <translation>Verstuur munten</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3409,7 +2984,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <source>The wallet data was successfully saved to %1.</source>
         <translation>De portemonneedata is succesvol opgeslagen in %1.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>aipg-core</name>
     <message>
@@ -3431,6 +3006,14 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Aanvaard opdrachtregel- en JSON-RPC-opdrachten</translation>
+    </message>
+    <message>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect/-noconnect)</source>
+        <translation>Accepteer verbindingen van buitenaf (standaard: 1 indien geen -proxy of -connect/-noconnect werd opgegeven)</translation>
+    </message>
+    <message>
+        <source>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</source>
+        <translation>Verbind enkel met de opgegeven knooppunt(en); -noconnect of -connect = 0 alleen om automatische verbindingen uit te schakelen</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
@@ -3473,8 +3056,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Niet mogelijk ok HTTP-server te starten. Zie debuglogboek voor details.</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3499,6 +3082,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Verwijder alle transacties van de portemonnee en herstel alleen de delen van de blokketen door -rescan tijdens het opstarten</translation>
+    </message>
+    <message>
+        <source>Error loading %s: You can't enable HD on a already existing non-HD wallet</source>
+        <translation>Fout bij het laden van %s: Je kan HD niet activeren voor een reeds bestaande niet-HD portemonnee</translation>
     </message>
     <message>
         <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
@@ -3575,6 +3162,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</source>
         <translation>Waarschuwing: Het lijkt erop dat we geen consensus kunnen vinden met onze peers! Mogelijk dient u te upgraden, of andere nodes moeten wellicht upgraden.</translation>
+    </message>
+    <message>
+        <source>You need to rebuild the database using -reindex-chainstate to change -txindex</source>
+        <translation>Om -txindex te kunnen veranderen dient u de database opnieuw te bouwen met gebruik van -reindex-chainstate.</translation>
     </message>
     <message>
         <source>%s corrupt, salvage failed</source>
@@ -3677,6 +3268,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Fout bij laden %s: Portemonnee vereist een nieuwere versie van %s</translation>
     </message>
     <message>
+        <source>Error loading %s: You can't disable HD on a already existing HD wallet</source>
+        <translation>Fout bij het laden van %s: Je kan HD niet deactiveren voor een reeds bestaande HD portemonnee</translation>
+    </message>
+    <message>
         <source>Error loading block database</source>
         <translation>Fout bij het laden van blokkendatabase</translation>
     </message>
@@ -3703,6 +3298,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>Initialization sanity check failed. %s is shutting down.</source>
         <translation>Initialisatie sanity check mislukt. %s is aan het afsluiten.</translation>
+    </message>
+    <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>Ongeldig -onion adres '%s'</translation>
     </message>
     <message>
         <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
@@ -3765,6 +3364,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Zet database cache grootte in megabytes (%d tot %d, standaard: %d)</translation>
     </message>
     <message>
+        <source>Set maximum block size in bytes (default: %d)</source>
+        <translation>Stel maximum blokgrootte in in bytes (standaard: %d)</translation>
+    </message>
+    <message>
         <source>Specify wallet file (within data directory)</source>
         <translation>Specificeer het portemonnee bestand (vanuit de gegevensmap)</translation>
     </message>
@@ -3805,6 +3408,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Blokken aan het controleren...</translation>
     </message>
     <message>
+        <source>Verifying wallet...</source>
+        <translation>Portemonnee aan het controleren...</translation>
+    </message>
+    <message>
         <source>Wallet %s resides outside data directory %s</source>
         <translation>Portemonnee %s bevindt zich buiten de gegevensmap %s</translation>
     </message>
@@ -3827,6 +3434,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6</source>
         <translation>Bind aan opgegeven adres en keur peers die ermee verbinden goed. Gebruik [host]:poort notatie voor IPv6</translation>
+    </message>
+    <message>
+        <source>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</source>
+        <translation>Bind aan gegeven adres om te luisteren voor JSON-RPC verbindingen. Gebruik [host]:poort notatie voor IPv6. Deze optie kan meerdere keren gespecificeerd worden (standaard: bind aan alle interfaces.</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -3865,8 +3476,16 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Gebruik willekeurige inloggegevens voor elke proxyverbinding. Dit maakt streamislatie voor Tor mogelijk (standaard: %u)</translation>
     </message>
     <message>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
+        <translation>Stel maximumgrootte in bytes in voor hoge-prioriteits-/lage-transactiekosten-transacties (standaard: %d)</translation>
+    </message>
+    <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
         <translation>Het transactiebedrag is te klein om te versturen nadat de transactiekosten in mindering zijn gebracht</translation>
+    </message>
+    <message>
+        <source>Use hierarchical deterministic key generation (HD) after BIP32. Only has effect during wallet creation/first start</source>
+        <translation>Gebruik hiërarchische deterministische sleutelgeneratie (HD) na BIP32. Dit heeft enkel effect bij het aanmaken van portemonnees of het eerste gebruik</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
@@ -3939,6 +3558,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Verzend trace/debug-info naar de console in plaats van het debug.log-bestand</translation>
+    </message>
+    <message>
+        <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
+        <translation>Indien mogelijk, verstuur zonder transactiekosten (standaard: %u)</translation>
     </message>
     <message>
         <source>Show all debugging options (usage: --help -help-debug)</source>
@@ -4025,6 +3648,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Sta DNS-naslag toe voor -addnode, -seednode en -connect</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Adressen aan het laden...</translation>
+    </message>
+    <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = behoudt tx meta data bijv. account eigenaar en betalingsverzoek informatie, 2. sla tx meta data niet op)</translation>
     </message>
@@ -4063,6 +3690,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>Output extra debugginginformatie (standaard: %u, het leveren van &lt;categorie&gt; is optioneel)</translation>
+    </message>
+    <message>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
+        <translation>Query voor peer-adressen via DNS-lookup , indien laag aan adressen  (default: 1 unless -connect/-noconnect)</translation>
     </message>
     <message>
         <source>Support filtering of blocks and transaction with bloom filters (default: %u)</source>
@@ -4127,6 +3758,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     <message>
         <source>Include IP addresses in debug output (default: %u)</source>
         <translation>IP-adressen toevoegen in de debuguitvoer (standaard: %u)</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Ongeldig -proxy adres: '%s'</translation>
     </message>
     <message>
         <source>Keypool ran out, please call keypoolrefill first</source>
@@ -4245,6 +3880,10 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Blokindex aan het laden...</translation>
     </message>
     <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Voeg een node om naar te verbinden toe en probeer de verbinding open te houden</translation>
+    </message>
+    <message>
         <source>Loading wallet...</source>
         <translation>Portemonnee aan het laden...</translation>
     </message>
@@ -4253,8 +3892,16 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Kan portemonnee niet downgraden</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>Kan standaardadres niet schrijven</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
-        <translation>Aan het herscannen...</translation>
+        <translation>Blokketen aan het herscannen...</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Klaar met laden</translation>
     </message>
     <message>
         <source>Error</source>

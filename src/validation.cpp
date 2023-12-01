@@ -1,7 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -66,7 +65,7 @@
 using namespace boost::placeholders;
 
 #if defined(NDEBUG)
-# error "AIPG cannot be compiled without assertions."
+# error "Aipg cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -127,7 +126,7 @@ static void CheckBlockIndex(const Consensus::Params& consensusParams);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "AIPG Signed Message:\n";
+const std::string strMessageMagic = "Aipg Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -945,7 +944,7 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
         // Remove conflicting transactions from the mempool
         for (const CTxMemPool::txiter it : allConflicting)
         {
-            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s AIPG additional fees, %d delta bytes\n",
+            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s aipg additional fees, %d delta bytes\n",
                     it->GetTx().GetHash().ToString(),
                     hash.ToString(),
                     FormatMoney(nModifiedFees - nConflictingFees),
@@ -2744,14 +2743,14 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
                          error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)",block.vtx[0]->GetValueOut(AreEnforcedValuesDeployed()), blockReward),
                          REJECT_INVALID, "bad-cb-amount");
 	
-    /** AIPG Start */
+    /** AIPG START */
 	//CommunityAutonomousAddress Assign 10%
 	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
 	CTxDestination destCommunityAutonomous 		= DecodeDestination(GetCommunityAutonomousAddress);
     if (!IsValidDestination(destCommunityAutonomous)) {
-		LogPrintf("IsValidDestination: Invalid AIPGcoin address %s \n", GetCommunityAutonomousAddress);
+		LogPrintf("IsValidDestination: Invalid Aipg address %s \n", GetCommunityAutonomousAddress);
     }
-	// Parse AIPG coin address
+	// Parse Aipg address
     CScript scriptPubKeyCommunityAutonomous 	= GetScriptForDestination(destCommunityAutonomous);
 	
 	CAmount nCommunityAutonomousAmount 			= GetParams().CommunityAutonomousAmount();
@@ -2779,7 +2778,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	}
 	/** AIPG END */
 	
-        if (!control.Wait())
+    if (!control.Wait())
         return state.DoS(100, error("%s: CheckQueue failed", __func__), REJECT_INVALID, "block-validation-failed");
     int64_t nTime4 = GetTimeMicros(); nTimeVerify += nTime4 - nTime2;
     LogPrint(BCLog::BENCH, "    - Verify %u txins: %.2fms (%.3fms/txin) [%.2fs (%.2fms/blk)]\n", nInputs - 1, MILLI * (nTime4 - nTime2), nInputs <= 1 ? 0 : MILLI * (nTime4 - nTime2) / (nInputs-1), nTimeVerify * MICRO, nTimeVerify * MILLI / nBlocksTotal);
@@ -3170,7 +3169,7 @@ bool static DisconnectTip(CValidationState& state, const CChainParams& chainpara
     std::shared_ptr<CBlock> pblock = std::make_shared<CBlock>();
     CBlock& block = *pblock;
     if (!ReadBlockFromDisk(block, pindexDelete, chainparams.GetConsensus()))
-        return error("DisconnectTip() : Failed to read block");
+        return AbortNode(state, "Failed to read block");
     // Apply the block atomically to the chain state.
     int64_t nStart = GetTimeMicros();
     {
@@ -3363,7 +3362,7 @@ bool static ConnectTip(CValidationState& state, const CChainParams& chainparams,
         bool flushed = view.Flush();
         assert(flushed);
         nTime4 = GetTimeMicros(); nTimeFlush += nTime4 - nTime3;
-        LogPrint(BCLog::BENCH, "  - Flush AIPG: %.2fms [%.2fs (%.2fms/blk)]\n", (nTime4 - nTime3) * MILLI, nTimeFlush * MICRO, nTimeFlush * MILLI / nBlocksTotal);
+        LogPrint(BCLog::BENCH, "  - Flush aipg: %.2fms [%.2fs (%.2fms/blk)]\n", (nTime4 - nTime3) * MILLI, nTimeFlush * MICRO, nTimeFlush * MILLI / nBlocksTotal);
 
         /** AIPG START */
         nTimeAssetsFlush = GetTimeMicros();
@@ -4234,7 +4233,7 @@ static bool ContextualCheckBlock(const CBlock& block, CValidationState& state, c
     // Enforce rule that the coinbase starts with serialized block height
     CScript expect = CScript() << nHeight;
 
-    if (nHeight >= consensusParams.nBIP34Enabled)
+    if (nHeight >= consensusParams.BIP34LockedIn)
     {
 		if (block.vtx[0]->vin[0].scriptSig.size() < expect.size() ||
 			!std::equal(expect.begin(), expect.end(), block.vtx[0]->vin[0].scriptSig.begin())) {
@@ -4517,7 +4516,7 @@ bool TestBlockValidity(CValidationState& state, const CChainParams& chainparams,
         return error("%s: Consensus::CheckBlock: %s", __func__, FormatStateMessage(state));
     if (!ContextualCheckBlock(block, state, chainparams.GetConsensus(), pindexPrev, &assetCache))
         return error("%s: Consensus::ContextualCheckBlock: %s", __func__, FormatStateMessage(state));
-    if (!ConnectBlock(block, state, &indexDummy, viewNew, chainparams, &assetCache, true)) /** AIPG START */ /*Add asset to function */ /** AIPG END*/
+    if (!ConnectBlock(block, state, &indexDummy, viewNew, chainparams, &assetCache, true)) /** AIPG START */ /*Add asset to function */ /** aipg END*/
         return error("%s: Consensus::ConnectBlock: %s", __func__, FormatStateMessage(state));
     assert(state.IsValid());
 

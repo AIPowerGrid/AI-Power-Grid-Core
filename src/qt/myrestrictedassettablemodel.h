@@ -53,7 +53,7 @@ public:
                 TxPlainTextRole,
         /** Unprocessed icon */
                 RawDecorationRole,
-        /** AIPG or name of an asset */
+        /** aipg or name of an asset */
                 AssetNameRole,
     };
 

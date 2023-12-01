@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +15,7 @@ QT_BEGIN_NAMESPACE
 class QNetworkProxy;
 QT_END_NAMESPACE
 
-/** Interface from Qt to configuration data structure for AIPG client.
+/** Interface from Qt to configuration data structure for aipg client.
    To Qt, the options are presented as a list with the different options
    laid out vertically.
    This can be changed to a tree once the settings become sufficiently
@@ -32,7 +32,6 @@ public:
         StartAtStartup,         // bool
         HideTrayIcon,           // bool
         MinimizeToTray,         // bool
-        ToolbarIconsOnly,       // bool
         MapPortUPnP,            // bool
         MinimizeOnClose,        // bool
         ProxyUse,               // bool
@@ -41,10 +40,8 @@ public:
         ProxyUseTor,            // bool
         ProxyIPTor,             // QString
         ProxyPortTor,           // int
-        DisplayUnit,            // AIPGUnits::Unit
-        DisplayCurrencyIndex,   // int
+        DisplayUnit,            // AipgUnits::Unit
         ThirdPartyTxUrls,       // QString
-        IpfsUrl,                // QString
         Language,               // QString
         CoinControlFeatures,    // bool
         ThreadsScriptVerif,     // int
@@ -64,17 +61,13 @@ public:
     bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole);
     /** Updates current unit in memory, settings and emits displayUnitChanged(newUnit) signal */
     void setDisplayUnit(const QVariant &value);
-    /** Updates current unit in memory, settings and emits displayCurrencyIndexChanged(newIndex) signal */
-    void setDisplayCurrencyIndex(const QVariant &value);
 
     /* Explicit getters */
     bool getHideTrayIcon() const { return fHideTrayIcon; }
     bool getMinimizeToTray() const { return fMinimizeToTray; }
     bool getMinimizeOnClose() const { return fMinimizeOnClose; }
     int getDisplayUnit() const { return nDisplayUnit; }
-    int getDisplayCurrencyIndex() const { return nDisplayCurrencyIndex; }
     QString getThirdPartyTxUrls() const { return strThirdPartyTxUrls; }
-    QString getIpfsUrl() const { return strIpfsUrl; }
     bool getProxySettings(QNetworkProxy& proxy) const;
     bool getCoinControlFeatures() const { return fCoinControlFeatures; }
     bool getCustomFeeFeatures() const { return fCustomFeeFeatures; }
@@ -90,12 +83,9 @@ private:
     bool fHideTrayIcon;
     bool fMinimizeToTray;
     bool fMinimizeOnClose;
-    bool fToolbarIconsOnly;
     QString language;
     int nDisplayUnit;
-    int nDisplayCurrencyIndex;
     QString strThirdPartyTxUrls;
-    QString strIpfsUrl;
     bool fCoinControlFeatures;
     /** AIPG START*/
     bool fCustomFeeFeatures;
@@ -111,11 +101,9 @@ private:
     void checkAndMigrate();
 Q_SIGNALS:
     void displayUnitChanged(int unit);
-    void displayCurrencyIndexChanged(int unit);
     void coinControlFeaturesChanged(bool);
     void customFeeFeaturesChanged(bool);
     void hideTrayIconChanged(bool);
-    void updateIconsOnlyToolbar(bool);
 };
 
 #endif // AIPG_QT_OPTIONSMODEL_H

@@ -1,4 +1,5 @@
-// Copyright (c) 2017-2019 The AIPG Core developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -63,9 +64,9 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
         BOOST_TEST_MESSAGE("Running Verify New Restricted transaction");
 
         /// Create CTxOut to use in the tests ///
-        // Create filler AIPG tx
-        CScript AIPGTransfer = GetScriptForDestination(DecodeDestination(GetParams().GlobalBurnAddress()));
-        CTxOut AIPGOut(1*COIN, AIPGTransfer);
+        // Create filler neox tx
+        CScript neoxTransfer = GetScriptForDestination(DecodeDestination(GetParams().GlobalBurnAddress()));
+        CTxOut neoxOut(1*COIN, neoxTransfer);
 
         // Create transaction and add burn to it
         CScript burnScript = GetScriptForDestination(DecodeDestination(GetBurnAddress(AssetType::RESTRICTED)));
@@ -98,7 +99,7 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
         // Run successful test 1
         std::string error;
         CMutableTransaction mutTxTest1;
-        mutTxTest1.vout.emplace_back(AIPGOut);
+        mutTxTest1.vout.emplace_back(neoxOut); 
         mutTxTest1.vout.emplace_back(burnOut);
         mutTxTest1.vout.emplace_back(parentOut);
         mutTxTest1.vout.emplace_back(verifierOut);
@@ -108,7 +109,7 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
 
         // Run failure test 2
         CMutableTransaction mutTxTest2;
-        mutTxTest2.vout.emplace_back(AIPGOut);
+        mutTxTest2.vout.emplace_back(neoxOut);
         mutTxTest2.vout.emplace_back(burnOut);
         mutTxTest2.vout.emplace_back(verifierOut);
         mutTxTest2.vout.emplace_back(assetOut);
@@ -118,7 +119,7 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
 
         // Run failure test 3
         CMutableTransaction mutTxTest3;
-        mutTxTest3.vout.emplace_back(AIPGOut);
+        mutTxTest3.vout.emplace_back(neoxOut);
         mutTxTest3.vout.emplace_back(burnOut);
         mutTxTest3.vout.emplace_back(parentOut);
         mutTxTest3.vout.emplace_back(assetOut);
@@ -128,7 +129,7 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
 
         // Run failure test 4
         CMutableTransaction mutTxTest4;
-        mutTxTest4.vout.emplace_back(AIPGOut);
+        mutTxTest4.vout.emplace_back(neoxOut);
         mutTxTest4.vout.emplace_back(parentOut);
         mutTxTest4.vout.emplace_back(verifierOut);
         mutTxTest4.vout.emplace_back(assetOut);
@@ -138,7 +139,7 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
 
         // Run failure test 5
         CMutableTransaction mutTxTest5;
-        mutTxTest5.vout.emplace_back(AIPGOut);
+        mutTxTest5.vout.emplace_back(neoxOut);
         mutTxTest5.vout.emplace_back(burnOut);
         mutTxTest5.vout.emplace_back(parentOut);
         mutTxTest5.vout.emplace_back(verifierOut);
@@ -148,7 +149,7 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
 
         // Run failure test 6
         CMutableTransaction mutTxTest6;
-        mutTxTest6.vout.emplace_back(AIPGOut);
+        mutTxTest6.vout.emplace_back(neoxOut);
         mutTxTest6.vout.emplace_back(burnOut);
         mutTxTest6.vout.emplace_back(parentOut);
         mutTxTest6.vout.emplace_back(verifierOut);
@@ -160,7 +161,7 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
 
         // Run failure test 7
         CMutableTransaction mutTxTest7;
-        mutTxTest7.vout.emplace_back(AIPGOut);
+        mutTxTest7.vout.emplace_back(neoxOut);
         mutTxTest7.vout.emplace_back(burnOut);
         mutTxTest7.vout.emplace_back(parentOut);
         mutTxTest7.vout.emplace_back(verifierOut);
@@ -172,7 +173,7 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
 
         // Run failure test 8
         CMutableTransaction mutTxTest8;
-        mutTxTest8.vout.emplace_back(AIPGOut);
+        mutTxTest8.vout.emplace_back(neoxOut);
         mutTxTest8.vout.emplace_back(burnOut);
         mutTxTest8.vout.emplace_back(parentOut);
         mutTxTest8.vout.emplace_back(verifierOut);

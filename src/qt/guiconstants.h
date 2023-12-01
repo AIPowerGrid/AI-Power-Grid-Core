@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2020-2021 The Aipg Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,7 +13,7 @@ static const int MODEL_UPDATE_DELAY = 250;
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* AIPGGUI -- Size of icons in status bar */
+/* AipgGUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -30,6 +30,8 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 #define COLOR_BAREADDRESS QColor(140, 140, 140)
 /* Transaction list -- TX status decoration - open until date */
 #define COLOR_TX_STATUS_OPENUNTILDATE QColor(64, 64, 255)
+/* Transaction list -- TX status decoration - offline */
+#define COLOR_TX_STATUS_OFFLINE QColor(192, 192, 192)
 /* Transaction list -- TX status decoration - danger, tx needs attention */
 #define COLOR_TX_STATUS_DANGER QColor(200, 100, 100)
 /* Transaction list -- TX status decoration - default color */
@@ -45,17 +47,17 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /** LIGHT MODE */
 /* Background color, very light gray */
 #define COLOR_BACKGROUND_LIGHT QColor("#fbfbfe")
-/* AIPGcoin dark orange */
+/* Aipg dark orange */
 #define COLOR_DARK_ORANGE QColor("#f05239")
-/* AIPGcoin light orange */
+/* Aipg light orange */
 #define COLOR_LIGHT_ORANGE QColor("#f79433")
-/* AIPGcoin dark blue */
+/* Aipg dark blue */
 #define COLOR_DARK_BLUE QColor("#384192")
-/* AIPGcoin light blue */
+/* Aipg light blue */
 #define COLOR_LIGHT_BLUE QColor("#5874cf")
-/* AIPGcoin asset text */
+/* Aipg asset text */
 #define COLOR_ASSET_TEXT QColor(255, 255, 255)
-/* AIPGcoin shadow color - light mode */
+/* Aipg shadow color - light mode */
 #define COLOR_SHADOW_LIGHT QColor("#e1e6f3")
 /* Toolbar not selected text color */
 #define COLOR_TOOLBAR_NOT_SELECTED_TEXT QColor("#a5b7f3")
@@ -68,19 +70,19 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /** DARK MODE */
 /* Widget background color, dark mode */
 #define COLOR_WIDGET_BACKGROUND_DARK QColor("#1c2535")
-/* AIPGcoin shadow color - dark mode */
+/* Aipg shadow color - dark mode */
 #define COLOR_SHADOW_DARK QColor("#0c1b3d")
-/* AIPGcoin Light blue - dark mode - dark mode */
+/* Aipg Light blue - dark mode - dark mode */
 #define COLOR_LIGHT_BLUE_DARK QColor("#1e2636")
-/* AIPGcoin Dark blue - dark mode - dark mode */
+/* Aipg Dark blue - dark mode - dark mode */
 #define COLOR_DARK_BLUE_DARK QColor("#0b1018")
 /* Pricing widget background color */
 #define COLOR_PRICING_WIDGET QColor("#161e2d")
-/* AIPGcoin dark mode administrator background color */
+/* Aipg dark mode administrator background color */
 #define COLOR_ADMIN_CARD_DARK COLOR_BLACK
-/* AIPGcoin dark mode regular asset background color */
+/* Aipg dark mode regular asset background color */
 #define COLOR_REGULAR_CARD_DARK_BLUE_DARK_MODE QColor("#06132a")
-/* AIPGcoin dark mode regular asset background color */
+/* Aipg dark mode regular asset background color */
 #define COLOR_REGULAR_CARD_LIGHT_BLUE_DARK_MODE QColor("#0e1b3b")
 /* Toolbar not selected text color */
 #define COLOR_TOOLBAR_NOT_SELECTED_TEXT_DARK_MODE QColor("#6c80c5")
@@ -90,7 +92,7 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 #define COLOR_SENDENTRIES_BACKGROUND_DARK QColor("#1c2535")
 
 
-/* AIPGcoin label color as a string */
+/* Aipg label color as a string */
 #define STRING_LABEL_COLOR "color: #4960ad"
 #define STRING_LABEL_COLOR_WARNING "color: #FF8080"
 
@@ -115,15 +117,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "AIPG"
+#define QAPP_ORG_NAME "Aipg"
 #define QAPP_ORG_DOMAIN "aipg.org"
-#define QAPP_APP_NAME_DEFAULT "AIPG-Qt"
-#define QAPP_APP_NAME_TESTNET "AIPG-Qt-testnet"
-
-/* Default third party browser urls */
-#define DEFAULT_THIRD_PARTY_BROWSERS "https://api.aipgcoin.org/tx/%s|https://AIPG.cryptoscope.io/tx/?txid=%s|https://blockbook.aipgcoin.org/tx/%s|https://explorer.mangofarmassets.com/tx/%s|https://www.assetsexplorer.com/tx/%s|https://explorer.aipgland.org/tx/%s"
-
-/* Default IPFS viewer */
-#define DEFAULT_IPFS_VIEWER "https://ipfs.io/ipfs/%s"
+#define QAPP_APP_NAME_DEFAULT "Aipg-Qt"
+#define QAPP_APP_NAME_TESTNET "Aipg-Qt-testnet"
 
 #endif // AIPG_QT_GUICONSTANTS_H

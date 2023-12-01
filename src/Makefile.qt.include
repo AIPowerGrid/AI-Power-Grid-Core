@@ -1,5 +1,5 @@
 # Copyright (c) 2013-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2019 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -72,7 +72,6 @@ QT_TS = \
   qt/locale/aipg_pt_PT.ts \
   qt/locale/aipg_ro_RO.ts \
   qt/locale/aipg_ro.ts \
-  qt/locale/aipg_ru_RU.ts \
   qt/locale/aipg_ru.ts \
   qt/locale/aipg_sk.ts \
   qt/locale/aipg_sl_SI.ts \
@@ -91,7 +90,6 @@ QT_TS = \
   qt/locale/aipg_vi_VN.ts \
   qt/locale/aipg_zh_CN.ts \
   qt/locale/aipg_zh_HK.ts \
-  qt/locale/aipg_zh.ts \
   qt/locale/aipg_zh_TW.ts
 
 QT_FORMS_UI = \
@@ -100,6 +98,7 @@ QT_FORMS_UI = \
   qt/forms/assetcontroldialog.ui \
   qt/forms/coincontroldialog.ui \
   qt/forms/editaddressdialog.ui \
+  qt/forms/encryptdialog.ui \
   qt/forms/helpmessagedialog.ui \
   qt/forms/intro.ui \
   qt/forms/modaloverlay.ui \
@@ -120,9 +119,7 @@ QT_FORMS_UI = \
   qt/forms/restrictedassignqualifier.ui \
   qt/forms/restrictedfreezeaddress.ui \
   qt/forms/sendassetsentry.ui \
-  qt/forms/mnemonicdialog1.ui \
-  qt/forms/mnemonicdialog2.ui \
-  qt/forms/mnemonicdialog3.ui
+  qt/forms/mnemonicdialog.ui
 
 QT_MOC_CPP = \
   qt/moc_addressbookpage.cpp \
@@ -143,6 +140,7 @@ QT_MOC_CPP = \
   qt/moc_csvmodelwriter.cpp \
   qt/moc_darkstyle.cpp \
   qt/moc_editaddressdialog.cpp \
+  qt/moc_encryptdialog.cpp \
   qt/moc_guiutil.cpp \
   qt/moc_intro.cpp \
   qt/moc_macdockiconhandler.cpp \
@@ -227,9 +225,9 @@ AIPG_QT_H = \
   qt/coincontroldialog.h \
   qt/coincontroltreewidget.h \
   qt/csvmodelwriter.h \
-  qt/currencyunits.h \
   qt/darkstyle.h \
   qt/editaddressdialog.h \
+  qt/encryptdialog.h \
   qt/guiconstants.h \
   qt/guiutil.h \
   qt/intro.h \
@@ -338,8 +336,6 @@ RES_ICONS = \
   qt/res/icons/receive_selected.png \
   qt/res/icons/refresh.png \
   qt/res/icons/remove.png \
-  qt/res/icons/restricted_asset.png \
-  qt/res/icons/restricted_asset_selected.png \
   qt/res/icons/send.png \
   qt/res/icons/send_selected.png \
   qt/res/icons/synced.png \
@@ -353,7 +349,6 @@ RES_ICONS = \
   qt/res/icons/tx_mined.png \
   qt/res/icons/tx_asset_input.png \
   qt/res/icons/tx_asset_output.png \
-  qt/res/icons/tx_atomic_swap.png \
   qt/res/icons/warning.png \
   qt/res/icons/verify.png \
   qt/res/darkstyle/icon_close.png \
@@ -431,6 +426,7 @@ AIPG_QT_WALLET_CPP = \
   qt/coincontroldialog.cpp \
   qt/coincontroltreewidget.cpp \
   qt/editaddressdialog.cpp \
+  qt/encryptdialog.cpp \
   qt/openuridialog.cpp \
   qt/overviewpage.cpp \
   qt/myrestrictedassettablemodel.cpp \
@@ -519,7 +515,7 @@ endif
 if ENABLE_ZMQ
 qt_aipg_qt_LDADD += $(LIBAIPG_ZMQ) $(ZMQ_LIBS)
 endif
-qt_aipg_qt_LDADD += $(LIBAIPG_CLI) $(LIBAIPG_COMMON) $(LIBAIPG_UTIL) $(LIBAIPG_CONSENSUS) $(LIBAIPG_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+qt_aipg_qt_LDADD += $(LIBaipg_cli) $(LIBAIPG_COMMON) $(LIBAIPG_UTIL) $(LIBAIPG_CONSENSUS) $(LIBAIPG_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 qt_aipg_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)

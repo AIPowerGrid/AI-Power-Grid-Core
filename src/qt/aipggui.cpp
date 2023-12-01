@@ -1,6 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -69,7 +68,6 @@
 #include <QTimer>
 #include <QToolBar>
 #include <QVBoxLayout>
-#include <QComboBox>
 
 // Fixing Boost 1.73 compile errors
 #include <boost/bind/bind.hpp>
@@ -92,7 +90,7 @@ using namespace boost::placeholders;
 #define QTversionPreFiveEleven
 #endif
 
-const std::string AIPGGUI::DEFAULT_UIPLATFORM =
+const std::string AipgGUI::DEFAULT_UIPLATFORM =
 #if defined(Q_OS_MAC)
         "macosx"
 #elif defined(Q_OS_WIN)
@@ -104,22 +102,72 @@ const std::string AIPGGUI::DEFAULT_UIPLATFORM =
 
 /** Display name for default wallet name. Uses tilde to avoid name
  * collisions in the future with additional wallets */
-const QString AIPGGUI::DEFAULT_WALLET = "~Default";
+const QString AipgGUI::DEFAULT_WALLET = "~Default";
 
-/* Bit of a bodge, c++ really doesn't want you to predefine values
- * in only header files, so we do one-time value assignment here. */
-std::array<CurrencyUnitDetails, 5> CurrencyUnits::CurrencyOptions = { {
-    { "AIPG",    "AIPGBTC"  , 1,          8},
-    { "mAIPG",   "AIPGBTC"  , 1000,       5},
-    { "µAIPG",   "AIPGBTC"  , 1000000,    2},
-    { "Satoshi", "AIPGBTC"  , 100000000,  0}
-} };
-
-static bool ThreadSafeMessageBox(AIPGGUI *gui, const std::string& message, const std::string& caption, unsigned int style);
-
-AIPGGUI::AIPGGUI(const PlatformStyle *_platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
+AipgGUI::AipgGUI(const PlatformStyle *_platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
     QMainWindow(parent),
     enableWallet(false),
+    clientModel(0),
+    walletFrame(0),
+    unitDisplayControl(0),
+    labelWalletEncryptionIcon(0),
+    labelWalletHDStatusIcon(0),
+    connectionsControl(0),
+    labelBlocksIcon(0),
+    progressBarLabel(0),
+    progressBar(0),
+    progressDialog(0),
+    appMenuBar(0),
+    overviewAction(0),
+    historyAction(0),
+    quitAction(0),
+    sendCoinsAction(0),
+    sendCoinsMenuAction(0),
+    usedSendingAddressesAction(0),
+    usedReceivingAddressesAction(0),
+    signMessageAction(0),
+    verifyMessageAction(0),
+    aboutAction(0),
+    receiveCoinsAction(0),
+    receiveCoinsMenuAction(0),
+    optionsAction(0),
+    toggleHideAction(0),
+    backupWalletAction(0),
+    changePassphraseAction(0),
+    lockWalletAction(0),
+    unlockWalletAction(0),
+    getMnemonicAction(0),
+    aboutQtAction(0),
+    openRPCConsoleAction(0),
+    openInformationAction(0),
+    openNetworkAction(0),
+    openPeerAction(0),
+    openWalletRepairAction(0),
+    openAction(0),
+    showHelpMessageAction(0),
+    transferAssetAction(0),
+    createAssetAction(0),
+    manageAssetAction(0),
+    messagingAction(0),
+    votingAction(0),
+    restrictedAssetAction(0),
+    headerWidget(0),
+    labelCurrentMarket(0),
+    labelCurrentPrice(0),
+    pricingTimer(0),
+    networkManager(0),
+    request(0),
+    labelVersionUpdate(0),
+    networkVersionManager(0),
+    versionRequest(0),
+    trayIcon(0),
+    trayIconMenu(0),
+    notificator(0),
+    rpcConsole(0),
+    helpMessageDialog(0),
+    modalOverlay(0),
+    prevBlocks(0),
+    spinnerFrame(0),
     platformStyle(_platformStyle)
 
 {
@@ -282,7 +330,7 @@ AIPGGUI::AIPGGUI(const PlatformStyle *_platformStyle, const NetworkStyle *networ
 #endif
 }
 
-AIPGGUI::~AIPGGUI()
+AipgGUI::~AipgGUI()
 {
     // Unsubscribe from notifications from core
     unsubscribeFromCoreSignals();
@@ -299,7 +347,7 @@ AIPGGUI::~AIPGGUI()
     delete rpcConsole;
 }
 
-void AIPGGUI::loadFonts()
+void AipgGUI::loadFonts()
 {
     QFontDatabase::addApplicationFont(":/fonts/opensans-bold");
     QFontDatabase::addApplicationFont(":/fonts/opensans-bolditalic");
@@ -314,7 +362,7 @@ void AIPGGUI::loadFonts()
 }
 
 
-void AIPGGUI::createActions()
+void AipgGUI::createActions()
 {
     QFont font = QFont();
     font.setPixelSize(22);
@@ -335,7 +383,7 @@ void AIPGGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/send_selected", ":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a AIPG address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a aipg address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
@@ -367,21 +415,21 @@ void AIPGGUI::createActions()
     tabGroup->addAction(historyAction);
 
     /** AIPG START */
-    createAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_create_selected", ":/icons/asset_create"), tr("&Create Assets"), this);
-    createAssetAction->setStatusTip(tr("Create new assets"));
-    createAssetAction->setToolTip(createAssetAction->statusTip());
-    createAssetAction->setCheckable(true);
-    createAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
-    createAssetAction->setFont(font);
-    tabGroup->addAction(createAssetAction);
-
     transferAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_transfer_selected", ":/icons/asset_transfer"), tr("&Transfer Assets"), this);
-    transferAssetAction->setStatusTip(tr("Transfer assets to AIPG addresses"));
+    transferAssetAction->setStatusTip(tr("Transfer assets to aipg addresses"));
     transferAssetAction->setToolTip(transferAssetAction->statusTip());
     transferAssetAction->setCheckable(true);
-    transferAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
+    transferAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     transferAssetAction->setFont(font);
     tabGroup->addAction(transferAssetAction);
+
+    createAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_create_selected", ":/icons/asset_create"), tr("&Create Assets"), this);
+    createAssetAction->setStatusTip(tr("Create new main/sub/unique assets"));
+    createAssetAction->setToolTip(createAssetAction->statusTip());
+    createAssetAction->setCheckable(true);
+    createAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
+    createAssetAction->setFont(font);
+    tabGroup->addAction(createAssetAction);
 
     manageAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_manage_selected", ":/icons/asset_manage"), tr("&Manage Assets"), this);
     manageAssetAction->setStatusTip(tr("Manage assets you are the administrator of"));
@@ -391,27 +439,27 @@ void AIPGGUI::createActions()
     manageAssetAction->setFont(font);
     tabGroup->addAction(manageAssetAction);
 
-    messagingAction = new QAction(platformStyle->SingleColorIcon(":/icons/editcopy"), tr("&Messaging"), this);
+    messagingAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/messageing_selected",":/icons/messageing"), tr("&Messaging"), this);
     messagingAction->setStatusTip(tr("Coming Soon"));
     messagingAction->setToolTip(messagingAction->statusTip());
     messagingAction->setCheckable(true);
-//    messagingAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_9));
+    messagingAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_8));
     messagingAction->setFont(font);
     tabGroup->addAction(messagingAction);
 
-    votingAction = new QAction(platformStyle->SingleColorIcon(":/icons/edit"), tr("&Voting"), this);
+    votingAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/voting_selected",":/icons/voting"), tr("&Voting"), this);
     votingAction->setStatusTip(tr("Coming Soon"));
     votingAction->setToolTip(votingAction->statusTip());
     votingAction->setCheckable(true);
-    // votingAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_V));
+    votingAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_9));
     votingAction->setFont(font);
     tabGroup->addAction(votingAction);
 
-    restrictedAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/restricted_asset_selected", ":/icons/restricted_asset"), tr("&Restricted Assets"), this);
+    restrictedAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_restricted_selected",":/icons/asset_restricted"), tr("&Restricted Assets"), this);
     restrictedAssetAction->setStatusTip(tr("Manage restricted assets"));
     restrictedAssetAction->setToolTip(restrictedAssetAction->statusTip());
     restrictedAssetAction->setCheckable(true);
-    restrictedAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_8));
+//    restrictedAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_9));
     restrictedAssetAction->setFont(font);
     tabGroup->addAction(restrictedAssetAction);
 
@@ -462,26 +510,37 @@ void AIPGGUI::createActions()
     toggleHideAction = new QAction(platformStyle->TextColorIcon(":/icons/about"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
-    encryptWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
-    encryptWalletAction->setStatusTip(tr("Encrypt the private keys that belong to your wallet"));
-    encryptWalletAction->setCheckable(true);
     backupWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/filesave"), tr("&Backup Wallet..."), this);
     backupWalletAction->setStatusTip(tr("Backup wallet to another location"));
+
     changePassphraseAction = new QAction(platformStyle->TextColorIcon(":/icons/key"), tr("&Change Passphrase..."), this);
     changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
 
-    getMyWordsAction = new QAction(platformStyle->TextColorIcon(":/icons/key"), tr("&Get my words..."), this);
-    getMyWordsAction->setStatusTip(tr("Show the recoverywords for this wallet"));
+    lockWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/lock_closed"), tr("&Lock Wallet"), this);
+    lockWalletAction->setStatusTip(tr("Lock the encrypted wallet to prevent spending and asset issue"));
+
+    unlockWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/lock_open"), tr("&Unlock Wallet..."), this);
+    unlockWalletAction->setStatusTip(tr("Unlock the encrypted wallet to allow spending and asset issue"));
+
+    getMnemonicAction = new QAction(platformStyle->TextColorIcon(":/icons/lock_open"), tr("&View Mnemonic..."), this);
+    getMnemonicAction->setStatusTip(tr("View the mnemonic phrase of the wallet"));
 
     signMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your AIPG addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your aipg addresses to prove you own them"));
     verifyMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/verify"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified AIPG addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified aipg addresses"));
+
+    openInformationAction = new QAction(platformStyle->TextColorIcon(":/icons/info"), tr("&Information"), this);
+    openInformationAction->setStatusTip(tr("Show diagnostic information"));
+
+    openNetworkAction = new QAction(platformStyle->TextColorIcon(":/icons/connect_4"), tr("&Network"), this);
+    openNetworkAction->setStatusTip(tr("Show network information"));
+
+    openPeerAction = new QAction(platformStyle->TextColorIcon(":/icons/connect_4"), tr("&Peers"), this);
+    openPeerAction->setStatusTip(tr("Show peers information"));
 
     openRPCConsoleAction = new QAction(platformStyle->TextColorIcon(":/icons/debugwindow"), tr("&Debug Window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
-    // initially disable the debug window menu item
-    openRPCConsoleAction->setEnabled(false);
 
     openWalletRepairAction = new QAction(platformStyle->TextColorIcon(":/icons/debugwindow"), tr("&Wallet Repair"), this);
     openWalletRepairAction->setStatusTip(tr("Open wallet repair options"));
@@ -492,11 +551,11 @@ void AIPGGUI::createActions()
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(platformStyle->TextColorIcon(":/icons/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a aipg: URI or payment request"));
+    openAction->setStatusTip(tr("Open a Aipg: URI or payment request"));
 
     showHelpMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/info"), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible AIPG command-line options").arg(tr(PACKAGE_NAME)));
+    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible aipg command-line options").arg(tr(PACKAGE_NAME)));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -504,7 +563,10 @@ void AIPGGUI::createActions()
     connect(optionsAction, SIGNAL(triggered()), this, SLOT(optionsClicked()));
     connect(toggleHideAction, SIGNAL(triggered()), this, SLOT(toggleHidden()));
     connect(showHelpMessageAction, SIGNAL(triggered()), this, SLOT(showHelpMessageClicked()));
-    connect(openRPCConsoleAction, SIGNAL(triggered()), this, SLOT(showDebugWindow()));
+    connect(openInformationAction, SIGNAL(triggered()), this, SLOT(showDebugWindowActivateInformation()));
+    connect(openPeerAction, SIGNAL(triggered()), this, SLOT(showDebugWindowPeerList()));
+    connect(openNetworkAction, SIGNAL(triggered()), this, SLOT(showDebugWindowNetworkTraffic()));
+    connect(openRPCConsoleAction, SIGNAL(triggered()), this, SLOT(showDebugWindowActivateConsole()));
     connect(openWalletRepairAction, SIGNAL(triggered()), this, SLOT(showWalletRepair()));
     // Get restart command-line parameters and handle restart
     connect(rpcConsole, SIGNAL(handleRestart(QStringList)), this, SLOT(handleRestart(QStringList)));
@@ -514,10 +576,11 @@ void AIPGGUI::createActions()
 #ifdef ENABLE_WALLET
     if(walletFrame)
     {
-        connect(encryptWalletAction, SIGNAL(triggered(bool)), walletFrame, SLOT(encryptWallet(bool)));
         connect(backupWalletAction, SIGNAL(triggered()), walletFrame, SLOT(backupWallet()));
         connect(changePassphraseAction, SIGNAL(triggered()), walletFrame, SLOT(changePassphrase()));
-        connect(getMyWordsAction, SIGNAL(triggered()), walletFrame, SLOT(getMyWords()));
+        connect(lockWalletAction, SIGNAL(triggered()), walletFrame, SLOT(lockWallet()));
+        connect(unlockWalletAction, SIGNAL(triggered(bool)), walletFrame, SLOT(unlockWallet()));
+        connect(getMnemonicAction, SIGNAL(triggered()), walletFrame, SLOT(getMnemonic()));
         connect(signMessageAction, SIGNAL(triggered()), this, SLOT(gotoSignMessageTab()));
         connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
         connect(usedSendingAddressesAction, SIGNAL(triggered()), walletFrame, SLOT(usedSendingAddresses()));
@@ -530,7 +593,7 @@ void AIPGGUI::createActions()
     new QShortcut(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_D), this, SLOT(showDebugWindow()));
 }
 
-void AIPGGUI::createMenuBar()
+void AipgGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     // Create a decoupled menu bar on Mac which stays even if the window is closed
@@ -557,78 +620,70 @@ void AIPGGUI::createMenuBar()
     QMenu *settings = appMenuBar->addMenu(tr("&Wallet"));
     if(walletFrame)
     {
-        settings->addAction(encryptWalletAction);
         settings->addAction(backupWalletAction);
         settings->addAction(changePassphraseAction);
-        settings->addAction(getMyWordsAction);
+        settings->addAction(lockWalletAction);
+        settings->addAction(unlockWalletAction);
+        settings->addAction(getMnemonicAction);
         settings->addSeparator();
     }
     settings->addAction(optionsAction);
 
-    QMenu *help = appMenuBar->addMenu(tr("&Help"));
+    QMenu *tools = appMenuBar->addMenu(tr("&Tools"));
+
+    tools->addAction(openInformationAction);
+    tools->addAction(openRPCConsoleAction);
+    tools->addAction(openNetworkAction);
+    tools->addAction(openPeerAction);
+
     if(walletFrame)
     {
-        help->addAction(openRPCConsoleAction);
-        help->addAction(openWalletRepairAction);
+        tools->addSeparator();
+        tools->addAction(openWalletRepairAction);
     }
+
+    QMenu *help = appMenuBar->addMenu(tr("&Help"));
+
     help->addAction(showHelpMessageAction);
     help->addSeparator();
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
 }
 
-void AIPGGUI::createToolBars()
+void AipgGUI::createToolBars()
 {
     if(walletFrame)
     {
-        QSettings settings;
-        bool IconsOnly = settings.value("fToolbarIconsOnly", false).toBool();
-
         /** AIPG START */
-        // Create the background and the vertical tool bar
+        // Create the orange background and the vertical tool bar
         QWidget* toolbarWidget = new QWidget();
 
         QString widgetStyleSheet = ".QWidget {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 %1, stop: 1 %2);}";
 
         toolbarWidget->setStyleSheet(widgetStyleSheet.arg(platformStyle->LightBlueColor().name(), platformStyle->DarkBlueColor().name()));
 
-        labelToolbar = new QLabel();
-        labelToolbar->setContentsMargins(0,0,0,50);
-        labelToolbar->setAlignment(Qt::AlignLeft);
-
-        if(IconsOnly) {
-            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/AIPGtext")));
-        }
-        else {
-            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/aipgcointext")));
-        }
-        labelToolbar->setStyleSheet(".QLabel{background-color: transparent;}");
-
+        QLabel* label = new QLabel();
+        label->setPixmap(QPixmap::fromImage(QImage(":/icons/aipgcointext")));
+        label->setContentsMargins(0,0,0,50);
+        label->setStyleSheet(".QLabel{background-color: transparent;}");
         /** AIPG END */
 
-        m_toolbar = new QToolBar();
-        m_toolbar->setStyle(style());
-        m_toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
-        m_toolbar->setMovable(false);
-
-        if(IconsOnly) {
-            m_toolbar->setMaximumWidth(65);
-            m_toolbar->setToolButtonStyle(Qt::ToolButtonIconOnly);
-        }
-        else {
-            m_toolbar->setMinimumWidth(labelToolbar->width());
-            m_toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-        }
-        m_toolbar->addAction(overviewAction);
-        m_toolbar->addAction(sendCoinsAction);
-        m_toolbar->addAction(receiveCoinsAction);
-        m_toolbar->addAction(historyAction);
-        m_toolbar->addAction(createAssetAction);
-        m_toolbar->addAction(transferAssetAction);
-        m_toolbar->addAction(manageAssetAction);
-//        m_toolbar->addAction(messagingAction);
-//        m_toolbar->addAction(votingAction);
-        m_toolbar->addAction(restrictedAssetAction);
+        QToolBar *toolbar = new QToolBar();
+        toolbar->setStyle(style());
+        toolbar->setMinimumWidth(label->width());
+        toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
+        toolbar->setMovable(false);
+        toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        toolbar->addAction(overviewAction);
+        toolbar->addAction(sendCoinsAction);
+        toolbar->addAction(receiveCoinsAction);
+        toolbar->addAction(historyAction);
+        toolbar->addAction(createAssetAction);
+        toolbar->addAction(transferAssetAction);
+        toolbar->addAction(manageAssetAction);
+//        toolbar->addAction(messagingAction);
+//        toolbar->addAction(votingAction);
+        toolbar->addAction(restrictedAssetAction);
 
         QString openSansFontString = "font: normal 22pt \"Open Sans\";";
         QString normalString = "font: normal 22pt \"Arial\";";
@@ -647,22 +702,22 @@ void AIPGGUI::createToolBars()
                                ".QToolButton:hover {background: none; background-color: none; border: none; color: %3;} "
                                ".QToolButton:disabled {color: gray;}";
 
-        m_toolbar->setStyleSheet(tbStyleSheet.arg(platformStyle->ToolBarNotSelectedTextColor().name(),
+        toolbar->setStyleSheet(tbStyleSheet.arg(platformStyle->ToolBarNotSelectedTextColor().name(),
                                                 platformStyle->ToolBarSelectedTextColor().name(),
                                                 platformStyle->DarkOrangeColor().name(), stringToUse));
 
-        m_toolbar->setOrientation(Qt::Vertical);
-        m_toolbar->setIconSize(QSize(40, 40));
+        toolbar->setOrientation(Qt::Vertical);
+        toolbar->setIconSize(QSize(40, 40));
 
-        QLayout* lay = m_toolbar->layout();
+        QLayout* lay = toolbar->layout();
         for(int i = 0; i < lay->count(); ++i)
             lay->itemAt(i)->setAlignment(Qt::AlignLeft);
 
         overviewAction->setChecked(true);
 
         QVBoxLayout* aipgLabelLayout = new QVBoxLayout(toolbarWidget);
-        aipgLabelLayout->addWidget(labelToolbar);
-        aipgLabelLayout->addWidget(m_toolbar);
+        aipgLabelLayout->addWidget(label);
+        aipgLabelLayout->addWidget(toolbar);
         aipgLabelLayout->setDirection(QBoxLayout::TopToBottom);
         aipgLabelLayout->addStretch(1);
 
@@ -683,7 +738,7 @@ void AIPGGUI::createToolBars()
         QString widgetBackgroundSytleSheet = QString(".QWidget{background-color: %1}").arg(platformStyle->TopWidgetBackGroundColor().name());
 
         // Set the headers widget options
-        headerWidget->setContentsMargins(0,25,0,0);
+        headerWidget->setContentsMargins(0,0,0,50);
         headerWidget->setStyleSheet(widgetBackgroundSytleSheet);
         headerWidget->setGraphicsEffect(GUIUtil::getShadowEffect());
         headerWidget->setFixedHeight(75);
@@ -696,37 +751,37 @@ void AIPGGUI::createToolBars()
 
         // Set the pricing information
         QHBoxLayout* priceLayout = new QHBoxLayout(headerWidget);
-        priceLayout->setContentsMargins(0,0,0,25);
+        priceLayout->setContentsMargins(QMargins());
         priceLayout->setDirection(QBoxLayout::LeftToRight);
         priceLayout->setAlignment(Qt::AlignVCenter);
         labelCurrentMarket->setContentsMargins(50,0,0,0);
+        labelCurrentMarket->setFixedHeight(75);
         labelCurrentMarket->setAlignment(Qt::AlignVCenter);
         labelCurrentMarket->setStyleSheet(STRING_LABEL_COLOR);
         labelCurrentMarket->setFont(currentMarketFont);
-        labelCurrentMarket->setText(tr("AIPG Market Price"));
+        labelCurrentMarket->setText(tr("Aipg Market Price"));
 
         QString currentPriceStyleSheet = ".QLabel{color: %1;}";
         labelCurrentPrice->setContentsMargins(25,0,0,0);
+        labelCurrentPrice->setFixedHeight(75);
         labelCurrentPrice->setAlignment(Qt::AlignVCenter);
         labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg(COLOR_LABELS.name()));
         labelCurrentPrice->setFont(currentMarketFont);
 
-        comboAIPGUnit = new QComboBox(headerWidget);
-        QStringList list;
-        for(int unitNum = 0; unitNum < CurrencyUnits::count(); unitNum++) {
-            list.append(QString(CurrencyUnits::CurrencyOptions[unitNum].Header));
-        }
-        comboAIPGUnit->addItems(list);
-        comboAIPGUnit->setFixedHeight(26);
-        comboAIPGUnit->setContentsMargins(5,0,0,0);
-        comboAIPGUnit->setStyleSheet(STRING_LABEL_COLOR);
-        comboAIPGUnit->setFont(currentMarketFont);
+        QLabel* labelBtcNeox = new QLabel();
+        labelBtcNeox->setText("BTC / aipg");
+        labelBtcNeox->setContentsMargins(15,0,0,0);
+        labelBtcNeox->setFixedHeight(75);
+        labelBtcNeox->setAlignment(Qt::AlignVCenter);
+        labelBtcNeox->setStyleSheet(STRING_LABEL_COLOR);
+        labelBtcNeox->setFont(currentMarketFont);
 
-        labelVersionUpdate->setText("<a href=\"https://github.com/AIPGProject/AIPGcoin/releases\">New Wallet Version Available</a>");
+        labelVersionUpdate->setText("<a href=\"https://github.com/bitcoin/bitcoin/releases\">New Wallet Version Available</a>");
         labelVersionUpdate->setTextFormat(Qt::RichText);
         labelVersionUpdate->setTextInteractionFlags(Qt::TextBrowserInteraction);
         labelVersionUpdate->setOpenExternalLinks(true);
         labelVersionUpdate->setContentsMargins(0,0,15,0);
+        labelVersionUpdate->setFixedHeight(75);
         labelVersionUpdate->setAlignment(Qt::AlignVCenter);
         labelVersionUpdate->setStyleSheet(STRING_LABEL_COLOR);
         labelVersionUpdate->setFont(currentMarketFont);
@@ -735,13 +790,9 @@ void AIPGGUI::createToolBars()
         priceLayout->setGeometry(headerWidget->rect());
         priceLayout->addWidget(labelCurrentMarket, 0, Qt::AlignVCenter | Qt::AlignLeft);
         priceLayout->addWidget(labelCurrentPrice, 0,  Qt::AlignVCenter | Qt::AlignLeft);
-        priceLayout->addWidget(comboAIPGUnit, 0 , Qt::AlignBottom| Qt::AlignLeft);
+        priceLayout->addWidget(labelBtcNeox, 0 , Qt::AlignVCenter | Qt::AlignLeft);
         priceLayout->addStretch();
         priceLayout->addWidget(labelVersionUpdate, 0 , Qt::AlignVCenter | Qt::AlignRight);
-
-        // Hide the "AIPG Market Price" label and dropdown
-        labelCurrentMarket->hide();
-        comboAIPGUnit->hide();
 
         // Create the layout for widget to the right of the tool bar
         QVBoxLayout* mainFrameLayout = new QVBoxLayout(mainWalletWidget);
@@ -784,7 +835,7 @@ void AIPGGUI::createToolBars()
                     // Evaluate the current and next numbers and assign a color (green for positive, red for negative)
                     bool ok;
                     if (!list.isEmpty()) {
-                        double next = list.first().toDouble(&ok) * this->currentPriceDisplay->Scalar;
+                        double next = list.first().toDouble(&ok);
                         if (!ok) {
                             labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg(COLOR_LABELS.name()));
                             labelCurrentPrice->setText("");
@@ -793,15 +844,14 @@ void AIPGGUI::createToolBars()
                             if (!ok) {
                                 current = 0.00000000;
                             } else {
-                                if (next < current && !this->unitChanged)
+                                if (next < current)
                                     labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg("red"));
-                                else if (next > current && !this->unitChanged)
+                                else if (next > current)
                                     labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg("green"));
                                 else
                                     labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg(COLOR_LABELS.name()));
                             }
-                            this->unitChanged = false;
-                            labelCurrentPrice->setText(QString("%1").arg(QString().setNum(next, 'f', this->currentPriceDisplay->Decimals)));
+                            labelCurrentPrice->setText(QString("%1").arg(QString().setNum(next, 'f', 8)));
                             labelCurrentPrice->setToolTip(tr("Brought to you by binance.com"));
                         }
                     }
@@ -810,16 +860,13 @@ void AIPGGUI::createToolBars()
 
         connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
 
-
-        // Signal change of displayed price units, must get new conversion ratio
-        connect(comboAIPGUnit, SIGNAL(activated(int)), this, SLOT(currencySelectionChanged(int)));
         // Create the timer
         connect(pricingTimer, SIGNAL(timeout()), this, SLOT(getPriceInfo()));
-        // pricingTimer->start(10000);
-        // getPriceInfo();
+        pricingTimer->start(10000);
+        getPriceInfo();
         /** AIPG END */
 
-        // Get the latest AIPGcoin release and let the user know if they are using the latest version
+        // Get the latest Aipg release and let the user know if they are using the latest version
         // Network request code for the header widget
         QObject::connect(networkVersionManager, &QNetworkAccessManager::finished,
                          this, [=](QNetworkReply *reply) {
@@ -900,7 +947,7 @@ void AIPGGUI::createToolBars()
                                            "New Wallet Version Found",
                                            CClientUIInterface::MSG_VERSION | CClientUIInterface::BTN_NO);
                                    if (fRet) {
-                                       QString link = "https://github.com/AIPGProject/AIPGcoin/releases";
+                                       QString link = "https://github.com/bitcoin/bitcoin/releases";
                                        QDesktopServices::openUrl(QUrl(link));
                                    }
                                }
@@ -916,21 +963,7 @@ void AIPGGUI::createToolBars()
     }
 }
 
-void AIPGGUI::updateIconsOnlyToolbar(bool IconsOnly)
-{
-    if(IconsOnly) {
-        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/AIPGtext")));
-        m_toolbar->setMaximumWidth(65);
-        m_toolbar->setToolButtonStyle(Qt::ToolButtonIconOnly);
-    }
-    else {
-        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/aipgcointext")));
-        m_toolbar->setMinimumWidth(labelToolbar->width());
-        m_toolbar->setMaximumWidth(255);
-        m_toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);        
-    }
-}
-void AIPGGUI::setClientModel(ClientModel *_clientModel)
+void AipgGUI::setClientModel(ClientModel *_clientModel)
 {
     this->clientModel = _clientModel;
     if(_clientModel)
@@ -971,16 +1004,6 @@ void AIPGGUI::setClientModel(ClientModel *_clientModel)
 
             // initialize the disable state of the tray icon with the current value in the model.
             setTrayIconVisible(optionsModel->getHideTrayIcon());
-
-            // Signal to notify the settings have updated the display currency
-            connect(optionsModel,SIGNAL(displayCurrencyIndexChanged(int)), this, SLOT(onCurrencyChange(int)));
-
-            // Init the currency display from settings
-            this->onCurrencyChange(optionsModel->getDisplayCurrencyIndex());
-
-            // Signal to update toolbar on iconsonly checkbox clicked.
-            connect(optionsModel, SIGNAL(updateIconsOnlyToolbar(bool)), this, SLOT(updateIconsOnlyToolbar(bool)));
-
         }
     } else {
         // Disable possibility to show main window via action
@@ -1003,7 +1026,7 @@ void AIPGGUI::setClientModel(ClientModel *_clientModel)
 }
 
 #ifdef ENABLE_WALLET
-bool AIPGGUI::addWallet(const QString& name, WalletModel *walletModel)
+bool AipgGUI::addWallet(const QString& name, WalletModel *walletModel)
 {
     if(!walletFrame)
         return false;
@@ -1011,14 +1034,14 @@ bool AIPGGUI::addWallet(const QString& name, WalletModel *walletModel)
     return walletFrame->addWallet(name, walletModel);
 }
 
-bool AIPGGUI::setCurrentWallet(const QString& name)
+bool AipgGUI::setCurrentWallet(const QString& name)
 {
     if(!walletFrame)
         return false;
     return walletFrame->setCurrentWallet(name);
 }
 
-void AIPGGUI::removeAllWallets()
+void AipgGUI::removeAllWallets()
 {
     if(!walletFrame)
         return;
@@ -1027,7 +1050,7 @@ void AIPGGUI::removeAllWallets()
 }
 #endif // ENABLE_WALLET
 
-void AIPGGUI::setWalletActionsEnabled(bool enabled)
+void AipgGUI::setWalletActionsEnabled(bool enabled)
 {
     overviewAction->setEnabled(enabled);
     sendCoinsAction->setEnabled(enabled);
@@ -1035,10 +1058,11 @@ void AIPGGUI::setWalletActionsEnabled(bool enabled)
     receiveCoinsAction->setEnabled(enabled);
     receiveCoinsMenuAction->setEnabled(enabled);
     historyAction->setEnabled(enabled);
-    encryptWalletAction->setEnabled(enabled);
     backupWalletAction->setEnabled(enabled);
     changePassphraseAction->setEnabled(enabled);
-    getMyWordsAction->setEnabled(enabled);
+    lockWalletAction->setEnabled(enabled);
+    unlockWalletAction->setEnabled(enabled);
+    getMnemonicAction->setEnabled(enabled);
     signMessageAction->setEnabled(enabled);
     verifyMessageAction->setEnabled(enabled);
     usedSendingAddressesAction->setEnabled(enabled);
@@ -1055,7 +1079,7 @@ void AIPGGUI::setWalletActionsEnabled(bool enabled)
     /** AIPG END */
 }
 
-void AIPGGUI::createTrayIcon(const NetworkStyle *networkStyle)
+void AipgGUI::createTrayIcon(const NetworkStyle *networkStyle)
 {
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
@@ -1068,7 +1092,7 @@ void AIPGGUI::createTrayIcon(const NetworkStyle *networkStyle)
     notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
 }
 
-void AIPGGUI::createTrayIconMenu()
+void AipgGUI::createTrayIconMenu()
 {
 #ifndef Q_OS_MAC
     // return if trayIcon is unset (only on non-Mac OSes)
@@ -1105,7 +1129,7 @@ void AIPGGUI::createTrayIconMenu()
 }
 
 #ifndef Q_OS_MAC
-void AIPGGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void AipgGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -1115,7 +1139,7 @@ void AIPGGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
-void AIPGGUI::optionsClicked()
+void AipgGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -1125,7 +1149,7 @@ void AIPGGUI::optionsClicked()
     dlg.exec();
 }
 
-void AIPGGUI::aboutClicked()
+void AipgGUI::aboutClicked()
 {
     if(!clientModel)
         return;
@@ -1134,7 +1158,7 @@ void AIPGGUI::aboutClicked()
     dlg.exec();
 }
 
-void AIPGGUI::showDebugWindow()
+void AipgGUI::showDebugWindow()
 {
     rpcConsole->showNormal();
     rpcConsole->show();
@@ -1142,25 +1166,43 @@ void AIPGGUI::showDebugWindow()
     rpcConsole->activateWindow();
 }
 
-void AIPGGUI::showDebugWindowActivateConsole()
+void AipgGUI::showDebugWindowActivateInformation()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_INFO);
+    showDebugWindow();
+}
+
+void AipgGUI::showDebugWindowActivateConsole()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_CONSOLE);
     showDebugWindow();
 }
 
-void AIPGGUI::showWalletRepair()
+void AipgGUI::showDebugWindowPeerList()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_PEERS);
+    showDebugWindow();
+}
+
+void AipgGUI::showDebugWindowNetworkTraffic()
+{
+    rpcConsole->setTabFocus(RPCConsole::TAB_GRAPH);
+    showDebugWindow();
+}
+
+void AipgGUI::showWalletRepair()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_REPAIR);
     showDebugWindow();
 }
 
-void AIPGGUI::showHelpMessageClicked()
+void AipgGUI::showHelpMessageClicked()
 {
     helpMessageDialog->show();
 }
 
 #ifdef ENABLE_WALLET
-void AIPGGUI::openClicked()
+void AipgGUI::openClicked()
 {
     OpenURIDialog dlg(this);
     if(dlg.exec())
@@ -1169,60 +1211,60 @@ void AIPGGUI::openClicked()
     }
 }
 
-void AIPGGUI::gotoOverviewPage()
+void AipgGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     if (walletFrame) walletFrame->gotoOverviewPage();
 }
 
-void AIPGGUI::gotoHistoryPage()
+void AipgGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     if (walletFrame) walletFrame->gotoHistoryPage();
 }
 
-void AIPGGUI::gotoReceiveCoinsPage()
+void AipgGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoReceiveCoinsPage();
 }
 
-void AIPGGUI::gotoSendCoinsPage(QString addr)
+void AipgGUI::gotoSendCoinsPage(QString addr)
 {
     sendCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
 }
 
-void AIPGGUI::gotoSignMessageTab(QString addr)
+void AipgGUI::gotoSignMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoSignMessageTab(addr);
 }
 
-void AIPGGUI::gotoVerifyMessageTab(QString addr)
+void AipgGUI::gotoVerifyMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoVerifyMessageTab(addr);
 }
 
 /** AIPG START */
-void AIPGGUI::gotoAssetsPage()
+void AipgGUI::gotoAssetsPage()
 {
     transferAssetAction->setChecked(true);
     if (walletFrame) walletFrame->gotoAssetsPage();
 };
 
-void AIPGGUI::gotoCreateAssetsPage()
+void AipgGUI::gotoCreateAssetsPage()
 {
     createAssetAction->setChecked(true);
     if (walletFrame) walletFrame->gotoCreateAssetsPage();
 };
 
-void AIPGGUI::gotoManageAssetsPage()
+void AipgGUI::gotoManageAssetsPage()
 {
     manageAssetAction->setChecked(true);
     if (walletFrame) walletFrame->gotoManageAssetsPage();
 };
 
-void AIPGGUI::gotoRestrictedAssetsPage()
+void AipgGUI::gotoRestrictedAssetsPage()
 {
     restrictedAssetAction->setChecked(true);
     if (walletFrame) walletFrame->gotoRestrictedAssetsPage();
@@ -1230,7 +1272,7 @@ void AIPGGUI::gotoRestrictedAssetsPage()
 /** AIPG END */
 #endif // ENABLE_WALLET
 
-void AIPGGUI::updateNetworkState()
+void AipgGUI::updateNetworkState()
 {
     int count = clientModel->getNumConnections();
     QString icon;
@@ -1246,7 +1288,7 @@ void AIPGGUI::updateNetworkState()
     QString tooltip;
 
     if (clientModel->getNetworkActive()) {
-        tooltip = tr("%n active connection(s) to AIPG network", "", count) + QString(".<br>") + tr("Click to disable network activity.");
+        tooltip = tr("%n active connection(s) to aipg network", "", count) + QString(".<br>") + tr("Click to disable network activity.");
     } else {
         tooltip = tr("Network activity disabled.") + QString("<br>") + tr("Click to enable network activity again.");
         icon = ":/icons/network_disabled";
@@ -1259,17 +1301,17 @@ void AIPGGUI::updateNetworkState()
     connectionsControl->setPixmap(platformStyle->SingleColorIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
 }
 
-void AIPGGUI::setNumConnections(int count)
+void AipgGUI::setNumConnections(int count)
 {
     updateNetworkState();
 }
 
-void AIPGGUI::setNetworkActive(bool networkActive)
+void AipgGUI::setNetworkActive(bool networkActive)
 {
     updateNetworkState();
 }
 
-void AIPGGUI::updateHeadersSyncProgressLabel()
+void AipgGUI::updateHeadersSyncProgressLabel()
 {
     int64_t headersTipTime = clientModel->getHeaderTipTime();
     int headersTipHeight = clientModel->getHeaderTipHeight();
@@ -1278,7 +1320,7 @@ void AIPGGUI::updateHeadersSyncProgressLabel()
         progressBarLabel->setText(tr("Syncing Headers (%1%)...").arg(QString::number(100.0 / (headersTipHeight+estHeadersLeft)*headersTipHeight, 'f', 1)));
 }
 
-void AIPGGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerificationProgress, bool header)
+void AipgGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerificationProgress, bool header)
 {
     if (modalOverlay)
     {
@@ -1389,9 +1431,9 @@ void AIPGGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerifi
     progressBar->setToolTip(tooltip);
 }
 
-void AIPGGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
+void AipgGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("AIPG"); // default title
+    QString strTitle = tr("Aipg"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -1417,7 +1459,7 @@ void AIPGGUI::message(const QString &title, const QString &message, unsigned int
             break;
         }
     }
-    // Append title to "AIPG - "
+    // Append title to "Aipg - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 
@@ -1448,7 +1490,7 @@ void AIPGGUI::message(const QString &title, const QString &message, unsigned int
         notificator->notify((Notificator::Class)nNotifyIcon, strTitle, message);
 }
 
-void AIPGGUI::changeEvent(QEvent *e)
+void AipgGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -1467,7 +1509,7 @@ void AIPGGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void AIPGGUI::closeEvent(QCloseEvent *event)
+void AipgGUI::closeEvent(QCloseEvent *event)
 {
 #ifndef Q_OS_MAC // Ignored on Mac
     if(clientModel && clientModel->getOptionsModel())
@@ -1490,7 +1532,7 @@ void AIPGGUI::closeEvent(QCloseEvent *event)
 #endif
 }
 
-void AIPGGUI::showEvent(QShowEvent *event)
+void AipgGUI::showEvent(QShowEvent *event)
 {
     // enable the debug window when the main window shows up
     openRPCConsoleAction->setEnabled(true);
@@ -1499,14 +1541,14 @@ void AIPGGUI::showEvent(QShowEvent *event)
 }
 
 #ifdef ENABLE_WALLET
-void AIPGGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& assetName)
+void AipgGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& assetName)
 {
     // On new transaction, make an info balloon
     QString msg = tr("Date: %1\n").arg(date);
-    if (assetName == "AIPG")
-        msg += tr("Amount: %1\n").arg(AIPGUnits::formatWithUnit(unit, amount, true));
+    if (assetName == "aipg")
+        msg += tr("Amount: %1\n").arg(AipgUnits::formatWithUnit(unit, amount, true));
     else
-        msg += tr("Amount: %1\n").arg(AIPGUnits::formatWithCustomName(assetName, amount, MAX_ASSET_UNITS, true));
+        msg += tr("Amount: %1\n").arg(AipgUnits::formatWithCustomName(assetName, amount, MAX_ASSET_UNITS, true));
 
     msg += tr("Type: %1\n").arg(type);
 
@@ -1518,14 +1560,14 @@ void AIPGGUI::incomingTransaction(const QString& date, int unit, const CAmount& 
              msg, CClientUIInterface::MSG_INFORMATION);
 }
 
-void AIPGGUI::checkAssets()
+void AipgGUI::checkAssets()
 {
-    // Check that status of RIP2 and activate the assets icon if it is active
+    // Check that status of HIP2 and activate the assets icon if it is active
     if(AreAssetsDeployed()) {
         transferAssetAction->setDisabled(false);
-        transferAssetAction->setToolTip(tr("Transfer assets to AIPG addresses"));
+        transferAssetAction->setToolTip(tr("Transfer assets to aipg addresses"));
         createAssetAction->setDisabled(false);
-        createAssetAction->setToolTip(tr("Create new assets"));
+        createAssetAction->setToolTip(tr("Create new main/sub/unique assets"));
         manageAssetAction->setDisabled(false);
         }
     else {
@@ -1547,14 +1589,14 @@ void AIPGGUI::checkAssets()
 }
 #endif // ENABLE_WALLET
 
-void AIPGGUI::dragEnterEvent(QDragEnterEvent *event)
+void AipgGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void AIPGGUI::dropEvent(QDropEvent *event)
+void AipgGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -1566,7 +1608,7 @@ void AIPGGUI::dropEvent(QDropEvent *event)
     event->acceptProposedAction();
 }
 
-bool AIPGGUI::eventFilter(QObject *object, QEvent *event)
+bool AipgGUI::eventFilter(QObject *object, QEvent *event)
 {
     // Catch status tip events
     if (event->type() == QEvent::StatusTip)
@@ -1579,7 +1621,7 @@ bool AIPGGUI::eventFilter(QObject *object, QEvent *event)
 }
 
 #ifdef ENABLE_WALLET
-bool AIPGGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
+bool AipgGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
 {
     // URI has to be valid
     if (walletFrame && walletFrame->handlePaymentRequest(recipient))
@@ -1591,7 +1633,7 @@ bool AIPGGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
     return false;
 }
 
-void AIPGGUI::setHDStatus(int hdEnabled)
+void AipgGUI::setHDStatus(int hdEnabled)
 {
     QString icon = "";
     if (hdEnabled == HD_DISABLED) {
@@ -1609,37 +1651,39 @@ void AIPGGUI::setHDStatus(int hdEnabled)
     labelWalletHDStatusIcon->setEnabled(hdEnabled);
 }
 
-void AIPGGUI::setEncryptionStatus(int status)
+void AipgGUI::setEncryptionStatus(int status)
 {
     switch(status)
     {
     case WalletModel::Unencrypted:
         labelWalletEncryptionIcon->hide();
-        encryptWalletAction->setChecked(false);
         changePassphraseAction->setEnabled(false);
-        encryptWalletAction->setEnabled(true);
         break;
     case WalletModel::Unlocked:
         labelWalletEncryptionIcon->show();
         labelWalletEncryptionIcon->setPixmap(platformStyle->SingleColorIcon(":/icons/lock_open").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
         labelWalletEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
-        encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
-        encryptWalletAction->setEnabled(false); // TODO: decrypt currently not supported
+        lockWalletAction->setEnabled(true);
+        lockWalletAction->setVisible(true);
+        unlockWalletAction->setEnabled(false);
+        unlockWalletAction->setVisible(false);
         break;
     case WalletModel::Locked:
         labelWalletEncryptionIcon->show();
         labelWalletEncryptionIcon->setPixmap(platformStyle->SingleColorIcon(":/icons/lock_closed").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
         labelWalletEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>locked</b>"));
-        encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
-        encryptWalletAction->setEnabled(false); // TODO: decrypt currently not supported
+        lockWalletAction->setEnabled(false);
+        lockWalletAction->setVisible(false);
+        unlockWalletAction->setEnabled(true);
+        unlockWalletAction->setVisible(true);
         break;
     }
 }
 #endif // ENABLE_WALLET
 
-void AIPGGUI::showNormalIfMinimized(bool fToggleHidden)
+void AipgGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     if(!clientModel)
         return;
@@ -1664,12 +1708,12 @@ void AIPGGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void AIPGGUI::toggleHidden()
+void AipgGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void AIPGGUI::detectShutdown()
+void AipgGUI::detectShutdown()
 {
     if (ShutdownRequested())
     {
@@ -1679,7 +1723,7 @@ void AIPGGUI::detectShutdown()
     }
 }
 
-void AIPGGUI::showProgress(const QString &title, int nProgress)
+void AipgGUI::showProgress(const QString &title, int nProgress)
 {
     if (nProgress == 0)
     {
@@ -1702,7 +1746,7 @@ void AIPGGUI::showProgress(const QString &title, int nProgress)
         progressDialog->setValue(nProgress);
 }
 
-void AIPGGUI::setTrayIconVisible(bool fHideTrayIcon)
+void AipgGUI::setTrayIconVisible(bool fHideTrayIcon)
 {
     if (trayIcon)
     {
@@ -1710,13 +1754,13 @@ void AIPGGUI::setTrayIconVisible(bool fHideTrayIcon)
     }
 }
 
-void AIPGGUI::showModalOverlay()
+void AipgGUI::showModalOverlay()
 {
     if (modalOverlay && (progressBar->isVisible() || modalOverlay->isLayerVisible()))
         modalOverlay->toggleVisibility();
 }
 
-static bool ThreadSafeMessageBox(AIPGGUI *gui, const std::string& message, const std::string& caption, unsigned int style)
+static bool ThreadSafeMessageBox(AipgGUI *gui, const std::string& message, const std::string& caption, unsigned int style)
 {
     bool modal = (style & CClientUIInterface::MODAL);
     // The SECURE flag has no effect in the Qt GUI.
@@ -1733,7 +1777,7 @@ static bool ThreadSafeMessageBox(AIPGGUI *gui, const std::string& message, const
     return ret;
 }
 
-static bool ThreadSafeMnemonic(AIPGGUI *gui, unsigned int style)
+static bool ThreadSafeMnemonic(AipgGUI *gui, unsigned int style)
 {
     bool modal = (style & CClientUIInterface::MODAL);
     // The SECURE flag has no effect in the Qt GUI.
@@ -1746,7 +1790,7 @@ static bool ThreadSafeMnemonic(AIPGGUI *gui, unsigned int style)
     return ret;
 }
 
-void AIPGGUI::subscribeToCoreSignals()
+void AipgGUI::subscribeToCoreSignals()
 {
     // Connect signals to client
     uiInterface.ThreadSafeMessageBox.connect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
@@ -1754,7 +1798,7 @@ void AIPGGUI::subscribeToCoreSignals()
     uiInterface.ShowMnemonic.connect(boost::bind(ThreadSafeMnemonic, this, _1));
 }
 
-void AIPGGUI::unsubscribeFromCoreSignals()
+void AipgGUI::unsubscribeFromCoreSignals()
 {
     // Disconnect signals from client
     uiInterface.ThreadSafeMessageBox.disconnect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
@@ -1762,7 +1806,7 @@ void AIPGGUI::unsubscribeFromCoreSignals()
     uiInterface.ShowMnemonic.disconnect(boost::bind(ThreadSafeMnemonic, this, _1));
 }
 
-void AIPGGUI::toggleNetworkActive()
+void AipgGUI::toggleNetworkActive()
 {
     if (clientModel) {
         clientModel->setNetworkActive(!clientModel->getNetworkActive());
@@ -1770,7 +1814,7 @@ void AIPGGUI::toggleNetworkActive()
 }
 
 /** Get restart command-line parameters and request restart */
-void AIPGGUI::handleRestart(QStringList args)
+void AipgGUI::handleRestart(QStringList args)
 {
     if (!ShutdownRequested())
         Q_EMIT requestedRestart(args);
@@ -1782,16 +1826,16 @@ UnitDisplayStatusBarControl::UnitDisplayStatusBarControl(const PlatformStyle *pl
 {
     createContextMenu(platformStyle);
     setToolTip(tr("Unit to show amounts in. Click to select another unit."));
-    QList<AIPGUnits::Unit> units = AIPGUnits::availableUnits();
+    QList<AipgUnits::Unit> units = AipgUnits::availableUnits();
     int max_width = 0;
     const QFontMetrics fm(font());
-    for (const AIPGUnits::Unit unit : units)
+    for (const AipgUnits::Unit unit : units)
     {
-    #ifndef QTversionPreFiveEleven
-        max_width = qMax(max_width, fm.horizontalAdvance(AIPGUnits::name(unit)));
-    #else
-        max_width = qMax(max_width, fm.width(AIPGUnits::name(unit)));
-    #endif
+    	#ifndef QTversionPreFiveEleven
+        	max_width = qMax(max_width, fm.horizontalAdvance(AipgUnits::name(unit)));
+        #else
+        	max_width = qMax(max_width, fm.width(AipgUnits::name(unit)));
+        #endif
     }
     setMinimumSize(max_width, 0);
     setAlignment(Qt::AlignRight | Qt::AlignVCenter);
@@ -1808,9 +1852,9 @@ void UnitDisplayStatusBarControl::mousePressEvent(QMouseEvent *event)
 void UnitDisplayStatusBarControl::createContextMenu(const PlatformStyle *platformStyle)
 {
     menu = new QMenu(this);
-    for (AIPGUnits::Unit u : AIPGUnits::availableUnits())
+    for (AipgUnits::Unit u : AipgUnits::availableUnits())
     {
-        QAction *menuAction = new QAction(QString(AIPGUnits::name(u)), this);
+        QAction *menuAction = new QAction(QString(AipgUnits::name(u)), this);
         menuAction->setData(QVariant(u));
         menu->addAction(menuAction);
     }
@@ -1836,7 +1880,7 @@ void UnitDisplayStatusBarControl::setOptionsModel(OptionsModel *_optionsModel)
 /** When Display Units are changed on OptionsModel it will refresh the display text of the control on the status bar */
 void UnitDisplayStatusBarControl::updateDisplayUnit(int newUnits)
 {
-    setText(AIPGUnits::name(newUnits));
+    setText(AipgUnits::name(newUnits));
 }
 
 /** Shows context menu with Display Unit options by the mouse coordinates */
@@ -1855,48 +1899,22 @@ void UnitDisplayStatusBarControl::onMenuSelection(QAction* action)
     }
 }
 
-/** Triggered only when the user changes the combobox on the main GUI */
-void AIPGGUI::currencySelectionChanged(int unitIndex)
+void AipgGUI::getPriceInfo()
 {
-    if(clientModel && clientModel->getOptionsModel())
-    {
-        clientModel->getOptionsModel()->setDisplayCurrencyIndex(unitIndex);
-    }
-}
-
-/** Triggered when the options model's display currency is updated */
-void AIPGGUI::onCurrencyChange(int newIndex)
-{
-    qDebug() << "AIPGGUI::onPriceUnitChange: " + QString::number(newIndex);
-
-    if(newIndex < 0 || newIndex >= CurrencyUnits::count()){
-        return;
-    }
-
-    this->unitChanged = true;
-    this->currentPriceDisplay = &CurrencyUnits::CurrencyOptions[newIndex];
-    //Update the main GUI box in case this was changed from the settings screen
-    //This will fire the event again, but the options model prevents the infinite loop
-    this->comboAIPGUnit->setCurrentIndex(newIndex);
-    this->getPriceInfo();
-}
-
-void AIPGGUI::getPriceInfo()
-{
-    request->setUrl(QUrl(QString("https://api.binance.com/api/v1/ticker/price?symbol=%1").arg(this->currentPriceDisplay->Ticker)));
+    request->setUrl(QUrl("https://api.binance.com/api/v1/ticker/price?symbol=aipgBTC"));
     networkManager->get(*request);
 }
 
 #ifdef ENABLE_WALLET
-void AIPGGUI::mnemonic()
+void AipgGUI::mnemonic()
 {
         MnemonicDialog dlg(this);
         dlg.exec();
 }
 #endif
 
-void AIPGGUI::getLatestVersion()
+void AipgGUI::getLatestVersion()
 {
-    versionRequest->setUrl(QUrl("https://api.github.com/repos/AIPGProject/AIPGcoin/releases"));
+    versionRequest->setUrl(QUrl("https://api.github.com/repos/JustAResearcher/Aipg/releases"));
     networkVersionManager->get(*versionRequest);
 }

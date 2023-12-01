@@ -1,4 +1,6 @@
-<TS language="ar" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ar">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -62,11 +64,11 @@
         <translation>استقبال العناوين</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>هذه هي عناوين Bitcion التابعة لك من أجل إرسال الدفعات. تحقق دائما من المبلغ و عنوان المرسل المستقبل قبل إرسال العملات</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>هذه هي عناوين Bitcion التابعة لك من أجل إستقبال الدفعات. ينصح استخدام عنوان جديد من أجل كل صفقة</translation>
     </message>
     <message>
@@ -168,8 +170,8 @@
         <translation>تأكيد تشفير المحفظة</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPGS&lt;/b&gt;!</source>
-        <translation>تحذير: إذا قمت بتشفير محفظتك وفقدت كلمة المرور الخاص بك, ستفقد كل عملات AIPGS الخاصة بك.</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPG&lt;/b&gt;!</source>
+        <translation>تحذير: إذا قمت بتشفير محفظتك وفقدت كلمة المرور الخاص بك, ستفقد كل عملات Aipg الخاصة بك.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -217,42 +219,6 @@
     </message>
 </context>
 <context>
-    <name>AssetControlDialog</name>
-    <message>
-        <source>Quantity:</source>
-        <translation>الكمية :</translation>
-    </message>
-    <message>
-        <source>Bytes:</source>
-        <translation>بايت</translation>
-    </message>
-    <message>
-        <source>Amount:</source>
-        <translation>المبلغ:</translation>
-    </message>
-    <message>
-        <source>Fee:</source>
-        <translation>رسوم :</translation>
-    </message>
-    <message>
-        <source>After Fee:</source>
-        <translation>بعد الرسوم :</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>المبلغ:</translation>
-    </message>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
@@ -261,6 +227,305 @@
     <message>
         <source>Banned Until</source>
         <translation>محظور حتى</translation>
+    </message>
+</context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>التوقيع و الرسائل</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>مزامنة مع الشبكة ...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;نظرة عامة</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>جهاز</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>إظهار نظرة عامة على المحفظة</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;المعاملات</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>تصفح سجل المعاملات</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>خروج</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>الخروج من التطبيق</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>حوالي %1</translation>
+    </message>
+    <message>
+        <source>Show information about %1</source>
+        <translation>أظهر المعلومات حولة %1</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>عن &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>اظهر المعلومات</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;خيارات ...</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>تغيير خيارات الإعداد لأساس ل%1</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;تشفير المحفظة</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;نسخ احتياط للمحفظة</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;تغيير كلمة المرور</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>ارسال العناوين.</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>استقبال العناوين</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>افتح &amp;URI...</translation>
+    </message>
+    <message>
+        <source>Click to disable network activity.</source>
+        <translation>اضغط لإلغاء تفعيل الشبكه</translation>
+    </message>
+    <message>
+        <source>Network activity disabled.</source>
+        <translation>تم إلغاء تفعيل الشبكه</translation>
+    </message>
+    <message>
+        <source>Click to enable network activity again.</source>
+        <translation>اضغط لتفعيل الشبكه مره أخرى</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>إعادة الفهرسة الكتل على القرص ...</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>ارسل عملات الى عنوان بيتكوين</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>احفظ نسخة احتياطية للمحفظة في مكان آخر</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>تغيير كلمة المرور المستخدمة لتشفير المحفظة</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;نافذة المعالجة</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>إفتح وحدة التصحيح و التشخيص</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;التحقق من الرسالة...</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>بت كوين</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>محفظة</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;ارسل</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;استقبل</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;عرض / اخفاء</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>عرض او اخفاء النافذة الرئيسية</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>تشفير المفتاح الخاص بمحفظتك</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>وقَع الرسائل بواسطة ال: Aipg الخاص بك لإثبات امتلاكك لهم</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Aipg محدَدة</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;ملف</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;الاعدادات</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;مساعدة</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>شريط أدوات علامات التبويب</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>أطلب دفعات (يولد كودات الرمز المربع وبيت كوين: العناوين المعطاة)</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>عرض قائمة عناوين الإرسال المستخدمة والملصقات</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>عرض قائمة عناوين الإستقبال المستخدمة والملصقات</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>فتح URI : Aipg أو طلب دفع</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>&amp;خيارات سطر الأوامر</translation>
+    </message>
+    <message>
+        <source>Indexing blocks on disk...</source>
+        <translation>ترتيب الفهرسة الكتل على القرص...</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>معالجة الكتل على القرص...</translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>خلف %1</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>تم توليد الكتلة المستقبلة الأخيرة منذ %1.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>المعاملات بعد ذلك لن تكون مريئة بعد.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>خطأ</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>تحذير</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>معلومات</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>محدث</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible Aipg command-line options</source>
+        <translation>بين اشارة المساعدة %1 للحصول على قائمة من خيارات اوامر البت كوين المحتملة </translation>
+    </message>
+    <message>
+        <source>%1 client</source>
+        <translation>الزبون %1</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>اللحاق بالركب ...</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>التاريخ %1
+
+
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>الكمية %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>نوع %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>علامه: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>عنوان %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>المعاملات  المرسلة</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>المعاملات الواردة</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>المحفظة &lt;b&gt;مشفرة&lt;/b&gt; و &lt;b&gt;مفتوحة&lt;/b&gt; حاليا</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>المحفظة &lt;b&gt;مشفرة&lt;/b&gt; و &lt;b&gt;مقفلة&lt;/b&gt; حاليا</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. Aipg can no longer continue safely and will quit.</source>
+        <translation>خطأ فادح حدث . لا يمكن اتمام بيتكوين بامان سيتم الخروج</translation>
     </message>
 </context>
 <context>
@@ -387,9 +652,6 @@
     </message>
 </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -428,7 +690,7 @@
         <translation>تعديل عنوان الارسال</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid AIPG address.</source>
+        <source>The entered address "%1" is not a valid Aipg address.</source>
         <translation>العنوان المدخل "%1" ليس عنوان بيت كوين صحيح.</translation>
     </message>
     <message>
@@ -467,12 +729,6 @@
         <translation>لا يمكن انشاء دليل بيانات هنا .</translation>
     </message>
 </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
@@ -556,18 +812,6 @@
     </message>
     </context>
 <context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
-<context>
     <name>ModalOverlay</name>
     <message>
         <source>Form</source>
@@ -581,9 +825,6 @@
         <source>Hide</source>
         <translation>إخفاء</translation>
     </message>
-    </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
     </context>
 <context>
     <name>OpenURIDialog</name>
@@ -617,6 +858,14 @@
     <message>
         <source>MB</source>
         <translation>م ب</translation>
+    </message>
+    <message>
+        <source>Accept connections from outside</source>
+        <translation>إقبل التواصل من الخارج</translation>
+    </message>
+    <message>
+        <source>Third party transaction URLs</source>
+        <translation>عنوان النطاق للطرف الثالث</translation>
     </message>
     <message>
         <source>&amp;Reset Options</source>
@@ -653,6 +902,10 @@
     <message>
         <source>&amp;Window</source>
         <translation>نافذه</translation>
+    </message>
+    <message>
+        <source>Hide tray icon</source>
+        <translation>اخفاء لوحة الايقون</translation>
     </message>
     <message>
         <source>&amp;Display</source>
@@ -844,6 +1097,10 @@
         <translation>&amp;حركة مرور الشبكة</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;مسح</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>المجاميع</translation>
     </message>
@@ -872,6 +1129,26 @@
         <translation>1 &amp; سنة</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>استخدم اسهم الاعلى و الاسفل للتنقل بين السجلات و &lt;b&gt;Ctrl-L&lt;/b&gt;  لمسح الشاشة</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 بايت</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 كيلو بايت</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 ميقا بايت</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 قيقا بايت</translation>
+    </message>
+    <message>
         <source>never</source>
         <translation>ابدا</translation>
     </message>
@@ -894,293 +1171,6 @@
     <message>
         <source>Unknown</source>
         <translation>غير معرف</translation>
-    </message>
-</context>
-<context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>التوقيع و الرسائل</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>مزامنة مع الشبكة ...</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;نظرة عامة</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>جهاز</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>إظهار نظرة عامة على المحفظة</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;المعاملات</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>تصفح سجل المعاملات</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>خروج</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>الخروج من التطبيق</translation>
-    </message>
-    <message>
-        <source>&amp;About %1</source>
-        <translation>حوالي %1</translation>
-    </message>
-    <message>
-        <source>Show information about %1</source>
-        <translation>أظهر المعلومات حولة %1</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>عن &amp;Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>اظهر المعلومات</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;خيارات ...</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for %1</source>
-        <translation>تغيير خيارات الإعداد لأساس ل%1</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;تشفير المحفظة</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;نسخ احتياط للمحفظة</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>&amp;تغيير كلمة المرور</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>ارسال العناوين.</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>استقبال العناوين</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>افتح &amp;URI...</translation>
-    </message>
-    <message>
-        <source>Click to disable network activity.</source>
-        <translation>اضغط لإلغاء تفعيل الشبكه</translation>
-    </message>
-    <message>
-        <source>Network activity disabled.</source>
-        <translation>تم إلغاء تفعيل الشبكه</translation>
-    </message>
-    <message>
-        <source>Click to enable network activity again.</source>
-        <translation>اضغط لتفعيل الشبكه مره أخرى</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>إعادة الفهرسة الكتل على القرص ...</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>ارسل عملات الى عنوان بيتكوين</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>احفظ نسخة احتياطية للمحفظة في مكان آخر</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>تغيير كلمة المرور المستخدمة لتشفير المحفظة</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>إفتح وحدة التصحيح و التشخيص</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;التحقق من الرسالة...</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>بت كوين</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>محفظة</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;ارسل</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;استقبل</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;عرض / اخفاء</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>عرض او اخفاء النافذة الرئيسية</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>تشفير المفتاح الخاص بمحفظتك</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>وقَع الرسائل بواسطة ال: AIPG الخاص بك لإثبات امتلاكك لهم</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل AIPG محدَدة</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;ملف</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;مساعدة</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>أطلب دفعات (يولد كودات الرمز المربع وبيت كوين: العناوين المعطاة)</translation>
-    </message>
-    <message>
-        <source>Show the list of used sending addresses and labels</source>
-        <translation>عرض قائمة عناوين الإرسال المستخدمة والملصقات</translation>
-    </message>
-    <message>
-        <source>Show the list of used receiving addresses and labels</source>
-        <translation>عرض قائمة عناوين الإستقبال المستخدمة والملصقات</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>فتح URI : AIPG أو طلب دفع</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>&amp;خيارات سطر الأوامر</translation>
-    </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>ترتيب الفهرسة الكتل على القرص...</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>معالجة الكتل على القرص...</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>خلف %1</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>تم توليد الكتلة المستقبلة الأخيرة منذ %1.</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>المعاملات بعد ذلك لن تكون مريئة بعد.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>خطأ</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>تحذير</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>معلومات</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>محدث</translation>
-    </message>
-    <message>
-        <source>Show the %1 help message to get a list with possible AIPG command-line options</source>
-        <translation>بين اشارة المساعدة %1 للحصول على قائمة من خيارات اوامر البت كوين المحتملة </translation>
-    </message>
-    <message>
-        <source>%1 client</source>
-        <translation>الزبون %1</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>اللحاق بالركب ...</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>التاريخ %1
-
-
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>الكمية %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>نوع %1
-</translation>
-    </message>
-    <message>
-        <source>Label: %1
-</source>
-        <translation>علامه: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>عنوان %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>المعاملات  المرسلة</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>المعاملات الواردة</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>المحفظة &lt;b&gt;مشفرة&lt;/b&gt; و &lt;b&gt;مفتوحة&lt;/b&gt; حاليا</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>المحفظة &lt;b&gt;مشفرة&lt;/b&gt; و &lt;b&gt;مقفلة&lt;/b&gt; حاليا</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. AIPG can no longer continue safely and will quit.</source>
-        <translation>خطأ فادح حدث . لا يمكن اتمام بيتكوين بامان سيتم الخروج</translation>
     </message>
 </context>
 <context>
@@ -1297,15 +1287,6 @@
     </message>
     </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
@@ -1350,6 +1331,14 @@
     <message>
         <source>Hide</source>
         <translation>إخفاء</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>طبيعي</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>سريع</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
@@ -1443,6 +1432,10 @@
         <translation>&amp;القيمة</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>ادفع &amp;الى :</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;وصف :</translation>
     </message>
@@ -1455,7 +1448,7 @@
         <translation>هذا دفع اعتيادي</translation>
     </message>
     <message>
-        <source>The AIPG address to send the payment to</source>
+        <source>The Aipg address to send the payment to</source>
         <translation>عنوان البت كوين المرسل اليه الدفع</translation>
     </message>
     <message>
@@ -1477,6 +1470,10 @@
     <message>
         <source>Message:</source>
         <translation>الرسائل</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>ادفع &amp;الى :</translation>
     </message>
     <message>
         <source>Enter a label for this address to add it to your address book</source>
@@ -1528,7 +1525,7 @@
         <translation>التوقيع</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
+        <source>Sign the message to prove you own this Aipg address</source>
         <translation>وقع الرسالة لتثبت انك تمتلك عنوان البت كوين هذا</translation>
     </message>
     <message>
@@ -1790,7 +1787,7 @@
         <source>Amount removed from or added to balance.</source>
         <translation>المبلغ الذي أزيل أو أضيف الى الرصيد</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>TransactionView</name>
     <message>
@@ -1930,7 +1927,7 @@
         <source>Send Coins</source>
         <translation>إرسال Coins</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -1965,7 +1962,7 @@
         <translation>حدد مجلد المعلومات</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
+        <source>Aipg Core</source>
         <translation>جوهر البيت كوين</translation>
     </message>
     <message>
@@ -1979,6 +1976,14 @@
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>فشل في الاستماع على أي منفذ. استخدام الاستماع = 0 إذا كنت تريد هذا.</translation>
+    </message>
+    <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>عنوان اونيون غير صحيح : '%s'</translation>
+    </message>
+    <message>
+        <source>Verifying wallet...</source>
+        <translation>التحقق من المحفظة ...</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -2005,6 +2010,14 @@
         <translation>تحذير</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>تحميل العنوان</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>عنوان البروكسي غير صحيح : '%s'</translation>
+    </message>
+    <message>
         <source>Make the wallet broadcast transactions</source>
         <translation>إنتاج معاملات بث المحفظة</translation>
     </message>
@@ -2025,8 +2038,16 @@
         <translation>لا يمكن تخفيض قيمة المحفظة</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>لايمكن كتابة العنوان الافتراضي</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>إعادة مسح</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>انتهاء التحميل</translation>
     </message>
     <message>
         <source>Error</source>

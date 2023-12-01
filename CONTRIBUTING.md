@@ -1,7 +1,7 @@
-Contributing to AIPG Core
+Contributing to Aipg Core
 ============================
 
-The AIPG Core project operates an open contributor model where anyone is
+The Aipg Core project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.
@@ -26,7 +26,7 @@ To contribute a patch, the workflow is as follows:
 
   - Fork repository
   - Create topic branch
-  - Create pull request
+  - Commit patches
 
 The project coding conventions in the [developer notes](doc/developer-notes.md)
 must be adhered to.
@@ -50,17 +50,14 @@ Please refer to the [Git manual](https://git-scm.com/doc) for more information
 about Git.
 
   - Push changes to your fork
-  - Create pull request to the develop branch
+  - Create pull request
 
 The title of the pull request should be prefixed by the component or area that
 the pull request affects. Valid areas as:
 
-
-  - *Build* for changes to the build-system
   - *Consensus* for changes to consensus critical code
-  - *Depends* for changes to depends
   - *Docs* for changes to the documentation
-  - *GUI* for changes to aipg-qt
+  - *Qt* for changes to aipg-qt
   - *Mining* for changes to the mining code
   - *Net* or *P2P* for changes to the peer-to-peer network code
   - *RPC/REST/ZMQ* for changes to the RPC, REST or ZMQ APIs
@@ -79,13 +76,13 @@ the pull request affects. Valid areas as:
 
 Examples:
 
-    Consensus: Add new opcode for RIP-XXXX OP_CHECKAWESOMESIG
+    Consensus: Add new opcode for HIP-XXXX OP_CHECKAWESOMESIG
     Net: Automatically create hidden service, listen on Tor
-    GUI: Add feed bump button
+    Qt: Add feed bump button
     Trivial: Fix typo in init.cpp
 
 Note that translations should not be submitted as pull requests, please see
-[Translation Process](https://github.com/AIPGProject/AIPGcoin/blob/master/doc/translation_process.md) 
+[Translation Process](https://github.com/JustAResearcher/Aipg/blob/master/doc/translation_process.md) 
 for more information on helping with translations.
 
 If a pull request is specifically not to be considered for merging (yet) please
@@ -172,11 +169,11 @@ workload on reviewing.
 "Decision Making" Process
 -------------------------
 
-The following applies to code changes to the AIPGcoin project (and related
-projects) and is not to be confused with overall AIPGcoin
+The following applies to code changes to the Aipg Core project (and related
+projects such as libsecp256k1), and is not to be confused with overall Aipg
 Network Protocol consensus changes.
 
-Whether a pull request is merged into AIPGcoin rests with the project merge
+Whether a pull request is merged into Aipg Core rests with the project merge
 maintainers and ultimately the project lead.
 
 Maintainers will take into consideration if a patch is in line with the general
@@ -194,7 +191,7 @@ In general, all pull requests must:
   - Where bugs are fixed, where possible, there should be unit tests
     demonstrating the bug and also proving the fix. This helps prevent regression.
 
-Patches that change AIPGcoin consensus rules are considerably more involved than
+Patches that change Aipg consensus rules are considerably more involved than
 normal because they affect the entire ecosystem and so must be preceded by
 extensive mailing list discussions and have a numbered RIP. While each case will
 be different, one should be prepared to expend more time and effort than for
@@ -209,7 +206,7 @@ request. Typically reviewers will review the code for obvious errors, as well as
 test out the patch set and opine on the technical merits of the patch. Project
 maintainers take into account the peer review when determining if there is
 consensus to merge a pull request (remember that discussions may have been
-spread out over GitHub, mailing list and Discord discussions). The following
+spread out over GitHub, mailing list and IRC discussions). The following
 language is used within pull-request comments:
 
   - ACK means "I have tested the code and I agree it should be merged";
@@ -235,9 +232,9 @@ higher in terms of discussion and peer review requirements, keeping in mind that
 mistakes could be very costly to the wider community. This includes refactoring
 of consensus critical code.
 
-Where a patch set proposes to change the AIPGcoin consensus, it must have been
-discussed extensively, be accompanied by a widely discussed RIP and 
-have a generally widely perceived technical consensus of being
+Where a patch set proposes to change the Aipg consensus, it must have been
+discussed extensively on the mailing list and IRC, be accompanied by a widely
+discussed RIP and have a generally widely perceived technical consensus of being
 a worthwhile change based on the judgement of the maintainers.
 
 ### Finding Reviewers
@@ -258,7 +255,7 @@ about:
     that personally, though! Instead, take another critical look at what you are suggesting
     and see if it: changes too much, is too broad, doesn't adhere to the
     [developer notes](doc/developer-notes.md), is dangerous or insecure, is messily written, etc.
-    Identify and address any of the issues you find. Then ask e.g. on Discord if someone could give
+    Identify and address any of the issues you find. Then ask e.g. on IRC if someone could give
     their opinion on the concept itself.
   - It may be because your code is too complex for all but a few people. And those people
     may not have realized your pull request even exists. A great way to find people who
@@ -266,7 +263,7 @@ about:
     [Git Blame feature](https://help.github.com/articles/tracing-changes-in-a-file/). Simply
     find the person touching the code you are touching before you and see if you can find
     them and give them a nudge. Don't be incessant about the nudging though.
-  - Finally, if all else fails, ask on Discord or elsewhere for someone to give your pull request
+  - Finally, if all else fails, ask on IRC or elsewhere for someone to give your pull request
     a look. If you think you've been waiting an unreasonably long amount of time (month+) for
     no particular reason (few lines changed, etc), this is totally fine. Try to return the favor
     when someone else is asking for feedback on their code, and universe balances out.
@@ -275,7 +272,7 @@ about:
 Release Policy
 --------------
 
-The AIPGQT-SIG selects a release manager for each AIPGcoin release.
+The project leader is the release manager for each Aipg Core release.
 
 Copyright
 ---------

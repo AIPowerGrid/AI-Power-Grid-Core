@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-mit-license.php.
 
@@ -18,7 +19,7 @@ Generate 427 more blocks.
 
 from io import BytesIO
 import time
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import assert_raises_rpc_error, hex_str_to_bytes, assert_equal
 from test_framework.mininode import CTransaction, NetworkThread
 from test_framework.blocktools import create_coinbase, create_block, add_witness_commitment
@@ -41,7 +42,7 @@ def true_dummy(tx):
     tx.rehash()
 
 
-class NULLDUMMYTest(AIPGTestFramework):
+class NULLDUMMYTest(AipgTestFramework):
 
     def set_test_params(self):
         self.num_nodes = 1

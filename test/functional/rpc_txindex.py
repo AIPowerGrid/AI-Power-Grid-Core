@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2015 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The AIPG Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
+# Copyright (c) 2020-2021 The Aipg Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 """Test txindex generation and fetching"""
 
 import binascii
-from test_framework.test_framework import AIPGTestFramework
+from test_framework.test_framework import AipgTestFramework
 from test_framework.util import connect_nodes_bi, assert_equal
 from test_framework.script import CScript, OP_DUP, OP_HASH160, OP_EQUALVERIFY, OP_CHECKSIG
 from test_framework.mininode import CTransaction, CTxIn, CTxOut, COutPoint
 
-class TxIndexTest(AIPGTestFramework):
+class TxIndexTest(AipgTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True

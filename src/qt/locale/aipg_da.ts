@@ -1,4 +1,6 @@
-<TS language="da" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="da">
 <context>
     <name>AddressBookPage</name>
     <message>
@@ -43,11 +45,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Vælg adresse at sende aipgs til</translation>
+        <translation>Vælg adresse at sende aipgss til</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Vælg adresse at modtage aipgs med</translation>
+        <translation>Vælg adresse at modtage aipgss med</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -62,12 +64,12 @@
         <translation>Modtagelsesadresser</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Disse er dine AIPG-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender aipgs.</translation>
+        <source>These are your Aipg addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Disse er dine Aipg-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender aipgss.</translation>
     </message>
     <message>
-        <source>These are your AIPG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dette er dine AIPG-adresser til modtagelse af betalinger. Det anbefales at bruge en ny modtagelsesadresse for hver transaktion.</translation>
+        <source>These are your Aipg addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dette er dine Aipg-adresser til modtagelse af betalinger. Det anbefales at bruge en ny modtagelsesadresse for hver transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +170,8 @@
         <translation>Bekræft tegnebogskryptering</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPGS&lt;/b&gt;!</source>
-        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE AIPGS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIPG&lt;/b&gt;!</source>
+        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE AIPG&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,7 +182,7 @@
         <translation>Tegnebog krypteret</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your aipgss from being stolen by malware infecting your computer.</source>
         <translation>%1 vil nu lukke for at færdiggøre krypteringsprocessen. Husk at kryptering af din tegnebog kan ikke beskytte dine aipg fuldt ud mod at blive stjålet af eventuel malware, der måtte have inficeret din computer.</translation>
     </message>
     <message>
@@ -221,18 +223,6 @@
     </message>
 </context>
 <context>
-    <name>AssetControlDialog</name>
-    </context>
-<context>
-    <name>AssetTableModel</name>
-    </context>
-<context>
-    <name>AssetsDialog</name>
-    </context>
-<context>
-    <name>AssignQualifier</name>
-    </context>
-<context>
     <name>BanTableModel</name>
     <message>
         <source>IP/Netmask</source>
@@ -241,6 +231,327 @@
     <message>
         <source>Banned Until</source>
         <translation>Bandlyst indtil</translation>
+    </message>
+</context>
+<context>
+    <name>AipgGUI</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>Signér &amp;besked…</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Synkroniserer med netværk…</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation>&amp;Oversigt</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Knude</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation>Vis generel oversigt over tegnebog</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transaktioner</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation>Gennemse transaktionshistorik</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation>&amp;Luk</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation>Afslut program</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>&amp;Om %1</translation>
+    </message>
+    <message>
+        <source>Show information about %1</source>
+        <translation>Vis informationer om %1</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation>Om &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation>Vis informationer om Qt</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation>&amp;Indstillinger…</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Redigér konfigurationsindstillinger for %1</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Kryptér tegnebog…</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Sikkerhedskopiér tegnebog…</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;Skift adgangskode…</translation>
+    </message>
+    <message>
+        <source>&amp;Sending addresses...</source>
+        <translation>&amp;Afsendelsesadresser…</translation>
+    </message>
+    <message>
+        <source>&amp;Receiving addresses...</source>
+        <translation>&amp;Modtagelsesadresser…</translation>
+    </message>
+    <message>
+        <source>Open &amp;URI...</source>
+        <translation>&amp;Åbn URI…</translation>
+    </message>
+    <message>
+        <source>Click to disable network activity.</source>
+        <translation>Klik for at deaktivere netværksaktivitet.</translation>
+    </message>
+    <message>
+        <source>Network activity disabled.</source>
+        <translation>Netværksaktivitet deaktiveret.</translation>
+    </message>
+    <message>
+        <source>Click to enable network activity again.</source>
+        <translation>Klik for a aktivere netværksaktivitet igen.</translation>
+    </message>
+    <message>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Synkroniserer hoveder (%1%)…</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Genindekserer blokke på disken…</translation>
+    </message>
+    <message>
+        <source>Send coins to a Aipg address</source>
+        <translation>Send aipgss til en Aipg-adresse</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation>Lav sikkerhedskopi af tegnebogen til et andet sted</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Skift adgangskode anvendt til tegnebogskryptering</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Fejlsøgningsvindue</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Åbn fejlsøgnings- og diagnosticeringskonsollen</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Verificér besked…</translation>
+    </message>
+    <message>
+        <source>Aipg</source>
+        <translation>Aipg</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Tegnebog</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation>&amp;Send</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation>&amp;Modtag</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Vis / skjul</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation>Vis eller skjul hovedvinduet</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation>Kryptér de private nøgler, der hører til din tegnebog</translation>
+    </message>
+    <message>
+        <source>Sign messages with your Aipg addresses to prove you own them</source>
+        <translation>Signér beskeder med dine Aipg-adresser for at bevise, at de tilhører dig</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Aipg addresses</source>
+        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne Aipg-adresser</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Fil</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Opsætning</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Hjælp</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Faneværktøjslinje</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and aipg: URIs)</source>
+        <translation>Anmod om betalinger (genererer QR-koder og “aipg:”-URI'er)</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Vis listen over brugte afsendelsesadresser og -mærkater</translation>
+    </message>
+    <message>
+        <source>Show the list of used receiving addresses and labels</source>
+        <translation>Vis listen over brugte modtagelsesadresser og -mærkater</translation>
+    </message>
+    <message>
+        <source>Open a aipg: URI or payment request</source>
+        <translation>Åbn en “aipg:”-URI eller betalingsanmodning</translation>
+    </message>
+    <message>
+        <source>&amp;Command-line options</source>
+        <translation>Tilvalg for &amp;kommandolinje</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n active connection(s) to Aipg network</source>
+        <translation><numerusform>%n aktiv forbindelse til Aipg-netværket</numerusform><numerusform>%n aktive forbindelser til Aipg-netværket</numerusform></translation>
+    </message>
+    <message>
+        <source>Indexing blocks on disk...</source>
+        <translation>Genindekserer blokke på disken…</translation>
+    </message>
+    <message>
+        <source>Processing blocks on disk...</source>
+        <translation>Bearbejder blokke på disken…</translation>
+    </message>
+    <message numerus="yes">
+        <source>Processed %n block(s) of transaction history.</source>
+        <translation><numerusform>Bearbejdede %n blok med transaktionshistorik.</numerusform><numerusform>Bearbejdede %n blokke med transaktionshistorik.</numerusform></translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation>%1 bagud</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>Senest modtagne blok blev genereret for %1 siden.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Transaktioner herefter vil endnu ikke være synlige.</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Fejl</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Advarsel</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Information</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation>Opdateret</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible Aipg command-line options</source>
+        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Aipg kommandolinje</translation>
+    </message>
+    <message>
+        <source>%1 client</source>
+        <translation>%1-klient</translation>
+    </message>
+    <message>
+        <source>Connecting to peers...</source>
+        <translation>Forbinder til knuder…</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation>Indhenter…</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>Dato: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>Beløb: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>Type: %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>Mærkat: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>Adresse: %1
+</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation>Afsendt transaktion</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation>Indgående transaktion</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
+        <translation>Generering af HD-nøgler er &lt;b&gt;aktiveret&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>Generering af HD-nøgler er &lt;b&gt;deaktiveret&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;ulåst&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;låst&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. Aipg can no longer continue safely and will quit.</source>
+        <translation>Der opstod en fatal fejl. Aipg kan ikke længere fortsætte sikkert og vil afslutte.</translation>
     </message>
 </context>
 <context>
@@ -395,9 +706,6 @@
     </message>
 </context>
 <context>
-    <name>CreateAssetDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -436,8 +744,8 @@
         <translation>Redigér afsendelsesadresse</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid AIPG address.</source>
-        <translation>Den indtastede adresse “%1” er ikke en gyldig AIPG-adresse.</translation>
+        <source>The entered address "%1" is not a valid Aipg address.</source>
+        <translation>Den indtastede adresse “%1” er ikke en gyldig Aipg-adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -475,12 +783,6 @@
         <translation>Kan ikke oprette en mappe her.</translation>
     </message>
 </context>
-<context>
-    <name>FreezeAddress</name>
-    </context>
-<context>
-    <name>GUIUtil::SyncWarningMessage</name>
-    </context>
 <context>
     <name>HelpMessageDialog</name>
     <message>
@@ -551,6 +853,10 @@
         <translation>Siden dette er første gang, programmet startes, kan du vælge, hvor %1 skal gemme sin data.</translation>
     </message>
     <message>
+        <source>%1 will download and store a copy of the Aipg block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 vil downloade og gemme et kopi af Aipg-blokkæden. Mindst %2 GB data vil blive gemt i denne mappe, og den vil vokse over tid. Tegnebogen vil også blive gemt i denne mappe.</translation>
+    </message>
+    <message>
         <source>Use the default data directory</source>
         <translation>Brug standardmappen for data</translation>
     </message>
@@ -566,19 +872,15 @@
         <source>Error</source>
         <translation>Fejl</translation>
     </message>
-    </context>
-<context>
-    <name>MnemonicDialog</name>
-    </context>
-<context>
-    <name>MnemonicDialog1</name>
-    </context>
-<context>
-    <name>MnemonicDialog2</name>
-    </context>
-<context>
-    <name>MnemonicDialog3</name>
-    </context>
+    <message numerus="yes">
+        <source>%n GB of free space available</source>
+        <translation><numerusform>%n GB fri plads tilgængelig</numerusform><numerusform>%n GB fri plads tilgængelig</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>(of %n GB needed)</source>
+        <translation><numerusform>(ud af %n GB nødvendig)</numerusform><numerusform>(ud af %n GB nødvendig)</numerusform></translation>
+    </message>
+</context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -590,7 +892,7 @@
         <translation>Nylige transaktioner er måske ikke synlige endnu, og derfor kan din tegnebogs saldo være ukorrekt. Denne information vil være korrekt, når din tegnebog er færdig med at synkronisere med aipg-netværket, som detaljerne herunder viser.</translation>
     </message>
     <message>
-        <source>Attempting to spend aipgs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Forsøg på at bruge aipg, som er indeholdt i endnu-ikke-viste transaktioner, accepteres ikke af netværket.</translation>
     </message>
     <message>
@@ -630,9 +932,6 @@
         <translation>Ukendt. Synkroniserer hoveder (%1)…</translation>
     </message>
 </context>
-<context>
-    <name>MyRestrictedAssetsTableModel</name>
-    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -687,6 +986,14 @@
         <translation>Antallet af script&amp;verificeringstråde</translation>
     </message>
     <message>
+        <source>Accept connections from outside</source>
+        <translation>Acceptér forbindelser udefra</translation>
+    </message>
+    <message>
+        <source>Allow incoming connections</source>
+        <translation>Tillad indkommende forbindelser</translation>
+    </message>
+    <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>IP-adresse for proxyen (fx IPv4: 127.0.0.1 / IPv6: ::1)</translation>
     </message>
@@ -697,6 +1004,10 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Tredjeparts-URL'er (fx et blokhåndteringsværktøj), der vises i transaktionsfanen som genvejsmenupunkter. %s i URL'en erstattes med transaktionens hash. Flere URL'er separeres med en lodret streg |.</translation>
+    </message>
+    <message>
+        <source>Third party transaction URLs</source>
+        <translation>Tredjeparts-transaktions-URL'er</translation>
     </message>
     <message>
         <source>Active command-line options that override above options:</source>
@@ -739,16 +1050,16 @@
         <translation>&amp;Brug ubekræftede byttepenge</translation>
     </message>
     <message>
-        <source>Automatically open the AIPG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åbn automatisk AIPG-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
+        <source>Automatically open the Aipg client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åbn automatisk Aipg-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Konfigurér port vha. &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a SOCKS5 proxy.</source>
-        <translation>Forbind til AIPG-netværket gennem en SOCKS5-proxy.</translation>
+        <source>Connect to the Aipg network through a SOCKS5 proxy.</source>
+        <translation>Forbind til Aipg-netværket gennem en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -771,6 +1082,10 @@
         <translation>Bruges til at nå knuder via:</translation>
     </message>
     <message>
+        <source>Shows, if the supplied default SOCKS5 proxy is used to reach peers via this network type.</source>
+        <translation>Viser om den angivne standard-SOCKS5-proxy bruges til at nå knuder via denne netværkstype.</translation>
+    </message>
+    <message>
         <source>IPv4</source>
         <translation>IPv4</translation>
     </message>
@@ -783,12 +1098,24 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the AIPG network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Forbind til AIPG-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
+        <source>Connect to the Aipg network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Forbind til Aipg-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
+    </message>
+    <message>
+        <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
+        <translation>Brug separat SOCKS5-proxy for at nå knuder via skjulte Tor-tjenester.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
         <translation>&amp;Vindue</translation>
+    </message>
+    <message>
+        <source>&amp;Hide the icon from the system tray.</source>
+        <translation>&amp;Skjul ikonet fra statusbaren.</translation>
+    </message>
+    <message>
+        <source>Hide tray icon</source>
+        <translation>Skjul statusikon</translation>
     </message>
     <message>
         <source>Show only a tray icon after minimizing the window.</source>
@@ -820,7 +1147,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af aipgs.</translation>
+        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af aipgss.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -870,8 +1197,8 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AIPG network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med AIPG-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aipg network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Aipg-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -900,6 +1227,10 @@
     <message>
         <source>Mined balance that has not yet matured</source>
         <translation>Minet saldo, som endnu ikke er modnet</translation>
+    </message>
+    <message>
+        <source>Balances</source>
+        <translation>Saldi:</translation>
     </message>
     <message>
         <source>Total:</source>
@@ -933,7 +1264,7 @@
         <source>Current total balance in watch-only addresses</source>
         <translation>Nuværende totalsaldo på kigge-adresser</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>PaymentServer</name>
     <message>
@@ -957,8 +1288,8 @@
         <translation>Ugyldig betalingsadresse %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid AIPG address or malformed URI parameters.</source>
-        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig AIPG-adresse eller forkert udformede URL-parametre.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Aipg address or malformed URI parameters.</source>
+        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Aipg-adresse eller forkert udformede URL-parametre.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1043,7 +1374,7 @@
         <source>Ping</source>
         <translation>Ping</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>QObject</name>
     <message>
@@ -1051,8 +1382,8 @@
         <translation>Beløb</translation>
     </message>
     <message>
-        <source>Enter a AIPG address (e.g. %1)</source>
-        <translation>Indtast en AIPG-adresse (fx %1)</translation>
+        <source>Enter a Aipg address (e.g. %1)</source>
+        <translation>Indtast en Aipg-adresse (fx %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1082,15 +1413,39 @@
         <source>%1 ms</source>
         <translation>%1 ms</translation>
     </message>
+    <message numerus="yes">
+        <source>%n second(s)</source>
+        <translation><numerusform>%n sekund</numerusform><numerusform>%n sekunder</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n minut</numerusform><numerusform>%n minutter</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n hour(s)</source>
+        <translation><numerusform>%n time</numerusform><numerusform>%n timer</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n day(s)</source>
+        <translation><numerusform>%n dag</numerusform><numerusform>%n dage</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n week(s)</source>
+        <translation><numerusform>%n uge</numerusform><numerusform>%n uger</numerusform></translation>
+    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 og %2</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n year(s)</source>
+        <translation><numerusform>%n år</numerusform><numerusform>%n år</numerusform></translation>
     </message>
     <message>
         <source>%1 didn't yet exit safely...</source>
         <translation>%1 har endnu ikke afsluttet på sikker vis…</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>QObject::QObject</name>
     <message>
@@ -1308,6 +1663,10 @@
         <translation>&amp;Netværkstrafik</translation>
     </message>
     <message>
+        <source>&amp;Clear</source>
+        <translation>&amp;Ryd</translation>
+    </message>
+    <message>
         <source>Totals</source>
         <translation>Totaler</translation>
     </message>
@@ -1360,12 +1719,36 @@
         <translation>Velkommen til %1s RPC-konsol.</translation>
     </message>
     <message>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Brug op- og ned-piletasterne til at navigere i historikken og &lt;b&gt;Ctrl-L&lt;/b&gt; til at rydde skærmen.</translation>
+    </message>
+    <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Tast &lt;b&gt;help&lt;/b&gt; for en oversigt over de tilgængelige kommandoer.</translation>
     </message>
     <message>
+        <source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramification of a command.</source>
+        <translation>ADVARSEL: Svindlere har tidligere forsøgt at få folk til at indtaste kommandoer her og derved stjæle indholdet af deres tegnebog. Brug ikke denne konsol uden fuldt ud at forstå følgerne for en kommando.</translation>
+    </message>
+    <message>
         <source>Network activity disabled</source>
         <translation>Netværksaktivitet deaktiveret</translation>
+    </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
     </message>
     <message>
         <source>(node id: %1)</source>
@@ -1401,307 +1784,6 @@
     </message>
 </context>
 <context>
-    <name>AIPGGUI</name>
-    <message>
-        <source>Sign &amp;message...</source>
-        <translation>Signér &amp;besked…</translation>
-    </message>
-    <message>
-        <source>Synchronizing with network...</source>
-        <translation>Synkroniserer med netværk…</translation>
-    </message>
-    <message>
-        <source>&amp;Overview</source>
-        <translation>&amp;Oversigt</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Knude</translation>
-    </message>
-    <message>
-        <source>Show general overview of wallet</source>
-        <translation>Vis generel oversigt over tegnebog</translation>
-    </message>
-    <message>
-        <source>&amp;Transactions</source>
-        <translation>&amp;Transaktioner</translation>
-    </message>
-    <message>
-        <source>Browse transaction history</source>
-        <translation>Gennemse transaktionshistorik</translation>
-    </message>
-    <message>
-        <source>E&amp;xit</source>
-        <translation>&amp;Luk</translation>
-    </message>
-    <message>
-        <source>Quit application</source>
-        <translation>Afslut program</translation>
-    </message>
-    <message>
-        <source>&amp;About %1</source>
-        <translation>&amp;Om %1</translation>
-    </message>
-    <message>
-        <source>Show information about %1</source>
-        <translation>Vis informationer om %1</translation>
-    </message>
-    <message>
-        <source>About &amp;Qt</source>
-        <translation>Om &amp;Qt</translation>
-    </message>
-    <message>
-        <source>Show information about Qt</source>
-        <translation>Vis informationer om Qt</translation>
-    </message>
-    <message>
-        <source>&amp;Options...</source>
-        <translation>&amp;Indstillinger…</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for %1</source>
-        <translation>Redigér konfigurationsindstillinger for %1</translation>
-    </message>
-    <message>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Kryptér tegnebog…</translation>
-    </message>
-    <message>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Sikkerhedskopiér tegnebog…</translation>
-    </message>
-    <message>
-        <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Skift adgangskode…</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Afsendelsesadresser…</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Modtagelsesadresser…</translation>
-    </message>
-    <message>
-        <source>Open &amp;URI...</source>
-        <translation>&amp;Åbn URI…</translation>
-    </message>
-    <message>
-        <source>Click to disable network activity.</source>
-        <translation>Klik for at deaktivere netværksaktivitet.</translation>
-    </message>
-    <message>
-        <source>Network activity disabled.</source>
-        <translation>Netværksaktivitet deaktiveret.</translation>
-    </message>
-    <message>
-        <source>Click to enable network activity again.</source>
-        <translation>Klik for a aktivere netværksaktivitet igen.</translation>
-    </message>
-    <message>
-        <source>Syncing Headers (%1%)...</source>
-        <translation>Synkroniserer hoveder (%1%)…</translation>
-    </message>
-    <message>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Genindekserer blokke på disken…</translation>
-    </message>
-    <message>
-        <source>Send coins to a AIPG address</source>
-        <translation>Send aipgs til en AIPG-adresse</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Lav sikkerhedskopi af tegnebogen til et andet sted</translation>
-    </message>
-    <message>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Skift adgangskode anvendt til tegnebogskryptering</translation>
-    </message>
-    <message>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Åbn fejlsøgnings- og diagnosticeringskonsollen</translation>
-    </message>
-    <message>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;Verificér besked…</translation>
-    </message>
-    <message>
-        <source>AIPG</source>
-        <translation>AIPG</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Tegnebog</translation>
-    </message>
-    <message>
-        <source>&amp;Send</source>
-        <translation>&amp;Send</translation>
-    </message>
-    <message>
-        <source>&amp;Receive</source>
-        <translation>&amp;Modtag</translation>
-    </message>
-    <message>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Vis / skjul</translation>
-    </message>
-    <message>
-        <source>Show or hide the main Window</source>
-        <translation>Vis eller skjul hovedvinduet</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Kryptér de private nøgler, der hører til din tegnebog</translation>
-    </message>
-    <message>
-        <source>Sign messages with your AIPG addresses to prove you own them</source>
-        <translation>Signér beskeder med dine AIPG-adresser for at bevise, at de tilhører dig</translation>
-    </message>
-    <message>
-        <source>Verify messages to ensure they were signed with specified AIPG addresses</source>
-        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne AIPG-adresser</translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation>&amp;Fil</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Hjælp</translation>
-    </message>
-    <message>
-        <source>Request payments (generates QR codes and aipg: URIs)</source>
-        <translation>Anmod om betalinger (genererer QR-koder og “aipg:”-URI'er)</translation>
-    </message>
-    <message>
-        <source>Show the list of used sending addresses and labels</source>
-        <translation>Vis listen over brugte afsendelsesadresser og -mærkater</translation>
-    </message>
-    <message>
-        <source>Show the list of used receiving addresses and labels</source>
-        <translation>Vis listen over brugte modtagelsesadresser og -mærkater</translation>
-    </message>
-    <message>
-        <source>Open a aipg: URI or payment request</source>
-        <translation>Åbn en “aipg:”-URI eller betalingsanmodning</translation>
-    </message>
-    <message>
-        <source>&amp;Command-line options</source>
-        <translation>Tilvalg for &amp;kommandolinje</translation>
-    </message>
-    <message>
-        <source>Indexing blocks on disk...</source>
-        <translation>Genindekserer blokke på disken…</translation>
-    </message>
-    <message>
-        <source>Processing blocks on disk...</source>
-        <translation>Bearbejder blokke på disken…</translation>
-    </message>
-    <message>
-        <source>%1 behind</source>
-        <translation>%1 bagud</translation>
-    </message>
-    <message>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>Senest modtagne blok blev genereret for %1 siden.</translation>
-    </message>
-    <message>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Transaktioner herefter vil endnu ikke være synlige.</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Fejl</translation>
-    </message>
-    <message>
-        <source>Warning</source>
-        <translation>Advarsel</translation>
-    </message>
-    <message>
-        <source>Information</source>
-        <translation>Information</translation>
-    </message>
-    <message>
-        <source>Up to date</source>
-        <translation>Opdateret</translation>
-    </message>
-    <message>
-        <source>Show the %1 help message to get a list with possible AIPG command-line options</source>
-        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for AIPG kommandolinje</translation>
-    </message>
-    <message>
-        <source>%1 client</source>
-        <translation>%1-klient</translation>
-    </message>
-    <message>
-        <source>Connecting to peers...</source>
-        <translation>Forbinder til knuder…</translation>
-    </message>
-    <message>
-        <source>Catching up...</source>
-        <translation>Indhenter…</translation>
-    </message>
-    <message>
-        <source>Date: %1
-</source>
-        <translation>Dato: %1
-</translation>
-    </message>
-    <message>
-        <source>Amount: %1
-</source>
-        <translation>Beløb: %1
-</translation>
-    </message>
-    <message>
-        <source>Type: %1
-</source>
-        <translation>Type: %1
-</translation>
-    </message>
-    <message>
-        <source>Label: %1
-</source>
-        <translation>Mærkat: %1
-</translation>
-    </message>
-    <message>
-        <source>Address: %1
-</source>
-        <translation>Adresse: %1
-</translation>
-    </message>
-    <message>
-        <source>Sent transaction</source>
-        <translation>Afsendt transaktion</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>Indgående transaktion</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
-        <translation>Generering af HD-nøgler er &lt;b&gt;aktiveret&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>Generering af HD-nøgler er &lt;b&gt;deaktiveret&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;ulåst&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;låst&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. AIPG can no longer continue safely and will quit.</source>
-        <translation>Der opstod en fatal fejl. AIPG kan ikke længere fortsætte sikkert og vil afslutte.</translation>
-    </message>
-</context>
-<context>
     <name>ReceiveCoinsDialog</name>
     <message>
         <source>&amp;Amount:</source>
@@ -1724,8 +1806,8 @@
         <translation>&amp;Genbrug en eksisterende modtagelsesadresse (anbefales ikke)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AIPG network.</source>
-        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over AIPG-netværket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aipg network.</source>
+        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Aipg-netværket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1875,19 +1957,10 @@
     </message>
 </context>
 <context>
-    <name>ReissueAssetDialog</name>
-    </context>
-<context>
-    <name>RestrictedAssetsDialog</name>
-    </context>
-<context>
-    <name>SendAssetsEntry</name>
-    </context>
-<context>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send aipgs</translation>
+        <translation>Send aipgss</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -1962,6 +2035,10 @@
         <translation>Skjul</translation>
     </message>
     <message>
+        <source>total at least</source>
+        <translation>total mindst</translation>
+    </message>
+    <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for aipg transactions than the network can process.</source>
         <translation>Det er helt fint kun at betale det minimale gebyr, så længe den totale transaktionsvolumen er mindre end den plads, der er tilgængelig i blokkene. Men vær opmærksom på, at dette kan ende ud i transaktioner, der aldrig bliver bekræftet, når der bliver større forespørgsel efter aipg-transaktioner, end hvad netværket kan bearbejde.</translation>
     </message>
@@ -1980,6 +2057,14 @@
     <message>
         <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
         <translation>(Smart-gebyr er ikke initialiseret endnu. Dette tager typisk nogle få blokke…)</translation>
+    </message>
+    <message>
+        <source>normal</source>
+        <translation>normal</translation>
+    </message>
+    <message>
+        <source>fast</source>
+        <translation>hurtig</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
@@ -2067,7 +2152,7 @@
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Bekræft afsendelse af aipgs</translation>
+        <translation>Bekræft afsendelse af aipgss</translation>
     </message>
     <message>
         <source>The recipient address is not valid. Please recheck.</source>
@@ -2105,13 +2190,21 @@
         <source>Payment request expired.</source>
         <translation>Betalingsanmodning er udløbet.</translation>
     </message>
+    <message numerus="yes">
+        <source>%n block(s)</source>
+        <translation><numerusform>%n blok</numerusform><numerusform>%n blokke</numerusform></translation>
+    </message>
     <message>
         <source>Pay only the required fee of %1</source>
         <translation>Betal kun det påkrævede gebyr på %1</translation>
     </message>
+    <message numerus="yes">
+        <source>Estimated to begin confirmation within %n block(s).</source>
+        <translation><numerusform>Bekræftelse estimeret til at begynde om %n blok.</numerusform><numerusform>Bekræftelse estimeret til at begynde om %n blokke.</numerusform></translation>
+    </message>
     <message>
-        <source>Warning: Invalid AIPG address</source>
-        <translation>Advarsel: Ugyldig AIPG-adresse</translation>
+        <source>Warning: Invalid Aipg address</source>
+        <translation>Advarsel: Ugyldig Aipg-adresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2137,6 +2230,10 @@
         <translation>&amp;Beløb:</translation>
     </message>
     <message>
+        <source>Pay &amp;To:</source>
+        <translation>Betal &amp;til:</translation>
+    </message>
+    <message>
         <source>&amp;Label:</source>
         <translation>&amp;Mærkat:</translation>
     </message>
@@ -2149,8 +2246,8 @@
         <translation>Dette er en normal betaling.</translation>
     </message>
     <message>
-        <source>The AIPG address to send the payment to</source>
-        <translation>AIPG-adresse, som betalingen skal sendes til</translation>
+        <source>The Aipg address to send the payment to</source>
+        <translation>Aipg-adresse, som betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2169,7 +2266,7 @@
         <translation>Fjern denne indgang</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less aipgss than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>Gebyret vil blive trukket fra det sendte beløb. Modtageren vil modtage færre aipg, end du indtaster i beløbfeltet. Hvis flere modtagere vælges, vil gebyret deles ligeligt.</translation>
     </message>
     <message>
@@ -2193,8 +2290,12 @@
         <translation>Indtast et mærkat for denne adresse for at føje den til listen over brugte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AIPG network.</source>
-        <translation>En besked, som blev føjet til “bitcon:”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over AIPG-netværket.</translation>
+        <source>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aipg network.</source>
+        <translation>En besked, som blev føjet til “bitcon:”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Aipg-netværket.</translation>
+    </message>
+    <message>
+        <source>Pay To:</source>
+        <translation>Betal til:</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2234,12 +2335,12 @@
         <translation>&amp;Singér besked</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive aipgs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive aipgss sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage aipg, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
     </message>
     <message>
-        <source>The AIPG address to sign the message with</source>
-        <translation>AIPG-adresse, som beskeden skal signeres med</translation>
+        <source>The Aipg address to sign the message with</source>
+        <translation>Aipg-adresse, som beskeden skal signeres med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2270,8 +2371,8 @@
         <translation>Kopiér den nuværende signatur til systemets udklipsholder</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AIPG address</source>
-        <translation>Signér denne besked for at bevise, at AIPG-adressen tilhører dig</translation>
+        <source>Sign the message to prove you own this Aipg address</source>
+        <translation>Signér denne besked for at bevise, at Aipg-adressen tilhører dig</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2294,12 +2395,12 @@
         <translation>Indtast modtagerens adresse, besked (vær sikker på at kopiere linjeskift, mellemrum, tabuleringer, etc. præcist) og signatur herunder for at verificere beskeden. Vær forsigtig med ikke at læse noget ud fra signaturen, som ikke står i selve beskeden, for at undgå at blive snydt af et eventuelt man-in-the-middle-angreb. Bemærk, at dette kun beviser, at den signerende person kan modtage med adressen; det kan ikke bevise hvem der har sendt en given transaktion!</translation>
     </message>
     <message>
-        <source>The AIPG address the message was signed with</source>
-        <translation>AIPG-adressen, som beskeden blev signeret med</translation>
+        <source>The Aipg address the message was signed with</source>
+        <translation>Aipg-adressen, som beskeden blev signeret med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AIPG address</source>
-        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne AIPG-adresse</translation>
+        <source>Verify the message to ensure it was signed with the specified Aipg address</source>
+        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne Aipg-adresse</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2378,6 +2479,10 @@
 </context>
 <context>
     <name>TransactionDesc</name>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Åben i %n yderligere blok</numerusform><numerusform>Åben i %n yderligere blokke</numerusform></translation>
+    </message>
     <message>
         <source>Open until %1</source>
         <translation>Åben indtil %1</translation>
@@ -2422,6 +2527,10 @@
         <source>, has not been successfully broadcast yet</source>
         <translation>, er ikke blevet transmitteret endnu</translation>
     </message>
+    <message numerus="yes">
+        <source>, broadcast through %n node(s)</source>
+        <translation><numerusform>, transmitteret igennem %n knude</numerusform><numerusform>, transmitteret igennem %n knuder</numerusform></translation>
+    </message>
     <message>
         <source>Date</source>
         <translation>Dato</translation>
@@ -2461,6 +2570,10 @@
     <message>
         <source>Credit</source>
         <translation>Kredit</translation>
+    </message>
+    <message numerus="yes">
+        <source>matures in %n more block(s)</source>
+        <translation><numerusform>modner om %n blok</numerusform><numerusform>modner om %n blokke</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -2512,7 +2625,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Minede aipgs skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til “ikke accepteret”, og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
+        <translation>Minede aipgss skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til “ikke accepteret”, og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2563,6 +2676,10 @@
     <message>
         <source>Label</source>
         <translation>Mærkat</translation>
+    </message>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Åben i %n yderligere blok</numerusform><numerusform>Åben i %n yderligere blokke</numerusform></translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -2660,7 +2777,7 @@
         <source>Amount removed from or added to balance.</source>
         <translation>Beløb trukket fra eller tilføjet balance.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>TransactionView</name>
     <message>
@@ -2834,9 +2951,9 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send aipgs</translation>
+        <translation>Send aipgss</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -2871,7 +2988,7 @@
         <source>The wallet data was successfully saved to %1.</source>
         <translation>Tegnebogsdata blev gemt til %1.</translation>
     </message>
-    </context>
+</context>
 <context>
     <name>aipg-core</name>
     <message>
@@ -2893,6 +3010,14 @@
     <message>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Acceptér kommandolinje- og JSON-RPC-kommandoer</translation>
+    </message>
+    <message>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect/-noconnect)</source>
+        <translation>Acceptér forbindelser udefra (standard: 1 hvis ingen -proxy eller -connect/-noconnect)</translation>
+    </message>
+    <message>
+        <source>Connect only to the specified node(s); -noconnect or -connect=0 alone to disable automatic connections</source>
+        <translation>Forbind kun til de specificerede knuder; -noconnect eller -connect=0 alene for at deaktivere automatiske forbindelser</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
@@ -2935,8 +3060,8 @@
         <translation>Kunne ikke starte HTTP-server. Se fejlretningslog for detaljer.</translation>
     </message>
     <message>
-        <source>AIPG Core</source>
-        <translation>AIPG Core</translation>
+        <source>Aipg Core</source>
+        <translation>Aipg Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -2961,6 +3086,10 @@
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Slet alle transaktioner i tegnebogen og genskab kun disse dele af blokkæden gennem -rescan under opstart</translation>
+    </message>
+    <message>
+        <source>Error loading %s: You can't enable HD on a already existing non-HD wallet</source>
+        <translation>Fejl under indlæsning af %s: Du kan ikke aktivere HD på en allerede eksisterende ikke-HD-tegnebog</translation>
     </message>
     <message>
         <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
@@ -2996,7 +3125,7 @@
     </message>
     <message>
         <source>Reduce storage requirements by enabling pruning (deleting) of old blocks. This allows the pruneblockchain RPC to be called to delete specific blocks, and enables automatic pruning of old blocks if a target size in MiB is provided. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, 1 = allow manual pruning via RPC, &gt;%u = automatically prune block files to stay under the specified target size in MiB)</source>
-        <translation>Reducér pladskaipge ved at beskære (slette, “prune”) gamle blokke. Dette tillader pruneblockchain-RPC'en at blive kaldt for at slette specifikke blokke, og det aktiverer automatisk beskæring af gamle blokke, hvis en målstørrelse i MiB er angivet. Denne tilstand er ikke kompatibel med -txindex og -rescan. Advarsel: Fortrydelse af denne indstilling kræver download af hele blokkæden igen. (standard: 0 = slå beskæring af blokke fra, 1 = tillad manuel beskæring via RPC, &gt;%u = beskær automatisk blokfiler for at bliver under den angivne målstørrelse i MiB)</translation>
+        <translation>Reducér pladskaipgse ved at beskære (slette, “prune”) gamle blokke. Dette tillader pruneblockchain-RPC'en at blive kaldt for at slette specifikke blokke, og det aktiverer automatisk beskæring af gamle blokke, hvis en målstørrelse i MiB er angivet. Denne tilstand er ikke kompatibel med -txindex og -rescan. Advarsel: Fortrydelse af denne indstilling kræver download af hele blokkæden igen. (standard: 0 = slå beskæring af blokke fra, 1 = tillad manuel beskæring via RPC, &gt;%u = beskær automatisk blokfiler for at bliver under den angivne målstørrelse i MiB)</translation>
     </message>
     <message>
         <source>Set lowest fee rate (in %s/kB) for transactions to be included in block creation. (default: %s)</source>
@@ -3037,6 +3166,10 @@
     <message>
         <source>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</source>
         <translation>Advarsel: Vi ser ikke ud til at være fuldt ud enige med andre knuder! Du kan være nødt til at opgradere, eller andre knuder kan være nødt til at opgradere.</translation>
+    </message>
+    <message>
+        <source>You need to rebuild the database using -reindex-chainstate to change -txindex</source>
+        <translation>Du er nødt til at genopbygge databasen ved hjælp af -reindex-chainstate for at ændre -txindex</translation>
     </message>
     <message>
         <source>%s corrupt, salvage failed</source>
@@ -3139,6 +3272,10 @@
         <translation>Fejl under indlæsning af %s: Tegnebog kræver nyere version af %s</translation>
     </message>
     <message>
+        <source>Error loading %s: You can't disable HD on a already existing HD wallet</source>
+        <translation>Fejl under indlæsning af %s: Du kan ikke deaktivere HD på en allerede eksisterende HD-tegnebog</translation>
+    </message>
+    <message>
         <source>Error loading block database</source>
         <translation>Indlæsning af blokdatabase mislykkedes</translation>
     </message>
@@ -3165,6 +3302,10 @@
     <message>
         <source>Initialization sanity check failed. %s is shutting down.</source>
         <translation>Klargøring af sundhedstjek mislykkedes. %s lukker ned.</translation>
+    </message>
+    <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>Ugyldig -onion adresse: “%s”</translation>
     </message>
     <message>
         <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
@@ -3227,6 +3368,10 @@
         <translation>Sæt cache-størrelse for database i megabytes (%d til %d; standard: %d)</translation>
     </message>
     <message>
+        <source>Set maximum block size in bytes (default: %d)</source>
+        <translation>Sæt maksimum blokstørrelse i byte (standard: %d)</translation>
+    </message>
+    <message>
         <source>Specify wallet file (within data directory)</source>
         <translation>Angiv tegnebogsfil (inden for datamappe)</translation>
     </message>
@@ -3267,6 +3412,10 @@
         <translation>Verificerer blokke…</translation>
     </message>
     <message>
+        <source>Verifying wallet...</source>
+        <translation>Verificerer tegnebog…</translation>
+    </message>
+    <message>
         <source>Wallet %s resides outside data directory %s</source>
         <translation>Tegnebog %s findes uden for datamappe %s</translation>
     </message>
@@ -3289,6 +3438,10 @@
     <message>
         <source>Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6</source>
         <translation>Tildel given adresse og sæt andre knuder, der forbinder til den, på hvidliste. Brug [vært]:port notation for IPv6</translation>
+    </message>
+    <message>
+        <source>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</source>
+        <translation>Tildel til den givne adresse for at lytte efter JSON-RPC-forbindelser. Brug [vært]:port-notation for IPv6. Denne valgmulighed kan angives flere gange (standard: tildel til alle grænseflader)</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -3327,8 +3480,16 @@
         <translation>Brug tilfældige akkreditiver for hver proxy-forbindelse. Dette aktiverer strømisolation med Tor (standard: %u)</translation>
     </message>
     <message>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
+        <translation>Sæt maksimumstørrelse for højprioritet/lavgebyr-transaktioner i byte (standard: %d)</translation>
+    </message>
+    <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
         <translation>Transaktionsbeløbet er for lille til at sende, når gebyret er trukket fra</translation>
+    </message>
+    <message>
+        <source>Use hierarchical deterministic key generation (HD) after BIP32. Only has effect during wallet creation/first start</source>
+        <translation>Brug hierarkisk deterministisk nøglegenerering (HD) efter BIP32. Har kun effekt ved generering af ny tegnebog og under første opstart</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
@@ -3401,6 +3562,10 @@
     <message>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Send sporings-/fejlsøgningsinformation til konsollen i stedet for debug.log filen</translation>
+    </message>
+    <message>
+        <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
+        <translation>Send transaktioner som nul-gebyr-transaktioner hvis muligt (standard: %u)</translation>
     </message>
     <message>
         <source>Show all debugging options (usage: --help -help-debug)</source>
@@ -3487,6 +3652,10 @@
         <translation>Tillad DNS-opslag for -addnode, -seednode og -connect</translation>
     </message>
     <message>
+        <source>Loading addresses...</source>
+        <translation>Indlæser adresser…</translation>
+    </message>
+    <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = behold metadata for transaktion, fx kontoindehaver og information om betalingsanmodning, 2 = drop metadata for transaktion)</translation>
     </message>
@@ -3525,6 +3694,10 @@
     <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>Udskriv fejlsøgningsinformation (standard: %u, angivelse af &lt;kategori&gt; er valgfri)</translation>
+    </message>
+    <message>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
+        <translation>Forespørg knudeadresser via DNS-opslag hvis antallet af adresser er lavt (standard: 1 med mindre -connect/-noconnect)</translation>
     </message>
     <message>
         <source>Sets the serialization of raw transaction or block hex returned in non-verbose mode, non-segwit(0) or segwit(1) (default: %d)</source>
@@ -3593,6 +3766,10 @@
     <message>
         <source>Include IP addresses in debug output (default: %u)</source>
         <translation>Inkludér IP-adresser i fejlretningsoutput (standard: %u)</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Ugyldig -proxy adresse: “%s”</translation>
     </message>
     <message>
         <source>Keypool ran out, please call keypoolrefill first</source>
@@ -3712,6 +3889,10 @@
         <translation>Indlæser blokindeks…</translation>
     </message>
     <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Tilføj en knude til at forbinde til og forsøg at holde forbindelsen åben</translation>
+    </message>
+    <message>
         <source>Loading wallet...</source>
         <translation>Indlæser tegnebog…</translation>
     </message>
@@ -3720,8 +3901,16 @@
         <translation>Kan ikke nedgradere tegnebog</translation>
     </message>
     <message>
+        <source>Cannot write default address</source>
+        <translation>Kan ikke skrive standardadresse</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>Genindlæser…</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Indlæsning gennemført</translation>
     </message>
     <message>
         <source>Error</source>

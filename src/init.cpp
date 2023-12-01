@@ -1,7 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
-// Copyright (c) 2022-2023 AIPG developers
+// Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -205,7 +204,7 @@ void PrepareShutdown()
 #ifdef ENABLE_WALLET
     FlushWallets();
 #endif
-    GenerateAIPGcoins(false, 0, GetParams());
+    GenerateAipgs(false, 0, GetParams());
 
     MapPort(false);
 
@@ -479,7 +478,6 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-sysperms", _("Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)"));
 #endif
     strUsage += HelpMessageOpt("-txindex", strprintf(_("Maintain a full transaction index, used by the getrawtransaction rpc call (default: %u)"), DEFAULT_TXINDEX));
-    strUsage += HelpMessageOpt("-assetindex", _("Keep an index of assets, used by the requestsnapshot rpc call. Requires a -reindex."));
 
     strUsage += HelpMessageOpt("-addressindex", strprintf(_("Maintain a full address index, used to query for the balance, txids and unspent outputs for addresses (default: %u)"), DEFAULT_ADDRESSINDEX));
     strUsage += HelpMessageOpt("-timestampindex", strprintf(_("Maintain a timestamp index for block hashes, used to query blocks hashes by a range of timestamps (default: %u)"), DEFAULT_TIMESTAMPINDEX));
@@ -629,10 +627,10 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/AIPGProject/AIPGcoin>";
-    const std::string URL_WEBSITE = "<https://aipowergrid.io>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/JustAResearcher/Aipg>";
+    const std::string URL_WEBSITE = "<https://aipgcrypto.com>";
 
-    return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2009, COPYRIGHT_YEAR) + " ") + "\n" +
+    return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2022, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
            strprintf(_("Please contribute if you find %s useful. "
                        "Visit %s for further information about the software."),
@@ -804,7 +802,7 @@ void ThreadImport(std::vector<fs::path> vImportFiles)
 }
 
 /** Sanity checks
- *  Ensure that AIPG is running in a usable environment with all
+ *  Ensure that Aipg is running in a usable environment with all
  *  necessary library support.
  */
 bool InitSanityCheck(void)
@@ -928,7 +926,7 @@ void InitLogging()
     fLogIPs = gArgs.GetBoolArg("-logips", DEFAULT_LOGIPS);
 
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("AIPG version %s\n", FormatFullVersion());
+    LogPrintf("Aipg version %s\n", FormatFullVersion());
 }
 
 namespace { // Variables internal to initialization process only
@@ -1192,11 +1190,9 @@ bool AppInitParameterInteraction()
         dustRelayFee = CFeeRate(n);
     }
 
-    fRequireStandard = !gArgs.GetBoolArg("-acceptnonstdtxn", false);
+    fRequireStandard = !gArgs.GetBoolArg("-acceptnonstdtxn", !chainparams.RequireStandard());
     if (chainparams.RequireStandard() && !fRequireStandard)
         return InitError(strprintf("acceptnonstdtxn is not currently supported for %s chain", chainparams.NetworkIDString()));
-    // This defaults all chains to requiring standard transactions; testnet and regtest can use "-acceptnonstdtxn" to over-ride, but mainnet cannot
-    // Note that as previously coded, the "-acceptnonstdtxn" switch was broken. Bitcoin fixed this differently in their PR#15891
     nBytesPerSigOp = gArgs.GetArg("-bytespersigop", nBytesPerSigOp);
 
 #ifdef ENABLE_WALLET
@@ -1271,7 +1267,7 @@ static bool LockDataDirectory(bool probeOnly)
 {
     std::string strDataDir = GetDataDir().string();
 
-    // Make sure only a single AIPG process is using the data directory.
+    // Make sure only a single Aipg process is using the data directory.
     fs::path pathLockFile = GetDataDir() / ".lock";
     FILE* file = fsbridge::fopen(pathLockFile, "a"); // empty lock file; created if it doesn't exist.
     if (file) fclose(file);
@@ -1383,7 +1379,7 @@ bool AppInitMain(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     bool fGenerate = gArgs.GetBoolArg("-regtest", false) ? false : DEFAULT_GENERATE;
     // Generate coins in the background
-    GenerateAIPGcoins(fGenerate, gArgs.GetArg("-genproclimit", DEFAULT_GENERATE_THREADS), chainparams);
+    GenerateAipgs(fGenerate, gArgs.GetArg("-genproclimit", DEFAULT_GENERATE_THREADS), chainparams);
 
     // ********************************************************* Step 6: network initialization
     // Note that we absolutely cannot open any actual connections
@@ -1612,7 +1608,7 @@ bool AppInitMain(boost::thread_group& threadGroup, CScheduler& scheduler)
                         LogPrintf(
                                 "Database failed to load last Reissued Mempool State. Will have to start from empty state");
 
-                    LogPrintf("Successfully loaded assets from database.\nCache of assets size: %d\n",
+                    LogPrintf("Loaded Assets from database without error\nCache of assets size: %d\n",
                               passetsCache->Size());
 
                     // Check for changed -disablemessaging state

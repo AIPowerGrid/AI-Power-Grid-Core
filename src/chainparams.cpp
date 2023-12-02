@@ -320,7 +320,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x0000005aff34b360a6c89b853ca84fd601e1479d26b1ced17843b56044526c5e");
+        consensus.defaultAssumeValid = uint256S("0x000000fd584323951d79ba46dba2ed49661023ff8731adcbbd2c906b1b2403a4");
 
 
         pchMessageStart[0] = 0x41; // A
@@ -329,10 +329,10 @@ public:
         pchMessageStart[3] = 0x54; // T
         nDefaultPort = 18798;
         nPruneAfterHeight = 1000;
-		
+
         uint32_t nGenesisTime = 1688350000;  // October 30, 2023
 
-        
+/*
            // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
            /////////////////////////////////////////////////////////////////
 
@@ -395,21 +395,19 @@ public:
         return;           
         /////////////////////////////////////////////////////////////////
            // end of genesis block creation
-
-
-        genesis = CreateGenesisBlock(nGenesisTime, 12318405, 0x1e00ffff, 4, 5000 *  COIN);
+*/
+        genesis = CreateGenesisBlock(nGenesisTime, 23949229, 0x1e00ffff, 4, 5000 *  COIN);
         consensus.hashGenesisBlock = genesis.GetX16RV2Hash();
-	    
         //Test MerkleRoot and GenesisBlock
-        assert(consensus.hashGenesisBlock == uint256S("0x0000005aff34b360a6c89b853ca84fd601e1479d26b1ced17843b56044526c5e"));
-        assert(genesis.hashMerkleRoot == uint256S("7fd7c4aa544bff358ba457a6865573640fef153d50c16eadbde886b96e2d4a4d"));		
-		
+        assert(consensus.hashGenesisBlock == uint256S("0x000000fd584323951d79ba46dba2ed49661023ff8731adcbbd2c906b1b2403a4"));
+        assert(genesis.hashMerkleRoot == uint256S("e04a78dcf0ad3d5c7f1ac4460c4c04bc333e677d52371b7453b5b09603b41d54"));
+
         vFixedSeeds.clear();
         vSeeds.clear();
-	    
+
         vSeeds.emplace_back("seed1-testnet.aipowergrid.io", false);
         vSeeds.emplace_back("seed2-testnet.aipowergrid.io", false);
-		
+
 	    base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);

@@ -1,4 +1,4 @@
-AIPG Core integration/staging tree
+AI Power Grid Core integration/staging tree
 =====================================
 
 https://aipowergrid.io
@@ -6,7 +6,7 @@ https://aipowergrid.io
 To see how to run AIPG, please read the respective files in [the doc folder](doc)
 
 
-What is AIPG?
+What is AI Power Grid?
 ----------------
 
 AI Power Grid is a revolutionary digital currency that stands at the intersection of blockchain and artificial intelligence. It is designed to democratize access to AI technology and foster open-source AI initiatives. AIPG enables instant payments to anyone, anywhere in the world, and allows the creation of assets (tokens) on its network. These assets can be used for various purposes, including AI generated NFT's.

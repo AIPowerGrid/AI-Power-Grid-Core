@@ -1,10 +1,7 @@
 AI Power Grid Core integration/staging tree
 =====================================
 
-https://aipowergrid.io
-
 To see how to run AIPG, please read the respective files in [the doc folder](doc)
-
 
 What is AI Power Grid?
 ----------------

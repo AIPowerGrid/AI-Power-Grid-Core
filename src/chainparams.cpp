@@ -165,7 +165,7 @@ public:
         pchMessageStart[1] = 0x49; // I
         pchMessageStart[2] = 0x34; // 4
         pchMessageStart[3] = 0x45; // E
-        nDefaultPort = 8798;
+        nDefaultPort = 8865;
         nPruneAfterHeight = 100000;
 		
 	    uint32_t nGenesisTime = 1688352006; // October 30, 2023, at 00:00:00 UTC	
@@ -327,7 +327,7 @@ public:
         pchMessageStart[1] = 0x49; // I
         pchMessageStart[2] = 0x34; // 4
         pchMessageStart[3] = 0x54; // T
-        nDefaultPort = 18798;
+        nDefaultPort = 18865;
         nPruneAfterHeight = 1000;
 
         uint32_t nGenesisTime = 1688350000;  // October 30, 2023
@@ -484,7 +484,7 @@ public:
         pchMessageStart[1] = 0x49; // I 
         pchMessageStart[2] = 0x34; // 4 
         pchMessageStart[3] = 0x52; // R 
-        nDefaultPort = 18448;
+        nDefaultPort = 18550;
         nPruneAfterHeight = 1000;
 
         uint32_t nGenesisTime = 1688340000;

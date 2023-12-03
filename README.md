@@ -19,14 +19,19 @@ AIPG introduces a sustainable and balanced economic model. Initially, the protoc
 
 AIPG is more than just a digital currency; it's a platform for AI enthusiasts to experiment, build, and contribute, thereby democratizing AI technology and helping pioneer the next era of open-source AI advancements. 
 
-Official Site - https://aipowergrid.io
-Official Pool - https://pool1.aipowergrid.io
-Official Explorer - https://explorer.aipowergrid.io
-Meowcoin Specs
-P2P Port - 8865
-RPC Port - 9788
-Block Time - 1 min
-Block Reward - 5000 AIPG (4750 eward, 250 donation)
+# AIPG Coin Information
+
+- **Official Site:** [https://aipowergrid.io](https://aipowergrid.io)
+- **Official Pool:** [https://pool1.aipowergrid.io](https://pool1.aipowergrid.io)
+- **Official Explorer:** [https://explorer.aipowergrid.io](https://explorer.aipowergrid.io)
+
+## AIPG Coin Specifications
+
+- **P2P Port:** 8865
+- **RPC Port:** 9788
+- **Block Time:** 1 minute
+- **Block Reward:** 5000 AIPG (4750 reward, 250 donation)
+
 
 License
 -------

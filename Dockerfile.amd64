@@ -1,0 +1,27 @@
+FROM amd64/ubuntu:latest
+
+MAINTAINER cade <cade.call@mediciventures.com>
+
+EXPOSE $RPCPORT
+
+EXPOSE $PORT
+
+RUN apt-get update && apt-get install -y bash net-tools && apt-get clean
+
+RUN useradd -ms /bin/bash aipg
+
+RUN mkdir /etc/aipg
+
+RUN mkdir /var/lib/aipg
+
+RUN chown aipg:aipg /etc/aipg /var/lib/aipg
+
+WORKDIR /home/aipg
+
+COPY --chown=aipg:aipg linux64/* /home/aipg/
+
+COPY --chown=aipg:aipg run.sh /home/aipg/
+
+USER aipg
+
+CMD ["/home/aipg/run.sh"]

@@ -107,7 +107,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 2100000;  //~ 4 yrs at 1 min block time
+        consensus.nSubsidyHalvingInterval = 1000000;  //~ 1.9 years at 1 min block time
         consensus.nBIP34Enabled = true;
         consensus.nBIP65Enabled = true; // 
         consensus.nBIP66Enabled = true;
@@ -216,17 +216,17 @@ public:
 
         /** AIPG Start **/
         // Burn Amounts
-        nIssueAssetBurnAmount = 500 * COIN;
-        nReissueAssetBurnAmount = 100 * COIN;
-        nIssueSubAssetBurnAmount = 100 * COIN;
-        nIssueUniqueAssetBurnAmount = 5 * COIN;
-        nIssueMsgChannelAssetBurnAmount = 100 * COIN;
-        nIssueQualifierAssetBurnAmount = 1000 * COIN;
-        nIssueSubQualifierAssetBurnAmount = 100 * COIN;
-        nIssueRestrictedAssetBurnAmount = 1500 * COIN;
-        nAddNullQualifierTagBurnAmount = .1 * COIN;
+        nIssueAssetBurnAmount = 50 * COIN;
+        nReissueAssetBurnAmount = 10 * COIN;
+        nIssueSubAssetBurnAmount = 10 * COIN;
+        nIssueUniqueAssetBurnAmount = 0.5 * COIN;
+        nIssueMsgChannelAssetBurnAmount = 10 * COIN;
+        nIssueQualifierAssetBurnAmount = 100 * COIN;
+        nIssueSubQualifierAssetBurnAmount = 10 * COIN;
+        nIssueRestrictedAssetBurnAmount = 150 * COIN;
+        nAddNullQualifierTagBurnAmount = 0.01 * COIN;
 		
-        // 5% of 5000 AIPG to operations wallet
+        // 5% of 500 AIPG to operations wallet
 	    nCommunityAutonomousAmount = 5;
         // Operations wallet placeholder
 
@@ -375,17 +375,17 @@ public:
 
         /** AIPG Start **/
         // Burn Amounts
-        nIssueAssetBurnAmount = 500 * COIN;
-        nReissueAssetBurnAmount = 100 * COIN;
-        nIssueSubAssetBurnAmount = 100 * COIN;
-        nIssueUniqueAssetBurnAmount = 5 * COIN;
-        nIssueMsgChannelAssetBurnAmount = 100 * COIN;
-        nIssueQualifierAssetBurnAmount = 1000 * COIN;
-        nIssueSubQualifierAssetBurnAmount = 100 * COIN;
-        nIssueRestrictedAssetBurnAmount = 1500 * COIN;
-        nAddNullQualifierTagBurnAmount = .1 * COIN;
+        nIssueAssetBurnAmount = 50 * COIN;
+        nReissueAssetBurnAmount = 10 * COIN;
+        nIssueSubAssetBurnAmount = 10 * COIN;
+        nIssueUniqueAssetBurnAmount = 0.5 * COIN;
+        nIssueMsgChannelAssetBurnAmount = 10 * COIN;
+        nIssueQualifierAssetBurnAmount = 100 * COIN;
+        nIssueSubQualifierAssetBurnAmount = 10 * COIN;
+        nIssueRestrictedAssetBurnAmount = 150 * COIN;
+        nAddNullQualifierTagBurnAmount = 0.01 * COIN;
 		
-	    // 5% of 5000 AIPG to operations wallet
+	    // 5% of 500 AIPG to operations fund
 	    nCommunityAutonomousAmount = 5;
 
         // Burn Addresses
@@ -502,7 +502,7 @@ public:
         uint256 TempHashHolding = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
         uint256 BestBlockHash = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         for (int i=0;i<40000000;i++) {
-            genesis = CreateGenesisBlock(nGenesisTime, i, 0x1e00ffff, 4, 5000 * COIN);
+            genesis = CreateGenesisBlock(nGenesisTime, i, 0x1e00ffff, 4, 500 * COIN);
             genesis.hashPrevBlock = TempHashHolding;
 			// Depending on when the timestamp is on the genesis block. You will need to use GetX16RHash or GetX16RV2Hash. Replace GetHash() with these below
             consensus.hashGenesisBlock = genesis.GetX16RHash();
@@ -552,7 +552,7 @@ public:
         /////////////////////////////////////////////////////////////////
            // end of genesis block creation
 */
-        genesis = CreateGenesisBlock(nGenesisTime, 1925563, 0x1e00ffff, 4, 5000 * COIN);
+        genesis = CreateGenesisBlock(nGenesisTime, 1925563, 0x1e00ffff, 4, 500 * COIN);
         consensus.hashGenesisBlock = genesis.GetX16RHash();
 
         assert(consensus.hashGenesisBlock == uint256S("0x0000001a53f7f3d9f8be5f0cdfeddd641bee2c6c7001a9cdfdbb6f72ca66aed5"));
@@ -587,18 +587,18 @@ public:
 
         /** AIPG Start **/
         // Burn Amounts
-        nIssueAssetBurnAmount = 500 * COIN;
-        nReissueAssetBurnAmount = 100 * COIN;
-        nIssueSubAssetBurnAmount = 100 * COIN;
-        nIssueUniqueAssetBurnAmount = 5 * COIN;
-        nIssueMsgChannelAssetBurnAmount = 100 * COIN;
-        nIssueQualifierAssetBurnAmount = 1000 * COIN;
-        nIssueSubQualifierAssetBurnAmount = 100 * COIN;
-        nIssueRestrictedAssetBurnAmount = 1500 * COIN;
-        nAddNullQualifierTagBurnAmount = .1 * COIN;
+        nIssueAssetBurnAmount = 50 * COIN;
+        nReissueAssetBurnAmount = 10 * COIN;
+        nIssueSubAssetBurnAmount = 10 * COIN;
+        nIssueUniqueAssetBurnAmount = 0.5 * COIN;
+        nIssueMsgChannelAssetBurnAmount = 10 * COIN;
+        nIssueQualifierAssetBurnAmount = 100 * COIN;
+        nIssueSubQualifierAssetBurnAmount = 10 * COIN;
+        nIssueRestrictedAssetBurnAmount = 150 * COIN;
+        nAddNullQualifierTagBurnAmount = 0.01 * COIN;
 		
-	//10% of 5000 COIN to ASSIGN
-	nCommunityAutonomousAmount = 10;
+	//5% of 500 COIN to Opertions Fund
+	nCommunityAutonomousAmount = 5;
 
         // Burn Addresses
 	strIssueAssetBurnAddress = "n1issueAssetXXXXXXXXXXXXXXXXWdnemQ";

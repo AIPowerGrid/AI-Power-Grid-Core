@@ -80,7 +80,7 @@ def create_coinbase(height, pubkey = None):
     coinbase.vin.append(CTxIn(COutPoint(0, 0xffffffff), 
                 ser_string(serialize_script_num(height)), 0xffffffff))
     coin_base_output = CTxOut()
-    coin_base_output.nValue = 5000 * COIN
+    coin_base_output.nValue = 500 * COIN
     halvings = int(height/150) # regtest
     coin_base_output.nValue >>= halvings
     if pubkey is not None:

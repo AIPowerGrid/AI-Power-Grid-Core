@@ -171,7 +171,7 @@ class ReplaceByFeeTest(AipgTestFramework):
     def test_doublespend_chain(self):
         """Doublespend of a long chain"""
 
-        initial_n_value = 5000 * COIN
+        initial_n_value = 500 * COIN
         tx0_outpoint = make_utxo(self.nodes[0], initial_n_value)
 
         prevout = tx0_outpoint

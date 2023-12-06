@@ -12,7 +12,7 @@ AIPG operates on a peer-to-peer technology with no central authority, meaning tr
 
 The AIPG protocol is built on principles of fairness, transparency, and decentralization. It uses the ASIC-resistant KawPoW algorithm during the PoW period to ensure a fair launch and encourage widespread participation. A significant evolution in the protocol is the transition to the PoUW system, where miners' computational resources are devoted to tangible tasks.
 
-AIPG introduces a sustainable and balanced economic model. Initially, the protocol capitalizes on a PoW mechanism, granting miners a block reward of 5000 AIPG coins for every block. As AIPG evolves, transitioning to the PoUW system and the associated Proof-of-Stake (PoS) mechanisms, there will be a phased reduction in block rewards to encourage early adoption and active participation.
+AIPG introduces a sustainable and balanced economic model. Initially, the protocol capitalizes on a PoW mechanism, granting miners a block reward of 500 AIPG coins for every block. As AIPG evolves, transitioning to the PoUW system and the associated Proof-of-Stake (PoS) mechanisms, there will be a phased reduction in block rewards to encourage early adoption and active participation.
 
 AIPG is more than just a digital currency; it's a platform for AI enthusiasts to experiment, build, and contribute, thereby democratizing AI technology and helping pioneer the next era of open-source AI advancements. 
 
@@ -27,7 +27,7 @@ AIPG is more than just a digital currency; it's a platform for AI enthusiasts to
 - **P2P Port:** 8865
 - **RPC Port:** 9788
 - **Block Time:** 1 minute
-- **Block Reward:** 5000 AIPG (4750 reward, 250 donation)
+- **Block Reward:** 500 AIPG (4750 reward, 250 donation)
 
 
 License

@@ -43,7 +43,7 @@ Additional fields may be added, but will be ignored by Aipg.
 
    "forsale": true,
 
-   "forsale_price": "5000 aipg",
+   "forsale_price": "500 AIPG",
    
    "domain": "bitactivate.com",
    

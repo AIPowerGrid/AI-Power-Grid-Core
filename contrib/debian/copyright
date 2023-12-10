@@ -7,7 +7,7 @@ Source: https://github.com/JustAResearcher/Aipg
 Files: *
 Copyright: 2009-2017, Aipg Core Developers
 License: Expat
-Comment: The Aipg__Core developers encompasses the current developers listed on aipgcoin.net,
+Comment: The AIPG Core developers encompasses the current developers listed on aipgcoin.net,
          as well as the numerous contributors to the project.
 
 Files: debian/*

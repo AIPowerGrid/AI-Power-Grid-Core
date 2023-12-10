@@ -27,7 +27,7 @@ AIPG is more than just a digital currency; it's a platform for AI enthusiasts to
 - **P2P Port:** 8865
 - **RPC Port:** 9788
 - **Block Time:** 1 minute
-- **Block Reward:** 500 AIPG (4750 reward, 250 donation)
+- **Block Reward:** 500 AIPG (500reward, 25 donation)
 
 
 License

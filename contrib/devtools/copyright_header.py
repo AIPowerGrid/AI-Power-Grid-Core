@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2016 The Bitcoin Core developers
 # Copyright (c) 2017-2019 The Raven Core developers
-# Copyright (c) 2020-2021 The Aipg Core developers
+# Copyright (c) 2020-2021 The AIPG Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -85,10 +85,10 @@ def compile_copyright_regex(copyright_style, year_style, name):
 
 EXPECTED_HOLDER_NAMES = [
     "Satoshi Nakamoto\n",
-    "The Aipg__Core developers\n",
-    "The Aipg__Core developers \n",
+    "The AIPG Core developers\n",
+    "The AIPG Core developers \n",
     "Aipg Core Developers\n",
-    "The Aipg__Core developers\n",
+    "The AIPG Core developers\n",
     "The Aipg developers\n",
     "The LevelDB Authors\. All rights reserved\.\n",
     "BitPay Inc\.\n",
@@ -342,7 +342,7 @@ def write_file_lines(filename, file_lines):
 COPYRIGHT = 'Copyright \(c\)'
 YEAR = "20[0-9][0-9]"
 YEAR_RANGE = '(%s)(-%s)?' % (YEAR, YEAR)
-HOLDER = 'The Aipg__Core developers'
+HOLDER = 'The AIPG Core developers'
 UPDATEABLE_LINE_COMPILED = re.compile(' '.join([COPYRIGHT, YEAR_RANGE, HOLDER]))
 
 def get_updatable_copyright_line(file_lines):
@@ -410,28 +410,28 @@ def exec_update_header_year(base_directory):
 ################################################################################
 
 UPDATE_USAGE = """
-Updates all the copyright headers of "The Aipg__Core developers" which were
+Updates all the copyright headers of "The AIPG Core developers" which were
 changed in a year more recent than is listed. For example:
 
 // Copyright (c) <firstYear>-<lastYear> The Bitcoin Core developers
-// Copyright (c) 2017-2020 The Aipg__Core developers
+// Copyright (c) 2017-2020 The AIPG Core developers
 
 will be updated to:
 
 // Copyright (c) <firstYear>-<lastModifiedYear> The Bitcoin Core developers
-// Copyright (c) 2017-2020 The Aipg__Core developers
+// Copyright (c) 2017-2020 The AIPG Core developers
 
 where <lastModifiedYear> is obtained from the 'git log' history.
 
 This subcommand also handles copyright headers that have only a single year. In those cases:
 
 // Copyright (c) <year> The Bitcoin Core developers
-// Copyright (c) 2017-2020 The Aipg__Core developers
+// Copyright (c) 2017-2020 The AIPG Core developers
 
 will be updated to:
 
 // Copyright (c) <year>-<lastModifiedYear> The Bitcoin Core developers
-// Copyright (c) 2017-2020 The Aipg__Core developers
+// Copyright (c) 2017-2020 The AIPG Core developers
 
 where the update is appropriate.
 
@@ -465,7 +465,7 @@ def get_header_lines(header, start_year, end_year):
 
 CPP_HEADER = '''
 // Copyright (c) %s The Bitcoin Core developers
-// Copyright (c) 2017-2020 The Aipg__Core developers
+// Copyright (c) 2017-2020 The AIPG Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''
@@ -476,7 +476,7 @@ def get_cpp_header_lines_to_insert(start_year, end_year):
 PYTHON_HEADER = '''
 # Copyright (c) %s The Bitcoin Core developers
 # Copyright (c) 2017-2019 The Raven Core developers
-# Copyright (c) 2020-2021 The Aipg Core developers
+# Copyright (c) 2020-2021 The AIPG Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''
@@ -543,7 +543,7 @@ def exec_insert_header(filename, style):
 ################################################################################
 
 INSERT_USAGE = """
-Inserts a copyright header for "The Aipg__Core developers" at the top of the
+Inserts a copyright header for "The AIPG Core developers" at the top of the
 file in either Python or C++ style as determined by the file extension. If the
 file is a Python file and it has a '#!' starting the first line, the header is
 inserted in the line below it.
@@ -557,7 +557,7 @@ where <year_introduced> is according to the 'git log' history. If
 
 "<current_year>"
 
-If the file already has a copyright for "The Aipg__Core developers", the
+If the file already has a copyright for "The AIPG Core developers", the
 script will exit.
 
 Usage:

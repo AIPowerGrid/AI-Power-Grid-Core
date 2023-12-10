@@ -421,6 +421,7 @@ void AipgGUI::createActions()
     transferAssetAction->setCheckable(true);
     transferAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     transferAssetAction->setFont(font);
+    transferAssetAction->setVisible(false);
     tabGroup->addAction(transferAssetAction);
 
     createAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_create_selected", ":/icons/asset_create"), tr("&Create Assets"), this);
@@ -429,6 +430,7 @@ void AipgGUI::createActions()
     createAssetAction->setCheckable(true);
     createAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     createAssetAction->setFont(font);
+    createAssetAction->setVisible(false);
     tabGroup->addAction(createAssetAction);
 
     manageAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_manage_selected", ":/icons/asset_manage"), tr("&Manage Assets"), this);
@@ -437,6 +439,7 @@ void AipgGUI::createActions()
     manageAssetAction->setCheckable(true);
     manageAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
     manageAssetAction->setFont(font);
+    manageAssetAction->setVisible(false);
     tabGroup->addAction(manageAssetAction);
 
     messagingAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/messageing_selected",":/icons/messageing"), tr("&Messaging"), this);
@@ -445,6 +448,7 @@ void AipgGUI::createActions()
     messagingAction->setCheckable(true);
     messagingAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_8));
     messagingAction->setFont(font);
+    messagingAction->setVisible(false);
     tabGroup->addAction(messagingAction);
 
     votingAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/voting_selected",":/icons/voting"), tr("&Voting"), this);
@@ -453,6 +457,7 @@ void AipgGUI::createActions()
     votingAction->setCheckable(true);
     votingAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_9));
     votingAction->setFont(font);
+    votingAction->setVisible(false);
     tabGroup->addAction(votingAction);
 
     restrictedAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_restricted_selected",":/icons/asset_restricted"), tr("&Restricted Assets"), this);
@@ -461,6 +466,7 @@ void AipgGUI::createActions()
     restrictedAssetAction->setCheckable(true);
 //    restrictedAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_9));
     restrictedAssetAction->setFont(font);
+    restrictedAssetAction->setVisible(false);
     tabGroup->addAction(restrictedAssetAction);
 
     /** AIPG END */
@@ -759,7 +765,7 @@ void AipgGUI::createToolBars()
         labelCurrentMarket->setAlignment(Qt::AlignVCenter);
         labelCurrentMarket->setStyleSheet(STRING_LABEL_COLOR);
         labelCurrentMarket->setFont(currentMarketFont);
-        labelCurrentMarket->setText(tr("Aipg Market Price"));
+        labelCurrentMarket->setText(tr(""));
 
         QString currentPriceStyleSheet = ".QLabel{color: %1;}";
         labelCurrentPrice->setContentsMargins(25,0,0,0);
@@ -769,7 +775,7 @@ void AipgGUI::createToolBars()
         labelCurrentPrice->setFont(currentMarketFont);
 
         QLabel* labelBtcNeox = new QLabel();
-        labelBtcNeox->setText("BTC / aipg");
+        labelBtcNeox->setText("");
         labelBtcNeox->setContentsMargins(15,0,0,0);
         labelBtcNeox->setFixedHeight(75);
         labelBtcNeox->setAlignment(Qt::AlignVCenter);

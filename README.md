@@ -19,7 +19,7 @@ AIPG is more than just a digital currency; it's a platform for AI enthusiasts to
 # AIPG Coin Information
 
 - **Official Site:** [https://aipowergrid.io](https://aipowergrid.io)
-- **Official Pool:** [https://pool1.aipowergrid.io](https://pool1.aipowergrid.io)
+- **Official Pool:** [https://mpool.aipowergrid.io](https://mpool.aipowergrid.io)
 - **Official Explorer:** [https://explorer.aipowergrid.io](https://explorer.aipowergrid.io)
 
 ## AIPG Coin Specifications

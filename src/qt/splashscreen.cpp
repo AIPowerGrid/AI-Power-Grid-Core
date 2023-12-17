@@ -79,7 +79,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
     pixPaint.fillRect(rGradient, gradient);
 
     // draw the aipg icon, expected size of PNG: 1024x1024
-    QRect rectIcon(QPoint(-40,0), QSize(310,310));
+    QRect rectIcon(QPoint(-40,0), QSize(545,333));
 
     const QSize requiredSize(1024,1024);
     QPixmap icon(networkStyle->getSplashIcon().pixmap(requiredSize));

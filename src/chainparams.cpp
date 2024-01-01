@@ -107,7 +107,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 1000000;  //~ 1.9 years at 1 min block time
+        consensus.nSubsidyHalvingInterval = 1000000;  //~ 1.9 years, change to 100000 for accelerated halvening in 2024
         consensus.nBIP34Enabled = true;
         consensus.nBIP65Enabled = true; // 
         consensus.nBIP66Enabled = true;
@@ -271,7 +271,7 @@ class CTestNetParams : public CChainParams {
 public:
     CTestNetParams() {
         strNetworkID = "test";
-        consensus.nSubsidyHalvingInterval = 2100000;  //~ 4 yrs at 1 min block time
+        consensus.nSubsidyHalvingInterval = 100000;  //~2 months
         consensus.nBIP34Enabled = true;
         consensus.nBIP65Enabled = true; // 
         consensus.nBIP66Enabled = true;

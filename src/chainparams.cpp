@@ -107,9 +107,9 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 1000000;  //~ 1.9 years, change to 100000 for accelerated halvening in 2024
+        consensus.nSubsidyHalvingInterval = 100000;  // changed after community vote to 100000 for accelerated halvening in 2024
         consensus.nBIP34Enabled = true;
-        consensus.nBIP65Enabled = true; // 
+        consensus.nBIP65Enabled = true; 
         consensus.nBIP66Enabled = true;
         consensus.nSegwitEnabled = true;
         consensus.nCSVEnabled 	= true;
@@ -180,10 +180,10 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000000fe8c99a7aacc5aff074278a8378e625c0d02e4894db8f09bab185f4eb6"));
         assert(genesis.hashMerkleRoot == uint256S("e04a78dcf0ad3d5c7f1ac4460c4c04bc333e677d52371b7453b5b09603b41d54"));
 
-        vSeeds.emplace_back("seed1.aipowergrid.io", false);
-        vSeeds.emplace_back("seed2.aipowergrid.io", false);
-        vSeeds.emplace_back("seed3.aipowergrid.io", false);
-        vSeeds.emplace_back("seed4.aipowergrid.io", false);
+        vSeeds.emplace_back("tobenamed.com", false); // New dnsseeder
+        // vSeeds.emplace_back("seed2.aipowergrid.io", false); Added fixed seed nodes for these Full nodes.
+        // vSeeds.emplace_back("seed3.aipowergrid.io", false);
+        // vSeeds.emplace_back("seed4.aipowergrid.io", false);
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix
@@ -204,14 +204,27 @@ public:
 
 		checkpointData = (CCheckpointData) {
             {
+            	{
+            	    {0, uint256S("0x000000fe8c99a7aacc5aff074278a8378e625c0d02e4894db8f09bab185f4eb6")},
+                    {1000, uint256S("0x0000000896d9bff8ff18634e4a6371c746f910a188b7e27912a7f99bf46b7619")},
+                    {5000, uint256S("0x000000000001de284a9c92a2e1ac6e27318eda12d40af4cde7cef76d1938383a")},
+                    {10000, uint256S("0x00000000000012a7e53f095089df469faee1c88374d34faff345cf63344e9f44")},
+                    {17500, uint256S("0x0000000000003b97704bb221c3d891ba0a180170a883bcf673a6027ec7d3f256")},
+                    {25000, uint256S("0x000000000000244c4b9141badcc9ea3793a616fde2f71117f691f5594497f601")},
+                    {32500, uint256S("0x00000000000044067d88c8e8d31ba7484f42a54ce69b8dd96e1aaf0c18741bf1")},
+                    {40000, uint256S("0x0000000000004d631d9a7e09ebd68dda413a0a38c4c7f9f0ec5d89016632aaf1")},
+                    {50000, uint256S("0x0000000000001db9dc268fc6ad716468f8431031af3eac52f0f2dd877247bc01")},
+                    {62500, uint256S("0x0000000000004b6d4a5ea2ff4cd8466098ad767b4a117b0cd32435afe8be6314")},
             	}
+            }
         };
 
 
         chainTxData = ChainTxData{
-            0,
-            0,
-            0
+            // Update as we know more about the contents of the Points chain from rpc: getchaintxstats 50000
+        	1705864305, // * UNIX timestamp of last known number of transactions
+            103435,      // * total number of transactions between genesis and that timestamp
+            0.03 // * estimated number of transactions per second after that timestamp
         };
 
         /** AIPG Start **/

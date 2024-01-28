@@ -180,10 +180,10 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000000fe8c99a7aacc5aff074278a8378e625c0d02e4894db8f09bab185f4eb6"));
         assert(genesis.hashMerkleRoot == uint256S("e04a78dcf0ad3d5c7f1ac4460c4c04bc333e677d52371b7453b5b09603b41d54"));
 
-        vSeeds.emplace_back("tobenamed.com", false); // New dnsseeder
-        // vSeeds.emplace_back("seed2.aipowergrid.io", false); Added fixed seed nodes for these Full nodes.
-        // vSeeds.emplace_back("seed3.aipowergrid.io", false);
-        // vSeeds.emplace_back("seed4.aipowergrid.io", false);
+        // vSeeds.emplace_back("tobenamed.com", false); // New dnsseeder
+        vSeeds.emplace_back("seed2.aipowergrid.io", false); //TODO: Added fixed seed nodes for these Full nodes.
+        vSeeds.emplace_back("seed3.aipowergrid.io", false);
+        vSeeds.emplace_back("seed4.aipowergrid.io", false);
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix

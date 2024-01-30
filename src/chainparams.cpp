@@ -177,7 +177,7 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000000fe8c99a7aacc5aff074278a8378e625c0d02e4894db8f09bab185f4eb6"));
         assert(genesis.hashMerkleRoot == uint256S("e04a78dcf0ad3d5c7f1ac4460c4c04bc333e677d52371b7453b5b09603b41d54"));
 
-        // vSeeds.emplace_back("tobenamed.com", false); //TODO: New dnsseeder
+        vSeeds.emplace_back("dnsseed.aipowergrid.io", false); 
         vSeeds.emplace_back("us-seed1.aipowergrid.io", false); 
         vSeeds.emplace_back("us-seed2.aipowergrid.io", false); 
         vSeeds.emplace_back("us-seed3.aipowergrid.io", false);

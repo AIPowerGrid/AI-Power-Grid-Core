@@ -181,9 +181,14 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("e04a78dcf0ad3d5c7f1ac4460c4c04bc333e677d52371b7453b5b09603b41d54"));
 
         // vSeeds.emplace_back("tobenamed.com", false); // New dnsseeder
-        vSeeds.emplace_back("seed2.aipowergrid.io", false); //TODO: Added fixed seed nodes for these Full nodes.
-        vSeeds.emplace_back("seed3.aipowergrid.io", false);
-        vSeeds.emplace_back("seed4.aipowergrid.io", false);
+        vSeeds.emplace_back("us-seed1.aipowergrid.io", false); 
+        vSeeds.emplace_back("us-seed2.aipowergrid.io", false); 
+        vSeeds.emplace_back("us-seed3.aipowergrid.io", false);
+        vSeeds.emplace_back("jp-seed1.aipowergrid.io", false); 
+        vSeeds.emplace_back("au-seed1.aipowergrid.io", false);
+        vSeeds.emplace_back("eu-seed1.aipowergrid.io", false);
+        vSeeds.emplace_back("in-seed1.aipowergrid.io", false);
+
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix
@@ -418,8 +423,10 @@ public:
 
         vSeeds.emplace_back("seed1-testnet.aipowergrid.io", false);
         vSeeds.emplace_back("seed2-testnet.aipowergrid.io", false);
+        vSeeds.emplace_back("seed3-testnet.aipowergrid.io", false);
+        vSeeds.emplace_back("seed4-testnet.aipowergrid.io", false);
 
-	    base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix
+	base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};

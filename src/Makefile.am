@@ -27,7 +27,7 @@ AIPG_INCLUDES += $(UNIVALUE_CFLAGS)
 LIBAIPG_SERVER=libaipg_server.a
 LIBAIPG_COMMON=libaipg_common.a
 LIBAIPG_CONSENSUS=libaipg_consensus.a
-LIBaipg_cli=libaipg_cli.a
+LIBAIPG_CLI=libaipg_cli.a
 LIBAIPG_UTIL=libaipg_util.a
 LIBAIPG_CRYPTO=crypto/libaipg_crypto.a
 LIBAIPGQT=qt/libaipgqt.a
@@ -54,7 +54,7 @@ EXTRA_LIBRARIES += \
   $(LIBAIPG_COMMON) \
   $(LIBAIPG_CONSENSUS) \
   $(LIBAIPG_SERVER) \
-  $(LIBaipg_cli) \
+  $(LIBAIPG_CLI) \
   $(LIBAIPG_WALLET) \
   $(LIBAIPG_ZMQ)
 
@@ -82,49 +82,6 @@ endif
 AIPG_CORE_H = \
   addrdb.h \
   addressindex.h \
-  algo/sph_groestl.h \
-  algo/sph_types.h \
-  algo/sph_blake.h \
-  algo/sph_bmw.h \
-  algo/sph_jh.h \
-  algo/sph_keccak.h \
-  algo/sph_skein.h \
-  algo/sph_luffa.h \
-  algo/sph_cubehash.h \
-  algo/sph_simd.h \
-  algo/sph_echo.h \
-  algo/sph_shavite.h \
-  algo/sph_sha2.h \
-  algo/sph_haval.h \
-  algo/sph_tiger.h \
-  algo/lyra2.h \
-  algo/sponge.h \
-  algo/gost_streebog.h \
-  algo/groestl.c \
-  algo/blake.c \
-  algo/bmw.c \
-  algo/cubehash.c \
-  algo/echo.c \
-  algo/jh.c \
-  algo/keccak.c \
-  algo/luffa.c \
-  algo/shavite.c \
-  algo/simd.c \
-  algo/skein.c \
-  algo/hamsi.c \
-  algo/whirlpool.c \
-  algo/shabal.c \
-  algo/fugue.c \
-  algo/sha2.c \
-  algo/extra.c \
-  algo/extra.h \
-  algo/sph_sha2big.c \
-  algo/haval.c \
-  algo/tiger.cpp \
-  algo/lyra2.cpp \
-  algo/sponge.cpp \
-  algo/sph_sha2.c \
-  algo/gost_streebog.c \
   spentindex.h \
   timestampindex.h \
   addrman.h \
@@ -340,6 +297,7 @@ crypto_libaipg_crypto_a_SOURCES = \
   crypto/hmac_sha512.cpp \
   crypto/hmac_sha512.h \
   crypto/ripemd160.cpp \
+  crypto/ripemd160.h \ 
   crypto/sha1.cpp \
   crypto/sha1.h \
   crypto/sha256.cpp \
@@ -512,7 +470,10 @@ aipg_cli_SOURCES += aipg-cli-res.rc
 endif
 
 aipg_cli_LDADD = \
-  $(LIBaipg_cli) \
+  $(LIBAIPG_CLI) \
+  $(LIBAIPG_COMMON) \
+  $(LIBAIPG_CONSENSUS) \
+  $(LIBSECP256K1) \
   $(LIBUNIVALUE) \
   $(LIBAIPG_UTIL) \
   $(LIBAIPG_CRYPTO)

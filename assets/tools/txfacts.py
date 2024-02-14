@@ -107,8 +107,8 @@ for i in range(23500,blockheight):
         for vout in tx_detail.get('vout'):
             #print("vout: " + str(vout.get('value')))
             #print(vout.get('scriptPubKey').get('asm'))
-            if (vout.get('scriptPubKey').get('asm')[86:98] == "OP_aipg_ASSET"):
-                #print("Found OP_aipg_ASSET")
+            if (vout.get('scriptPubKey').get('asm')[86:98] == "OP_AIPG_ASSET"):
+                #print("Found OP_AIPG_ASSET")
                 #print(vout.get('scriptPubKey').get('hex'))
                 asset_script = decode_script(vout.get('scriptPubKey').get('hex'))
                 asset_handler(asset_script)

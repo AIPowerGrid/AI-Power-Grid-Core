@@ -78,7 +78,7 @@ Section -Main SEC0000
     File /oname=readme.txt @abs_top_srcdir@/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
     File @abs_top_srcdir@/release/@AIPG_DAEMON_NAME@@EXEEXT@
-    File @abs_top_srcdir@/release/@aipg_cli_NAME@@EXEEXT@
+    File @abs_top_srcdir@/release/@AIPG_CLI_NAME@@EXEEXT@
     SetOutPath $INSTDIR\doc
     File /r @abs_top_srcdir@/doc\*.*
     SetOutPath $INSTDIR

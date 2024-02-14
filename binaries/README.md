@@ -1,3 +1,3 @@
 Releases have been moved to:
 
-https://github.com/bitcoin/bitcoin/releases/latest
+https://github.com/AIPowerGrid/AI-Power-Grid-Core/releases/latest

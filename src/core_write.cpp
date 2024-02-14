@@ -114,8 +114,8 @@ std::string ScriptToAsmStr(const CScript& script, const bool fAttemptSighashDeco
             return str;
         }
 
-        if (opcode == OP_aipg_ASSET) {
-            // Once we hit an OP_aipg_ASSET, we know that all the next data should be considered as hex
+        if (opcode == OP_AIPG_ASSET) {
+            // Once we hit an OP_AIPG_ASSET, we know that all the next data should be considered as hex
             str += GetOpName(opcode);
             str += " ";
             str += HexStr(vch);

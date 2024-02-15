@@ -331,7 +331,6 @@ inline int GetHashSelection(const uint256 PrevBlockHash, int index) {
 //extern int algoHashHits[16];
 
 
-/**
 template<typename T1>
 inline uint256 HashX16R(const T1 pbegin, const T1 pend, const uint256 PrevBlockHash)
 {
@@ -605,7 +604,6 @@ inline uint256 HashX16RV2(const T1 pbegin, const T1 pend, const uint256 PrevBloc
 
     return hash[15].trim256();
 }
-*/
 
 uint256 KAWPOWHash(const CBlockHeader& blockHeader, uint256& mix_hash);
 uint256 KAWPOWHash_OnlyMix(const CBlockHeader& blockHeader);

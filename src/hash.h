@@ -14,7 +14,7 @@
 #include "serialize.h"
 #include "uint256.h"
 #include "version.h"
-/*
+
 #include "algo/sph_blake.h"
 #include "algo/sph_bmw.h"
 #include "algo/sph_groestl.h"
@@ -36,7 +36,7 @@
 #include "algo/sph_tiger.h"
 #include "algo/lyra2.h"
 #include "algo/gost_streebog.h"
-*/
+
 
 #include <crypto/ethash/helpers.hpp>
 

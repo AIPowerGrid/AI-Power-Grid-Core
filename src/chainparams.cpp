@@ -359,13 +359,12 @@ public:
         vSeeds.emplace_back("seed3-testnet.aipowergrid.io", false);
         vSeeds.emplace_back("seed4-testnet.aipowergrid.io", false);
 
-	base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,23);  // 'A' prefix
+	    base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,20);  // 'A' prefix
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,20);  // 'A' prefix
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        // AIPG BIP44 cointype in testnet
         nExtCoinType = 1;
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));

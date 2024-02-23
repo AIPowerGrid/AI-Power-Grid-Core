@@ -115,6 +115,7 @@ public:
     CAipgAddress(const char* pszAddress) { SetString(pszAddress); }
 
     CTxDestination Get() const;
+    CTxDestination Get(const CChainParams &params) const;
     bool GetIndexKey(uint160& hashBytes, int& type) const;
 };
 

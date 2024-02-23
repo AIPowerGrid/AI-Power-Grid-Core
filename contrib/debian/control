@@ -26,9 +26,9 @@ Build-Depends: debhelper,
  python,
  libzmq3-dev
 Standards-Version: 3.9.2
-Homepage: https://aipgcrypto.com
-Vcs-Git: git://github.com/JustAResearcher/Aipg.git
-Vcs-Browser: https://github.com/JustAResearcher/Aipg
+Homepage: https://aipowergrid.io/
+Vcs-Git: git://github.com/AIPowerGrid/AI-Power-Grid-Core.git
+Vcs-Browser: https://github.com/AIPowerGrid/AI-Power-Grid-Core
 
 Package: aipgd
 Architecture: any

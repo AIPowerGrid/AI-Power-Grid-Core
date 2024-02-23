@@ -37,6 +37,7 @@
 #include "algo/lyra2.h"
 #include "algo/gost_streebog.h"
 
+
 #include <crypto/ethash/helpers.hpp>
 
 #include <vector>
@@ -326,9 +327,8 @@ inline int GetHashSelection(const uint256 PrevBlockHash, int index) {
     return(hashSelection);
 }
 
-extern double algoHashTotal[16];
-extern int algoHashHits[16];
-
+//extern double algoHashTotal[16];
+//extern int algoHashHits[16];
 
 
 template<typename T1>

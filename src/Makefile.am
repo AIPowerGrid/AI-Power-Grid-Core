@@ -27,7 +27,7 @@ AIPG_INCLUDES += $(UNIVALUE_CFLAGS)
 LIBAIPG_SERVER=libaipg_server.a
 LIBAIPG_COMMON=libaipg_common.a
 LIBAIPG_CONSENSUS=libaipg_consensus.a
-LIBaipg_cli=libaipg_cli.a
+LIBAIPG_CLI=libaipg_cli.a
 LIBAIPG_UTIL=libaipg_util.a
 LIBAIPG_CRYPTO=crypto/libaipg_crypto.a
 LIBAIPGQT=qt/libaipgqt.a
@@ -54,7 +54,7 @@ EXTRA_LIBRARIES += \
   $(LIBAIPG_COMMON) \
   $(LIBAIPG_CONSENSUS) \
   $(LIBAIPG_SERVER) \
-  $(LIBaipg_cli) \
+  $(LIBAIPG_CLI) \
   $(LIBAIPG_WALLET) \
   $(LIBAIPG_ZMQ)
 
@@ -340,6 +340,7 @@ crypto_libaipg_crypto_a_SOURCES = \
   crypto/hmac_sha512.cpp \
   crypto/hmac_sha512.h \
   crypto/ripemd160.cpp \
+  crypto/ripemd160.h \ 
   crypto/sha1.cpp \
   crypto/sha1.h \
   crypto/sha256.cpp \
@@ -512,7 +513,10 @@ aipg_cli_SOURCES += aipg-cli-res.rc
 endif
 
 aipg_cli_LDADD = \
-  $(LIBaipg_cli) \
+  $(LIBAIPG_CLI) \
+  $(LIBAIPG_COMMON) \
+  $(LIBAIPG_CONSENSUS) \
+  $(LIBSECP256K1) \
   $(LIBUNIVALUE) \
   $(LIBAIPG_UTIL) \
   $(LIBAIPG_CRYPTO)

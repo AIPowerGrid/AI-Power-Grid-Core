@@ -1115,7 +1115,7 @@ bool EvalScript(std::vector<std::vector<unsigned char> > &stack, const CScript &
                         break;
 
                         /** AIPG START */
-                    case OP_aipg_ASSET:
+                    case OP_AIPG_ASSET:
                         break;
                         /** AIPG END */
 

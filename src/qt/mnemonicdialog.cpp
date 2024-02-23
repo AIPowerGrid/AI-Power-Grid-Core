@@ -17,9 +17,11 @@ MnemonicDialog::MnemonicDialog(QWidget *parent) :
     setWindowFlags(Qt::Window | Qt::WindowTitleHint | Qt::CustomizeWindowHint);
     ui->setupUi(this);
 
-    // QObject::connect(ui->btnClose, &QPushButton::clicked, this, &MnemonicDialog::on_btnClose_clicked);
-    QObject::connect(ui->btnGenerate, &QPushButton::clicked, this, &MnemonicDialog::on_btnGenerate_clicked);
+    // Connect the checkbox stateChanged signal to the slot
+    QObject::connect(ui->chkHidePassword, &QCheckBox::stateChanged, this, &MnemonicDialog::onHidePasswordStateChanged);
 
+    // Connect other signals and setup UI elements
+    QObject::connect(ui->btnGenerate, &QPushButton::clicked, this, &MnemonicDialog::on_btnGenerate_clicked);
     ui->tbxMnemonic->installEventFilter(this);
 
     setWindowTitle(QString("HD Wallet Setup"));
@@ -27,7 +29,21 @@ MnemonicDialog::MnemonicDialog(QWidget *parent) :
 #if QT_VERSION >= 0x050200
     ui->tbxMnemonic->setPlaceholderText(tr("Enter your BIP39 compliant Recovery Phrase/Mnemonic."));
 #endif
+
+    // Initially hide the edtPassword section if the checkbox is checked
+    onHidePasswordStateChanged(ui->chkHidePassword->isChecked());
 };
+
+void MnemonicDialog::onHidePasswordStateChanged(int state)
+{
+    if (state == Qt::Checked) {
+        ui->edtPassword->show();
+        ui->passwordLabel->show();
+    } else {
+        ui->edtPassword->hide();
+        ui->passwordLabel->hide();
+    }
+}
 
 bool MnemonicDialog::eventFilter(QObject *obj, QEvent *ev)
 {

@@ -1322,13 +1322,37 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
-    // Force block reward to zero when right shift is undefined.
-    if (halvings >= 64)
-        return 0;
 
-    CAmount nSubsidy = 500 * COIN;
-    // Subsidy is cut in half every 2,100,000 blocks which will occur approximately every 4 years.
-    nSubsidy >>= halvings;
+    CAmount nSubsidy;
+
+    if (halvings < 4) {
+        // Halve the subsidy based on consensusParams.nSubsidyHalvingInterval for the first 4 halvings
+        nSubsidy = 500 * COIN;
+        nSubsidy >>= halvings;
+    } else if (nHeight >= 400000 && nHeight < 3000000) {
+        // Subsidy is constant at 31.25 COIN from 400k to 3 million
+        nSubsidy = 31.25 * COIN;
+    } else if (nHeight >= 3000000 && nHeight < 4575000) {
+        // Calculate the number of blocks after the initial 3,000,000 blocks
+        int blocksAfterInitial = nHeight - 3000000;
+        // Halve the subsidy every 525,000 blocks
+        int additionalHalvings = blocksAfterInitial / 525000;
+        nSubsidy = 15.625 * COIN;
+        nSubsidy >>= additionalHalvings;
+    } else if (nHeight >= 4575000 && nHeight < 8850000) {
+        // Subsidy is constant at 1.95 COIN from 4.575 million to 8.85 million
+        nSubsidy = 1.953125 * COIN;
+    } else {
+        // Calculate the number of blocks after the initial 8,850,000 blocks
+        int blocksAfterSecondPhase = nHeight - 8850000;
+        // Calculate the number of times 1,050,000 blocks have been added after 8,850,000 blocks
+        int additionalHalvingsSecondPhase = blocksAfterSecondPhase / 1050000;
+
+        // Halve the subsidy every 1,050,000 blocks from 8.85 million onwards
+        nSubsidy = 0.9765625 * COIN;
+        nSubsidy >>= additionalHalvingsSecondPhase;
+    }
+
     return nSubsidy;
 }
 

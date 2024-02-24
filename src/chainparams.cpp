@@ -216,16 +216,16 @@ public:
                     {50000, uint256S("0x0000000000001db9dc268fc6ad716468f8431031af3eac52f0f2dd877247bc01")},
                     {62500, uint256S("0x0000000000004b6d4a5ea2ff4cd8466098ad767b4a117b0cd32435afe8be6314")},
                     {100000, uint256S("0x0000000000003cd083d33367cb52c2e01cc7c26335d99bfdb8d030849f76c987")},
+                    {101775, uint256S("0x0000000000006c4a234393ce042d5f938ba24c0e54bdb2efcbcdb7da9a4b4613")},
             	}
             }
         };
 
-
         chainTxData = ChainTxData{
             // Update as we know more about the contents of the Points chain from rpc: getchaintxstats 50000
-        	1705864305, // * UNIX timestamp of last known number of transactions
-            103435,      // * total number of transactions between genesis and that timestamp
-            0.03 // * estimated number of transactions per second after that timestamp
+        	1708784597, // * UNIX timestamp of last known number of transactions
+            178478,      // * total number of transactions between genesis and that timestamp
+            0.025 // * estimated number of transactions per second after that timestamp
         };
 
         /** AIPG Start **/

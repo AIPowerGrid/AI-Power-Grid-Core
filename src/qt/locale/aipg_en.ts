@@ -1201,7 +1201,7 @@
     </message>
     <message>
         <location line="+19"/>
-        <source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend aipg that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

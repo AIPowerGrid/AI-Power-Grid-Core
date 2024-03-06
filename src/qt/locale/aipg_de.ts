@@ -1042,7 +1042,7 @@
 			<translation>Neuere Transaktionen sind möglicherweise noch nicht sichtbar, und daher könnte der Saldo Ihrer Brieftasche falsch sein.Diese Informationen werden korrekt sein, sobald Ihre Brieftasche mit dem Aipg-Netzwerk synchronisiert ist, wie unten beschrieben.</translation>
 		</message>
 		<message>
-			<source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+			<source>Attempting to spend aipg that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
 			<translation>Der Versuch, Nesselsucht auszugeben, die von noch nicht angezeigten Transaktionen betroffen sind, wird vom Netzwerk nicht akzeptiert.</translation>
 		</message>
 		<message>

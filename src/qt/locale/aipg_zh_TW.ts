@@ -1042,7 +1042,7 @@
 			<translation>最近的交易可能还不可见,因此您的钱包余额可能不正确.一旦您的钱包完成与蜂窝网络的同步,此信息将是正确的,详情如下.</translation>
 		</message>
 		<message>
-			<source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+			<source>Attempting to spend aipg that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
 			<translation>网络将不接受尝试使用受尚未显示的事务影响的配置单元.</translation>
 		</message>
 		<message>

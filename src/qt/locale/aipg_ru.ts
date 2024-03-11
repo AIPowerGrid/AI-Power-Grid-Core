@@ -1042,7 +1042,7 @@
 			<translation>последние операции ещё не видны, поэтому остаток вашего бумажника может быть неправильным.как только ваш бумажник будет синхронизирован с сотовой сетью, эта информация будет правильна и подробно описана ниже.</translation>
 		</message>
 		<message>
-			<source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+			<source>Attempting to spend aipg that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
 			<translation>сеть не будет принимать попытки использовать модули настройки, которые ещё не показаны.</translation>
 		</message>
 		<message>

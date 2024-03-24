@@ -21,7 +21,7 @@ endif
 
 AIPGD_BIN=$(top_builddir)/src/$(AIPG_DAEMON_NAME)$(EXEEXT)
 AIPG_QT_BIN=$(top_builddir)/src/qt/$(AIPG_GUI_NAME)$(EXEEXT)
-aipg_cli_BIN=$(top_builddir)/src/$(aipg_cli_NAME)$(EXEEXT)
+aipg_cli_BIN=$(top_builddir)/src/$(AIPG_CLI_NAME)$(EXEEXT)
 AIPG_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win$(WINDOWS_BITS)-setup$(EXEEXT)
 aipg_cli_INSTALL=$(top_builddir)/contrib/install_cli.sh
 

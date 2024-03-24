@@ -1322,13 +1322,37 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
-    // Force block reward to zero when right shift is undefined.
-    if (halvings >= 64)
-        return 0;
 
-    CAmount nSubsidy = 500 * COIN;
-    // Subsidy is cut in half every 2,100,000 blocks which will occur approximately every 4 years.
-    nSubsidy >>= halvings;
+    CAmount nSubsidy;
+
+    if (halvings < 4) {
+        // Halve the subsidy based on consensusParams.nSubsidyHalvingInterval for the first 4 halvings
+        nSubsidy = 500 * COIN;
+        nSubsidy >>= halvings;
+    } else if (nHeight >= 400000 && nHeight < 3000000) {
+        // Subsidy is constant at 31.25 COIN from 400k to 3 million
+        nSubsidy = 31.25 * COIN;
+    } else if (nHeight >= 3000000 && nHeight < 4575000) {
+        // Calculate the number of blocks after the initial 3,000,000 blocks
+        int blocksAfterInitial = nHeight - 3000000;
+        // Halve the subsidy every 525,000 blocks
+        int additionalHalvings = blocksAfterInitial / 525000;
+        nSubsidy = 15.625 * COIN;
+        nSubsidy >>= additionalHalvings;
+    } else if (nHeight >= 4575000 && nHeight < 8850000) {
+        // Subsidy is constant at 1.95 COIN from 4.575 million to 8.85 million
+        nSubsidy = 1.953125 * COIN;
+    } else {
+        // Calculate the number of blocks after the initial 8,850,000 blocks
+        int blocksAfterSecondPhase = nHeight - 8850000;
+        // Calculate the number of times 1,050,000 blocks have been added after 8,850,000 blocks
+        int additionalHalvingsSecondPhase = blocksAfterSecondPhase / 1050000;
+
+        // Halve the subsidy every 1,050,000 blocks from 8.85 million onwards
+        nSubsidy = 0.9765625 * COIN;
+        nSubsidy >>= additionalHalvingsSecondPhase;
+    }
+
     return nSubsidy;
 }
 
@@ -2525,6 +2549,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
         {
             CAmount txfee = 0;
             if (!Consensus::CheckTxInputs(tx, state, view, pindex->nHeight, txfee)) {
+                state.SetFailedTransaction(tx.GetHash());
                 return error("%s: Consensus::CheckTxInputs: %s, %s", __func__, tx.GetHash().ToString(), FormatStateMessage(state));
             }
             nFees += txfee;
@@ -3169,7 +3194,7 @@ bool static DisconnectTip(CValidationState& state, const CChainParams& chainpara
     std::shared_ptr<CBlock> pblock = std::make_shared<CBlock>();
     CBlock& block = *pblock;
     if (!ReadBlockFromDisk(block, pindexDelete, chainparams.GetConsensus()))
-        return AbortNode(state, "Failed to read block");
+        return error("DisconnectTip() : Failed to read block");
     // Apply the block atomically to the chain state.
     int64_t nStart = GetTimeMicros();
     {
@@ -3510,6 +3535,12 @@ static bool ActivateBestChainStep(CValidationState& state, const CChainParams& c
             // This is likely a fatal error, but keep the mempool consistent,
             // just in case. Only remove from the mempool in this case.
             UpdateMempoolForReorg(disconnectpool, false);
+            
+            // If we're unable to disconnect a block during normal operation,
+            // then that is a failure of our local system -- we should abort
+            // rather than stay on a less work chain.
+            AbortNode(state, "Failed to disconnect block; see debug.log for details");
+
             return false;
         }
         fBlocksDisconnected = true;
@@ -4939,9 +4970,9 @@ bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview,
         if (!ReadBlockFromDisk(block, pindex, chainparams.GetConsensus()))
             return error("VerifyDB(): *** ReadBlockFromDisk failed at %d, hash=%s", pindex->nHeight, pindex->GetBlockHash().ToString());
         // check level 1: verify block validity
-        bool fCheckPoW = true;
-        bool fCheckMerkleRoot = true;
-        bool fDBCheck = true;
+        const bool fCheckPoW = true;
+        const bool fCheckMerkleRoot = true;
+        const bool fDBCheck = true;
         if (nCheckLevel >= 1 && !CheckBlock(block, state, chainparams.GetConsensus(), fCheckPoW, fCheckMerkleRoot, fDBCheck)) // fCheckAssetDuplicate set to false, because we don't want to fail because the asset exists in our database, when loading blocks from our asset databse
             return error("%s: *** found bad block at %d, hash=%s (%s)\n", __func__,
                          pindex->nHeight, pindex->GetBlockHash().ToString(), FormatStateMessage(state));

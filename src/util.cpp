@@ -630,13 +630,8 @@ fs::path GetConfigFile(const std::string &confPath)
 void ArgsManager::ReadConfigFile(const std::string &confPath)
 {
     fs::ifstream streamConfig(GetConfigFile(confPath));
-    if (!streamConfig.good()){
-        // Create empty aipg.conf if it does not exist
-        FILE* configFile = fopen(GetConfigFile(confPath).string().c_str(), "a");
-        if (configFile != nullptr)
-            fclose(configFile);
-        return; // Nothing to read, so just return
-    }
+    if (!streamConfig.good())
+        return; // No aipg.conf file is OK
 
     {
         LOCK(cs_args);

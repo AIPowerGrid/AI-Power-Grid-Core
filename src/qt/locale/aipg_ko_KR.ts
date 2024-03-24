@@ -1042,7 +1042,7 @@
 			<translation>최근 의 거래 가 아직 보이 지 않 을 수도 있 으 므 로 귀하 의 지갑 잔액 이 정확 하지 않 을 수도 있 습 니 다.지갑 이 벌집 네트워크 와 일치 하면 이 정 보 는 다음 과 같 습 니 다.</translation>
 		</message>
 		<message>
-			<source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+			<source>Attempting to spend aipg that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
 			<translation>네트워크 는 표시 되 지 않 은 트 랜 잭 션 의 영향 을 받 은 설정 부 를 사용 하려 는 시도 도 받 아들 이지 않 습 니 다.</translation>
 		</message>
 		<message>

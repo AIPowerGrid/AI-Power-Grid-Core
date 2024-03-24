@@ -530,7 +530,7 @@ void CNewAsset::ConstructTransaction(CScript& script) const
     vchMessage.push_back(aipg_Q); 
 
     vchMessage.insert(vchMessage.end(), ssAsset.begin(), ssAsset.end());
-    script << OP_aipg_ASSET << ToByteVector(vchMessage) << OP_DROP;
+    script << OP_AIPG_ASSET << ToByteVector(vchMessage) << OP_DROP;
 }
 
 void CNewAsset::ConstructOwnerTransaction(CScript& script) const
@@ -545,7 +545,7 @@ void CNewAsset::ConstructOwnerTransaction(CScript& script) const
     vchMessage.push_back(aipg_O); 
 
     vchMessage.insert(vchMessage.end(), ssOwner.begin(), ssOwner.end());
-    script << OP_aipg_ASSET << ToByteVector(vchMessage) << OP_DROP;
+    script << OP_AIPG_ASSET << ToByteVector(vchMessage) << OP_DROP;
 }
 
 bool AssetFromTransaction(const CTransaction& tx, CNewAsset& asset, std::string& strAddress)
@@ -1630,7 +1630,7 @@ void CAssetTransfer::ConstructTransaction(CScript& script) const
     vchMessage.push_back(aipg_T);
 
     vchMessage.insert(vchMessage.end(), ssTransfer.begin(), ssTransfer.end());
-    script << OP_aipg_ASSET << ToByteVector(vchMessage) << OP_DROP;
+    script << OP_AIPG_ASSET << ToByteVector(vchMessage) << OP_DROP;
 }
 
 CReissueAsset::CReissueAsset(const std::string &strAssetName, const CAmount &nAmount, const int &nUnits, const int &nReissuable,
@@ -1656,7 +1656,7 @@ void CReissueAsset::ConstructTransaction(CScript& script) const
     vchMessage.push_back(aipg_N); 
 
     vchMessage.insert(vchMessage.end(), ssReissue.begin(), ssReissue.end());
-    script << OP_aipg_ASSET << ToByteVector(vchMessage) << OP_DROP;
+    script << OP_AIPG_ASSET << ToByteVector(vchMessage) << OP_DROP;
 }
 
 bool CReissueAsset::IsNull() const
@@ -4303,7 +4303,7 @@ bool CreateTransferAssetTransaction(CWallet* pwallet, const CCoinControl& coinCo
         vecSend.push_back(recipient);
     }
 
-    // If assetTxData is not nullptr, the user wants to add some OP_aipg_ASSET data transactions into the transaction
+    // If assetTxData is not nullptr, the user wants to add some OP_AIPG_ASSET data transactions into the transaction
     if (nullAssetTxData) {
         std::string strError = "";
         int nAddTagCount = 0;
@@ -4338,7 +4338,7 @@ bool CreateTransferAssetTransaction(CWallet* pwallet, const CCoinControl& coinCo
         }
     }
 
-    // nullGlobalRestiotionData, the user wants to add OP_aipg_ASSET OP_aipg_ASSET OP_aipg_ASSETS data transaction to the transaction
+    // nullGlobalRestiotionData, the user wants to add OP_AIPG_ASSET OP_AIPG_ASSET OP_AIPG_ASSETS data transaction to the transaction
     if (nullGlobalRestrictionData) {
         std::string strError = "";
         for (auto dataObject : *nullGlobalRestrictionData) {
@@ -4552,7 +4552,7 @@ void CNullAssetTxData::ConstructGlobalRestrictionTransaction(CScript &script) co
 
     std::vector<unsigned char> vchMessage;
     vchMessage.insert(vchMessage.end(), ssAssetTxData.begin(), ssAssetTxData.end());
-    script << OP_aipg_ASSET << OP_RESERVED << OP_RESERVED << ToByteVector(vchMessage);
+    script << OP_AIPG_ASSET << OP_RESERVED << OP_RESERVED << ToByteVector(vchMessage);
 }
 
 CNullAssetTxVerifierString::CNullAssetTxVerifierString(const std::string &verifier)
@@ -4568,7 +4568,7 @@ void CNullAssetTxVerifierString::ConstructTransaction(CScript &script) const
 
     std::vector<unsigned char> vchMessage;
     vchMessage.insert(vchMessage.end(), ssAssetTxData.begin(), ssAssetTxData.end());
-    script << OP_aipg_ASSET << OP_RESERVED << ToByteVector(vchMessage);
+    script << OP_AIPG_ASSET << OP_RESERVED << ToByteVector(vchMessage);
 }
 
 bool CAssetsCache::GetAssetVerifierStringIfExists(const std::string &name, CNullAssetTxVerifierString& verifierString, bool fSkipTempCache)

@@ -1,18 +1,18 @@
 name: Build AIPG
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-      - develop
-    paths-ignore:
-      - 'binaries/**'
-      - 'doc/**'
-      - 'whitepaper/**'
-      - '*.md'
+#  push:
+#    branches:
+#      - master
+#  pull_request:
+#    branches:
+#      - master
+#      - develop
+#    paths-ignore:
+#      - 'binaries/**'
+#      - 'doc/**'
+#      - 'whitepaper/**'
+#      - '*.md'
   workflow_dispatch:
     # This creates a "Run workflow" button on the github repo webpage when the "Build AIPG" 
     #     workflow is selected on the "Actions" tab. But only if this workflow is in

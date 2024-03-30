@@ -32,7 +32,7 @@
      <item row="0" column="1">
       <widget class="QLineEdit" name="labelEdit">
        <property name="toolTip">
-        <string>The label associated with this address list entry</string>
+        <string>The Label associated with this Address List Entry.</string>
        </property>
       </widget>
      </item>
@@ -49,7 +49,7 @@
      <item row="1" column="1">
       <widget class="QValidatedLineEdit" name="addressEdit">
        <property name="toolTip">
-        <string>The address associated with this address list entry. This can only be modified for sending addresses.</string>
+        <string>The Address associated with this Address List Entry. This can only be modified for Sending Addresses.</string>
        </property>
       </widget>
      </item>

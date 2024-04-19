@@ -5536,7 +5536,7 @@
 		</message>
 		<message>
 			<source>Address:</source>
-			<translation>DIRECCIÓN:</translation>
+			<translation>Dirección:</translation>
 		</message>
 		<message>
 			<source>The AIPG address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
@@ -5767,7 +5767,7 @@
 		</message>
 		<message>
 			<source>Address</source>
-			<translation>DIRECCIÓN</translation>
+			<translation>Dirección</translation>
 		</message>
 		<message>
 			<source>Asset Name</source>
@@ -5838,7 +5838,7 @@
 		</message>
 		<message>
 			<source>Address:</source>
-			<translation>DIRECCIÓN:</translation>
+			<translation>Dirección:</translation>
 		</message>
 		<message>
 			<source>Custom Change Address</source>

@@ -5797,7 +5797,7 @@
 		</message>
 	</context>
 	<context>
-		<name>restrictedassignqualifier</name>
+		<name>AssignQualifier</name>
 		<message>
 			<source>Assign Qualifier</source>
 			<translation>Assigner un qualificatif</translation>

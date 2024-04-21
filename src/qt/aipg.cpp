@@ -565,7 +565,7 @@ void AipgApplication::initializeResult(bool success)
             EncryptDialog dlg;
 
             dlg.setModel(walletModel);
-            dlg.setWindowTitle("Encrypt Wallet");
+            dlg.setWindowTitle(tr("Encrypt Wallet"));
             dlg.exec();
 
             walletModel->updateStatus();

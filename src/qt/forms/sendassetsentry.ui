@@ -42,7 +42,7 @@
     <item row="9" column="1">
      <widget class="QLabel" name="messageTextLabel">
       <property name="toolTip">
-       <string>A message that was attached to the aipg: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the aipg network.</string>
+       <string>A message that was attached to the AIPG: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AIPG network.</string>
       </property>
       <property name="textFormat">
        <enum>Qt::PlainText</enum>
@@ -131,7 +131,7 @@
       <item>
        <widget class="QValidatedLineEdit" name="payTo">
         <property name="toolTip">
-         <string>The aipg address to send the payment to</string>
+         <string>The AIPG address to send the payment to</string>
         </property>
        </widget>
       </item>

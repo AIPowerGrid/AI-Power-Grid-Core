@@ -30,7 +30,7 @@ void EncryptDialog::setModel(WalletModel* model)
 void EncryptDialog::closeEvent (QCloseEvent *event)
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::warning(this, "Wallet Encryption Required", "There was no passphrase entered for the wallet. Wallet encryption is required in order to ensure your funds security. What would you like to do?", QMessageBox::Retry|QMessageBox::Close);
+    reply = QMessageBox::warning(this, tr("Wallet Encryption Required"), tr("There was no password entered for the wallet. Wallet encryption is required in order to ensure your funds security. What would you like to do?"), QMessageBox::Retry|QMessageBox::Close);
     if (reply == QMessageBox::Retry) {
       event->ignore();
     } else {
@@ -41,7 +41,7 @@ void EncryptDialog::closeEvent (QCloseEvent *event)
 void EncryptDialog::on_btnCancel()
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::warning(this, "Wallet Encryption Required", "There was no passphrase entered for the wallet. Wallet encryption is required in order to ensure your funds security. What would you like to do?", QMessageBox::Retry|QMessageBox::Close);
+    reply = QMessageBox::warning(this, tr("Wallet Encryption Required"), tr("There was no password entered for the wallet. Wallet encryption is required in order to ensure your funds security. What would you like to do?"), QMessageBox::Retry|QMessageBox::Close);
     if (reply == QMessageBox::Retry) {
       return;
     } else {
@@ -60,8 +60,8 @@ void EncryptDialog::on_acceptPassphrase() {
 
     if ( (!ui->linePwd->text().length()) || (!ui->linePwdConfirm->text().length()) ) {
         QMessageBox msgBox;
-        msgBox.setWindowTitle("Wallet Encryption Failed");
-        msgBox.setText("The passphrase entered for wallet encryption was empty. Please try again.");
+        msgBox.setWindowTitle(tr("Wallet Encryption Failed"));
+        msgBox.setText(tr("The password entered for wallet encryption was empty. Please try again."));
         msgBox.setIcon(QMessageBox::Critical);
         msgBox.exec();
         return;
@@ -70,18 +70,18 @@ void EncryptDialog::on_acceptPassphrase() {
     if (newPass == newPass2) {
         if (model->setWalletEncrypted(true, newPass)) {
             QMessageBox msgBox;
-            msgBox.setWindowTitle("Wallet Encryption Successful");
-            msgBox.setText("Wallet passphrase was successfully set.\nPlease remember your passphrase, this is the only way to access your funds.");
+            msgBox.setWindowTitle(tr("Wallet Encryption Successful"));
+            msgBox.setText(tr("Wallet password was successfully set.Please remember your password, this is the only way to access your funds."));
             msgBox.setIcon(QMessageBox::Information);
             msgBox.exec();
             accept();
         }
     } else {
-        QMessageBox msgBox;
-        msgBox.setWindowTitle("Wallet Encryption Failed");
-        msgBox.setText("The passphrases entered for wallet encryption do not match. Please try again.");
-        msgBox.setIcon(QMessageBox::Critical);
-        msgBox.exec();
-        return;
+    QMessageBox msgBox;
+    msgBox.setWindowTitle(QApplication::translate("context", "Wallet Encryption Failed"));
+    msgBox.setText(QApplication::translate("context", "The passwords entered for wallet encryption do not match. Please try again."));
+    msgBox.setIcon(QMessageBox::Critical);
+    msgBox.exec();
+    return;
     }
 }

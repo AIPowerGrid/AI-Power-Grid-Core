@@ -42,9 +42,9 @@ QString AipgUnits::name(int unit)
 {
     switch(unit)
     {
-    case aipg: return QString("aipg");
-    case maipg: return QString("maipg");
-    case uaipg: return QString::fromUtf8("μaipg");
+    case aipg: return QString("AIPG");
+    case maipg: return QString("mAIPG");
+    case uaipg: return QString::fromUtf8("μAIPG");
     default: return QString("???");
     }
 }
@@ -53,9 +53,9 @@ QString AipgUnits::description(int unit)
 {
     switch(unit)
     {
-    case aipg: return QString("Aipg");
-    case maipg: return QString("Milli-Aipg (1 / 1" THIN_SP_UTF8 "000)");
-    case uaipg: return QString("Micro-Aipg (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case aipg: return QString("AIPG");
+    case maipg: return QString("Milli-AIPG (1 / 1" THIN_SP_UTF8 "000)");
+    case uaipg: return QString("Micro-AIPG (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }

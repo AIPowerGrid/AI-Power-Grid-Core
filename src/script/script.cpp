@@ -145,7 +145,7 @@ const char* GetOpName(opcodetype opcode)
     case OP_NOP10                  : return "OP_NOP10";
 
     /** AIPG START */
-    case OP_aipg_ASSET              : return "OP_aipg_ASSET";
+    case OP_AIPG_ASSET              : return "OP_AIPG_ASSET";
     /** AIPG END */
 
     case OP_INVALIDOPCODE          : return "OP_INVALIDOPCODE";
@@ -246,7 +246,7 @@ bool CScript::IsAssetScript(int& nType, bool& isOwner) const
 bool CScript::IsAssetScript(int& nType, bool& fIsOwner, int& nStartingIndex) const
 {
     if (this->size() > 31) {
-        if ((*this)[25] == OP_aipg_ASSET) { // OP_aipg_ASSET is always in the 25 index of the script if it exists
+        if ((*this)[25] == OP_AIPG_ASSET) { // OP_AIPG_ASSET is always in the 25 index of the script if it exists
             int index = -1;
             if ((*this)[27] == aipg_N) { // Check to see if aipg starts at 27 ( this->size() < 105)
                 if ((*this)[28] == aipg_E)
@@ -332,15 +332,15 @@ bool CScript::IsNullAsset() const
 bool CScript::IsNullAssetTxDataScript() const
 {
     return (this->size() > 23 &&
-            (*this)[0] == OP_aipg_ASSET &&
+            (*this)[0] == OP_AIPG_ASSET &&
             (*this)[1] == 0x14);
 }
 
 bool CScript::IsNullGlobalRestrictionAssetTxDataScript() const
 {
-    // 1 OP_aipg_ASSET followed by two OP_RESERVED + atleast 4 characters for the restricted name $ABC
+    // 1 OP_AIPG_ASSET followed by two OP_RESERVED + atleast 4 characters for the restricted name $ABC
     return (this->size() > 6 &&
-            (*this)[0] == OP_aipg_ASSET &&
+            (*this)[0] == OP_AIPG_ASSET &&
             (*this)[1] == OP_RESERVED &&
             (*this)[2] == OP_RESERVED);
 }
@@ -348,9 +348,9 @@ bool CScript::IsNullGlobalRestrictionAssetTxDataScript() const
 
 bool CScript::IsNullAssetVerifierTxDataScript() const
 {
-    // 1 OP_aipg_ASSET followed by one OP_RESERVED
+    // 1 OP_AIPG_ASSET followed by one OP_RESERVED
     return (this->size() > 3 &&
-            (*this)[0] == OP_aipg_ASSET &&
+            (*this)[0] == OP_AIPG_ASSET &&
             (*this)[1] == OP_RESERVED &&
             (*this)[2] != OP_RESERVED);
 }
@@ -450,7 +450,7 @@ bool CScript::HasValidOps() const
 bool CScript::IsUnspendable() const
 {
     CAmount nAmount;
-    return (size() > 0 && *begin() == OP_RETURN) || (size() > 0 && *begin() == OP_aipg_ASSET) || (size() > MAX_SCRIPT_SIZE) || (GetAssetAmountFromScript(*this, nAmount) && nAmount == 0);
+    return (size() > 0 && *begin() == OP_RETURN) || (size() > 0 && *begin() == OP_AIPG_ASSET) || (size() > MAX_SCRIPT_SIZE) || (GetAssetAmountFromScript(*this, nAmount) && nAmount == 0);
 }
 
 //!--------------------------------------------------------------------------------------------------------------------------!//

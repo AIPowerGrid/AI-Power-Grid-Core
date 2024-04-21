@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Passphrase Dialog</string>
+   <string>Password Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="sizeConstraint">
@@ -53,7 +53,7 @@
      <item row="0" column="0">
       <widget class="QLabel" name="passLabel1">
        <property name="text">
-        <string>Enter passphrase</string>
+        <string>Enter password</string>
        </property>
       </widget>
      </item>
@@ -67,7 +67,7 @@
      <item row="1" column="0">
       <widget class="QLabel" name="passLabel2">
        <property name="text">
-        <string>New passphrase</string>
+        <string>New password</string>
        </property>
       </widget>
      </item>
@@ -81,7 +81,7 @@
      <item row="2" column="0">
       <widget class="QLabel" name="passLabel3">
        <property name="text">
-        <string>Repeat new passphrase</string>
+        <string>Repeat new password</string>
        </property>
       </widget>
      </item>

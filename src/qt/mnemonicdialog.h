@@ -26,6 +26,9 @@ public Q_SLOTS:
     void on_btnImport_clicked();
     void on_btnGenerate_clicked();
 
+private Q_SLOTS:
+    void onHidePasswordStateChanged(int state);
+
 private:
     Ui::MnemonicDialog *ui;
 };

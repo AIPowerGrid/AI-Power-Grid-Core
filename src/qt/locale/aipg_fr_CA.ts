@@ -892,7 +892,7 @@
 			<translation>Les transactions récentes ne sont peut-être pas encore visibles et par conséquent le solde de votre porte-monnaie est peut-être erroné. Cette information sera juste quand votre porte-monnaie aura fini de se synchroniser avec le réseau Aipg, comme décrit ci-dessous.</translation>
 		</message>
 		<message>
-			<source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+			<source>Attempting to spend aipg that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
 			<translation>Toute tentative de dépense de aipgss affectés par des transactions qui ne sont pas encore affichées ne sera pas acceptée par le réseau.</translation>
 		</message>
 		<message>
@@ -5797,7 +5797,7 @@
 		</message>
 	</context>
 	<context>
-		<name>restrictedassignqualifier</name>
+		<name>AssignQualifier</name>
 		<message>
 			<source>Assign Qualifier</source>
 			<translation>Assigner un qualificatif</translation>

@@ -34,6 +34,7 @@ build-aux/test-driver
 config.log
 config.status
 configure
+configure~
 libtool
 src/config/aipg-config.h
 src/config/aipg-config.h.in

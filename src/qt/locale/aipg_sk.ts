@@ -892,7 +892,7 @@
         <translation>Nedávne transakcie nemusia byť ešte viditeľné preto môže byť zostatok vo vašej peňaženke nesprávny. Táto informácia bude správna keď sa dokončí synchronizovanie peňaženky so sieťou aipg, ako je rozpísané nižšie.</translation>
     </message>
     <message>
-        <source>Attempting to spend aipgss that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend aipg that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Pokus o minutie aipgsov, ktoré sú ovplyvnené ešte nezobrazenými transakciami, nebude sieťou akceptovaný.</translation>
     </message>
     <message>

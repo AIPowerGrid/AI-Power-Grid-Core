@@ -341,7 +341,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 aipg</string>
+                    <string notr="true">0.00 AIPG</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -421,7 +421,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 aipg</string>
+                    <string notr="true">0.00 AIPG</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -472,7 +472,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 aipg</string>
+                    <string notr="true">0.00 AIPG</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -501,7 +501,7 @@
                     <enum>Qt::ActionsContextMenu</enum>
                    </property>
                    <property name="text">
-                    <string notr="true">0.00 aipg</string>
+                    <string notr="true">0.00 AIPG</string>
                    </property>
                    <property name="textInteractionFlags">
                     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -532,10 +532,10 @@
             <item>
              <widget class="QCheckBox" name="checkBoxAssetControlChange">
               <property name="toolTip">
-               <string>If this is activated, but the change address is empty or invalid, change will be sent to a newly generated address.</string>
+               <string>If this is activated, but the "Change Address" is empty or invalid, change will be sent to a newly generated address.</string>
               </property>
               <property name="text">
-               <string>Custom change address</string>
+               <string>Custom Change Address</string>
               </property>
              </widget>
             </item>
@@ -814,7 +814,7 @@
             <item>
              <widget class="QPushButton" name="buttonMinimizeFee">
               <property name="toolTip">
-               <string>collapse fee-settings</string>
+               <string>Collapse Fee-Settings</string>
               </property>
               <property name="text">
                <string>Hide</string>
@@ -865,10 +865,10 @@
                    <item>
                     <widget class="QLabel" name="labelCustomPerKilobyte">
                      <property name="toolTip">
-                      <string>If the custom fee is set to 1000 satoshis and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 satoshis in fee, while &quot;total at least&quot; pays 1000 satoshis. For transactions bigger than a kilobyte both pay by kilobyte.</string>
+                      <string>If the custom fee is set to 1000 Satoshis and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 Satoshis in fee, while &quot;total at least&quot; pays 1000 Satoshis. For transactions bigger than a kilobyte both pay per kilobyte.</string>
                      </property>
                      <property name="text">
-                      <string>per kilobyte</string>
+                      <string>Per Kilobyte</string>
                      </property>
                     </widget>
                    </item>
@@ -895,7 +895,7 @@
                    <item>
                     <widget class="QCheckBox" name="checkBoxMinimumFee">
                      <property name="toolTip">
-                      <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for aipg transactions than the network can process.</string>
+                      <string>Paying a Minimum Fee is OK if there is vacant space (less transaction volume than room) in Blocks. However, be advised: This could result in a never-confirming transaction if demand for transactions is in excess of available space/room in Blocks.</string>
                      </property>
                      <property name="text">
                       <string/>
@@ -908,7 +908,7 @@
                       <bool>true</bool>
                      </property>
                      <property name="toolTip">
-                      <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for aipg transactions than the network can process.</string>
+                      <string>Paying a Minimum Fee is OK if there is vacant space (less transaction volume than room) in Blocks. However, be advised: This could result in a never-confirming transaction if demand for transactions is in excess of available space/room in Blocks.</string>
                      </property>
                      <property name="text">
                       <string>(read the tooltip)</string>
@@ -1051,7 +1051,7 @@
                      <item>
                       <widget class="QLabel" name="labelSmartFee3">
                        <property name="text">
-                        <string>Confirmation time target:</string>
+                        <string>Confirmation Time Target:</string>
                        </property>
                        <property name="margin">
                         <number>2</number>
@@ -1164,7 +1164,7 @@
           </size>
          </property>
          <property name="toolTip">
-          <string>Confirm the send action</string>
+          <string>Confirm the action: Send</string>
          </property>
          <property name="text">
           <string>S&amp;end</string>
@@ -1207,7 +1207,7 @@
        <item>
         <widget class="QPushButton" name="addButton">
          <property name="toolTip">
-          <string>Send to multiple recipients at once</string>
+          <string>Send to multiple Recipients at once.</string>
          </property>
          <property name="text">
           <string>Add &amp;Recipient</string>
@@ -1264,7 +1264,7 @@
             <cursorShape>IBeamCursor</cursorShape>
            </property>
            <property name="text">
-            <string notr="true">123.456 aipg</string>
+            <string notr="true">123.456 AIPG</string>
            </property>
            <property name="textInteractionFlags">
             <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>

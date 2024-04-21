@@ -627,8 +627,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/JustAResearcher/Aipg>";
-    const std::string URL_WEBSITE = "<https://aipgcrypto.com>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/AIPowerGrid/AI-Power-Grid-Core>";
+    const std::string URL_WEBSITE = "<https://aipowergrid.io/>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2022, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -1190,9 +1190,11 @@ bool AppInitParameterInteraction()
         dustRelayFee = CFeeRate(n);
     }
 
-    fRequireStandard = !gArgs.GetBoolArg("-acceptnonstdtxn", !chainparams.RequireStandard());
+    fRequireStandard = !gArgs.GetBoolArg("-acceptnonstdtxn", false);
     if (chainparams.RequireStandard() && !fRequireStandard)
         return InitError(strprintf("acceptnonstdtxn is not currently supported for %s chain", chainparams.NetworkIDString()));
+    // This defaults all chains to requiring standard transactions; testnet and regtest can use "-acceptnonstdtxn" to over-ride, but mainnet cannot
+    // Note that as previously coded, the "-acceptnonstdtxn" switch was broken. Bitcoin fixed this differently in their PR#15891
     nBytesPerSigOp = gArgs.GetArg("-bytespersigop", nBytesPerSigOp);
 
 #ifdef ENABLE_WALLET

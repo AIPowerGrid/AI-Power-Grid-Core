@@ -186,7 +186,7 @@ enum opcodetype
     OP_NOP10 = 0xb9,
 
     /** AIPG START */
-    OP_aipg_ASSET = 0xc0,
+    OP_AIPG_ASSET = 0xc0,
     /** AIPG END */
 
 
@@ -578,7 +578,7 @@ public:
 
         // If we see an op neox asset, we consider all data after it has data, and not op codes
         // Move the pc to the end of the script
-        if (opcode == OP_aipg_ASSET) {
+        if (opcode == OP_AIPG_ASSET) {
             unsigned int nSize = end() - pc;
             if (pvchRet)
                 pvchRet->assign(pc, pc + nSize);

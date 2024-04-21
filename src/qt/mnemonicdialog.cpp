@@ -17,17 +17,33 @@ MnemonicDialog::MnemonicDialog(QWidget *parent) :
     setWindowFlags(Qt::Window | Qt::WindowTitleHint | Qt::CustomizeWindowHint);
     ui->setupUi(this);
 
-    // QObject::connect(ui->btnClose, &QPushButton::clicked, this, &MnemonicDialog::on_btnClose_clicked);
-    QObject::connect(ui->btnGenerate, &QPushButton::clicked, this, &MnemonicDialog::on_btnGenerate_clicked);
+    // Connect the checkbox stateChanged signal to the slot
+    QObject::connect(ui->chkHidePassword, &QCheckBox::stateChanged, this, &MnemonicDialog::onHidePasswordStateChanged);
 
+    // Connect other signals and setup UI elements
+    QObject::connect(ui->btnGenerate, &QPushButton::clicked, this, &MnemonicDialog::on_btnGenerate_clicked);
     ui->tbxMnemonic->installEventFilter(this);
 
     setWindowTitle(QString("HD Wallet Setup"));
-    ui->edtPassword->setPlaceholderText(tr("Enter a passphrase to protect your Recovery Phrase. (optional)"));
+    ui->edtPassword->setPlaceholderText(tr("Enter a passphrase to protect your Seed Phrase. (optional)"));
 #if QT_VERSION >= 0x050200
-    ui->tbxMnemonic->setPlaceholderText(tr("Enter your BIP39 compliant Recovery Phrase/Mnemonic."));
+    ui->tbxMnemonic->setPlaceholderText(tr("Enter your BIP39 compliant Seed Phrase/Mnemonic."));
 #endif
+
+    // Initially hide the edtPassword section if the checkbox is checked
+    onHidePasswordStateChanged(ui->chkHidePassword->isChecked());
 };
+
+void MnemonicDialog::onHidePasswordStateChanged(int state)
+{
+    if (state == Qt::Checked) {
+        ui->edtPassword->show();
+        ui->passwordLabel->show();
+    } else {
+        ui->edtPassword->hide();
+        ui->passwordLabel->hide();
+    }
+}
 
 bool MnemonicDialog::eventFilter(QObject *obj, QEvent *ev)
 {
@@ -54,9 +70,9 @@ void MnemonicDialog::on_btnImport_clicked()
 
     SecureString tmp(my_words.begin(), my_words.end());
 
-    // NOTE: default mnemonic passphrase is an empty string
+    // NOTE: default mnemonic seed phrase is an empty string
     if (!CMnemonic::Check(tmp)) {
-        ui->lblHelp->setText("Words are not valid, please check the words and try again");
+        ui->lblHelp->setText(tr("Words are not valid, please check the words and try again"));
         my_words.clear();
         my_passphrase.clear();
         return;

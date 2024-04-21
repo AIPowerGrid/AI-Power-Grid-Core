@@ -262,13 +262,18 @@ bool CAipgAddress::IsValid(const CChainParams& params) const
 
 CTxDestination CAipgAddress::Get() const
 {
-    if (!IsValid())
+    return Get(GetParams());
+}
+
+CTxDestination CAipgAddress::Get(const CChainParams& params) const
+{
+    if (!IsValid(params))
         return CNoDestination();
     uint160 id;
     memcpy(&id, vchData.data(), 20);
-    if (vchVersion == GetParams().Base58Prefix(CChainParams::PUBKEY_ADDRESS))
+    if (vchVersion == params.Base58Prefix(CChainParams::PUBKEY_ADDRESS))
         return CKeyID(id);
-    else if (vchVersion == GetParams().Base58Prefix(CChainParams::SCRIPT_ADDRESS))
+    else if (vchVersion == params.Base58Prefix(CChainParams::SCRIPT_ADDRESS))
         return CScriptID(id);
     else
         return CNoDestination();

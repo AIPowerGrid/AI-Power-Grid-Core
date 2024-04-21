@@ -40,14 +40,14 @@
        <item row="0" column="0">
         <widget class="QLabel" name="mnemonicLabel">
          <property name="text">
-          <string>Import Recovery Phrase</string>
+          <string>Import Seed Phrase</string>
          </property>
         </widget>
        </item>
        <item row="1" column="0">
         <widget class="QTextEdit" name="tbxMnemonic">
          <property name="toolTip">
-          <string>Enter your BIP39 compliant Recovery Phrase/Mnemonic - Typing your own words will probably not work how you expect, since the words require a particular structure (the last word is a checksum).</string>
+          <string>Enter your BIP39 compliant Seed Phrase/Mnemonic - Typing your own words will probably not work how you expect, since the words require a particular structure (the last word is a checksum).</string>
          </property>
          <property name="lineWrapMode">
           <enum>QTextEdit::WidgetWidth</enum>
@@ -66,7 +66,7 @@
          <item row="0" column="1">
           <widget class="QLineEdit" name="edtPassword">
            <property name="toolTip">
-            <string>Enter a passphrase to protect your Recovery Phrase (optional)</string>
+            <string>Enter a passphrase to protect your Seed Phrase (optional)</string>
            </property>
           </widget>
          </item>
@@ -86,7 +86,7 @@
          <item row="1" column="1">
           <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>Please ensure you backup your Recovery Phrase and Passphrase - they are not recoverable!</string>
+            <string>Please ensure you backup your Seed Phrase and Recovery Passphrase - they are not recoverable!</string>
            </property>
           </widget>
          </item>
@@ -123,6 +123,21 @@
            </property>
            <property name="text">
             <string>Generate</string>
+           </property>
+          </widget>
+         </item>
+          <item>
+          <widget class="QCheckBox" name="chkHidePassword">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>20</y>
+             <width>150</width>
+             <height>0</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Old Wallet Compatibility</string>
            </property>
           </widget>
          </item>

@@ -139,11 +139,12 @@ void AddressBookPage::setModel(AddressTableModel *_model)
     // Set column widths
 #if QT_VERSION < 0x050000
     ui->tableView->horizontalHeader()->setResizeMode(AddressTableModel::Label, QHeaderView::Stretch);
-    ui->tableView->horizontalHeader()->setResizeMode(AddressTableModel::Address, QHeaderView::ResizeToContents);
+    ui->tableView->horizontalHeader()->setResizeMode(AddressTableModel::Address, QHeaderView::Fixed);
+    ui->tableView->setColumnWidth(AddressTableModel::Address, 400); // Adjust the width as needed
 #else
-    ui->tableView->horizontalHeader()->setSectionResizeMode(AddressTableModel::Label, QHeaderView::Fixed);
-    ui->tableView->horizontalHeader()->resizeSection(AddressTableModel::Label, 120);
-    ui->tableView->horizontalHeader()->setSectionResizeMode(AddressTableModel::Address, QHeaderView::ResizeToContents);
+    ui->tableView->horizontalHeader()->setSectionResizeMode(AddressTableModel::Label, QHeaderView::Stretch);
+    ui->tableView->horizontalHeader()->setSectionResizeMode(AddressTableModel::Address, QHeaderView::Fixed);
+    ui->tableView->setColumnWidth(AddressTableModel::Address, 500); // Adjust the width as needed
 #endif
 
     connect(ui->tableView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),

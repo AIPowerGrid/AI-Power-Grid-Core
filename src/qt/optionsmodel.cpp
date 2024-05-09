@@ -89,8 +89,8 @@ void OptionsModel::Init(bool resetSettings)
     fCustomFeeFeatures = settings.value("fCustomFeeFeatures", false).toBool();
 
     if (!settings.contains("fDarkModeEnabled"))
-        settings.setValue("fDarkModeEnabled", false);
-    fDarkModeEnabled = settings.value("fDarkModeEnabled", false).toBool();
+        settings.setValue("fDarkModeEnabled", true);
+    fDarkModeEnabled = settings.value("fDarkModeEnabled", true).toBool();
 
     // These are shared with the core or have a command-line parameter
     // and we want command-line parameters to overwrite the GUI settings.

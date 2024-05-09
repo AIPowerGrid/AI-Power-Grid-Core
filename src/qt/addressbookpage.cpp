@@ -33,7 +33,7 @@ AddressBookPage::AddressBookPage(const PlatformStyle *platformStyle, Mode _mode,
     ui->setupUi(this);
         // Set font size for tableView
         QFont font = ui->tableView->font();
-        font.setPointSize(12); // Set the font size to 12 points, adjust as needed
+        font.setPointSize(14); // Set the font size to 12 points, adjust as needed
         ui->tableView->setFont(font);
 
     if (!platformStyle->getImagesOnButtons()) {

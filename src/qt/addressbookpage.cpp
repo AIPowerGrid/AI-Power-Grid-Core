@@ -31,6 +31,10 @@ AddressBookPage::AddressBookPage(const PlatformStyle *platformStyle, Mode _mode,
     tab(_tab)
 {
     ui->setupUi(this);
+        // Set font size for tableView
+        QFont font = ui->tableView->font();
+        font.setPointSize(12); // Set the font size to 12 points, adjust as needed
+        ui->tableView->setFont(font);
 
     if (!platformStyle->getImagesOnButtons()) {
         ui->newAddress->setIcon(QIcon());

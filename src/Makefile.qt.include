@@ -8,89 +8,19 @@ EXTRA_LIBRARIES += qt/libaipgqt.a
 
 # aipg qt core #
 QT_TS = \
-  qt/locale/aipg_af.ts \
-  qt/locale/aipg_af_ZA.ts \
   qt/locale/aipg_ar.ts \
-  qt/locale/aipg_be_BY.ts \
-  qt/locale/aipg_bg_BG.ts \
-  qt/locale/aipg_bg.ts \
-  qt/locale/aipg_ca_ES.ts \
-  qt/locale/aipg_ca.ts \
-  qt/locale/aipg_ca@valencia.ts \
-  qt/locale/aipg_cs.ts \
-  qt/locale/aipg_cy.ts \
-  qt/locale/aipg_da.ts \
   qt/locale/aipg_de.ts \
-  qt/locale/aipg_el_GR.ts \
-  qt/locale/aipg_el.ts \
   qt/locale/aipg_en_GB.ts \
   qt/locale/aipg_en.ts \
-  qt/locale/aipg_eo.ts \
-  qt/locale/aipg_es_AR.ts \
-  qt/locale/aipg_es_CL.ts \
-  qt/locale/aipg_es_CO.ts \
-  qt/locale/aipg_es_DO.ts \
   qt/locale/aipg_es_ES.ts \
-  qt/locale/aipg_es_MX.ts \
-  qt/locale/aipg_es.ts \
-  qt/locale/aipg_es_UY.ts \
-  qt/locale/aipg_es_VE.ts \
-  qt/locale/aipg_et_EE.ts \
-  qt/locale/aipg_et.ts \
-  qt/locale/aipg_eu_ES.ts \
-  qt/locale/aipg_fa_IR.ts \
-  qt/locale/aipg_fa.ts \
-  qt/locale/aipg_fi.ts \
-  qt/locale/aipg_fr_CA.ts \
   qt/locale/aipg_fr_FR.ts \
-  qt/locale/aipg_fr.ts \
-  qt/locale/aipg_gl.ts \
-  qt/locale/aipg_he.ts \
-  qt/locale/aipg_hi_IN.ts \
-  qt/locale/aipg_hr.ts \
-  qt/locale/aipg_hu.ts \
-  qt/locale/aipg_id_ID.ts \
   qt/locale/aipg_it_IT.ts \
-  qt/locale/aipg_it.ts \
   qt/locale/aipg_ja.ts \
-  qt/locale/aipg_ka.ts \
-  qt/locale/aipg_kk_KZ.ts \
   qt/locale/aipg_ko_KR.ts \
-  qt/locale/aipg_ku_IQ.ts \
-  qt/locale/aipg_ky.ts \
-  qt/locale/aipg_la.ts \
-  qt/locale/aipg_lt.ts \
-  qt/locale/aipg_lv_LV.ts \
-  qt/locale/aipg_mk_MK.ts \
-  qt/locale/aipg_mn.ts \
-  qt/locale/aipg_ms_MY.ts \
-  qt/locale/aipg_nb.ts \
-  qt/locale/aipg_ne.ts \
-  qt/locale/aipg_nl.ts \
-  qt/locale/aipg_pl.ts \
-  qt/locale/aipg_pt_BR.ts \
   qt/locale/aipg_pt_PT.ts \
-  qt/locale/aipg_ro_RO.ts \
-  qt/locale/aipg_ro.ts \
   qt/locale/aipg_ru.ts \
-  qt/locale/aipg_sk.ts \
-  qt/locale/aipg_sl_SI.ts \
-  qt/locale/aipg_sq.ts \
-  qt/locale/aipg_sr@latin.ts \
-  qt/locale/aipg_sr.ts \
-  qt/locale/aipg_sv.ts \
-  qt/locale/aipg_ta.ts \
-  qt/locale/aipg_th_TH.ts \
   qt/locale/aipg_tr_TR.ts \
-  qt/locale/aipg_tr.ts \
-  qt/locale/aipg_uk.ts \
-  qt/locale/aipg_ur_PK.ts \
-  qt/locale/aipg_uz@Cyrl.ts \
-  qt/locale/aipg_vi.ts \
-  qt/locale/aipg_vi_VN.ts \
   qt/locale/aipg_zh_CN.ts \
-  qt/locale/aipg_zh_HK.ts \
-  qt/locale/aipg_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \

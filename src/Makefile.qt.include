@@ -20,7 +20,7 @@ QT_TS = \
   qt/locale/aipg_pt_PT.ts \
   qt/locale/aipg_ru.ts \
   qt/locale/aipg_tr_TR.ts \
-  qt/locale/aipg_zh_CN.ts \
+  qt/locale/aipg_zh_CN.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \

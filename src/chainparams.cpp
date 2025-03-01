@@ -242,6 +242,9 @@ public:
 		
         // 5% of 500 AIPG to operations wallet
 	    nCommunityAutonomousAmount = 5;
+
+        // 25% of 500 AIPG to operations wallet
+	    nAIPGGridFee = 50;
         // Operations wallet placeholder
 
         // Burn Addresses

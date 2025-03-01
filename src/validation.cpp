@@ -2781,8 +2781,10 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
     CScript scriptPubKeyCommunityAutonomous 	= GetScriptForDestination(destCommunityAutonomous);
 	
 	CAmount nCommunityAutonomousAmount 			= GetParams().CommunityAutonomousAmount();
+    CAmount nAIPGGridFee 			            = GetParams().AIPGGridFee();
 	CAmount nSubsidy 							= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
 	CAmount nCommunityAutonomousAmountValue		= nSubsidy*nCommunityAutonomousAmount/100;
+    CAmount nAIPGGridFeeValue		            = nSubsidy*nAIPGGridFee/100;
 	/* Remove Log to console
 	LogPrintf("==>block.vtx[0]->vout[1].nValue:    %ld \n", block.vtx[0]->vout[1].nValue);
 	LogPrintf("==>nCommunityAutonomousAmountValue: %ld \n", nCommunityAutonomousAmountValue);
@@ -2791,12 +2793,17 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	LogPrintf("==>scriptPubKeyCommunityAutonomous    Actual: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey));
 	LogPrintf("==>scriptPubKeyCommunityAutonomous Should Be: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
 	*/
-	//Check 10% Amount
-	if(block.vtx[0]->vout[1].nValue != nCommunityAutonomousAmountValue )		{
-		return state.DoS(100,
-                         error("ConnectBlock(): coinbase Community Autonomous Amount Is Invalid. Actual: %ld Should be:%ld ",block.vtx[0]->vout[1].nValue, nCommunityAutonomousAmountValue),
-                         REJECT_INVALID, "bad-cb-community-autonomous-amount");
-	}
+    // Check if the current block height is 700000 or greater
+    CAmount nExpectedAmountValue = (pindex->nHeight >= 700000) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
+
+    // Check expected amount
+    if (block.vtx[0]->vout[1].nValue != nExpectedAmountValue) {
+        return state.DoS(100,
+                        error("ConnectBlock(): coinbase Community Autonomous/Grid Fee Amount Is Invalid. Actual: %ld Should be:%ld ",
+                            block.vtx[0]->vout[1].nValue, nExpectedAmountValue),
+                        REJECT_INVALID, "bad-cb-community-autonomous-amount");
+    }
+
 	//Check 10% Address
 	if( HexStr(block.vtx[0]->vout[1].scriptPubKey) != HexStr(scriptPubKeyCommunityAutonomous) )		{
 		return state.DoS(100,

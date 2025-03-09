@@ -171,45 +171,54 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     nLastBlockTx = nBlockTx;
     nLastBlockWeight = nBlockWeight;
 
-    //AIPG START
+    // AIPG START
     // Coinbase TX is created
     CMutableTransaction coinbaseTx;
     coinbaseTx.vin.resize(1);
     coinbaseTx.vin[0].prevout.SetNull();
-	//vout
-	CAmount nSubsidy 					= GetBlockSubsidy(nHeight, chainparams.GetConsensus());
-	CAmount nCommunityAutonomousAmount 	= GetParams().CommunityAutonomousAmount();
-	
+
+    // Assign subsidy and fees
+    CAmount nSubsidy = GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+    CAmount nCommunityAutonomousAmount = GetParams().CommunityAutonomousAmount();
+    CAmount nAIPGGridFee = GetParams().AIPGGridFee();
+    CAmount nCommunityAutonomousAmountValue = nSubsidy * nCommunityAutonomousAmount / 100;
+    CAmount nAIPGGridFeeValue = nSubsidy * nAIPGGridFee / 100;
+
+    // Determine expected amount based on height
+    CAmount nExpectedAmountValue = (nHeight >= 30) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
+
+    // Set up coinbase transaction outputs
     coinbaseTx.vout.resize(2);
     coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
-    coinbaseTx.vout[0].nValue = nFees + ( (100-nCommunityAutonomousAmount) * nSubsidy / 100 );
-	
+    coinbaseTx.vout[0].nValue = nFees + (nSubsidy - nExpectedAmountValue);
+
     // Assign the set % in chainparams.cpp to the TX
-	std::string  GetCommunityAutonomousAddress 	= GetParams().CommunityAutonomousAddress();
-	CTxDestination destCommunityAutonomous = DecodeDestination(GetCommunityAutonomousAddress);
+    std::string GetCommunityAutonomousAddress = GetParams().CommunityAutonomousAddress();
+    CTxDestination destCommunityAutonomous = DecodeDestination(GetCommunityAutonomousAddress);
     if (!IsValidDestination(destCommunityAutonomous)) {
-		LogPrintf("IsValidDestination: Invalid Aipg address %s \n", GetCommunityAutonomousAddress);
+        LogPrintf("IsValidDestination: Invalid Aipg address %s \n", GetCommunityAutonomousAddress);
     }
-    // We need to parse the address ready to send to it
+
+    // Parse address for the fee recipient
     CScript scriptPubKeyCommunityAutonomous = GetScriptForDestination(destCommunityAutonomous);
-	
     coinbaseTx.vout[1].scriptPubKey = scriptPubKeyCommunityAutonomous;
-    coinbaseTx.vout[1].nValue = nSubsidy*nCommunityAutonomousAmount/100;
-	LogPrintf("nSubsidy: ====================================================\n");
-	LogPrintf("Miner: %ld \n", coinbaseTx.vout[0].nValue);
-	LogPrintf("scriptPubKeyIn: %s \n", HexStr(scriptPubKeyIn));
-	
-	LogPrintf("GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
-	LogPrintf("scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
-	LogPrintf("nCommunityAutonomousAmount: %ld \n", coinbaseTx.vout[1].nValue);
+    coinbaseTx.vout[1].nValue = nExpectedAmountValue;
+
+    LogPrintf("nSubsidy: ====================================================\n");
+    LogPrintf("Miner: %ld \n", coinbaseTx.vout[0].nValue);
+    LogPrintf("scriptPubKeyIn: %s \n", HexStr(scriptPubKeyIn));
+    LogPrintf("GetCommunityAutonomousAddress: %s \n", GetCommunityAutonomousAddress);
+    LogPrintf("scriptPubKeyCommunityAutonomous: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
+    LogPrintf("nExpectedAmountValue: %ld \n", coinbaseTx.vout[1].nValue);
+
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
-	
+
     pblock->vtx[0] = MakeTransactionRef(std::move(coinbaseTx));
     pblocktemplate->vchCoinbaseCommitment = GenerateCoinbaseCommitment(*pblock, pindexPrev, chainparams.GetConsensus());
     pblocktemplate->vTxFees[0] = -nFees;
 
     LogPrintf("CreateNewBlock(): block weight: %u txs: %u fees: %ld sigops %d\n", GetBlockWeight(*pblock), nBlockTx, nFees, nBlockSigOpsCost);
-    //aipg END
+    // AIPG END
 
     // Fill in header
     pblock->hashPrevBlock  = pindexPrev->GetBlockHash();

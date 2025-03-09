@@ -217,6 +217,9 @@ public:
                     {62500, uint256S("0x0000000000004b6d4a5ea2ff4cd8466098ad767b4a117b0cd32435afe8be6314")},
                     {100000, uint256S("0x0000000000003cd083d33367cb52c2e01cc7c26335d99bfdb8d030849f76c987")},
                     {101775, uint256S("0x0000000000006c4a234393ce042d5f938ba24c0e54bdb2efcbcdb7da9a4b4613")},
+                    {300000, uint256S("0x00000000000e895e615f66c9e8c957910f3717cc26215ac2f676d569c096aea1")},
+                    {400000, uint256S("0x0000000000155a8ffba384ae87a54a3fd0fe47cb4397999fdb624555befdfaae")},
+                    {500000, uint256S("0x000000000059f6cc99399239ee56e16ddedbfa3b1923c51694c76cfe6c501531")},
             	}
             }
         };
@@ -242,6 +245,9 @@ public:
 		
         // 5% of 500 AIPG to operations wallet
 	    nCommunityAutonomousAmount = 5;
+
+        // 25% of 500 AIPG to operations wallet
+	    nAIPGGridFee = 50;
         // Operations wallet placeholder
 
         // Burn Addresses

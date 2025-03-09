@@ -2793,8 +2793,8 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	LogPrintf("==>scriptPubKeyCommunityAutonomous    Actual: %s \n", HexStr(block.vtx[0]->vout[1].scriptPubKey));
 	LogPrintf("==>scriptPubKeyCommunityAutonomous Should Be: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
 	*/
-    // Check if the current block height is 674500 or greater
-    CAmount nExpectedAmountValue = (pindex->nHeight >= 674500) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
+    // Check if the current block height is 700000 or greater
+    CAmount nExpectedAmountValue = (pindex->nHeight >= 700000) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
 
     // Check expected amount
     if (block.vtx[0]->vout[1].nValue != nExpectedAmountValue) {

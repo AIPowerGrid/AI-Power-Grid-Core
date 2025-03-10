@@ -185,7 +185,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     CAmount nAIPGGridFeeValue = nSubsidy * nAIPGGridFee / 100;
 
     // Determine expected amount based on height
-    CAmount nExpectedAmountValue = (nHeight >= 30) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
+    CAmount nExpectedAmountValue = (nHeight >= 700000) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
 
     // Set up coinbase transaction outputs
     coinbaseTx.vout.resize(2);

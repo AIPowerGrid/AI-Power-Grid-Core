@@ -248,7 +248,9 @@ public:
 
         // 25% of 500 AIPG to operations wallet
 	    nAIPGGridFee = 50;
-        // Operations wallet placeholder
+
+        // Block height when devfee increase starts
+	    nAIPGGridFeeStart = 700000;
 
         // Burn Addresses
 	    strIssueAssetBurnAddress = "AIissueAssetXXXXXXXXXXXXXXXXXhhZGt";

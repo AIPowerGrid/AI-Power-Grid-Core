@@ -180,12 +180,13 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     // Assign subsidy and fees
     CAmount nSubsidy = GetBlockSubsidy(nHeight, chainparams.GetConsensus());
     CAmount nCommunityAutonomousAmount = GetParams().CommunityAutonomousAmount();
+    CAmount nAIPGGridFeeStart 			            = GetParams().AIPGGridFeeStart();
     CAmount nAIPGGridFee = GetParams().AIPGGridFee();
     CAmount nCommunityAutonomousAmountValue = nSubsidy * nCommunityAutonomousAmount / 100;
     CAmount nAIPGGridFeeValue = nSubsidy * nAIPGGridFee / 100;
 
     // Determine expected amount based on height
-    CAmount nExpectedAmountValue = (nHeight >= 700000) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
+    CAmount nExpectedAmountValue = (nHeight >= nAIPGGridFeeStart) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
 
     // Set up coinbase transaction outputs
     coinbaseTx.vout.resize(2);

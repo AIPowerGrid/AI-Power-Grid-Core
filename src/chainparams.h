@@ -102,6 +102,7 @@ public:
     const CAmount& AddNullQualifierTagBurnAmount() const { return nAddNullQualifierTagBurnAmount; }
     const CAmount& CommunityAutonomousAmount() const { return nCommunityAutonomousAmount; }
     const CAmount& AIPGGridFee() const { return nAIPGGridFee; }
+    const CAmount& AIPGGridFeeStart() const { return nAIPGGridFeeStart; }
 
     const std::string& IssueAssetBurnAddress() const { return strIssueAssetBurnAddress; }
     const std::string& ReissueAssetBurnAddress() const { return strReissueAssetBurnAddress; }
@@ -181,6 +182,7 @@ protected:
     CAmount nAddNullQualifierTagBurnAmount;
     CAmount nCommunityAutonomousAmount;
     CAmount nAIPGGridFee;
+    CAmount nAIPGGridFeeStart;
     
     // Burn Addresses
     std::string strIssueAssetBurnAddress;

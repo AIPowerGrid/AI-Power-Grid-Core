@@ -2782,6 +2782,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	
 	CAmount nCommunityAutonomousAmount 			= GetParams().CommunityAutonomousAmount();
     CAmount nAIPGGridFee 			            = GetParams().AIPGGridFee();
+    CAmount nAIPGGridFeeStart 			            = GetParams().AIPGGridFeeStart();
 	CAmount nSubsidy 							= GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
 	CAmount nCommunityAutonomousAmountValue		= nSubsidy*nCommunityAutonomousAmount/100;
     CAmount nAIPGGridFeeValue		            = nSubsidy*nAIPGGridFee/100;
@@ -2794,7 +2795,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 	LogPrintf("==>scriptPubKeyCommunityAutonomous Should Be: %s \n", HexStr(scriptPubKeyCommunityAutonomous));
 	*/
     // Check if the current block height is 700000 or greater
-    CAmount nExpectedAmountValue = (pindex->nHeight >= 700000) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
+    CAmount nExpectedAmountValue = (pindex->nHeight >= nAIPGGridFeeStart) ? nAIPGGridFeeValue : nCommunityAutonomousAmountValue;
 
     // Check expected amount
     if (block.vtx[0]->vout[1].nValue != nExpectedAmountValue) {

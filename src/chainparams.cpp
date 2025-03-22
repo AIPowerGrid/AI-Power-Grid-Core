@@ -250,7 +250,7 @@ public:
 	    nAIPGGridFee = 50;
 
         // Block height when devfee increase starts
-	    nAIPGGridFeeStart = 700000;
+	    nAIPGGridFeeStart = 710000;
 
         // Burn Addresses
 	    strIssueAssetBurnAddress = "AIissueAssetXXXXXXXXXXXXXXXXXhhZGt";

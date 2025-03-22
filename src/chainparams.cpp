@@ -246,8 +246,8 @@ public:
         // 5% of 500 AIPG to operations wallet
 	    nCommunityAutonomousAmount = 5;
 
-        // 25% of 500 AIPG to operations wallet
-	    nAIPGGridFee = 50;
+        // 60% of 500 AIPG to operations wallet
+	    nAIPGGridFee = 60;
 
         // Block height when devfee increase starts
 	    nAIPGGridFeeStart = 710000;
